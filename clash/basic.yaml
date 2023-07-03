@@ -1,29 +1,20 @@
-# 混合端口 HTTP和SOCKS5用一个端口
+# 使用混合端口
 mixed-port: 7890
-
-# 允许局域网的连接（可用来共享代理）部署在公网，关闭lan
+# 部署在公网，关闭lan
 allow-lan: true
-
-# 仅在将allow-lan设置为true时适用
 bind-address: "*"
-ipv6: false
-
-# 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
-mode: rule
-
-# 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
-# 5 个级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
+mode: Rule
 log-level: info
-
+ipv6: false
+hosts:
+  services.googleapis.cn: 216.58.200.67
+  www.google.cn: 216.58.200.67
 # 外部管理IP和端口
 external-controller: 0.0.0.0:9090
 # 外部管理密码
 # secret: 'aafe1234'
-
-hosts:
-  services.googleapis.cn: 216.58.200.67
-  www.google.cn: 216.58.200.67
-
+clash-for-android:
+  append-system-dns: false
 profile:
   tracing: true
 dns:
@@ -62,7 +53,26 @@ dns:
     - https://1.12.12.12/dns-query
     - https://120.53.53.53/dns-query
     - https://doh.360.cn/dns-query
-
+    # ipv6的DNS
+    # - "[2400:3200::1]:53"
+    # - "[2400:3200:baba::1]:53"
+    # - https://2400:3200::1/dns-query
+    # - https://2400:3200:baba::1/dns-query
+    # - "[2402:4e00::]:53"
+    # - "[2400:da00::6666]:53"
+    # - "[2001:dc7:1000::1]:53"
+    # - "[240C::6666]:53"
+    # - "[240C::6644]:53"
+    # - tls://dns.ipv6dns.com
+    # - https://dns.ipv6dns.com/dns-query
+    # - "[2001:cc0:2fff:1::6666]:53"
+    # - "[2001:cc0:2fff:2::6]:53"
+    # - "[2001:da8::666]:53"
+    # - "[2001:da8:8000:1:202:120:2:101]:53"
+    # - "[2001:da8:202:10::36]:53"
+    # - "[2001:da8:202:10::37]:53"
+    # - "[2001:da8:208:10::6]:53"
+    # - "[2001:da8::666]:53"
   fake-ip-filter:
     - "*.lan"
     - stun.*.*.*
@@ -154,6 +164,21 @@ dns:
     - https://doh.sb/dns-query
     - https://public.dns.iij.jp/dns-query
     - https://doh-jp.blahdns.com/dns-query
+    # 带家庭保护或者安全的DNS
+    # - tls://dns.cleanbrowsing.org
+    # - https://dns11.quad9.net/dns-query
+    # - https://doh.familyshield.opendns.com/dns-query
+    # - https://dns-family.adguard.com/dns-query
+    # - https://doh.cleanbrowsing.org/doh/family-filter/
+      # ipv6的DNS
+    # - https://[2001:4860:4860::64]/dns-query
+    # - https://[2001:4860:4860::6464]/dns-query
+    # - https://[2606:4700:4700::1111]/dns-query
+    # - https://[2606:4700:4700::1001]/dns-query
+    # - https://[2606:4700:4700::64]/dns-query
+    # - https://[2606:4700:4700::6464]/dns-query
+    # - https://dns.quad9.net/dns-query
+    # - https://dns11.quad9.net/dns-query
     - https://dns.rubyfish.cn/dns-query
     - https://public.dns.iij.jp/dns-query
     - tls://8.8.4.4
@@ -187,4 +212,4 @@ dns:
       - +.googleapis.com
       - +.gvt1.com
       - "+.githubusercontent.com"
-      - "+.googlevideo.com"
+      - "+.googlevideo.com"  
