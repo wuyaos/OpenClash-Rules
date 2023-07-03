@@ -1,2 +1,16 @@
 # 添加自定义的代理
 DOMAIN-SUFFIX,iptorrents.com
+DOMAIN-SUFFIX,mangabz.com
+DOMAIN-SUFFIX,tmdb.org
+DOMAIN-SUFFIX,mikanani.me
+DOMAIN-SUFFIX,manhuagui.com
+DOMAIN-SUFFIX,mxwljsq.top
+DOMAIN-SUFFIX,dmhy.org
+DOMAIN-SUFFIX,fanart.tv
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,sonarr.tv
+DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,opensubtitles.org
+DOMAIN-KEYWORD,tmdb
+DOMAIN-KEYWORD,themoviedb
+DOMAIN-KEYWORD,telegram
