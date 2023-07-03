@@ -1,32 +1,29 @@
-proxy-providers:
-  LIAN:
-    type: http
-    # 这里填proxy-provider-converter转换得到的链接
-    url: "xxxx"
-    interval: 3600
-    # 这里也根据proxy-provider-converter填写
-    path: ./api.nxtlnodes.com.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204
-
-# 使用混合端口
+# 混合端口 HTTP和SOCKS5用一个端口
 mixed-port: 7890
-# 部署在公网，关闭lan
+
+# 允许局域网的连接（可用来共享代理）部署在公网，关闭lan
 allow-lan: true
+
+# 仅在将allow-lan设置为true时适用
 bind-address: "*"
-#运行模式: 规则Rule,全局Global,直连Direct
-mode: Rule
-log-level: info
 ipv6: false
-hosts:
-  services.googleapis.cn: 216.58.200.67
-  www.google.cn: 216.58.200.67
+
+# 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+mode: rule
+
+# 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
+# 5 个级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
+log-level: info
+
 # 外部管理IP和端口
 external-controller: 0.0.0.0:9090
 # 外部管理密码
 # secret: 'aafe1234'
+
+hosts:
+  services.googleapis.cn: 216.58.200.67
+  www.google.cn: 216.58.200.67
+
 profile:
   tracing: true
 dns:
@@ -191,10 +188,3 @@ dns:
       - +.gvt1.com
       - "+.githubusercontent.com"
       - "+.googlevideo.com"
-
-proxy-groups:
-  - name: auto
-    type: url-test
-    interval: 300
-    use:
-      - LIAN
