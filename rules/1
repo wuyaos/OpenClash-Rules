@@ -1,0 +1,70 @@
+
+rules:
+  # 自定义部分
+  - 'DOMAIN-SUFFIX,mangabz.com,♻️ 自动选择'
+  - 'DOMAIN-SUFFIX,tmdb.org,♻️ 自动选择'
+  - 'DOMAIN-SUFFIX,tailscale.com,🎯 全球直连'
+  - 'DOMAIN-SUFFIX,mikanani.me,♻️ 自动选择'
+  - 'DOMAIN-SUFFIX,manhuagui.com,♻️ 自动选择'
+  - 'DOMAIN-SUFFIX,mxwljsq.top,♻️ 自动选择'
+  - 'DOMAIN-SUFFIX,dmhy.org,♻️ 自动选择'
+  - 'DOMAIN-SUFFIX,fanart.tv,♻️ 自动选择'
+  - 'DOMAIN-SUFFIX,telegram.org,♻️ 自动选择'
+  - 'DOMAIN-SUFFIX,sonarr.tv,♻️ 自动选择'
+  - 'DOMAIN-SUFFIX,themoviedb.org,♻️ 自动选择'
+  - 'DOMAIN-SUFFIX,opensubtitles.org,♻️ 自动选择'
+  - 'DOMAIN-KEYWORD,tmdb,♻️ 自动选择'
+  - 'DOMAIN-KEYWORD,themoviedb,♻️ 自动选择'
+  - 'DOMAIN-KEYWORD,telegram,♻️ 自动选择'
+
+  
+  
+  # 代理规则
+  - 'RULE-SET,OpenAI,🧮 ChatGPT'
+  - 'RULE-SET,Bili,🎯 全球直连'
+  - 'RULE-SET,BiliHMT,📺 哔哩哔哩'
+  - 'DOMAIN-SUFFIX,poe.com,🧮 ChatGPT'
+  - 'RULE-SET,Proxy,🚀 节点选择'
+  - 'RULE-SET,Microsoft,Ⓜ️ 微软服务'
+  - 'RULE-SET,Backlist,🛑 全球拦截'
+  - 'GEOIP,CN,🎯 全球直连'
+  - 'MATCH,🐟 漏网之鱼'
+  
+  
+rule-providers:
+  Proxy:
+    type: http
+    behavior: classical
+    url: "https://endpoint.fastgit.org/https://github.com/zhanyeye/clash-rules-lite/blob/main/proxy-rules.txt"
+    path: ./providers/rule-proxy.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: "https://endpoint.fastgit.org/https://github.com/zhanyeye/clash-rules-lite/blob/main/microsoft-rules.txt"
+    path: ./providers/rule-microsoft.yaml
+    interval: 86400
+  Backlist:
+    type: http
+    behavior: classical
+    url: "https://endpoint.fastgit.org/https://github.com/zhanyeye/clash-rules-lite/blob/main/blacklist-rules.txt"
+    path: ./providers/rule-backlist.yaml
+    interval: 86400 
+  OpenAI:
+    behavior: classical
+    interval: 86400
+    path: ./providers/OpenAI.yaml
+    type: http
+    url: 'https://endpoint.fastgit.org/https://github.com/zzcabc/Rules/blob/master/Rules_Provider/Integrate/OpenAI.yaml'
+  Bili:
+    behavior: classical
+    interval: 86400
+    path: ./providers/Bilibili.yaml
+    type: http
+    url: 'https://endpoint.fastgit.org/https://github.com/ZJU-Rule/ZJU-Rule/blob/master/Clash/Providers/Ruleset/Bilibili.yaml'
+  BiliHMT:
+    behavior: classical
+    interval: 86400
+    path: ./providers/BilibiliHMT.yaml
+    type: http
+    url: 'https://endpoint.fastgit.org/https://github.com/ZJU-Rule/ZJU-Rule/blob/master/Clash/Providers/Ruleset/BilibiliHMT.yaml'
