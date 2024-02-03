@@ -47,7 +47,7 @@
 > 
 > **2.6 远程配置**
 > 
-> > 分流配置，可以选择给定的也可以输入URL自定义分流规则（注意必须是直链才行），自用clash分流> 规则直链地址：https://raw.githubusercontent.com/wuyaos/OpenClash-> Rules/main/config/ACL4SSR_mod_mini.ini
+> > 分流配置，可以选择给定的也可以输入URL自定义分流规则（注意必须是直链才行），自用clash分流> 规则直链地址：https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/config/ACL4SSR_mod_mini.ini
 > 
 > 
 > **2.7 高级功能**
