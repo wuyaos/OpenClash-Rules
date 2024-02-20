@@ -16,7 +16,7 @@ log-level: info
 
 # clash 的 RESTful API 监听地址
 # 外部管理IP和端口
-external-controller: 0.0.0.0:9090
+external-controller: :9090
 # 外部管理密码
 # secret: 'aafe1234'
 
