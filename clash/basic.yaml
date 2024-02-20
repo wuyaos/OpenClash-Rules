@@ -14,11 +14,17 @@ mode: rule
 # 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
 log-level: info
 
+hosts:
+  services.googleapis.cn: 142.250.196.131
+  www.google.cn: 142.250.196.131
+  time.android.com: 203.107.6.88
+  www.msn.cn: 127.0.0.1
+
 # clash 的 RESTful API 监听地址
-# 外部管理IP和端口
-external-controller: :9090
-# 外部管理密码
-# secret: 'aafe1234'
+clash-for-android:
+  append-system-dns: false
+external-controller: '127.0.0.1:9090'
+secret: ''
 
 # 存放配置文件的相对路径，或存放网页静态资源的绝对路径
 # Clash core 将会将其部署在 http://{{external-controller}}/ui
@@ -36,19 +42,7 @@ external-controller: :9090
 # 支持通配符域名 (例如: *.clash.dev, *.foo.*.example.com )
 # 不使用通配符的域名优先级高于使用通配符的域名 (例如: foo.example.com > *.example.com > .example.com )
 # 注意: +.foo.com 的效果等同于 .foo.com 和 foo.com
-hosts:
-  # '*.clash.dev': 127.0.0.1
-  # '.dev': 127.0.0.1
-  # 'alpha.clash.dev': '::1'
 
-  # Firebase Cloud Messaging
-  'mtalk.google.com': 108.177.125.188
-  # Google Dl
-  'dl.google.com': 180.163.151.161
-  'dl.l.google.com': 180.163.151.161
-
-  services.googleapis.cn: 216.58.200.67
-  www.google.cn: 216.58.200.67
 
 # DNS 服务器配置(可选；若不配置，程序内置的 DNS 服务会被关闭)
 dns:
