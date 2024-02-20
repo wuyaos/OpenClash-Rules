@@ -1,7 +1,17 @@
 mixed-port: 7890
 allow-lan: true
-bind-address: "*"
-mode: rule
+mode: Rule
 log-level: info
-external-controller: '0.0.0.0:9090'
-secret: ''
+external-controller: :9090
+dns:
+  enabled: true
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://223.5.5.5/dns-query
+    - https://doh.360.cn/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
