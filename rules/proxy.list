@@ -24,6 +24,9 @@ DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,byr.pt
 DOMAIN-SUFFIX,avistaz.to
 DOMAIN-SUFFIX,fsm.name
+DOMAIN-SUFFIX,hub.docker.com
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,docker.io
 
 # 内容：Telegram
 # 数量：13条

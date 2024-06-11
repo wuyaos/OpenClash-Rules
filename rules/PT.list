@@ -1,6 +1,7 @@
 # BT,PT 规则
 DOMAIN-KEYWORD,tracker
 DOMAIN-KEYWORD,announce.php?passkey=
+DOMAIN-KEYWORD,announce
 DOMAIN-KEYWORD,torrent
 DOMAIN-KEYWORD,peer_id=
 DOMAIN-KEYWORD,info_hash
