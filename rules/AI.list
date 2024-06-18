@@ -63,6 +63,5 @@ DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,chat.openai.com
 DOMAIN-SUFFIX,auth0.openai.com
 DOMAIN-SUFFIX,openai.nooc.ink
-
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,gemini.google.com
