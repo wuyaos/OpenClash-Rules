@@ -27,6 +27,9 @@ DOMAIN-SUFFIX,fsm.name
 DOMAIN-SUFFIX,hub.docker.com
 DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,hub.docker.com
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,monikadesign.uk
 
 # 内容：Telegram
