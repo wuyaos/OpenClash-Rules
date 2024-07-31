@@ -20,7 +20,6 @@ DOMAIN-SUFFIX,filelist.io
 DOMAIN-SUFFIX,resources.ani.rip
 DOMAIN-SUFFIX,aniopen.an-i.workers.dev
 DOMAIN-SUFFIX,ani.rip
-DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,byr.pt
 DOMAIN-SUFFIX,avistaz.to
 DOMAIN-SUFFIX,fsm.name
@@ -52,6 +51,10 @@ IP-CIDR,149.154.160.0/20,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
+
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,cdn.cloudflare.net
+DOMAIN-SUFFIX,cloudflareinsights.com
 
 
 # AV
