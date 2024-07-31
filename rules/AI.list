@@ -46,7 +46,6 @@ DOMAIN-SUFFIX,claude.ai
 DOMAIN-KEYWORD,openai
 DOMAIN,gemini.google.com
 DOMAIN-SUFFIX,auth0.com
-DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,events.statsigapi.net
@@ -74,7 +73,6 @@ DOMAIN-SUFFIX,vimeocdn.com
 DOMAIN-SUFFIX,blob.core.windows.net
 DOMAIN-SUFFIX,azurefd.net
 DOMAIN-SUFFIX,azureedge.net
-DOMAIN-SUFFIX,cdn.cloudflare.net
 DOMAIN-SUFFIX,hcaptcha.com
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,vimeo.com
@@ -87,7 +85,6 @@ DOMAIN-SUFFIX,statsigapi.net
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN-SUFFIX,pki.goog
-DOMAIN-SUFFIX,cloudflareinsights.com
 DOMAIN-SUFFIX,edgecompute.app
 DOMAIN-SUFFIX,compute-pipe.com
 DOMAIN-SUFFIX,stripe.network
