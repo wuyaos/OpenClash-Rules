@@ -1,9 +1,34 @@
 mixed-port: 7890
+geodata-mode: true          # GEO模式：true使用geoip.dat数据库,false使用mmdb数据库
+tcp-concurrent: true        # TCP并发：允许并发连接TCP,提高并发性能
+# find-process-mode: strict  # 进程匹配模式：strict严格,off关闭,always总是
 allow-lan: true
 bind-address: '*'
 mode: Rule
 log-level: info
 external-controller: :9090
+#------------------------性能调优------------------------#
+tcp-concurrent-users: 64      # TCP并发连接数,根据服务器性能调整,建议值:16-128
+keep-alive-interval: 15       # 保活心跳间隔(秒),建议值:15-30
+inbound-tfo: true            # 入站TCP Fast Open
+outbound-tfo: true           # 出站TCP Fast Open
+# Windows示例
+#interface-name: WLAN   # Windows中的无线网卡名称
+# 或
+#interface-name: 以太网  # Windows中的有线网卡名称
+# macOS示例
+#interface-name: en0    # macOS中通常是Wi-Fi
+# 或
+#interface-name: en1    # macOS中通常是有线网卡
+# Linux示例
+#interface-name: eth0   # Linux中常见的有线网卡名
+# 或
+#interface-name: wlan0  # Linux中常见的无线网卡名
+
+# 连接池配置
+connection-pool-size: 256     # 连接池大小,建议值:128-512
+idle-timeout: 60             # 空闲超时时间(秒)
+
 dns:
   enabled: true
   default-nameserver:
