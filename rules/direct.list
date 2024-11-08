@@ -2,3 +2,6 @@
 DOMAIN-SUFFIX,hust.edu.cn
 DOMAIN-SUFFIX,tailscale.com
 DOMAIN-SUFFIX,ipify.org
+PROCESS-NAME, VirtualDesktop.Streamer.exe
+PROCESS-NAME, VirtualDesktop.Service.exe
+PROCESS-NAME, LinkEase.exe
