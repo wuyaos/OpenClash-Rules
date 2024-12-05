@@ -441,6 +441,8 @@ DOMAIN-SUFFIX,zmpt.cc
 
 
 IP-CIDR,119.28.71.45/32,no-resolve
+IP-CIDR,1.1.1.1/32,no-resolve
+IP-CIDR,8.8.8.8/32,no-resolve
 IP-CIDR,184.105.151.166/32,no-resolve
 IP-CIDR,207.241.226.111/32,no-resolve
 IP-CIDR,207.241.231.226/32,no-resolve
