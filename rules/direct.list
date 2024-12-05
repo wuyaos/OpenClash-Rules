@@ -5,3 +5,5 @@ DOMAIN-SUFFIX,ipify.org
 PROCESS-NAME, VirtualDesktop.Streamer.exe
 PROCESS-NAME, VirtualDesktop.Service.exe
 PROCESS-NAME, LinkEase.exe
+PROCESS-NAME, linkease
+PROCESS-NAME, mosdns
