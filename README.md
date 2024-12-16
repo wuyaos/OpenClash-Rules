@@ -104,4 +104,4 @@
 
 ***
 
-> 推荐使用[Clash Verge](https://github.com/clash-verge-rev/clash-verge-rev)
+> 推荐使用[Clash Verge](https://github.com/clash-verge-rev/clash-verge-rev) [mihomo-party](https://github.com/mihomo-party-org/mihomo-party)
