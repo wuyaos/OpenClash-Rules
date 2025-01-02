@@ -4,7 +4,7 @@ tcp-concurrent: true        # TCP并发：允许并发连接TCP,提高并发性�
 # find-process-mode: strict  # 进程匹配模式：strict严格,off关闭,always总是
 allow-lan: true
 bind-address: '*'
-mode: Rule
+mode: rule
 log-level: info
 external-controller: :9090
 #------------------------性能调优------------------------#
