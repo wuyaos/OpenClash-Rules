@@ -36,6 +36,10 @@ DOMAIN,api.thetvdb.com
 DOMAIN-SUFFIX,msq.pub
 DOMAIN-SUFFIX,acgrip.art
 DOMAIN-SUFFIX,u2.dmhy.org
+DOMAIN-SUFFIX,siliconflow.cn
+DOMAIN-SUFFIX,cherry-ai.com
+DOMAIN-SUFFIX,typeset.io
+DOMAIN-SUFFIX,acg.rip
 
 # 内容：Telegram
 # 数量：13条
