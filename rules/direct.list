@@ -3,6 +3,7 @@ DOMAIN-SUFFIX,hust.edu.cn
 DOMAIN-SUFFIX,tailscale.com
 DOMAIN-SUFFIX,ipify.org
 DOMAIN-SUFFIX,kooldns.com
+DOMAIN-SUFFIX,nyat.app
 PROCESS-NAME,VirtualDesktop.Streamer.exe
 PROCESS-NAME,VirtualDesktop.Service.exe
 PROCESS-NAME,LinkEase.exe
