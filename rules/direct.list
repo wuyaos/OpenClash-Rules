@@ -9,5 +9,6 @@ PROCESS-NAME,VirtualDesktop.Service.exe
 PROCESS-NAME,LinkEase.exe
 PROCESS-NAME,linkease
 PROCESS-NAME,iStoreEnhance
-PROCESS-NAME,frp
+PROCESS-NAME,frpc
+PROCESS-NAME,tailscaled
 DOMAIN-SUFFIX,ipm.com.cn
