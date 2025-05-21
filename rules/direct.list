@@ -8,3 +8,6 @@ PROCESS-NAME,VirtualDesktop.Streamer.exe
 PROCESS-NAME,VirtualDesktop.Service.exe
 PROCESS-NAME,LinkEase.exe
 PROCESS-NAME,linkease
+PROCESS-NAME,iStoreEnhance
+PROCESS-NAME,frp
+DOMAIN-SUFFIX,ipm.com.cn
