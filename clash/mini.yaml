@@ -8,7 +8,7 @@ mode: rule
 log-level: info
 external-controller: :9090
 #------------------------性能调优------------------------#
-tcp-concurrent-users: 64      # TCP并发连接数,根据服务器性能调整,建议值:16-128
+tcp-concurrent-users: 32      # TCP并发连接数,根据服务器性能调整,建议值:16-128
 keep-alive-interval: 15       # 保活心跳间隔(秒),建议值:15-30
 inbound-tfo: true            # 入站TCP Fast Open
 outbound-tfo: true           # 出站TCP Fast Open
@@ -34,23 +34,20 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
+  ipv6: false
   nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  default-nameserver:
     - 223.5.5.5 # 阿里DNS
-    - 180.76.76.76 # 百度DNS
     - 119.29.29.29 # 腾讯DNS
-    - 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
-    - 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
     - 114.114.114.114 # 114DNS
     - 1.1.1.1 # Cloudflare DNS
-    - https://dns.alidns.com/dns-query # 阿里 DoH DNS
-    - https://doh.360.cn/dns-query # 360 DoH DNS
+    - 180.76.76.76
   fallback:
     - 8.8.8.8 # 谷歌DNS
     - 1.1.1.1 # Cloudflare DNS
-    - tls://dns.rubyfish.cn:853
-    - tls://1.0.0.1:853
     - tls://dns.google:853
-    - https://dns.rubyfish.cn/dns-query
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
   fallback-filter:
