@@ -120,6 +120,7 @@ DOMAIN,adult.contents.fc2.com
 DOMAIN,db.msin.jp
 DOMAIN,dl.getchu.com
 DOMAIN,my.tokyo-hot.com
+DOMAIN,api.lianwusuoai.top
 
 # 国外域名关键字
 DOMAIN-KEYWORD,1e100
