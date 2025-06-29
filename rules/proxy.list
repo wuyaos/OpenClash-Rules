@@ -121,6 +121,7 @@ DOMAIN,db.msin.jp
 DOMAIN,dl.getchu.com
 DOMAIN,my.tokyo-hot.com
 DOMAIN,api.lianwusuoai.top
+DOMAIN-SUFFIX,hdhive.online
 
 # 国外域名关键字
 DOMAIN-KEYWORD,1e100
