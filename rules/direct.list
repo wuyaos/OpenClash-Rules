@@ -12,3 +12,5 @@ PROCESS-NAME,iStoreEnhance
 PROCESS-NAME,frpc
 PROCESS-NAME,tailscaled
 DOMAIN-SUFFIX,ipm.com.cn
+DOMAIN-SUFFIX,api.ephone.chat
+DOMAIN-SUFFIX,api.ephone.ai
