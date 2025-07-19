@@ -1,22 +1,55 @@
 mixed-port: 7890
+geodata-mode: true          # GEO模式：true使用geoip.dat数据库,false使用mmdb数据库
+tcp-concurrent: true        # TCP并发：允许并发连接TCP,提高并发性能
+# find-process-mode: strict  # 进程匹配模式：strict严格,off关闭,always总是
 allow-lan: true
 bind-address: '*'
 mode: rule
 log-level: info
 external-controller: :9090
+#------------------------性能调优------------------------#
+tcp-concurrent-users: 32      # TCP并发连接数,根据服务器性能调整,建议值:16-128
+keep-alive-interval: 15       # 保活心跳间隔(秒),建议值:15-30
+inbound-tfo: true            # 入站TCP Fast Open
+outbound-tfo: true           # 出站TCP Fast Open
+# Windows示例
+#interface-name: WLAN   # Windows中的无线网卡名称
+# 或
+#interface-name: 以太网  # Windows中的有线网卡名称
+# macOS示例
+#interface-name: en0    # macOS中通常是Wi-Fi
+# 或
+#interface-name: en1    # macOS中通常是有线网卡
+# Linux示例
+#interface-name: eth0   # Linux中常见的有线网卡名
+# 或
+#interface-name: wlan0  # Linux中常见的无线网卡名
+
+# 连接池配置
+connection-pool-size: 256     # 连接池大小,建议值:128-512
+idle-timeout: 60             # 空闲超时时间(秒)
+
 dns:
   enabled: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   ipv6: false
-  nameserver: [223.5.5.5, 119.29.29.29]
-  default-nameserver: [223.5.5.5, 119.29.29.29, 180.76.76.76, 1.1.1.1]
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  default-nameserver:
+    - 223.5.5.5 # 阿里DNS
+    - 119.29.29.29 # 腾讯DNS
+    - 114.114.114.114 # 114DNS
+    - 1.1.1.1 # Cloudflare DNS
+    - 180.76.76.76
   fallback:
-    - 'https://doh.dns.sb/dns-query'
-    - 'https://dns.cloudflare.com/dns-query'
-    - 'https://dns.twnic.tw/dns-query'
-    - 'https://dns.alidns.com/dns-query'
+    - 8.8.8.8 # 谷歌DNS
+    - 1.1.1.1 # Cloudflare DNS
+    - tls://dns.google:853
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
   fallback-filter:
     geoip: true
     ipcidr:
@@ -29,6 +62,7 @@ dns:
       - 192.168.0.0/16
       - 255.255.255.255/32
   fake-ip-filter:
+    # 以下域名列表参考自 vernesong/OpenClash 项目，并由 Hackl0us 整理补充
     # === LAN ===
     - '*.lan'
     - '*.localdomain'
@@ -52,6 +86,7 @@ dns:
     - 'time.*.gov'
     - 'time.*.edu.cn'
     - 'time.*.apple.com'
+
     - 'time1.*.com'
     - 'time2.*.com'
     - 'time3.*.com'
@@ -59,6 +94,7 @@ dns:
     - 'time5.*.com'
     - 'time6.*.com'
     - 'time7.*.com'
+
     - 'ntp.*.com'
     - 'ntp.*.com'
     - 'ntp1.*.com'
@@ -68,9 +104,11 @@ dns:
     - 'ntp5.*.com'
     - 'ntp6.*.com'
     - 'ntp7.*.com'
+
     - '*.time.edu.cn'
     - '*.ntp.org.cn'
     - '+.pool.ntp.org'
+
     - 'time1.cloud.tencent.com'
     # === Music Service ===
     ## NetEase
