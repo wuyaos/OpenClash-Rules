@@ -121,9 +121,6 @@ dns:
     # Windows Default LAN WorkGroup
     - 'WORKGROUP'
     - "rule-set:private_domain,cn_domain"
-    - "geosite:connectivity-check"
-    - "geosite:private"
-    - "rule-set:fake_ip_filter_DustinWin"
 
   default-nameserver:
     - 1.1.1.1                    # Cloudflare Public DNS (UDP)
@@ -188,21 +185,3 @@ dns:
 profile:
   store-selected: true # 记忆选择
   store-fake-ip: true
-
-# **=============================== GEO 数据库配置 ===============================**
-# GEO 数据库模式配置，启用该功能以获取和使用地理位置信息
-geodata-mode: true
-
-# GEO 数据库加载模式，选择合适的内存占用策略 'memconservative' 适用于较低内存占用，保证系统性能
-geodata-loader: memconservative
-
-# 是否自动更新 GEO 数据库，默认每48小时更新一次
-geo-auto-update: true
-# GEO 数据库更新间隔时间，单位为小时
-geo-update-interval: 48
-
-# GEO 数据库文件下载地址配置，提供各类 GEO 数据文件的 URL，确保实时更新
-geox-url:
-  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
-  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb"
