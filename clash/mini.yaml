@@ -120,8 +120,6 @@ dns:
     - '*.mcdn.bilivideo.cn'
     # Windows Default LAN WorkGroup
     - 'WORKGROUP'
-    - "rule-set:private_domain,cn_domain"
-
   default-nameserver:
     - 1.1.1.1                    # Cloudflare Public DNS (UDP)
     - 8.8.8.8                    # Google Public DNS (UDP)
