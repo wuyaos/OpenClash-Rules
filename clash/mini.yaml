@@ -4,14 +4,29 @@ bind-address: '*'
 mode: rule
 log-level: info
 external-controller: :9090
+unified-delay: true  # 更换延迟计算方式，去除握手等额外延迟
+tcp-concurrent: true # 启用 TCP 并发连接。这允许 Clash 同时建立多个 TCP
+find-process-mode: "strict"       # 设置进程查找模式为严格模式，Clash 会更精确地识别和匹配网络流量来源的进程
+global-client-fingerprint: chrome # 设置全局客户端指纹为 Chrome，使 Clash 在建立连接时模拟 Chrome 浏览器的 TLS 指纹，增强隐私性和绕过某些网站的指纹检测
+keep-alive-idle: 600
+keep-alive-interval: 15
+disable-keep-alive: false
+
 dns:
   enabled: true
+  ipv6: true
+  listen: 0.0.0.0:1053
+  prefer-h3: false
+  respect-rules: true
+  cache-algorithm: arc
+  cache-size: 2048
+
+  use-hosts: true
+  use-system-hosts: false
+
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  use-hosts: true
-  ipv6: false
-  nameserver: [223.5.5.5, 119.29.29.29]
-  default-nameserver: [223.5.5.5, 119.29.29.29, 180.76.76.76, 1.1.1.1]
+  fake-ip-filter-mode: blacklist
   fake-ip-filter:
     # === LAN ===
     - '*.lan'
@@ -92,6 +107,8 @@ dns:
     # === Other ===
     ## QQ Quick Login
     - 'localhost.ptlogin2.qq.com'
+    - localhost.sec.qq.com
+    - localhost.work.weixin.qq.com
     ## Golang
     - 'proxy.golang.org'
     ## STUN Server
@@ -103,3 +120,89 @@ dns:
     - '*.mcdn.bilivideo.cn'
     # Windows Default LAN WorkGroup
     - 'WORKGROUP'
+    - "rule-set:private_domain,cn_domain"
+    - "geosite:connectivity-check"
+    - "geosite:private"
+    - "rule-set:fake_ip_filter_DustinWin"
+
+  default-nameserver:
+    - 1.1.1.1                    # Cloudflare Public DNS (UDP)
+    - 8.8.8.8                    # Google Public DNS (UDP)
+    # 为配合rules中的IP-CIDR注释掉，防止dns泄露（启用就泄露）
+    #    - 223.5.5.5                 # 阿里（国内）
+    #    - 119.29.29.29              # 腾讯（国内）
+    #    - system # 系统 DNS (保留以防万一)
+
+  #`nameserver-policy` 精准分流与严格兜底。**
+  # 确保国内域名走国内 DNS，境外域名走境外 DNS。这是解决问题的关键。
+  # 这是 Clash 进行主要 DNS 查询时使用的服务器列表。
+  nameserver: # 默认 DNS，供所有请求使用，支持 DoH3 的在前面
+    - https://1.1.1.1/dns-query    # Cloudflare（支持 H3）
+    - https://dns.google/dns-query # Google（支持 H3）
+    - 1.1.1.1                      # Cloudflare Public DNS (UDP)
+    - 8.8.8.8                      # Google Public DNS (UDP)
+    # 为配合rules中的IP-CIDR注释掉，防止dns泄露（启用就泄露） 
+    #    - https://dns.alidns.com/dns-query # 阿里（国内稳定）
+    #    - https://doh.pub/dns-query # 腾讯 (境内，DoH，可作为备选)
+
+  nameserver-policy:
+    "geosite:cn,private": # 国内域名和私有域名强制走国内 DNS
+      - https://223.5.5.5/dns-query # 阿里
+      - https://doh.pub/dns-query   # 腾讯
+      - 223.5.5.5                   # 阿里 UDP
+      - 119.29.29.29                # 腾讯 UDP
+    "geo:cn":                       # 也可以用 geo:cn 匹配 IP
+      - https://223.5.5.5/dns-query
+      - https://doh.pub/dns-query
+      - 223.5.5.5                   # 阿里 UDP
+      - 119.29.29.29                # 腾讯 UDP
+    "geosite:gfw":                  # 新增：GFW 列表域名强制走国外 DNS
+      - https://1.1.1.1/dns-query
+      - https://dns.google/dns-query
+      - 1.1.1.1
+      - 8.8.8.8
+    "geosite:geolocation-!cn":      # 新增：非中国大陆域名强制走国外 DNS
+      - https://1.1.1.1/dns-query
+      - https://dns.google/dns-query
+      - 1.1.1.1
+      - 8.8.8.8
+    "full-nameserver":              # 新增：最终兜底，所有未匹配的域名查询强制走国外 DNS
+      - https://1.1.1.1/dns-query
+      - https://dns.google/dns-query
+      - 1.1.1.1
+      - 8.8.8.8
+
+  # 当 `nameserver` 中的 DNS 服务器解析失败时，Clash 会尝试这里的 DNS。
+  fallback:
+    - 1.1.1.1 # Cloudflare DNS备用
+    - 8.8.8.8 # Google DNS备用
+    # - 9.9.9.9                    # Quad9 (备选，更注重隐私和安全性)
+
+  # `proxy-server-nameserver`: 用于代理服务器自身的 DNS 解析，仅包含国外 DNS。
+  proxy-server-nameserver:          # 当请求通过代理（即国外站）时使用
+    - https://1.1.1.1/dns-query     # Cloudflare，DoH3
+    - https://dns.google/dns-query  # Google，DoH3
+    - 1.1.1.1
+    - 8.8.8.8
+
+profile:
+  store-selected: true # 记忆选择
+  store-fake-ip: true
+
+# **=============================== GEO 数据库配置 ===============================**
+# GEO 数据库模式配置，启用该功能以获取和使用地理位置信息
+geodata-mode: true
+
+# GEO 数据库加载模式，选择合适的内存占用策略 'memconservative' 适用于较低内存占用，保证系统性能
+geodata-loader: memconservative
+
+# 是否自动更新 GEO 数据库，默认每48小时更新一次
+geo-auto-update: true
+# GEO 数据库更新间隔时间，单位为小时
+geo-update-interval: 48
+
+# GEO 数据库文件下载地址配置，提供各类 GEO 数据文件的 URL，确保实时更新
+geox-url:
+  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb"
