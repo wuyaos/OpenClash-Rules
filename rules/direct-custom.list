@@ -14,3 +14,5 @@ PROCESS-NAME,tailscaled
 DOMAIN-SUFFIX,ipm.com.cn
 DOMAIN-SUFFIX,api.ephone.chat
 DOMAIN-SUFFIX,api.ephone.ai
+DOMAIN,api-drive.mypikpak.com
+DOMAIN-KEYWORD,dl-a10b-

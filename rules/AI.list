@@ -97,6 +97,7 @@ DOMAIN-SUFFIX,openrouter.ai
 # Augment
 DOMAIN-SUFFIX,augment.com
 DOMAIN-SUFFIX,augmentcode.com
+DOMAIN-KEYWORD,augmentcode
 
 # Cursor
 DOMAIN-SUFFIX,cursor.sh
