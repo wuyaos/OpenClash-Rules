@@ -20,15 +20,9 @@ DOMAIN-SUFFIX,resources.ani.rip
 DOMAIN-SUFFIX,aniopen.an-i.workers.dev
 DOMAIN-SUFFIX,acg.rip
 
-# 视频刮削
-DOMAIN-SUFFIX,tmdb.org
-DOMAIN-SUFFIX,fanart.tv
-DOMAIN-SUFFIX,themoviedb.org
-DOMAIN-KEYWORD,tmdb
-DOMAIN-KEYWORD,themoviedb
-DOMAIN-SUFFIX,danmaku.movie.kg
-DOMAIN,api.thetvdb.com
-DOMAIN-SUFFIX,opensubtitles.org
+# 解决谷歌商店无法下载应用的问题
+DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+DOMAIN-SUFFIX,services.googleapis.cn
 
 # 内容：Telegram
 # 数量：13条
