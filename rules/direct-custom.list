@@ -1,0 +1,11 @@
+# 添加自定义的代理
+PROCESS-NAME,mosdns
+PROCESS-NAME,lucky
+PROCESS-NAME,tailscaled
+PROCESS-NAME,easytier-core
+PROCESS-NAME,easytier
+PROCESS-NAME,frp
+PROCESS-NAME,LinkEase.exe
+PROCESS-NAME,syncthing.exe
+PROCESS-NAME,syncthing
+PROCESS-NAME,GameViewer.exe
