@@ -4,7 +4,7 @@ PROCESS-NAME,lucky
 PROCESS-NAME,tailscaled
 PROCESS-NAME,easytier-core
 PROCESS-NAME,easytier
-PROCESS-NAME,frp
+PROCESS-NAME,frpc
 PROCESS-NAME,LinkEase.exe
 PROCESS-NAME,syncthing.exe
 PROCESS-NAME,syncthing
