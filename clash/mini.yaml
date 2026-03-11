@@ -17,20 +17,38 @@ dns:
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   ipv6: false
-  nameserver-policy:
-    'www.baidu.com': '114.114.114.114'
-    '+.internal.crop.com': '10.0.0.1'
-    'geosite:cn': https://doh.pub/dns-query
+  default-nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - 119.29.29.29  # 腾讯DNS
+    - 223.5.5.5     # 阿里DNS
+    - 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
+    - 114.114.114.114 # 114DNS
   nameserver:
+    - https://dns.alidns.com/dns-query # 阿里 DoH DNS
+    - https://doh.360.cn/dns-query # 360 DoH DNS
+    - https://cloudflare-dns.com/dns-query
     - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
     - https://dns.google/dns-query # Google（支持 H3）
   fallback:
+    - tls://dns.rubyfish.cn:853
+    - tls://1.0.0.1:853
     - tls://dns.google:853
-    - tls://1.0.9.1:853
-  proxy-server-nameserver:
-    - https://doh.pub/dns-query
+    - https://dns.rubyfish.cn/dns-query
+    - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query # 阿里 DoH DNS
+    - https://doh.360.cn/dns-query # 360 DoH DNS
+    - https://cloudflare-dns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.google/dns-query # Google（支持 H3）
+    - 223.5.5.5 # 阿里DNS
+    - 180.76.76.76 # 百度DNS
+    - 119.29.29.29 # 腾讯DNS
+    - 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
+    - 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
+    - 114.114.114.114 # 114DNS
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -39,7 +57,9 @@ dns:
     ipcidr:
       - 240.0.0.0/4
     domain:
+      - '+.ai.com'
       - '+.algolia.net'
+      - '+.anthropic.com'
       - '+.argotunnel.com'
       - '+.arkoselabs.com'
       - '+.auth0.com'
@@ -48,6 +68,8 @@ dns:
       - '+.bing.com'
       - '+.bingapis.com'
       - '+.bugsnag.com'
+      - '+.chatgpt.com'
+      - '+.claude.ai'
       - '+.cloudflare.net'
       - '+.cloudflareinsights.com'
       - '+.cohere.ai'
