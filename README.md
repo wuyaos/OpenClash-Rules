@@ -107,3 +107,48 @@
 > 推荐使用
 > - [Clash Verge](https://github.com/clash-verge-rev/clash-verge-rev)
 > - [mihomo-party](https://github.com/mihomo-party-org/mihomo-party)
+
+***
+
+### 4. FlClash 脚本（基于本仓库规则自动生成）
+
+仓库内已提供 FlClash 可用的 `main(config)` 脚本生成链路，参考了 `ZipZhu/Flclash-scripts` 的脚本形态，并对接当前项目的 `config/*.ini` 规则源。
+
+#### 4.1 文件说明
+
+- `scripts/gen-flclash-scripts.js`：生成器，读取 `config/ACL4SSR_mod_mini.ini` 与 `config/Home_mod_mini.ini`
+- `scripts/flclash.acl.js`：对应 `ACL4SSR_mod_mini.ini` 的 FlClash 脚本
+- `scripts/flclash.home.js`：对应 `Home_mod_mini.ini` 的 FlClash 脚本
+
+#### 4.2 重新生成
+
+在项目根目录执行：
+
+```bash
+node scripts/gen-flclash-scripts.js
+```
+
+可选语法检查：
+
+```bash
+node -c scripts/gen-flclash-scripts.js
+node -c scripts/flclash.acl.js
+node -c scripts/flclash.home.js
+```
+
+#### 4.3 脚本能力范围
+
+- 自动将 `custom_proxy_group` 转换为 FlClash 的 `proxy-groups`
+- 自动将 `ruleset=` 转换为 `rule-providers` 与 `rules`
+- 支持三类 `ruleset` 源：
+  - 普通 URL（text provider）
+  - `clash-classic:<url>`（yaml provider）
+  - `[]GEOIP,...` / `[]FINAL`（内建规则，`FINAL` 转为 `MATCH,...`）
+- 自动去重（provider 与 rules）并保持首次出现顺序
+- 保留 `home` 与 `acl` 的差异（例如 `🏠 回家` 规则链）
+
+#### 4.4 在 FlClash 中使用
+
+1. 打开 FlClash 的脚本配置（YAML 脚本模式）。
+2. 将 `scripts/flclash.acl.js` 或 `scripts/flclash.home.js` 内容粘贴进去。
+3. 应用配置并重载核心，检查 `proxy-groups` 和 `rules` 是否按预期出现。
