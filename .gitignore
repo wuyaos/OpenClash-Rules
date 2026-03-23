@@ -1,2 +1,5 @@
 .history
 .omc/
+.ace-tool/
+.omx/
+__pycache__
