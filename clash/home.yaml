@@ -1,0 +1,52 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: info
+external-controller: :9090
+unified-delay: true
+tcp-concurrent: true
+global-client-fingerprint: chrome
+
+dns:
+  enabled: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  ipv6: false
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - 223.5.5.5
+  fallback:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - tls://1.0.0.1:853
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+
+proxies:
+  - name: home-8ga9ngi3
+    type: vless
+    server: 192.168.123.xx
+    port: xxx
+    uuid: xxx
+    network: tcp
+    tls: true
+    skip-cert-verify: false
+    servername: www.intel.com
+    client-fingerprint: xx
+
+proxy-groups:
+  - name: 🏠 回家
+    type: select
+    proxies:
+      - home-8ga9ngi3
+      - DIRECT
+
+rules:
+  - IP-CIDR,192.168.123.0/24,🏠 回家,no-resolve
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,DIRECT
