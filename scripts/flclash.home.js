@@ -531,7 +531,7 @@ function main(config) {
     "type": "http"
   },
   "quest3": {
-    "url": "https://raw.githubusercontent.com/Nowat995/emby/main/quest3.list",
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/quest3.list",
     "path": "./ruleset/quest3.list",
     "behavior": "classical",
     "interval": 86400,
