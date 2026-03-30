@@ -12,6 +12,8 @@ const ICON_BASE = "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color
 const HOME_GROUP_NAME = "🏠 回家";
 const HOME_RULESET_PROVIDER = "home_lan";
 const HOME_PROXY_NAME = "home1";
+const HOME_LAN_SELF_BYPASS_RULE_PREFIX =
+  "AND,((SRC-IP-CIDR,192.168.123.0/24),(IP-CIDR,192.168.123.0/24)),";
 const HOME_PROXY_TEMPLATE = {
   name: HOME_PROXY_NAME,
   type: "ss",
@@ -292,10 +294,20 @@ function withDnsHijackRule(rules) {
   return out;
 }
 
-function withHomeRuleSecondLine(rules) {
+function withHomeRulePriority(rules) {
   const homeRule = `RULE-SET,${HOME_RULESET_PROVIDER},${HOME_GROUP_NAME}`;
   if (!rules.includes(homeRule)) return rules;
+
   const out = rules.filter((rule) => rule !== homeRule);
+  const bypassRuleIndex = out.findIndex((rule) => rule.startsWith(HOME_LAN_SELF_BYPASS_RULE_PREFIX));
+
+  if (bypassRuleIndex !== -1) {
+    const [bypassRule] = out.splice(bypassRuleIndex, 1);
+    out.splice(1, 0, bypassRule);
+    out.splice(2, 0, homeRule);
+    return out;
+  }
+
   out.splice(1, 0, homeRule);
   return out;
 }
@@ -506,7 +518,7 @@ function main() {
     const { providers, rules } = buildRulesAndProviders(rulesets);
     let finalRules = withDnsHijackRule(rules);
     if (withHome) {
-      finalRules = withHomeRuleSecondLine(finalRules);
+      finalRules = withHomeRulePriority(finalRules);
     }
 
     const config = buildMobileConfig(

@@ -653,6 +653,13 @@ rule-providers:
     interval: 86400
     path: "./ruleset/android_adguard_block.list"
     url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/android-adguard-block.list"
+  goodbyeads_dns:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/goodbyeads_dns.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/goodbyeads-dns.list"
   APP_mutated:
     type: "http"
     behavior: "classical"
@@ -787,6 +794,7 @@ rules:
   - "RULE-SET,direct_custom,🎯 全球直连"
   - "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台"
   - "RULE-SET,android_adguard_cn_allow,🎯 全球直连"
+  - "AND,((SRC-IP-CIDR,192.168.123.0/24),(IP-CIDR,192.168.123.0/24)),🎯 全球直连"
   - "RULE-SET,ProxyMedia,🌍 国外媒体"
   - "RULE-SET,scraper_nojp,🕸 刮削"
   - "RULE-SET,scraper_jp,🕸 刮削🇯🇵"
@@ -800,6 +808,7 @@ rules:
   - "RULE-SET,Microsoft,Ⓜ️ 微软服务"
   - "RULE-SET,GoogleFCM,📢 谷歌FCM"
   - "RULE-SET,android_adguard_block,🛑 广告拦截"
+  - "RULE-SET,goodbyeads_dns,🛑 广告拦截"
   - "RULE-SET,APP_mutated,🎯 全球直连"
   - "RULE-SET,GAME_mutated,🎯 全球直连"
   - "RULE-SET,adblock_reject,🛑 广告拦截"
