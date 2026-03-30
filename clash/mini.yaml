@@ -2,211 +2,40 @@ mixed-port: 7890
 allow-lan: true
 bind-address: '*'
 mode: rule
-log-level: info
 external-controller: :9090
 unified-delay: true  # 更换延迟计算方式，去除握手等额外延迟
 tcp-concurrent: true # 启用 TCP 并发连接。这允许 Clash 同时建立多个 TCP
-find-process-mode: "strict"       # 设置进程查找模式为严格模式，Clash 会更精确地识别和匹配网络流量来源的进程
 global-client-fingerprint: chrome # 设置全局客户端指纹为 Chrome，使 Clash 在建立连接时模拟 Chrome 浏览器的 TLS 指纹，增强隐私性和绕过某些网站的指纹检测
-keep-alive-idle: 600
-keep-alive-interval: 15
-disable-keep-alive: false
+
 dns:
-  enabled: true
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  use-hosts: true
-  ipv6: false
-  default-nameserver:
-    - 8.8.8.8
-    - 1.0.0.1
-    - 119.29.29.29
-    - 223.5.5.5
-    - 117.50.10.10
-    - 114.114.114.114
-  nameserver:
+  enable: true # 开启 DNS 配置
+  enhanced-mode: fake-ip # 使用 fake-ip 提升规则匹配效率
+  fake-ip-range: 198.18.0.1/16 # fake-ip 网段
+  use-hosts: true # 读取 hosts
+  use-system-hosts: true # 读取系统 hosts
+  ipv6: true # IPv6 解析开关
+  respect-rules: true      #让连接DNS服务器时能够遵循规则，也就是通过代理节点连接到上面设置的国外DNS，因为直连可能连接不上
+  default-nameserver: # 基础 DNS，必须为 IP 形式
+    - tls://223.5.5.5
+    - tls://223.6.6.6
+  nameserver: # 未命中分流规则最终走 MATCH 时使用，采用国外 DNS 防污染/泄漏
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  proxy-server-nameserver: # 解析代理节点域名时使用，优先国内 DNS 保证起步可达
     - https://dns.alidns.com/dns-query
-    - https://doh.360.cn/dns-query
-    - https://cloudflare-dns.com/dns-query
     - https://doh.pub/dns-query
-    - https://dns.google/dns-query
-    - 223.5.5.5 # 阿里DNS
-    - 180.76.76.76 # 百度DNS
-    - 119.29.29.29 # 腾讯DNS
-    - 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
-    - 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
-    - 114.114.114.114 # 114DNS
-  fallback:
-    - tls://dns.rubyfish.cn:853
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
-    - https://dns.rubyfish.cn/dns-query
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
-    - 8.8.8.8 # 谷歌DNS
-  direct-nameserver:
+  direct-nameserver: # 命中直连规则时使用国内 DNS
     - https://dns.alidns.com/dns-query
-    - https://doh.360.cn/dns-query
-    - https://cloudflare-dns.com/dns-query
     - https://doh.pub/dns-query
-    - https://dns.google/dns-query
-    - 223.5.5.5
-    - 180.76.76.76
-    - 119.29.29.29
-    - 117.50.11.11
-    - 117.50.10.10
-    - 114.114.114.114
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - gfw
-    ipcidr:
-      - 240.0.0.0/4
-    domain:
-      - '+.ai.com'
-      - '+.algolia.net'
-      - '+.anthropic.com'
-      - '+.argotunnel.com'
-      - '+.arkoselabs.com'
-      - '+.auth0.com'
-      - '+.azure.com'
-      - '+.azureedge.net'
-      - '+.bing.com'
-      - '+.bingapis.com'
-      - '+.bugsnag.com'
-      - '+.chatgpt.com'
-      - '+.claude.ai'
-      - '+.cloudflare.net'
-      - '+.cloudflareinsights.com'
-      - '+.cohere.ai'
-      - '+.docker.com'
-      - '+.docker.io'
-      - '+.facebook.com'
-      - '+.github.com'
-      - '+.githubusercontent.com'
-      - '+.google'
-      - '+.google.com'
-      - '+.google.dev'
-      - '+.googleapis.cn'
-      - '+.googlevideo.com'
-      - '+.identrust.com'
-      - '+.instagram.com'
-      - '+.intercom.io'
-      - '+.live.com'
-      - '+.livekit.cloud'
-      - '+.meta.ai'
-      - '+.microsoft.com'
-      - '+.microsoftapp.net'
-      - '+.minecraft.net'
-      - '+.msn.com'
-      - '+.openai.com'
-      - '+.poe.com'
-      - '+.segment.com'
-      - '+.segment.io'
-      - '+.sentry.io'
-      - '+.synn.cc'
-      - '+.stripe.com'
-      - '+.t.me'
-      - '+.tailscale.com'
-      - '+.tailscale.io'
-      - '+.twitter.com'
-      - '+.usefathom.com'
-      - '+.v2ex.com'
-      - '+.windows.net'
-      - '+.wootric.com'
-      - '+.x.com'
-      - '+.youtube.com'
+  fake-ip-filter-mode: blacklist # 显式启用 fake-ip-filter 模式（黑名单语义）
   fake-ip-filter:
-    # === LAN ===
     - '*.lan'
-    - '*.localdomain'
-    - '*.example'
-    - '*.invalid'
     - '*.localhost'
     - '*.test'
     - '*.local'
     - '*.home.arpa'
-    # === Linksys Wireless Router ===
-    - '*.linksys.com'
-    - '*.linksyssmartwifi.com'
-    # === Apple Software Update Service ===
-    - 'swscan.apple.com'
-    - 'mesu.apple.com'
-    # === Windows 10 Connnect Detection ===
-    - '*.msftconnecttest.com'
-    - '*.msftncsi.com'
-    # === NTP Service ===
-    - 'time.*.com'
-    - 'time.*.gov'
-    - 'time.*.edu.cn'
-    - 'time.*.apple.com'
-    - 'time1.*.com'
-    - 'time2.*.com'
-    - 'time3.*.com'
-    - 'time4.*.com'
-    - 'time5.*.com'
-    - 'time6.*.com'
-    - 'time7.*.com'
-    - 'ntp.*.com'
-    - 'ntp.*.com'
-    - 'ntp1.*.com'
-    - 'ntp2.*.com'
-    - 'ntp3.*.com'
-    - 'ntp4.*.com'
-    - 'ntp5.*.com'
-    - 'ntp6.*.com'
-    - 'ntp7.*.com'
-    - '*.time.edu.cn'
-    - '*.ntp.org.cn'
-    - '+.pool.ntp.org'
-    - 'time1.cloud.tencent.com'
-    # === Music Service ===
-    ## NetEase
-    - '+.music.163.com'
-    - '*.126.net'
-    ## Baidu
-    - 'musicapi.taihe.com'
-    - 'music.taihe.com'
-    ## Kugou
-    - 'songsearch.kugou.com'
-    - 'trackercdn.kugou.com'
-    ## Kuwo
-    - '*.kuwo.cn'
-    ## JOOX
-    - 'api-jooxtt.sanook.com'
-    - 'api.joox.com'
-    - 'joox.com'
-    ## QQ
-    - '+.y.qq.com'
-    - '+.music.tc.qq.com'
-    - 'aqqmusic.tc.qq.com'
-    - '+.stream.qqmusic.qq.com'
-    ## Xiami
-    - '*.xiami.com'
-    ## Migu
-    - '+.music.migu.cn'
-    # === Game Service ===
-    ## Nintendo Switch
-    - '+.srv.nintendo.net'
-    ## Sony PlayStation
-    - '+.stun.playstation.net'
-    ## Microsoft Xbox
-    - 'xbox.*.microsoft.com'
-    - '+.xboxlive.com'
-    # === Other ===
-    ## QQ Quick Login
-    - 'localhost.ptlogin2.qq.com'
-    - localhost.sec.qq.com
-    - localhost.work.weixin.qq.com
-    ## Golang
-    - 'proxy.golang.org'
-    ## STUN Server
+    - geosite:private
+    - geosite:category-ntp
     - 'stun.*.*'
     - 'stun.*.*.*'
-    # === Google Voices ===
-    - 'lens.l.google.com'
-    # Bilibili CDN
-    - '*.mcdn.bilivideo.cn'
-    # Windows Default LAN WorkGroup
     - 'WORKGROUP'
