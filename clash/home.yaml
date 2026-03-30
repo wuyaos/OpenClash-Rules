@@ -18,15 +18,21 @@ dns:
   default-nameserver: # 基础 DNS，必须为 IP 形式（此处使用阿里 DNS over TLS）
     - tls://223.5.5.5
     - tls://223.6.6.6
+    - tls://119.29.29.29
+    - tls://1.12.12.12
   nameserver: # 未命中分流规则最终走 MATCH 时使用，采用国外 DNS 防污染/泄漏
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.opendns.com/dns-query
   proxy-server-nameserver: # 解析代理节点域名时使用，优先国内 DNS 保证起步可达
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+    - https://doh.360.cn/dns-query
   direct-nameserver: # 命中直连规则时使用国内 DNS
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+    - https://doh.360.cn/dns-query
   respect-rules: true # 连接 DNS 服务器时遵循路由规则
   fake-ip-filter-mode: blacklist # 显式启用 fake-ip-filter 模式（黑名单语义）
   fake-ip-filter: # 最小 fake-ip 例外集合，保障内网/授时等直连场景
@@ -57,6 +63,7 @@ proxy-groups:
       - DIRECT
 
 rules:
+  - AND,((SRC-IP-CIDR,192.168.123.0/24),(IP-CIDR,192.168.123.0/24)),DIRECT
   - IP-CIDR,192.168.123.0/24,🏠 回家,no-resolve
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
