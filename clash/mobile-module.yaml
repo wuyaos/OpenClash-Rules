@@ -653,27 +653,13 @@ rule-providers:
     interval: 86400
     path: "./ruleset/android_adguard_block.list"
     url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/android-adguard-block.list"
-  goodbyeads_dns:
+  clash_meta:
     type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/goodbyeads_dns.list"
-    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/goodbyeads-dns.list"
-  APP_mutated:
-    type: "http"
-    behavior: "classical"
+    behavior: "domain"
     format: "yaml"
     interval: 86400
-    path: "./ruleset/APP_mutated.yaml"
-    url: "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/APP.mutated.yaml"
-  GAME_mutated:
-    type: "http"
-    behavior: "classical"
-    format: "yaml"
-    interval: 86400
-    path: "./ruleset/GAME_mutated.yaml"
-    url: "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/GAME.mutated.yaml"
+    path: "./ruleset/clash_meta.yaml"
+    url: "https://raw.githubusercontent.com/qq5460168/AD886/main/clash_meta.yaml"
   adblock_reject:
     type: "http"
     behavior: "classical"
@@ -716,6 +702,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/BanEasyPrivacy.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list"
+  APP_mutated:
+    type: "http"
+    behavior: "classical"
+    format: "yaml"
+    interval: 86400
+    path: "./ruleset/APP_mutated.yaml"
+    url: "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/APP.mutated.yaml"
+  GAME_mutated:
+    type: "http"
+    behavior: "classical"
+    format: "yaml"
+    interval: 86400
+    path: "./ruleset/GAME_mutated.yaml"
+    url: "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/GAME.mutated.yaml"
   ProxyGFWlist:
     type: "http"
     behavior: "classical"
@@ -808,15 +808,15 @@ rules:
   - "RULE-SET,Microsoft,Ⓜ️ 微软服务"
   - "RULE-SET,GoogleFCM,📢 谷歌FCM"
   - "RULE-SET,android_adguard_block,🛑 广告拦截"
-  - "RULE-SET,goodbyeads_dns,🛑 广告拦截"
-  - "RULE-SET,APP_mutated,🎯 全球直连"
-  - "RULE-SET,GAME_mutated,🎯 全球直连"
+  - "RULE-SET,clash_meta,🛑 广告拦截"
   - "RULE-SET,adblock_reject,🛑 广告拦截"
   - "RULE-SET,BanAD,🛑 广告拦截"
   - "RULE-SET,BanProgramAD,🛑 广告拦截"
   - "RULE-SET,BanEasyList,🛑 广告拦截"
   - "RULE-SET,BanEasyListChina,🛑 广告拦截"
   - "RULE-SET,BanEasyPrivacy,🛑 广告拦截"
+  - "RULE-SET,APP_mutated,🎯 全球直连"
+  - "RULE-SET,GAME_mutated,🎯 全球直连"
   - "RULE-SET,ProxyGFWlist,🚀 节点选择"
   - "RULE-SET,applications,🎯 全球直连"
   - "RULE-SET,LocalAreaNetwork,🎯 全球直连"

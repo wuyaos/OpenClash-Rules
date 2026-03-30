@@ -259,11 +259,17 @@ function buildRulesAndProviders(rulesets) {
       continue;
     }
 
-    const isClassic = source.startsWith("clash-classic:");
-    const url = isClassic ? source.slice("clash-classic:".length).trim() : source;
+    const sourceModes = [
+      { prefix: "clash-classic:", behavior: "classical", format: "yaml" },
+      { prefix: "clash-domain:", behavior: "domain", format: "yaml" },
+    ];
+    const mode = sourceModes.find((item) => source.startsWith(item.prefix));
+    const format = mode ? mode.format : "text";
+    const behavior = mode ? mode.behavior : "classical";
+    const url = mode ? source.slice(mode.prefix.length).trim() : source;
     if (!url) continue;
 
-    const providerKey = `${isClassic ? "yaml" : "text"}|${url}`;
+    const providerKey = `${behavior}|${format}|${url}`;
     let providerName = providerBySource.get(providerKey);
     if (!providerName) {
       const baseName = toSafeName(url);
@@ -273,10 +279,10 @@ function buildRulesAndProviders(rulesets) {
       providerBySource.set(providerKey, providerName);
       providers[providerName] = {
         type: "http",
-        behavior: "classical",
-        format: isClassic ? "yaml" : "text",
+        behavior,
+        format,
         interval: 86400,
-        path: `./ruleset/${providerName}.${isClassic ? "yaml" : "list"}`,
+        path: `./ruleset/${providerName}.${format === "yaml" ? "yaml" : "list"}`,
         url,
       };
     }
