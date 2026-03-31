@@ -5,7 +5,6 @@ mode: rule
 external-controller: :9090
 unified-delay: true  # 更换延迟计算方式，去除握手等额外延迟
 tcp-concurrent: true # 启用 TCP 并发连接。这允许 Clash 同时建立多个 TCP
-global-client-fingerprint: chrome # 设置全局客户端指纹为 Chrome，使 Clash 在建立连接时模拟 Chrome 浏览器的 TLS 指纹，增强隐私性和绕过某些网站的指纹检测
 
 dns:
   enable: true # 开启 DNS 配置
