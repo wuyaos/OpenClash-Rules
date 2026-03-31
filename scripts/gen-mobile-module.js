@@ -479,8 +479,6 @@ function buildMobileConfig(proxyGroups, providers, rules, proxyNameOverrides, ex
     proxies: [
       { name: "DNS_Hijack", type: "dns" },
       ...extraProxies,
-      { name: "🇨🇳 本地直连", type: "direct", udp: true },
-      { name: "⛔ 拒绝连接", type: "reject" },
     ],
     "proxy-groups": proxyGroups,
     "rule-providers": providers,
