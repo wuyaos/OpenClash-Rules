@@ -156,7 +156,13 @@ proxies:
     cipher: "aes-128-gcm"
     password: "please-change-me"
     udp: true
-
+  -
+    name: "🇨🇳 本地直连"
+    type: "direct"
+    udp: true
+  -
+    name: "⛔ 拒绝连接"
+    type: "reject"
 proxy-groups:
   -
     name: "🚀 节点选择"
@@ -719,6 +725,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/BanEasyPrivacy.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list"
+  awavenue_ads:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/awavenue_ads.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/awavenue-ads.list"
+  ddgksf_ads:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/ddgksf_ads.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ddgksf-ads.list"
   app_mutated:
     type: "http"
     behavior: "classical"
@@ -805,6 +825,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
 rules:
   - "DST-PORT,53,DNS_Hijack"
+  - "AND,((SRC-IP-CIDR,192.168.123.0/24),(IP-CIDR,192.168.123.0/24)),🎯 全球直连"
   - "RULE-SET,home_lan,🏠 回家"
   - "GEOIP,LAN,🎯 全球直连"
   - "RULE-SET,proxy_custom,🚀 节点选择"
@@ -832,6 +853,8 @@ rules:
   - "RULE-SET,BanEasyList,🛑 广告拦截"
   - "RULE-SET,BanEasyListChina,🛑 广告拦截"
   - "RULE-SET,BanEasyPrivacy,🛑 广告拦截"
+  - "RULE-SET,awavenue_ads,🛑 广告拦截"
+  - "RULE-SET,ddgksf_ads,🛑 广告拦截"
   - "RULE-SET,app_mutated,🎯 全球直连"
   - "RULE-SET,game_mutated,🎯 全球直连"
   - "RULE-SET,ProxyGFWlist,🚀 节点选择"
