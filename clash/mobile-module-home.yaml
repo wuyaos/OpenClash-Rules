@@ -805,7 +805,6 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
 rules:
   - "DST-PORT,53,DNS_Hijack"
-  - "AND,((SRC-IP-CIDR,192.168.123.0/24),(IP-CIDR,192.168.123.0/24)),🎯 全球直连"
   - "RULE-SET,home_lan,🏠 回家"
   - "GEOIP,LAN,🎯 全球直连"
   - "RULE-SET,proxy_custom,🚀 节点选择"
