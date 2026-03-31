@@ -20,18 +20,18 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Sync app/game mutated rules + adblock-reject
+      - name: Sync app/game mutated rules + adblock-reject + awavenue-ads + ddgksf-ads
         run: node scripts/sync-direct-android-ruleset.js
 
       - name: Commit changes
         run: |
-          if git diff --quiet -- rules/app-mutated.list rules/game-mutated.list rules/adblock-reject.list; then
+          if git diff --quiet -- rules/app-mutated.list rules/game-mutated.list rules/adblock-reject.list rules/awavenue-ads.list rules/ddgksf-ads.list; then
             echo "No changes."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add rules/app-mutated.list rules/game-mutated.list rules/adblock-reject.list
-          git commit -m "chore(rules): sync direct-android + adblock-reject lists"
+          git add rules/app-mutated.list rules/game-mutated.list rules/adblock-reject.list rules/awavenue-ads.list rules/ddgksf-ads.list
+          git commit -m "chore(rules): sync direct-android + adblock-reject + awavenue-ads + ddgksf-ads lists"
           git push

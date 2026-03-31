@@ -312,7 +312,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",
     "include-all": true,
     "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*$",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   },
@@ -322,7 +322,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png",
     "include-all": true,
     "filter": "^(?!.*((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev)))).*$",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   },
@@ -332,7 +332,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
     "include-all": true,
     "filter": "^(?!.*((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev)))).*$",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   },
@@ -342,7 +342,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
     "include-all": true,
     "filter": "^(?!.*(日本|JP|Japan|🇯🇵))(?!.*((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev)))).*$",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   },
@@ -352,7 +352,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png",
     "include-all": true,
     "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*🇭🇰(?!.*(?!🇨🇳)[🇦-🇿]{2})",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   },
@@ -362,7 +362,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png",
     "include-all": true,
     "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*🇹🇼(?!.*(?!🇨🇳)[🇦-🇿]{2})",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   },
@@ -372,7 +372,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
     "include-all": true,
     "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*(🇭🇰|🇹🇼|🇨🇳|🇲🇴)(?!.*[🇦-🇿]{2})",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   },
@@ -382,7 +382,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png",
     "include-all": true,
     "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*🇸🇬(?!.*[🇦-🇿]{2})",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   },
@@ -392,7 +392,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png",
     "include-all": true,
     "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*🇯🇵(?!.*[🇦-🇿]{2})",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   },
@@ -402,7 +402,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png",
     "include-all": true,
     "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*(🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2})",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   },
@@ -412,7 +412,7 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png",
     "include-all": true,
     "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev)))))(?!.*(🇨🇳|🇭🇰|🇲🇴|🇹🇼|🇸🇬|🇯🇵|🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2}))",
-    "url": "http://www.gstatic.com/generate_204",
+    "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
   }
@@ -578,30 +578,6 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "app_mutated": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/app-mutated.list",
-    "path": "./ruleset/app_mutated.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "game_mutated": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/game-mutated.list",
-    "path": "./ruleset/game_mutated.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "adblock_reject": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/adblock-reject.list",
-    "path": "./ruleset/adblock_reject.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
   "BanAD": {
     "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
     "path": "./ruleset/BanAD.list",
@@ -637,6 +613,38 @@ function main(config) {
   "BanEasyPrivacy": {
     "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list",
     "path": "./ruleset/BanEasyPrivacy.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "awavenue_ads": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/awavenue-ads.list",
+    "path": "./ruleset/awavenue_ads.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "ddgksf_ads": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ddgksf-ads.list",
+    "path": "./ruleset/ddgksf_ads.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "app_mutated": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/app-mutated.list",
+    "path": "./ruleset/app_mutated.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "game_mutated": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/game-mutated.list",
+    "path": "./ruleset/game_mutated.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -736,14 +744,15 @@ function main(config) {
   "RULE-SET,Microsoft,Ⓜ️ 微软服务",
   "RULE-SET,GoogleFCM,📢 谷歌FCM",
   "RULE-SET,android_block,🛑 广告拦截",
-  "RULE-SET,app_mutated,🎯 全球直连",
-  "RULE-SET,game_mutated,🎯 全球直连",
-  "RULE-SET,adblock_reject,🛑 广告拦截",
   "RULE-SET,BanAD,🛑 广告拦截",
   "RULE-SET,BanProgramAD,🛑 广告拦截",
   "RULE-SET,BanEasyList,🛑 广告拦截",
   "RULE-SET,BanEasyListChina,🛑 广告拦截",
   "RULE-SET,BanEasyPrivacy,🛑 广告拦截",
+  "RULE-SET,awavenue_ads,🛑 广告拦截",
+  "RULE-SET,ddgksf_ads,🛑 广告拦截",
+  "RULE-SET,app_mutated,🎯 全球直连",
+  "RULE-SET,game_mutated,🎯 全球直连",
   "RULE-SET,ProxyGFWlist,🚀 节点选择",
   "RULE-SET,applications,🎯 全球直连",
   "RULE-SET,UnBan,🎯 全球直连",

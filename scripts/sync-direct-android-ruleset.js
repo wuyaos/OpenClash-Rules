@@ -26,6 +26,21 @@ const SOURCES = [
     sourceLabel: "217heidai/adblockfilters",
     url: "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomolite.yaml",
     outFile: path.join(RULES_DIR, "adblock-reject.list"),
+    parser: "payload-yaml",
+  },
+  {
+    name: "awavenue-ads",
+    sourceLabel: "TG-Twilight/AWAvenue-Ads-Rule",
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list",
+    outFile: path.join(RULES_DIR, "awavenue-ads.list"),
+    parser: "qx-list",
+  },
+  {
+    name: "ddgksf-ads",
+    sourceLabel: "ddgksf2013/Profile/QuantumultX.conf(filter_remote reject)",
+    url: "https://ddgksf2013.top/Profile/QuantumultX.conf",
+    outFile: path.join(RULES_DIR, "ddgksf-ads.list"),
+    parser: "qx-conf-reject-merge",
   },
 ];
 
@@ -176,6 +191,92 @@ function normalizeEntries(sourceName, entries) {
   return out;
 }
 
+function parseQuantumultXList(listText) {
+  const lines = listText.replace(/\r/g, "").split("\n");
+  const out = [];
+  const seen = new Set();
+  const kindMap = new Map([
+    ["DOMAIN", "DOMAIN"],
+    ["HOST", "DOMAIN"],
+    ["DOMAIN-SUFFIX", "DOMAIN-SUFFIX"],
+    ["HOST-SUFFIX", "DOMAIN-SUFFIX"],
+    ["DOMAIN-KEYWORD", "DOMAIN-KEYWORD"],
+    ["HOST-KEYWORD", "DOMAIN-KEYWORD"],
+    ["IP-CIDR", "IP-CIDR"],
+    ["IP-CIDR6", "IP-CIDR6"],
+    ["IP6-CIDR", "IP-CIDR6"],
+  ]);
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line || line.startsWith("#") || line.startsWith(";") || line.startsWith("[")) continue;
+
+    const [kindRaw, valueRaw] = line.split(",");
+    const kind = (kindRaw || "").trim().toUpperCase();
+    const value = (valueRaw || "").trim();
+    const mappedKind = kindMap.get(kind);
+    if (!mappedKind || !value) continue;
+
+    const converted = `${mappedKind},${value}`;
+    if (seen.has(converted)) continue;
+    seen.add(converted);
+    out.push(converted);
+  }
+
+  return out;
+}
+
+function parseQxFilterRemoteRejectUrls(confText) {
+  const lines = confText.replace(/\r/g, "").split("\n");
+  const out = [];
+  const seen = new Set();
+  let inFilterRemote = false;
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line || line.startsWith("#") || line.startsWith(";")) continue;
+
+    if (/^\[.*\]$/.test(line)) {
+      inFilterRemote = line.toLowerCase() === "[filter_remote]";
+      continue;
+    }
+    if (!inFilterRemote) continue;
+
+    const parts = line.split(",").map((part) => part.trim()).filter(Boolean);
+    if (parts.length === 0) continue;
+    const url = parts[0];
+    if (!/^https?:\/\//i.test(url)) continue;
+
+    const attrs = {};
+    for (const item of parts.slice(1)) {
+      const idx = item.indexOf("=");
+      if (idx <= 0) continue;
+      const key = item.slice(0, idx).trim().toLowerCase();
+      const value = item.slice(idx + 1).trim();
+      attrs[key] = value;
+    }
+
+    const enabled = (attrs.enabled || "true").toLowerCase();
+    if (enabled === "false") continue;
+
+    const forcePolicy = (attrs["force-policy"] || "").toLowerCase();
+    if (!forcePolicy.includes("reject")) continue;
+
+    if (seen.has(url)) continue;
+    seen.add(url);
+    out.push(url);
+  }
+
+  return out;
+}
+
+function parseRuleTextAny(rawText) {
+  if (/(^|\n)\s*payload:\s*(\n|$)/.test(rawText)) {
+    return parsePayloadToList(rawText);
+  }
+  return parseQuantumultXList(rawText);
+}
+
 function buildListContent(sourceLabel, name, sourceUrl, entries) {
   const header = [
     `# Auto-synced from ${sourceLabel} (${name})`,
@@ -187,11 +288,32 @@ function buildListContent(sourceLabel, name, sourceUrl, entries) {
 }
 
 async function parseOne(source) {
-  const yamlText = await fetchTextWithRetry(source.url);
-  const rawEntries = parsePayloadToList(yamlText);
+  const sourceText = await fetchTextWithRetry(source.url);
+  const parser = source.parser || "payload-yaml";
+  let rawEntries = [];
+
+  if (parser === "qx-list") {
+    rawEntries = parseQuantumultXList(sourceText);
+  } else if (parser === "qx-conf-reject-merge") {
+    const rejectUrls = parseQxFilterRemoteRejectUrls(sourceText);
+    if (rejectUrls.length === 0) {
+      throw new Error(`No reject filter_remote URLs found in ${source.url}`);
+    }
+
+    for (const rejectUrl of rejectUrls) {
+      const ruleText = await fetchTextWithRetry(rejectUrl);
+      const parsedRules = parseRuleTextAny(ruleText);
+      for (const item of parsedRules) {
+        rawEntries.push(item);
+      }
+    }
+  } else {
+    rawEntries = parsePayloadToList(sourceText);
+  }
+
   const entries = normalizeEntries(source.name, rawEntries);
   if (entries.length === 0) {
-    throw new Error(`No payload entries parsed from ${source.url}`);
+    throw new Error(`No entries parsed from ${source.url}`);
   }
   return { source, entries };
 }
