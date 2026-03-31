@@ -156,13 +156,7 @@ proxies:
     cipher: "aes-128-gcm"
     password: "please-change-me"
     udp: true
-  -
-    name: "🇨🇳 本地直连"
-    type: "direct"
-    udp: true
-  -
-    name: "⛔ 拒绝连接"
-    type: "reject"
+
 proxy-groups:
   -
     name: "🚀 节点选择"

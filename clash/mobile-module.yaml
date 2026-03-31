@@ -148,13 +148,7 @@ proxies:
   -
     name: "DNS_Hijack"
     type: "dns"
-  -
-    name: "🇨🇳 本地直连"
-    type: "direct"
-    udp: true
-  -
-    name: "⛔ 拒绝连接"
-    type: "reject"
+
 proxy-groups:
   -
     name: "🚀 节点选择"
