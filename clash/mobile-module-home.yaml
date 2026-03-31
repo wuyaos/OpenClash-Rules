@@ -536,13 +536,41 @@ proxy-groups:
     interval: 600
     tolerance: 50
 rule-providers:
-  proxy_custom:
+  LocalAreaNetwork:
     type: "http"
     behavior: "classical"
     format: "text"
     interval: 86400
-    path: "./ruleset/proxy_custom.list"
-    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-custom.list"
+    path: "./ruleset/LocalAreaNetwork.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
+  ChinaIp:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/ChinaIp.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list"
+  ChinaCompanyIp:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/ChinaCompanyIp.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+  UnBan:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/UnBan.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
+  SteamCN:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/SteamCN.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
   pt:
     type: "http"
     behavior: "classical"
@@ -557,13 +585,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/direct_custom.list"
     url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/direct-custom.list"
-  BilibiliHMT:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/BilibiliHMT.list"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list"
   androidcn_allow:
     type: "http"
     behavior: "classical"
@@ -578,6 +599,27 @@ rule-providers:
     interval: 86400
     path: "./ruleset/home_lan.list"
     url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/home-lan.list"
+  proxy_custom:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/proxy_custom.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-custom.list"
+  ProxyGFWlist:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/ProxyGFWlist.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
+  BilibiliHMT:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/BilibiliHMT.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list"
   proxy_media:
     type: "http"
     behavior: "classical"
@@ -746,13 +788,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/game_mutated.list"
     url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/game-mutated.list"
-  ProxyGFWlist:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/ProxyGFWlist.list"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
   applications:
     type: "http"
     behavior: "classical"
@@ -760,20 +795,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/applications.list"
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
-  LocalAreaNetwork:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/LocalAreaNetwork.list"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
-  UnBan:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/UnBan.list"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
   GoogleCN:
     type: "http"
     behavior: "classical"
@@ -781,20 +802,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/GoogleCN.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list"
-  SteamCN:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/SteamCN.list"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
-  ChinaIp:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/ChinaIp.list"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list"
   ChinaDomain:
     type: "http"
     behavior: "classical"
@@ -802,13 +809,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/ChinaDomain.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
-  ChinaCompanyIp:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/ChinaCompanyIp.list"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
   Download:
     type: "http"
     behavior: "classical"
@@ -818,14 +818,19 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
 rules:
   - "DST-PORT,53,DNS_Hijack"
-  - "AND,((SRC-IP-CIDR,192.168.123.0/24),(IP-CIDR,192.168.123.0/24)),🎯 全球直连"
-  - "RULE-SET,home_lan,🏠 回家"
+  - "RULE-SET,home_lan,🏠 回家,no-resolve"
   - "GEOIP,LAN,🎯 全球直连"
-  - "RULE-SET,proxy_custom,🚀 节点选择"
+  - "RULE-SET,LocalAreaNetwork,🎯 全球直连,no-resolve"
+  - "RULE-SET,ChinaIp,🎯 全球直连,no-resolve"
+  - "RULE-SET,ChinaCompanyIp,🎯 全球直连,no-resolve"
+  - "RULE-SET,UnBan,🎯 全球直连"
+  - "RULE-SET,SteamCN,🎯 全球直连"
   - "RULE-SET,pt,🎯 全球直连"
   - "RULE-SET,direct_custom,🎯 全球直连"
-  - "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台"
   - "RULE-SET,androidcn_allow,🎯 全球直连"
+  - "RULE-SET,proxy_custom,🚀 节点选择"
+  - "RULE-SET,ProxyGFWlist,🚀 节点选择"
+  - "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台"
   - "RULE-SET,proxy_media,🌍 国外媒体"
   - "RULE-SET,scraper_nojp,🕸 刮削"
   - "RULE-SET,scraper_jp,🕸 刮削🇯🇵"
@@ -850,15 +855,9 @@ rules:
   - "RULE-SET,ddgksf_ads,🛑 广告拦截"
   - "RULE-SET,app_mutated,🎯 全球直连"
   - "RULE-SET,game_mutated,🎯 全球直连"
-  - "RULE-SET,ProxyGFWlist,🚀 节点选择"
   - "RULE-SET,applications,🎯 全球直连"
-  - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
-  - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,GoogleCN,🎯 全球直连"
-  - "RULE-SET,SteamCN,🎯 全球直连"
-  - "RULE-SET,ChinaIp,🎯 全球直连"
   - "RULE-SET,ChinaDomain,🎯 全球直连"
-  - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
   - "RULE-SET,Download,🎯 全球直连"
   - "GEOIP,CN,🎯 全球直连"
   - "MATCH,🐟 Final兜底"
