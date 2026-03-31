@@ -23,8 +23,8 @@ const SOURCES = [
   },
   {
     name: "adblock-reject",
-    sourceLabel: "REIJI007/AdBlock_Rule_For_Clash",
-    url: "https://raw.githubusercontent.com/REIJI007/AdBlock_Rule_For_Clash/main/adblock_reject.yaml",
+    sourceLabel: "217heidai/adblockfilters",
+    url: "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomolite.yaml",
     outFile: path.join(RULES_DIR, "adblock-reject.list"),
   },
 ];
@@ -147,6 +147,35 @@ function parsePayloadToList(yamlText) {
   return out;
 }
 
+function normalizeEntryBySource(sourceName, entry) {
+  if (sourceName !== "adblock-reject") return entry;
+
+  const text = entry.trim();
+  if (!text) return "";
+
+  // adblockmihomolite payload uses "+.domain" style; convert to mihomo classical list.
+  if (text.startsWith("+.")) {
+    const domain = text.slice(2).trim();
+    return domain ? `DOMAIN-SUFFIX,${domain}` : "";
+  }
+
+  return text;
+}
+
+function normalizeEntries(sourceName, entries) {
+  const out = [];
+  const seen = new Set();
+
+  for (const entry of entries) {
+    const normalized = normalizeEntryBySource(sourceName, entry);
+    if (!normalized || seen.has(normalized)) continue;
+    seen.add(normalized);
+    out.push(normalized);
+  }
+
+  return out;
+}
+
 function buildListContent(sourceLabel, name, sourceUrl, entries) {
   const header = [
     `# Auto-synced from ${sourceLabel} (${name})`,
@@ -159,7 +188,8 @@ function buildListContent(sourceLabel, name, sourceUrl, entries) {
 
 async function parseOne(source) {
   const yamlText = await fetchTextWithRetry(source.url);
-  const entries = parsePayloadToList(yamlText);
+  const rawEntries = parsePayloadToList(yamlText);
+  const entries = normalizeEntries(source.name, rawEntries);
   if (entries.length === 0) {
     throw new Error(`No payload entries parsed from ${source.url}`);
   }
