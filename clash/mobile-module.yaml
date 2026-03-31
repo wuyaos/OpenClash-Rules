@@ -117,6 +117,7 @@ dns:
   use-hosts: true
   use-system-hosts: true
   respect-rules: true
+  cache-algorithm: "arc"
   default-nameserver:
     - "tls://223.5.5.5"
     - "tls://223.6.6.6"
@@ -422,7 +423,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
     include-all: true
     include-all-providers: true
-    filter: ".*"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:.*)"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -432,7 +433,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png"
     include-all: true
     include-all-providers: true
-    filter: ".*"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:.*)"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -442,7 +443,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
     include-all: true
     include-all-providers: true
-    filter: ".*"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:.*)"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -452,7 +453,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
     include-all: true
     include-all-providers: true
-    filter: "(?!.*(日本|JP|Japan|🇯🇵)).*"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:(?!.*(日本|JP|Japan|🇯🇵)).*)"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -462,7 +463,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
     include-all: true
     include-all-providers: true
-    filter: "🇭🇰(?!.*(?!🇨🇳)[🇦-🇿]{2})"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:🇭🇰(?!.*(?!🇨🇳)[🇦-🇿]{2}))"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -472,7 +473,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"
     include-all: true
     include-all-providers: true
-    filter: "🇹🇼(?!.*(?!🇨🇳)[🇦-🇿]{2})"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:🇹🇼(?!.*(?!🇨🇳)[🇦-🇿]{2}))"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -482,7 +483,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"
     include-all: true
     include-all-providers: true
-    filter: "(🇭🇰|🇹🇼|🇨🇳|🇲🇴)(?!.*[🇦-🇿]{2})"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:(🇭🇰|🇹🇼|🇨🇳|🇲🇴)(?!.*[🇦-🇿]{2}))"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -492,7 +493,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png"
     include-all: true
     include-all-providers: true
-    filter: "🇸🇬(?!.*[🇦-🇿]{2})"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:🇸🇬(?!.*[🇦-🇿]{2}))"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -502,7 +503,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
     include-all: true
     include-all-providers: true
-    filter: "🇯🇵(?!.*[🇦-🇿]{2})"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:🇯🇵(?!.*[🇦-🇿]{2}))"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -512,7 +513,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"
     include-all: true
     include-all-providers: true
-    filter: "(🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2})"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:(🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2}))"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -522,7 +523,7 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"
     include-all: true
     include-all-providers: true
-    filter: "^(?!.*(🇨🇳|🇭🇰|🇲🇴|🇹🇼|🇸🇬|🇯🇵|🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2}))"
+    filter: "^(?!.*(?:DNS_Hijack|(?:((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))))(?:(?!.*(🇨🇳|🇭🇰|🇲🇴|🇹🇼|🇸🇬|🇯🇵|🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2})))"
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 50
@@ -534,13 +535,13 @@ rule-providers:
     interval: 86400
     path: "./ruleset/proxy_custom.list"
     url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-custom.list"
-  PT:
+  pt:
     type: "http"
     behavior: "classical"
     format: "text"
     interval: 86400
-    path: "./ruleset/PT.list"
-    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/PT.list"
+    path: "./ruleset/pt.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/pt.list"
   direct_custom:
     type: "http"
     behavior: "classical"
@@ -555,20 +556,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/BilibiliHMT.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list"
-  android_adguard_cn_allow:
+  androidcn_allow:
     type: "http"
     behavior: "classical"
     format: "text"
     interval: 86400
-    path: "./ruleset/android_adguard_cn_allow.list"
-    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/android-adguard-cn-allow.list"
-  ProxyMedia:
+    path: "./ruleset/androidcn_allow.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/androidcn-allow.list"
+  proxy_media:
     type: "http"
     behavior: "classical"
     format: "text"
     interval: 86400
-    path: "./ruleset/ProxyMedia.list"
-    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ProxyMedia.list"
+    path: "./ruleset/proxy_media.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-media.list"
   scraper_nojp:
     type: "http"
     behavior: "classical"
@@ -590,13 +591,13 @@ rule-providers:
     interval: 86400
     path: "./ruleset/DMM.yaml"
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DMM/DMM.yaml"
-  AI:
+  ai:
     type: "http"
     behavior: "classical"
     format: "text"
     interval: 86400
-    path: "./ruleset/AI.list"
-    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/AI.list"
+    path: "./ruleset/ai.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ai.list"
   OpenAI:
     type: "http"
     behavior: "classical"
@@ -617,7 +618,7 @@ rule-providers:
     format: "text"
     interval: 86400
     path: "./ruleset/quest3.list"
-    url: "https://raw.githubusercontent.com/Nowat995/emby/main/quest3.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/quest3.list"
   Telegram:
     type: "http"
     behavior: "classical"
@@ -646,13 +647,13 @@ rule-providers:
     interval: 86400
     path: "./ruleset/GoogleFCM.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list"
-  android_adguard_block:
+  android_block:
     type: "http"
     behavior: "classical"
     format: "text"
     interval: 86400
-    path: "./ruleset/android_adguard_block.list"
-    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/android-adguard-block.list"
+    path: "./ruleset/android_block.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/android-block.list"
   clash_meta:
     type: "http"
     behavior: "domain"
@@ -663,10 +664,10 @@ rule-providers:
   adblock_reject:
     type: "http"
     behavior: "classical"
-    format: "yaml"
+    format: "text"
     interval: 86400
-    path: "./ruleset/adblock_reject.yaml"
-    url: "https://raw.githubusercontent.com/REIJI007/AdBlock_Rule_For_Clash/main/adblock_reject.yaml"
+    path: "./ruleset/adblock_reject.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/adblock-reject.list"
   BanAD:
     type: "http"
     behavior: "classical"
@@ -702,20 +703,20 @@ rule-providers:
     interval: 86400
     path: "./ruleset/BanEasyPrivacy.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list"
-  APP_mutated:
+  app_mutated:
     type: "http"
     behavior: "classical"
-    format: "yaml"
+    format: "text"
     interval: 86400
-    path: "./ruleset/APP_mutated.yaml"
-    url: "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/APP.mutated.yaml"
-  GAME_mutated:
+    path: "./ruleset/app_mutated.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/app-mutated.list"
+  game_mutated:
     type: "http"
     behavior: "classical"
-    format: "yaml"
+    format: "text"
     interval: 86400
-    path: "./ruleset/GAME_mutated.yaml"
-    url: "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/GAME.mutated.yaml"
+    path: "./ruleset/game_mutated.list"
+    url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/game-mutated.list"
   ProxyGFWlist:
     type: "http"
     behavior: "classical"
@@ -790,16 +791,16 @@ rules:
   - "DST-PORT,53,DNS_Hijack"
   - "GEOIP,LAN,🎯 全球直连"
   - "RULE-SET,proxy_custom,🚀 节点选择"
-  - "RULE-SET,PT,🎯 全球直连"
+  - "RULE-SET,pt,🎯 全球直连"
   - "RULE-SET,direct_custom,🎯 全球直连"
   - "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台"
-  - "RULE-SET,android_adguard_cn_allow,🎯 全球直连"
+  - "RULE-SET,androidcn_allow,🎯 全球直连"
   - "AND,((SRC-IP-CIDR,192.168.123.0/24),(IP-CIDR,192.168.123.0/24)),🎯 全球直连"
-  - "RULE-SET,ProxyMedia,🌍 国外媒体"
+  - "RULE-SET,proxy_media,🌍 国外媒体"
   - "RULE-SET,scraper_nojp,🕸 刮削"
   - "RULE-SET,scraper_jp,🕸 刮削🇯🇵"
   - "RULE-SET,DMM,🕸 刮削🇯🇵"
-  - "RULE-SET,AI,🤖 AI"
+  - "RULE-SET,ai,🤖 AI"
   - "RULE-SET,OpenAI,🤖 AI"
   - "RULE-SET,GitHub,👨‍💻 GitHub"
   - "RULE-SET,quest3,ᯅ QUEST"
@@ -807,7 +808,7 @@ rules:
   - "RULE-SET,OneDrive,Ⓜ️ 微软云盘"
   - "RULE-SET,Microsoft,Ⓜ️ 微软服务"
   - "RULE-SET,GoogleFCM,📢 谷歌FCM"
-  - "RULE-SET,android_adguard_block,🛑 广告拦截"
+  - "RULE-SET,android_block,🛑 广告拦截"
   - "RULE-SET,clash_meta,🛑 广告拦截"
   - "RULE-SET,adblock_reject,🛑 广告拦截"
   - "RULE-SET,BanAD,🛑 广告拦截"
@@ -815,8 +816,8 @@ rules:
   - "RULE-SET,BanEasyList,🛑 广告拦截"
   - "RULE-SET,BanEasyListChina,🛑 广告拦截"
   - "RULE-SET,BanEasyPrivacy,🛑 广告拦截"
-  - "RULE-SET,APP_mutated,🎯 全球直连"
-  - "RULE-SET,GAME_mutated,🎯 全球直连"
+  - "RULE-SET,app_mutated,🎯 全球直连"
+  - "RULE-SET,game_mutated,🎯 全球直连"
   - "RULE-SET,ProxyGFWlist,🚀 节点选择"
   - "RULE-SET,applications,🎯 全球直连"
   - "RULE-SET,LocalAreaNetwork,🎯 全球直连"

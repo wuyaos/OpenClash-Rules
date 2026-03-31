@@ -101,6 +101,7 @@ function parseIni(iniText) {
   const groups = [];
   let addEmoji = false;
   let removeOldEmoji = false;
+  let excludeRemarksPattern = "";
   const emojiRules = [];
 
   for (const rawLine of lines) {
@@ -131,6 +132,11 @@ function parseIni(iniText) {
       continue;
     }
 
+    if (line.startsWith("exclude_remarks=")) {
+      excludeRemarksPattern = line.slice("exclude_remarks=".length).trim();
+      continue;
+    }
+
     if (line.startsWith("ruleset=")) {
       const body = line.slice("ruleset=".length);
       const idx = body.indexOf(",");
@@ -156,7 +162,7 @@ function parseIni(iniText) {
     }
   }
 
-  return { rulesets, groups, addEmoji, removeOldEmoji, emojiRules };
+  return { rulesets, groups, addEmoji, removeOldEmoji, excludeRemarksPattern, emojiRules };
 }
 
 function buildProxyNameOverrides(addEmoji, removeOldEmoji, emojiRules) {
@@ -179,13 +185,32 @@ function buildProxyNameOverrides(addEmoji, removeOldEmoji, emojiRules) {
   return rules;
 }
 
-function buildProxyGroup(groupSpec) {
+function buildExcludeGuardPattern(excludeRemarksPattern) {
+  const excludes = ["DNS_Hijack"];
+  if (excludeRemarksPattern) {
+    excludes.push(`(?:${excludeRemarksPattern})`);
+  }
+  return `^(?!.*(?:${excludes.join("|")}))`;
+}
+
+function applyExcludeGuard(baseFilter, excludeGuardPattern) {
+  if (!excludeGuardPattern) return baseFilter;
+  const wrappedBase =
+    baseFilter && baseFilter.trim()
+      ? baseFilter.trim().replace(/^[\u200B-\u200D\uFEFF\s]*/, "").replace(/^\^+/, "")
+      : ".*";
+  return `${excludeGuardPattern}(?:${wrappedBase})`;
+}
+
+function buildProxyGroup(groupSpec, excludeRemarksPattern) {
   const { name, type, tokens } = groupSpec;
   const staticProxies = [];
   const regexTokens = [];
   let testUrl = "";
   let interval = 300;
   let tolerance = 50;
+  const isManualGroup = name.includes("手动选择");
+  const excludeGuardPattern = isManualGroup ? "" : buildExcludeGuardPattern(excludeRemarksPattern);
 
   for (const token of tokens) {
     if (token.startsWith("[]")) {
@@ -217,7 +242,10 @@ function buildProxyGroup(groupSpec) {
   if (latencyTypes.has(type)) {
     group["include-all"] = true;
     group["include-all-providers"] = true;
-    if (filterExpr) group.filter = filterExpr;
+    const effectiveFilter = isManualGroup
+      ? filterExpr
+      : applyExcludeGuard(filterExpr, excludeGuardPattern);
+    if (effectiveFilter) group.filter = effectiveFilter;
     group.url = testUrl || DEFAULT_TEST_URL;
     group.interval = interval;
     group.tolerance = tolerance;
@@ -227,7 +255,9 @@ function buildProxyGroup(groupSpec) {
     if (uniqueStatic.length === 0) {
       group["include-all"] = true;
       group["include-all-providers"] = true;
-      group.filter = filterExpr;
+      group.filter = isManualGroup
+        ? filterExpr
+        : applyExcludeGuard(filterExpr, excludeGuardPattern);
     }
   }
 
@@ -412,6 +442,7 @@ function buildMobileConfig(proxyGroups, providers, rules, proxyNameOverrides, ex
       "use-hosts": true,
       "use-system-hosts": true,
       "respect-rules": true,
+      "cache-algorithm": "arc",
       // Bootstrap resolvers (IP-based), expanded with public CN DNS.
       "default-nameserver": [
         "tls://223.5.5.5",
@@ -511,7 +542,9 @@ function main() {
 
   const buildVariant = (withHome) => {
     const rulesets = parsed.rulesets.filter((item) => withHome || item.target !== HOME_GROUP_NAME);
-    const groups = parsed.groups.filter((item) => withHome || item.name !== HOME_GROUP_NAME).map(buildProxyGroup);
+    const groups = parsed.groups
+      .filter((item) => withHome || item.name !== HOME_GROUP_NAME)
+      .map((item) => buildProxyGroup(item, parsed.excludeRemarksPattern));
 
     if (withHome) {
       for (const group of groups) {
