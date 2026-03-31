@@ -14,6 +14,7 @@ dns:
   use-hosts: true # 读取 hosts
   use-system-hosts: true # 读取系统 hosts
   ipv6: true # IPv6 解析开关
+  cache-algorithm: arc
   respect-rules: true      #让连接DNS服务器时能够遵循规则，也就是通过代理节点连接到上面设置的国外DNS，因为直连可能连接不上
   default-nameserver: # 基础 DNS，必须为 IP 形式
     - tls://223.5.5.5

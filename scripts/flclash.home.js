@@ -46,7 +46,7 @@ function main(config) {
       "DIRECT"
     ],
     "include-all": true,
-    "filter": "(?i)Home"
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*(?i)Home"
   },
   {
     "name": "ᯅ QUEST",
@@ -58,7 +58,7 @@ function main(config) {
       "🥈 手动选择2"
     ],
     "include-all": true,
-    "filter": ".*"
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*$"
   },
   {
     "name": "Ⓜ️ 微软云盘",
@@ -143,7 +143,7 @@ function main(config) {
       "🇯🇵 日本自动"
     ],
     "include-all": true,
-    "filter": "🇯🇵(?!.*[🇦-🇿]{2})"
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*🇯🇵(?!.*[🇦-🇿]{2})"
   },
   {
     "name": "📲 电报消息",
@@ -188,9 +188,8 @@ function main(config) {
     ]
   },
   {
-    "name": "🤖 GPT",
+    "name": "🤖 AI",
     "type": "select",
-    "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png",
     "proxies": [
       "🇺🇲 ‍美国自动",
       "🚀 节点选择",
@@ -312,9 +311,9 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",
     "include-all": true,
-    "filter": ".*",
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*$",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   },
   {
@@ -322,9 +321,9 @@ function main(config) {
     "type": "fallback",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png",
     "include-all": true,
-    "filter": ".*",
+    "filter": "^(?!.*((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev)))).*$",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   },
   {
@@ -332,9 +331,9 @@ function main(config) {
     "type": "load-balance",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
     "include-all": true,
-    "filter": ".*",
+    "filter": "^(?!.*((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev)))).*$",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   },
   {
@@ -342,9 +341,9 @@ function main(config) {
     "type": "load-balance",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
     "include-all": true,
-    "filter": "(?!.*(日本|JP|Japan|🇯🇵)).*",
+    "filter": "^(?!.*(日本|JP|Japan|🇯🇵))(?!.*((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev)))).*$",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   },
   {
@@ -352,18 +351,19 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png",
     "include-all": true,
-    "filter": "🇭🇰(?!.*(?!🇨🇳)[🇦-🇿]{2})",
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*🇭🇰(?!.*(?!🇨🇳)[🇦-🇿]{2})",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   },
   {
     "name": "🇹🇼 台湾自动",
     "type": "url-test",
+    "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png",
     "include-all": true,
-    "filter": "🇹🇼(?!.*(?!🇨🇳)[🇦-🇿]{2})",
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*🇹🇼(?!.*(?!🇨🇳)[🇦-🇿]{2})",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   },
   {
@@ -371,9 +371,9 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
     "include-all": true,
-    "filter": "(🇭🇰|🇹🇼|🇨🇳|🇲🇴)(?!.*[🇦-🇿]{2})",
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*(🇭🇰|🇹🇼|🇨🇳|🇲🇴)(?!.*[🇦-🇿]{2})",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   },
   {
@@ -381,9 +381,9 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png",
     "include-all": true,
-    "filter": "🇸🇬(?!.*[🇦-🇿]{2})",
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*🇸🇬(?!.*[🇦-🇿]{2})",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   },
   {
@@ -391,9 +391,9 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png",
     "include-all": true,
-    "filter": "🇯🇵(?!.*[🇦-🇿]{2})",
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*🇯🇵(?!.*[🇦-🇿]{2})",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   },
   {
@@ -401,9 +401,9 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png",
     "include-all": true,
-    "filter": "(🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2})",
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev))))).*(🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2})",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   },
   {
@@ -411,13 +411,21 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png",
     "include-all": true,
-    "filter": "^(?!.*(🇨🇳|🇭🇰|🇲🇴|🇹🇼|🇸🇬|🇯🇵|🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2}))",
+    "filter": "^(?!.*(((?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev)))))(?!.*(🇨🇳|🇭🇰|🇲🇴|🇹🇼|🇸🇬|🇯🇵|🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2}))",
     "url": "http://www.gstatic.com/generate_204",
-    "interval": 300,
+    "interval": 600,
     "tolerance": 50
   }
 ];
   const generatedRuleProviders = {
+  "LocalAreaNetwork": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
+    "path": "./ruleset/LocalAreaNetwork.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
   "home_lan": {
     "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/home-lan.list",
     "path": "./ruleset/home_lan.list",
@@ -434,9 +442,9 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "PT": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/PT.list",
-    "path": "./ruleset/PT.list",
+  "pt": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/pt.list",
+    "path": "./ruleset/pt.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -450,9 +458,25 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "ProxyMedia": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ProxyMedia.list",
-    "path": "./ruleset/ProxyMedia.list",
+  "BilibiliHMT": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list",
+    "path": "./ruleset/BilibiliHMT.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "androidcn_allow": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/androidcn-allow.list",
+    "path": "./ruleset/androidcn_allow.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "proxy_media": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-media.list",
+    "path": "./ruleset/proxy_media.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -482,44 +506,20 @@ function main(config) {
     "format": "yaml",
     "type": "http"
   },
-  "AI": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/AI.list",
-    "path": "./ruleset/AI.list",
+  "ai": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ai.list",
+    "path": "./ruleset/ai.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
     "type": "http"
   },
-  "BilibiliHMT": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list",
-    "path": "./ruleset/BilibiliHMT.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "Emby": {
-    "url": "https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Emby.yaml",
-    "path": "./ruleset/Emby.yaml",
+  "OpenAI": {
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml",
+    "path": "./ruleset/OpenAI.yaml",
     "behavior": "classical",
     "interval": 86400,
     "format": "yaml",
-    "type": "http"
-  },
-  "Emby_2": {
-    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.yaml",
-    "path": "./ruleset/Emby_2.yaml",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "yaml",
-    "type": "http"
-  },
-  "AddEmbyList": {
-    "url": "https://raw.githubusercontent.com/Nowat995/emby/main/AddEmbyList.list",
-    "path": "./ruleset/AddEmbyList.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
     "type": "http"
   },
   "GitHub": {
@@ -536,14 +536,6 @@ function main(config) {
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
-    "type": "http"
-  },
-  "OpenAI": {
-    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml",
-    "path": "./ruleset/OpenAI.yaml",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "yaml",
     "type": "http"
   },
   "Telegram": {
@@ -578,6 +570,38 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
+  "android_block": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/android-block.list",
+    "path": "./ruleset/android_block.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "app_mutated": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/app-mutated.list",
+    "path": "./ruleset/app_mutated.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "game_mutated": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/game-mutated.list",
+    "path": "./ruleset/game_mutated.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "adblock_reject": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/adblock-reject.list",
+    "path": "./ruleset/adblock_reject.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
   "BanAD": {
     "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
     "path": "./ruleset/BanAD.list",
@@ -594,6 +618,30 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
+  "BanEasyList": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list",
+    "path": "./ruleset/BanEasyList.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "BanEasyListChina": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list",
+    "path": "./ruleset/BanEasyListChina.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "BanEasyPrivacy": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list",
+    "path": "./ruleset/BanEasyPrivacy.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
   "ProxyGFWlist": {
     "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
     "path": "./ruleset/ProxyGFWlist.list",
@@ -605,14 +653,6 @@ function main(config) {
   "applications": {
     "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt",
     "path": "./ruleset/applications.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "LocalAreaNetwork": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
-    "path": "./ruleset/LocalAreaNetwork.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -676,31 +716,36 @@ function main(config) {
   }
 };
   const generatedRules = [
+  "RULE-SET,LocalAreaNetwork,🎯 全球直连",
   "RULE-SET,home_lan,🏠 回家",
   "RULE-SET,proxy_custom,🚀 节点选择",
-  "RULE-SET,PT,🎯 全球直连",
+  "RULE-SET,pt,🎯 全球直连",
   "RULE-SET,direct_custom,🎯 全球直连",
-  "RULE-SET,ProxyMedia,🌍 国外媒体",
+  "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台",
+  "RULE-SET,androidcn_allow,🎯 全球直连",
+  "RULE-SET,proxy_media,🌍 国外媒体",
   "RULE-SET,scraper_nojp,🕸 刮削",
   "RULE-SET,scraper_jp,🕸 刮削🇯🇵",
   "RULE-SET,DMM,🕸 刮削🇯🇵",
-  "RULE-SET,AI,🤖 GPT",
-  "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台",
-  "RULE-SET,Emby,🎬 EMBY",
-  "RULE-SET,Emby_2,🎬 EMBY",
-  "RULE-SET,AddEmbyList,🎬 EMBY",
+  "RULE-SET,ai,🤖 AI",
+  "RULE-SET,OpenAI,🤖 AI",
   "RULE-SET,GitHub,👨‍💻 GitHub",
   "RULE-SET,quest3,ᯅ QUEST",
-  "RULE-SET,OpenAI,🤖 GPT",
   "RULE-SET,Telegram,📲 电报消息",
   "RULE-SET,OneDrive,Ⓜ️ 微软云盘",
   "RULE-SET,Microsoft,Ⓜ️ 微软服务",
   "RULE-SET,GoogleFCM,📢 谷歌FCM",
+  "RULE-SET,android_block,🛑 广告拦截",
+  "RULE-SET,app_mutated,🎯 全球直连",
+  "RULE-SET,game_mutated,🎯 全球直连",
+  "RULE-SET,adblock_reject,🛑 广告拦截",
   "RULE-SET,BanAD,🛑 广告拦截",
   "RULE-SET,BanProgramAD,🛑 广告拦截",
+  "RULE-SET,BanEasyList,🛑 广告拦截",
+  "RULE-SET,BanEasyListChina,🛑 广告拦截",
+  "RULE-SET,BanEasyPrivacy,🛑 广告拦截",
   "RULE-SET,ProxyGFWlist,🚀 节点选择",
   "RULE-SET,applications,🎯 全球直连",
-  "RULE-SET,LocalAreaNetwork,🎯 全球直连",
   "RULE-SET,UnBan,🎯 全球直连",
   "RULE-SET,GoogleCN,🎯 全球直连",
   "RULE-SET,SteamCN,🎯 全球直连",
@@ -708,7 +753,6 @@ function main(config) {
   "RULE-SET,ChinaDomain,🎯 全球直连",
   "RULE-SET,ChinaCompanyIp,🎯 全球直连",
   "RULE-SET,Download,🎯 全球直连",
-  "GEOIP,LAN,🎯 全球直连",
   "GEOIP,CN,🎯 全球直连",
   "MATCH,🐟 Final兜底"
 ];

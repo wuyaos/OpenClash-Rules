@@ -10,22 +10,22 @@ const RULES_DIR = path.join(ROOT, "rules");
 
 const SOURCES = [
   {
-    name: "APP.mutated",
+    name: "app-mutated",
     sourceLabel: "mnixry/direct-android-ruleset",
     url: "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/APP.mutated.yaml",
-    outFile: path.join(RULES_DIR, "APP.mutated.list"),
+    outFile: path.join(RULES_DIR, "app-mutated.list"),
   },
   {
-    name: "GAME.mutated",
+    name: "game-mutated",
     sourceLabel: "mnixry/direct-android-ruleset",
     url: "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/GAME.mutated.yaml",
-    outFile: path.join(RULES_DIR, "GAME.mutated.list"),
+    outFile: path.join(RULES_DIR, "game-mutated.list"),
   },
   {
-    name: "adblock_reject",
+    name: "adblock-reject",
     sourceLabel: "REIJI007/AdBlock_Rule_For_Clash",
     url: "https://raw.githubusercontent.com/REIJI007/AdBlock_Rule_For_Clash/main/adblock_reject.yaml",
-    outFile: path.join(RULES_DIR, "adblock_reject.list"),
+    outFile: path.join(RULES_DIR, "adblock-reject.list"),
   },
 ];
 
