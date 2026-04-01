@@ -175,10 +175,11 @@ function buildProxyNameOverrides(addEmoji, removeOldEmoji, emojiRules) {
   }
 
   if (addEmoji) {
+    const multiMatchEmojis = new Set(["ℹ", "ℹ️"]);
     const pickedEmoji = new Set();
     for (const { pattern, emoji } of emojiRules) {
       if (!CORE_REGION_EMOJIS.has(emoji)) continue;
-      if (pickedEmoji.has(emoji)) continue;
+      if (!multiMatchEmojis.has(emoji) && pickedEmoji.has(emoji)) continue;
       pickedEmoji.add(emoji);
       rules.push({ pattern, target: `${emoji} $0` });
     }
