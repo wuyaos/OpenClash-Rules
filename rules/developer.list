@@ -1,0 +1,89 @@
+# Developer 开发者常用国外网站、镜像和论坛
+
+# Code Hosting / SCM
+DOMAIN-SUFFIX,bitbucket.org
+DOMAIN-SUFFIX,gitlab.com
+DOMAIN-SUFFIX,gitlab.io
+DOMAIN-SUFFIX,sourceforge.net
+DOMAIN-SUFFIX,sourcegraph.com
+
+# Package Registries
+DOMAIN-SUFFIX,crates.io
+DOMAIN-SUFFIX,npmjs.com
+DOMAIN-SUFFIX,npmjs.org
+DOMAIN-SUFFIX,nuget.org
+DOMAIN-SUFFIX,packagist.org
+DOMAIN-SUFFIX,pypi.org
+DOMAIN-SUFFIX,pythonhosted.org
+DOMAIN-SUFFIX,rubygems.org
+DOMAIN-SUFFIX,repo.maven.apache.org
+DOMAIN-SUFFIX,mvnrepository.com
+DOMAIN-SUFFIX,jitpack.io
+DOMAIN-SUFFIX,registry.npmjs.org
+
+# Container / Image
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,dockerhub.com
+DOMAIN-SUFFIX,gcr.io
+DOMAIN-SUFFIX,ghcr.io
+DOMAIN-SUFFIX,quay.io
+DOMAIN,d1q6f0aelx0por.cloudfront.net
+DOMAIN,d2wy8f7a9ursnm.cloudfront.net
+DOMAIN,d36jcksde1wxzq.cloudfront.net
+DOMAIN-SUFFIX,compose-spec.io
+
+# Docs / Standards
+DOMAIN-SUFFIX,apache.org
+DOMAIN-SUFFIX,developer.mozilla.org
+DOMAIN-SUFFIX,jetbrains.com
+DOMAIN-SUFFIX,mozilla.org
+DOMAIN-SUFFIX,readthedocs.io
+DOMAIN-SUFFIX,w3.org
+
+# Mirrors / Linux Ecosystem
+DOMAIN-SUFFIX,debian.org
+DOMAIN-SUFFIX,gnu.org
+DOMAIN-SUFFIX,kernel.org
+DOMAIN-SUFFIX,ubuntu.com
+
+# Code Source
+DOMAIN-SUFFIX,artifacts.bitwarden.com
+DOMAIN-SUFFIX,sub.xeton.dev
+DOMAIN-SUFFIX,www.python.org
+DOMAIN-SUFFIX,cdn.kernel.org
+DOMAIN-SUFFIX,sourceware.org
+DOMAIN-SUFFIX,ftpmirror.gnu.org
+DOMAIN-SUFFIX,mirror.lyrahosting.com
+DOMAIN-SUFFIX,ftp.nluug.nl
+DOMAIN-SUFFIX,ftp.wayne.edu
+DOMAIN-SUFFIX,mirror.cyberbits.eu
+DOMAIN-SUFFIX,static.rust-lang.org
+DOMAIN-SUFFIX,cache.ruby-lang.org
+DOMAIN-SUFFIX,git.codelinaro.org
+DOMAIN-SUFFIX,mirror.csclub.uwaterloo.ca
+DOMAIN-SUFFIX,mirror.netcologne.de
+DOMAIN-SUFFIX,www.busybox.net
+DOMAIN-SUFFIX,repo.jellyfin.org
+DOMAIN-SUFFIX,sgp1.mirror.jellyfin.org
+DOMAIN-SUFFIX,deb.debian.org
+
+# Community / Forums
+DOMAIN,news.ycombinator.com
+DOMAIN-SUFFIX,askubuntu.com
+DOMAIN-SUFFIX,dev.to
+DOMAIN-SUFFIX,lobste.rs
+DOMAIN-SUFFIX,medium.com
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,serverfault.com
+DOMAIN-SUFFIX,stackexchange.com
+DOMAIN-SUFFIX,stackoverflow.com
+DOMAIN-SUFFIX,superuser.com
+
+# Discord
+DOMAIN-SUFFIX,discord.co
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
