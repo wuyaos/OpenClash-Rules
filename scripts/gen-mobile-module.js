@@ -2,15 +2,19 @@
 
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 
 const ROOT = path.resolve(__dirname, "..");
-const INI_PATH = path.join(ROOT, "config", "Mobile_mod_mini.ini");
+const INI_GIT_REF = "main:config/ACL4SSR_mod_mini.ini";
+const BASE_YAML_PATH = path.join(ROOT, "clash", "base.yaml");
 const OUT_PATH_NO_HOME = path.join(ROOT, "clash", "mobile-module.yaml");
 const OUT_PATH_WITH_HOME = path.join(ROOT, "clash", "mobile-module-home.yaml");
-const DEFAULT_TEST_URL = "http://www.gstatic.com/generate_204";
+const DEFAULT_TEST_URL = "https://www.gstatic.com/generate_204";
 const ICON_BASE = "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/";
 const HOME_GROUP_NAME = "🏠 回家";
 const HOME_RULESET_PROVIDER = "home_lan";
+const HOME_RULESET_SOURCE =
+  "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/home-lan.list";
 const HOME_PROXY_NAME = "home1";
 const HOME_PROXY_TEMPLATE = {
   name: HOME_PROXY_NAME,
@@ -35,6 +39,7 @@ const ICON_RULES = [
   ["谷歌", "Google_Search.png"],
   ["AI", "Bot.png"],
   ["GPT", "Bot.png"],
+  ["开发", "GitHub.png"],
   ["GitHub", "GitHub.png"],
   ["微软云盘", "OneDrive.png"],
   ["微软服务", "Microsoft.png"],
@@ -45,7 +50,6 @@ const ICON_RULES = [
   ["Final", "Final.png"],
   ["香港", "Hong_Kong.png"],
   ["台湾", "Taiwan.png"],
-  ["**###**", "Taiwan.png"],
   ["中国", "China.png"],
   ["狮城", "Singapore.png"],
   ["日本", "Japan.png"],
@@ -266,7 +270,6 @@ function buildRulesAndProviders(rulesets) {
   const providers = {};
   const providerBySource = new Map();
   const providerNameCount = new Map();
-  const providerNeedsNoResolve = new Map();
   const rules = [];
   const seenRules = new Set();
 
@@ -274,21 +277,6 @@ function buildRulesAndProviders(rulesets) {
     if (seenRules.has(rule)) return;
     seenRules.add(rule);
     rules.push(rule);
-  };
-
-  const isIpOnlyRuleset = (providerName, url) => {
-    const name = providerName.toLowerCase();
-    const link = url.toLowerCase();
-    const nameHints = new Set(["localareanetwork", "chinaip", "chinacompanyip", "home_lan", "home-lan"]);
-    for (const hint of nameHints) {
-      if (name === hint || name.endsWith(`_${hint}`) || name.includes(hint)) return true;
-    }
-    return (
-      /\/localareanetwork\.list(?:$|[?#])/i.test(link) ||
-      /\/chinaip\.list(?:$|[?#])/i.test(link) ||
-      /\/chinacompanyip\.list(?:$|[?#])/i.test(link) ||
-      /\/home-lan\.list(?:$|[?#])/i.test(link)
-    );
   };
 
   for (const { target, source } of rulesets) {
@@ -329,11 +317,9 @@ function buildRulesAndProviders(rulesets) {
         path: `./ruleset/${providerName}.${format === "yaml" ? "yaml" : "list"}`,
         url,
       };
-      providerNeedsNoResolve.set(providerName, isIpOnlyRuleset(providerName, url));
     }
 
-    const suffix = providerNeedsNoResolve.get(providerName) ? ",no-resolve" : "";
-    addRule(`RULE-SET,${providerName},${target}${suffix}`);
+    addRule(`RULE-SET,${providerName},${target}`);
   }
 
   return { providers, rules };
@@ -357,7 +343,7 @@ function withHomeRulePriority(rules) {
   return out;
 }
 
-function buildMobileConfig(proxyGroups, providers, rules, proxyNameOverrides, extraProxies = []) {
+function buildDynamicConfig(proxyGroups, providers, rules, proxyNameOverrides, extraProxies = []) {
   const subscription = {
     type: "http",
     path: "./proxy_provider/subscription.yaml",
@@ -384,106 +370,8 @@ function buildMobileConfig(proxyGroups, providers, rules, proxyNameOverrides, ex
   }
 
   return {
-    "mixed-port": 7890,
-    "redir-port": 9797,
-    "tproxy-port": 9898,
-    ipv6: true,
-    mode: "rule",
-    "allow-lan": true,
-    "unified-delay": true,
-    "tcp-concurrent": true,
-    "log-level": "silent",
-    "bind-address": "*",
-    "find-process-mode": "always",
-    "external-controller": "0.0.0.0:9090",
-    "external-ui": "./dashboard",
-    "geo-auto-update": true,
-    "geo-update-interval": 24,
-    "geodata-mode": true,
-    "geox-url": {
-      geoip:
-        "https://v6.gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat",
-      geosite:
-        "https://v6.gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-      mmdb:
-        "https://v6.gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb",
-      asn:
-        "https://v6.gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb",
-    },
-    secret: "",
     "proxy-providers": {
       subscription,
-    },
-    profile: {
-      "store-selected": true,
-      "store-fake-ip": true,
-    },
-    sniffer: {
-      enable: true,
-      "force-dns-mapping": true,
-      "parse-pure-ip": true,
-      "override-destination": true,
-      sniff: {
-        HTTP: { ports: [80, "8080-8880"] },
-        TLS: { ports: [443, 5228, 8443] },
-        QUIC: { ports: [443, 8443] },
-      },
-      "force-domain": ["+.v2ex.com"],
-      "skip-domain": ["Mijia Cloud"],
-    },
-    tun: {
-      enable: true,
-      device: "Meta",
-      stack: "gvisor",
-      "dns-hijack": ["any:53", "tcp://any:53"],
-      "udp-timeout": 300,
-      "auto-route": true,
-      "strict-route": true,
-      "auto-redirect": false,
-      "auto-detect-interface": true,
-      "exclude-package": [],
-    },
-    dns: {
-      enable: true,
-      ipv6: true,
-      "enhanced-mode": "fake-ip",
-      "fake-ip-range": "198.18.0.1/16",
-      "use-hosts": true,
-      "use-system-hosts": true,
-      "respect-rules": true,
-      "cache-algorithm": "arc",
-      // Bootstrap resolvers (IP-based), expanded with public CN DNS.
-      "default-nameserver": [
-        "tls://223.5.5.5",
-        "tls://223.6.6.6",
-        "tls://119.29.29.29",
-        "tls://1.12.12.12",
-      ],
-      "nameserver": [
-        "https://cloudflare-dns.com/dns-query",
-        "https://dns.google/dns-query",
-        "https://dns.quad9.net/dns-query",
-        "https://dns.opendns.com/dns-query",
-      ],
-      "proxy-server-nameserver": [
-        "https://dns.alidns.com/dns-query",
-        "https://doh.pub/dns-query",
-        "https://doh.360.cn/dns-query",
-      ],
-      "direct-nameserver": [
-        "https://dns.alidns.com/dns-query",
-        "https://doh.pub/dns-query",
-        "https://doh.360.cn/dns-query",
-      ],
-      "fake-ip-filter-mode": "blacklist",
-      "fake-ip-filter": [
-        "*.lan",
-        "*.local",
-        "*.localhost",
-        "*.home.arpa",
-        "geosite:private",
-        "geosite:category-ntp",
-      ],
     },
     proxies: [
       { name: "DNS_Hijack", type: "dns" },
@@ -543,17 +431,32 @@ function toYaml(value, indent = 0) {
 }
 
 function main() {
-  const iniText = fs.readFileSync(INI_PATH, "utf8");
+  const iniSource = loadIniSource();
+  const baseYaml = loadBaseYaml();
+  const iniText = iniSource.text;
   const parsed = parseIni(iniText);
   const proxyNameOverrides = buildProxyNameOverrides(parsed.addEmoji, parsed.removeOldEmoji, parsed.emojiRules);
+  const injectedHomeGroup = {
+    name: HOME_GROUP_NAME,
+    type: "select",
+    tokens: [`[]${HOME_PROXY_NAME}`, "[]DIRECT"],
+  };
 
   const buildVariant = (withHome) => {
-    const rulesets = parsed.rulesets.filter((item) => withHome || item.target !== HOME_GROUP_NAME);
+    const rulesets = parsed.rulesets
+      .filter((item) => withHome || item.target !== HOME_GROUP_NAME)
+      .map((item) => ({ ...item }));
     const groups = parsed.groups
       .filter((item) => withHome || item.name !== HOME_GROUP_NAME)
       .map((item) => buildProxyGroup(item, parsed.excludeRemarksPattern));
 
     if (withHome) {
+      if (!rulesets.some((item) => item.target === HOME_GROUP_NAME)) {
+        rulesets.push({ target: HOME_GROUP_NAME, source: HOME_RULESET_SOURCE });
+      }
+      if (!groups.some((item) => item.name === HOME_GROUP_NAME)) {
+        groups.push(buildProxyGroup(injectedHomeGroup, parsed.excludeRemarksPattern));
+      }
       for (const group of groups) {
         if (group.name === HOME_GROUP_NAME) {
           group.proxies = [HOME_PROXY_NAME, "DIRECT"];
@@ -567,7 +470,7 @@ function main() {
       finalRules = withHomeRulePriority(finalRules);
     }
 
-    const config = buildMobileConfig(
+    const config = buildDynamicConfig(
       groups,
       providers,
       finalRules,
@@ -578,7 +481,7 @@ function main() {
     const outPath = withHome ? OUT_PATH_WITH_HOME : OUT_PATH_NO_HOME;
     const header = [
       "# Auto-generated mobile module config",
-      `# Source INI: ${path.relative(ROOT, INI_PATH)}`,
+      `# Source INI: ${iniSource.label}`,
       "# Generated by: scripts/gen-mobile-module.js",
       `# Variant: ${withHome ? "with-home" : "no-home"}`,
       "# 订阅地址请填写 proxy-providers.subscription.url",
@@ -586,16 +489,41 @@ function main() {
     ].join("\n");
 
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
-    fs.writeFileSync(outPath, `${header}${toYaml(config)}\n`, "utf8");
+    fs.writeFileSync(outPath, `${header}${baseYaml}${toYaml(config)}\n`, "utf8");
 
     console.log(
-      `[mobile] ${path.relative(ROOT, INI_PATH)} -> ${path.relative(ROOT, outPath)} ` +
+      `[mobile] ${iniSource.label} -> ${path.relative(ROOT, outPath)} ` +
         `(groups=${groups.length}, providers=${Object.keys(providers).length}, rules=${rules.length})`
     );
   };
 
   buildVariant(false);
   buildVariant(true);
+}
+
+function loadBaseYaml() {
+  try {
+    const raw = fs.readFileSync(BASE_YAML_PATH, "utf8");
+    const normalized = raw.replace(/\r\n/g, "\n").trimEnd();
+    return normalized.length > 0 ? `${normalized}\n` : "";
+  } catch (error) {
+    const reason = error && error.message ? error.message : String(error);
+    throw new Error(`Failed to load base YAML from ${BASE_YAML_PATH}: ${reason}`);
+  }
+}
+
+function loadIniSource() {
+  try {
+    const text = execSync(`git show ${INI_GIT_REF}`, {
+      cwd: ROOT,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+    });
+    return { text, label: INI_GIT_REF };
+  } catch (error) {
+    const reason = error && error.message ? error.message : String(error);
+    throw new Error(`Failed to load source INI from ${INI_GIT_REF}: ${reason}`);
+  }
 }
 
 main();
