@@ -358,7 +358,7 @@ function main(config) {
     "tolerance": 50
   },
   {
-    "name": "🇹🇼 TW自动",
+    "name": "🇹🇼 台湾自动",
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png",
     "include-all": true,
