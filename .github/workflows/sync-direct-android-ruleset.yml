@@ -21,7 +21,7 @@ jobs:
           node-version: "20"
 
       - name: Sync app/game mutated rules + adblock-reject + awavenue-ads + ddgksf-ads
-        run: node scripts/sync-direct-android-ruleset.js
+        run: node scripts/sync-ruleset.js
 
       - name: Commit changes
         run: |

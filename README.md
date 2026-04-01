@@ -116,24 +116,28 @@
 
 #### 4.1 文件说明
 
-- `scripts/gen-flclash-scripts.js`：生成器，读取 `config/ACL4SSR_mod_mini.ini` 与 `config/Home_mod_mini.ini`
-- `scripts/flclash.acl.js`：对应 `ACL4SSR_mod_mini.ini` 的 FlClash 脚本
-- `scripts/flclash.home.js`：对应 `Home_mod_mini.ini` 的 FlClash 脚本
+- `scripts/gen_script.js`：生成器，读取 `config/*.ini`
+- 生成结果命名规则：`scripts/override_<ini文件名>.js`
+- 当前示例输出：
+  - `scripts/override_ACL4SSR_mod_mini.js`
+  - `scripts/override_Home_mod_mini.js`
+  - `scripts/override_Router_mod_mini.js`
 
 #### 4.2 重新生成
 
 在项目根目录执行：
 
 ```bash
-node scripts/gen-flclash-scripts.js
+node scripts/gen_script.js
 ```
 
 可选语法检查：
 
 ```bash
-node -c scripts/gen-flclash-scripts.js
-node -c scripts/flclash.acl.js
-node -c scripts/flclash.home.js
+node -c scripts/gen_script.js
+node -c scripts/override_ACL4SSR_mod_mini.js
+node -c scripts/override_Home_mod_mini.js
+node -c scripts/override_Router_mod_mini.js
 ```
 
 #### 4.3 脚本能力范围
@@ -145,10 +149,10 @@ node -c scripts/flclash.home.js
   - `clash-classic:<url>`（yaml provider）
   - `[]GEOIP,...` / `[]FINAL`（内建规则，`FINAL` 转为 `MATCH,...`）
 - 自动去重（provider 与 rules）并保持首次出现顺序
-- 保留 `home` 与 `acl` 的差异（例如 `🏠 回家` 规则链）
+- 保留各 `ini` 文件之间的规则差异（例如 `🏠 回家` 规则链）
 
 #### 4.4 在 FlClash 中使用
 
 1. 打开 FlClash 的脚本配置（YAML 脚本模式）。
-2. 将 `scripts/flclash.acl.js` 或 `scripts/flclash.home.js` 内容粘贴进去。
+2. 将对应 `scripts/override_<ini文件名>.js` 内容粘贴进去。
 3. 应用配置并重载核心，检查 `proxy-groups` 和 `rules` 是否按预期出现。
