@@ -29,43 +29,6 @@ DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,cdn.cloudflare.net
 DOMAIN-SUFFIX,cloudflareinsights.com
 
-# Developer 开发者常用国外网站、镜像和论坛
-DOMAIN-SUFFIX,apache.org
-DOMAIN-SUFFIX,docker.com
-DOMAIN-SUFFIX,docker.io
-DOMAIN-SUFFIX,elastic.co
-DOMAIN-SUFFIX,elastic.com
-DOMAIN-SUFFIX,gcr.io
-DOMAIN-SUFFIX,gitlab.com
-DOMAIN-SUFFIX,gitlab.io
-DOMAIN-SUFFIX,jitpack.io
-DOMAIN-SUFFIX,maven.org
-DOMAIN-SUFFIX,medium.com
-DOMAIN-SUFFIX,mvnrepository.com
-DOMAIN-SUFFIX,quay.io
-DOMAIN-SUFFIX,reddit.com
-DOMAIN-SUFFIX,redhat.com
-DOMAIN-SUFFIX,sonatype.org
-DOMAIN-SUFFIX,sourcegraph.com
-DOMAIN-SUFFIX,spring.io
-DOMAIN-SUFFIX,spring.net
-DOMAIN-SUFFIX,stackoverflow.com
-
-# Docker
-DOMAIN,d1q6f0aelx0por.cloudfront.net
-DOMAIN,d2wy8f7a9ursnm.cloudfront.net
-DOMAIN,d36jcksde1wxzq.cloudfront.net
-DOMAIN-SUFFIX,compose-spec.io
-DOMAIN-SUFFIX,dockerhub.com
-
-# Discord
-DOMAIN-SUFFIX,discord.co
-DOMAIN-SUFFIX,discord.com
-DOMAIN-SUFFIX,discord.gg
-DOMAIN-SUFFIX,discord.media
-DOMAIN-SUFFIX,discordapp.com
-DOMAIN-SUFFIX,discordapp.net
-
 # Facebook
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,fb.com
@@ -86,27 +49,6 @@ IP-CIDR,173.252.64.0/18,no-resolve
 IP-CIDR,179.60.192.0/22,no-resolve
 IP-CIDR,185.60.216.0/22,no-resolve
 IP-CIDR,204.15.20.0/22,no-resolve
-
-# 💻CodeSource，程序源码规则集，一般用于编译或下载程序资源/更新等
-DOMAIN-SUFFIX,artifacts.bitwarden.com
-DOMAIN-SUFFIX,sub.xeton.dev
-DOMAIN-SUFFIX,www.python.org
-DOMAIN-SUFFIX,cdn.kernel.org
-DOMAIN-SUFFIX,sourceware.org
-DOMAIN-SUFFIX,ftpmirror.gnu.org
-DOMAIN-SUFFIX,mirror.lyrahosting.com
-DOMAIN-SUFFIX,ftp.nluug.nl
-DOMAIN-SUFFIX,ftp.wayne.edu
-DOMAIN-SUFFIX,mirror.cyberbits.eu
-DOMAIN-SUFFIX,static.rust-lang.org
-DOMAIN-SUFFIX,cache.ruby-lang.org
-DOMAIN-SUFFIX,git.codelinaro.org
-DOMAIN-SUFFIX,mirror.csclub.uwaterloo.ca
-DOMAIN-SUFFIX,mirror.netcologne.de
-DOMAIN-SUFFIX,www.busybox.net
-DOMAIN-SUFFIX,repo.jellyfin.org
-DOMAIN-SUFFIX,sgp1.mirror.jellyfin.org
-DOMAIN-SUFFIX,deb.debian.org
 
 # 🚫Porn-FISH
 DOMAIN-SUFFIX,zodgame.xyz
