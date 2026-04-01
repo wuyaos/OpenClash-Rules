@@ -46,7 +46,7 @@ function main(config) {
       "DIRECT"
     ],
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*(?i)Home"
+    "filter": "^(?!.*ℹ(?:️)?).*(?i)Home"
   },
   {
     "name": "ᯅ QUEST",
@@ -58,7 +58,7 @@ function main(config) {
       "🥈 手动选择2"
     ],
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*$"
+    "filter": "^(?!.*ℹ(?:️)?).*$"
   },
   {
     "name": "Ⓜ️ 微软云盘",
@@ -143,7 +143,7 @@ function main(config) {
       "🇯🇵 日本自动"
     ],
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*🇯🇵(?!.*[🇦-🇿]{2})"
+    "filter": "^(?!.*ℹ(?:️)?).*🇯🇵(?!.*[🇦-🇿]{2})"
   },
   {
     "name": "📲 电报消息",
@@ -312,7 +312,7 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*$",
+    "filter": "^(?!.*ℹ(?:️)?).*$",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
@@ -322,7 +322,7 @@ function main(config) {
     "type": "fallback",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png",
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*$",
+    "filter": "^(?!.*ℹ(?:️)?).*$",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
@@ -332,7 +332,7 @@ function main(config) {
     "type": "load-balance",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*$",
+    "filter": "^(?!.*ℹ(?:️)?).*$",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
@@ -342,7 +342,7 @@ function main(config) {
     "type": "load-balance",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
     "include-all": true,
-    "filter": "^(?!.*(日本|JP|Japan|🇯🇵))(?!.*ℹ️).*$",
+    "filter": "^(?!.*(日本|JP|Japan|🇯🇵))(?!.*ℹ(?:️)?).*$",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
@@ -352,7 +352,7 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png",
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*🇭🇰(?!.*(?!🇨🇳)[🇦-🇿]{2})",
+    "filter": "^(?!.*ℹ(?:️)?).*🇭🇰(?!.*(?!🇨🇳)[🇦-🇿]{2})",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
@@ -362,7 +362,7 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png",
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*🇹🇼(?!.*(?!🇨🇳)[🇦-🇿]{2})",
+    "filter": "^(?!.*ℹ(?:️)?).*🇹🇼(?!.*(?!🇨🇳)[🇦-🇿]{2})",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
@@ -372,7 +372,7 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*(🇭🇰|🇹🇼|🇨🇳|🇲🇴)(?!.*[🇦-🇿]{2})",
+    "filter": "^(?!.*ℹ(?:️)?).*(🇭🇰|🇹🇼|🇨🇳|🇲🇴)(?!.*[🇦-🇿]{2})",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
@@ -382,7 +382,7 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png",
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*🇸🇬(?!.*[🇦-🇿]{2})",
+    "filter": "^(?!.*ℹ(?:️)?).*🇸🇬(?!.*[🇦-🇿]{2})",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
@@ -392,7 +392,7 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png",
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*🇯🇵(?!.*[🇦-🇿]{2})",
+    "filter": "^(?!.*ℹ(?:️)?).*🇯🇵(?!.*[🇦-🇿]{2})",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
@@ -402,7 +402,7 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png",
     "include-all": true,
-    "filter": "^(?!.*ℹ️).*(🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2})",
+    "filter": "^(?!.*ℹ(?:️)?).*(🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2})",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
@@ -412,7 +412,7 @@ function main(config) {
     "type": "url-test",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png",
     "include-all": true,
-    "filter": "^(?!.*ℹ️)(?!.*(🇨🇳|🇭🇰|🇲🇴|🇹🇼|🇸🇬|🇯🇵|🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2}))",
+    "filter": "^(?!.*ℹ(?:️)?)(?!.*(🇨🇳|🇭🇰|🇲🇴|🇹🇼|🇸🇬|🇯🇵|🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2}))",
     "url": "https://www.gstatic.com/generate_204",
     "interval": 600,
     "tolerance": 50
