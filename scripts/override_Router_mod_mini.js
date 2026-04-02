@@ -408,33 +408,9 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "ChinaIp": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list",
-    "path": "./ruleset/ChinaIp.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "ChinaCompanyIp": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
-    "path": "./ruleset/ChinaCompanyIp.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
   "UnBan": {
     "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list",
     "path": "./ruleset/UnBan.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "SteamCN": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
-    "path": "./ruleset/SteamCN.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -459,30 +435,6 @@ function main(config) {
   "proxy_custom": {
     "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-custom.list",
     "path": "./ruleset/proxy_custom.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "ProxyGFWlist": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
-    "path": "./ruleset/ProxyGFWlist.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "ProxyLite": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list",
-    "path": "./ruleset/ProxyLite.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "androidcn_allow": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/androidcn-allow.list",
-    "path": "./ruleset/androidcn_allow.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -592,6 +544,54 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
+  "SteamCN": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
+    "path": "./ruleset/SteamCN.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "ProxyGFWlist": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
+    "path": "./ruleset/ProxyGFWlist.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "ProxyLite": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list",
+    "path": "./ruleset/ProxyLite.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "ChinaIp": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list",
+    "path": "./ruleset/ChinaIp.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "ChinaCompanyIp": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
+    "path": "./ruleset/ChinaCompanyIp.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "androidcn_allow": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/androidcn-allow.list",
+    "path": "./ruleset/androidcn_allow.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
   "app_mutated": {
     "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/app-mutated.list",
     "path": "./ruleset/app_mutated.list",
@@ -643,16 +643,10 @@ function main(config) {
 };
   const generatedRules = [
   "RULE-SET,LocalAreaNetwork,🎯 全球直连",
-  "RULE-SET,ChinaIp,🎯 全球直连",
-  "RULE-SET,ChinaCompanyIp,🎯 全球直连",
   "RULE-SET,UnBan,🎯 全球直连",
-  "RULE-SET,SteamCN,🎯 全球直连",
   "RULE-SET,pt,🎯 全球直连",
   "RULE-SET,direct_custom,🎯 全球直连",
   "RULE-SET,proxy_custom,🚀 节点选择",
-  "RULE-SET,ProxyGFWlist,🚀 节点选择",
-  "RULE-SET,ProxyLite,🚀 节点选择",
-  "RULE-SET,androidcn_allow,🎯 全球直连",
   "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台",
   "RULE-SET,proxy_media,🌍 国外媒体",
   "RULE-SET,scraper_nojp,🕸 刮削",
@@ -666,6 +660,12 @@ function main(config) {
   "RULE-SET,OneDrive,Ⓜ️ 微软云盘",
   "RULE-SET,Microsoft,Ⓜ️ 微软服务",
   "RULE-SET,GoogleFCM,📢 谷歌FCM",
+  "RULE-SET,SteamCN,🎯 全球直连",
+  "RULE-SET,ProxyGFWlist,🚀 节点选择",
+  "RULE-SET,ProxyLite,🚀 节点选择",
+  "RULE-SET,ChinaIp,🎯 全球直连",
+  "RULE-SET,ChinaCompanyIp,🎯 全球直连",
+  "RULE-SET,androidcn_allow,🎯 全球直连",
   "RULE-SET,app_mutated,🎯 全球直连",
   "RULE-SET,game_mutated,🎯 全球直连",
   "RULE-SET,applications,🎯 全球直连",

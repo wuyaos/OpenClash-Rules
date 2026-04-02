@@ -425,14 +425,6 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "SteamCN": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
-    "path": "./ruleset/SteamCN.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
   "pt": {
     "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/pt.list",
     "path": "./ruleset/pt.list",
@@ -452,22 +444,6 @@ function main(config) {
   "proxy_custom": {
     "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-custom.list",
     "path": "./ruleset/proxy_custom.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "ProxyGFWlist": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
-    "path": "./ruleset/ProxyGFWlist.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "ProxyLite": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list",
-    "path": "./ruleset/ProxyLite.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -572,6 +548,30 @@ function main(config) {
   "GoogleFCM": {
     "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
     "path": "./ruleset/GoogleFCM.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "SteamCN": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
+    "path": "./ruleset/SteamCN.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "ProxyGFWlist": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
+    "path": "./ruleset/ProxyGFWlist.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "ProxyLite": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list",
+    "path": "./ruleset/ProxyLite.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -725,12 +725,9 @@ function main(config) {
   const generatedRules = [
   "RULE-SET,LocalAreaNetwork,🎯 全球直连",
   "RULE-SET,UnBan,🎯 全球直连",
-  "RULE-SET,SteamCN,🎯 全球直连",
   "RULE-SET,pt,🎯 全球直连",
   "RULE-SET,direct_custom,🎯 全球直连",
   "RULE-SET,proxy_custom,🚀 节点选择",
-  "RULE-SET,ProxyGFWlist,🚀 节点选择",
-  "RULE-SET,ProxyLite,🚀 节点选择",
   "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台",
   "RULE-SET,proxy_media,🌍 国外媒体",
   "RULE-SET,scraper_nojp,🕸 刮削",
@@ -744,6 +741,9 @@ function main(config) {
   "RULE-SET,OneDrive,Ⓜ️ 微软云盘",
   "RULE-SET,Microsoft,Ⓜ️ 微软服务",
   "RULE-SET,GoogleFCM,📢 谷歌FCM",
+  "RULE-SET,SteamCN,🎯 全球直连",
+  "RULE-SET,ProxyGFWlist,🚀 节点选择",
+  "RULE-SET,ProxyLite,🚀 节点选择",
   "RULE-SET,android_block,🛑 广告拦截",
   "RULE-SET,adblock_reject,🛑 广告拦截",
   "RULE-SET,BanAD,🛑 广告拦截",
