@@ -597,12 +597,12 @@ rule-providers:
     interval: 86400
     path: "./ruleset/ai.list"
     url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ai.list"
-  AI:
+  AI_2:
     type: "http"
     behavior: "classical"
     format: "text"
     interval: 86400
-    path: "./ruleset/AI.list"
+    path: "./ruleset/AI_2.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/AI.list"
   github:
     type: "http"
@@ -618,12 +618,12 @@ rule-providers:
     interval: 86400
     path: "./ruleset/developer.list"
     url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/developer.list"
-  Developer:
+  Developer_2:
     type: "http"
     behavior: "classical"
     format: "text"
     interval: 86400
-    path: "./ruleset/Developer.list"
+    path: "./ruleset/Developer_2.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Developer.list"
   Docker:
     type: "http"
@@ -800,10 +800,10 @@ rules:
   - "RULE-SET,BanEasyPrivacy,🛑 广告拦截"
   - "RULE-SET,awavenue_ads,🛑 广告拦截"
   - "RULE-SET,ai,🤖 AI"
-  - "RULE-SET,AI,🤖 AI"
+  - "RULE-SET,AI_2,🤖 AI"
   - "RULE-SET,github,👨‍💻 开发"
   - "RULE-SET,developer,👨‍💻 开发"
-  - "RULE-SET,Developer,👨‍💻 开发"
+  - "RULE-SET,Developer_2,👨‍💻 开发"
   - "RULE-SET,Docker,👨‍💻 开发"
   - "RULE-SET,JetBrains,👨‍💻 开发"
   - "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台"

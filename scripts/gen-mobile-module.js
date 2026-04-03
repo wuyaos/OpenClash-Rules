@@ -271,6 +271,7 @@ function buildRulesAndProviders(rulesets) {
   const providers = {};
   const providerBySource = new Map();
   const providerNameCount = new Map();
+  const usedProviderNames = new Set();
   const rules = [];
   const seenRules = new Set();
 
@@ -306,9 +307,18 @@ function buildRulesAndProviders(rulesets) {
     let providerName = providerBySource.get(providerKey);
     if (!providerName) {
       const baseName = toSafeName(url);
-      const count = (providerNameCount.get(baseName) || 0) + 1;
-      providerNameCount.set(baseName, count);
-      providerName = count === 1 ? baseName : `${baseName}_${count}`;
+      const baseKey = baseName.toLowerCase();
+      let count = providerNameCount.get(baseKey) || 0;
+
+      // Ensure case-insensitive uniqueness for ./ruleset file names,
+      // important on case-insensitive file systems.
+      do {
+        count += 1;
+        providerName = count === 1 ? baseName : `${baseName}_${count}`;
+      } while (usedProviderNames.has(providerName.toLowerCase()));
+
+      providerNameCount.set(baseKey, count);
+      usedProviderNames.add(providerName.toLowerCase());
       providerBySource.set(providerKey, providerName);
       providers[providerName] = {
         type: "http",
