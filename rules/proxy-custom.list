@@ -17,3 +17,62 @@ DOMAIN-SUFFIX,sub.dy.ax
 DOMAIN-SUFFIX,sub.d1.mk
 DOMAIN-SUFFIX,mineru.net
 DOMAIN-SUFFIX,idcflare.com
+
+
+# pikpak
+DOMAIN,mypikpak.com
+DOMAIN,mypikpak.netcologne
+DOMAIN,user.mypikpak.com
+DOMAIN,access.mypikpak.com
+
+# PT/BT
+DOMAIN-SUFFIX,iptorrents.com
+DOMAIN-SUFFIX,mikanani.me
+DOMAIN-SUFFIX,dmhy.org
+DOMAIN-SUFFIX,filelist.io
+DOMAIN-SUFFIX,byr.pt
+DOMAIN-SUFFIX,avistaz.to
+DOMAIN-SUFFIX,ani.rip
+DOMAIN-SUFFIX,u2.dmhy.org
+DOMAIN-SUFFIX,acgrip.art
+DOMAIN-SUFFIX,monikadesign.uk
+DOMAIN-SUFFIX,cinemaz.to
+DOMAIN-SUFFIX,resources.ani.rip
+DOMAIN-SUFFIX,aniopen.an-i.workers.dev
+DOMAIN-SUFFIX,acg.rip
+
+# 解决谷歌商店无法下载应用的问题
+DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+DOMAIN-SUFFIX,services.googleapis.cn
+
+# cloudflare
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,cdn.cloudflare.net
+DOMAIN-SUFFIX,cloudflareinsights.com
+
+# Facebook
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,fbcdn.com
+DOMAIN-SUFFIX,fbcdn.net
+IP-CIDR,31.13.24.0/21,no-resolve
+IP-CIDR,31.13.64.0/18,no-resolve
+IP-CIDR,45.64.40.0/22,no-resolve
+IP-CIDR,66.220.144.0/20,no-resolve
+IP-CIDR,69.63.176.0/20,no-resolve
+IP-CIDR,69.171.224.0/19,no-resolve
+IP-CIDR,74.119.76.0/22,no-resolve
+IP-CIDR,103.4.96.0/22,no-resolve
+IP-CIDR,129.134.0.0/17,no-resolve
+IP-CIDR,157.240.0.0/17,no-resolve
+IP-CIDR,173.252.64.0/18,no-resolve
+IP-CIDR,179.60.192.0/22,no-resolve
+IP-CIDR,185.60.216.0/22,no-resolve
+IP-CIDR,204.15.20.0/22,no-resolve
+
+# 🚫Porn-FISH
+DOMAIN-SUFFIX,zodgame.xyz
+DOMAIN-SUFFIX,ecchi100.com
+DOMAIN-SUFFIX,www.acgkkk.com
+DOMAIN-SUFFIX,www.gtloli.eu.org

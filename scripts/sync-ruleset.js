@@ -22,25 +22,11 @@ const SOURCES = [
     outFile: path.join(RULES_DIR, "game-mutated.list"),
   },
   {
-    name: "adblock-reject",
-    sourceLabel: "217heidai/adblockfilters",
-    url: "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomolite.yaml",
-    outFile: path.join(RULES_DIR, "adblock-reject.list"),
-    parser: "payload-yaml",
-  },
-  {
     name: "awavenue-ads",
     sourceLabel: "TG-Twilight/AWAvenue-Ads-Rule",
     url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list",
     outFile: path.join(RULES_DIR, "awavenue-ads.list"),
     parser: "qx-list",
-  },
-  {
-    name: "ddgksf-ads",
-    sourceLabel: "ddgksf2013/Profile/QuantumultX.conf(filter_remote reject)",
-    url: "https://ddgksf2013.top/Profile/QuantumultX.conf",
-    outFile: path.join(RULES_DIR, "ddgksf-ads.list"),
-    parser: "qx-conf-reject-merge",
   },
 ];
 
@@ -162,27 +148,12 @@ function parsePayloadToList(yamlText) {
   return out;
 }
 
-function normalizeEntryBySource(sourceName, entry) {
-  if (sourceName !== "adblock-reject") return entry;
-
-  const text = entry.trim();
-  if (!text) return "";
-
-  // adblockmihomolite payload uses "+.domain" style; convert to mihomo classical list.
-  if (text.startsWith("+.")) {
-    const domain = text.slice(2).trim();
-    return domain ? `DOMAIN-SUFFIX,${domain}` : "";
-  }
-
-  return text;
-}
-
-function normalizeEntries(sourceName, entries) {
+function normalizeEntries(entries) {
   const out = [];
   const seen = new Set();
 
   for (const entry of entries) {
-    const normalized = normalizeEntryBySource(sourceName, entry);
+    const normalized = entry.trim();
     if (!normalized || seen.has(normalized)) continue;
     seen.add(normalized);
     out.push(normalized);
@@ -226,57 +197,6 @@ function parseQuantumultXList(listText) {
   return out;
 }
 
-function parseQxFilterRemoteRejectUrls(confText) {
-  const lines = confText.replace(/\r/g, "").split("\n");
-  const out = [];
-  const seen = new Set();
-  let inFilterRemote = false;
-
-  for (const raw of lines) {
-    const line = raw.trim();
-    if (!line || line.startsWith("#") || line.startsWith(";")) continue;
-
-    if (/^\[.*\]$/.test(line)) {
-      inFilterRemote = line.toLowerCase() === "[filter_remote]";
-      continue;
-    }
-    if (!inFilterRemote) continue;
-
-    const parts = line.split(",").map((part) => part.trim()).filter(Boolean);
-    if (parts.length === 0) continue;
-    const url = parts[0];
-    if (!/^https?:\/\//i.test(url)) continue;
-
-    const attrs = {};
-    for (const item of parts.slice(1)) {
-      const idx = item.indexOf("=");
-      if (idx <= 0) continue;
-      const key = item.slice(0, idx).trim().toLowerCase();
-      const value = item.slice(idx + 1).trim();
-      attrs[key] = value;
-    }
-
-    const enabled = (attrs.enabled || "true").toLowerCase();
-    if (enabled === "false") continue;
-
-    const forcePolicy = (attrs["force-policy"] || "").toLowerCase();
-    if (!forcePolicy.includes("reject")) continue;
-
-    if (seen.has(url)) continue;
-    seen.add(url);
-    out.push(url);
-  }
-
-  return out;
-}
-
-function parseRuleTextAny(rawText) {
-  if (/(^|\n)\s*payload:\s*(\n|$)/.test(rawText)) {
-    return parsePayloadToList(rawText);
-  }
-  return parseQuantumultXList(rawText);
-}
-
 function buildListContent(sourceLabel, name, sourceUrl, entries) {
   const header = [
     `# Auto-synced from ${sourceLabel} (${name})`,
@@ -294,24 +214,11 @@ async function parseOne(source) {
 
   if (parser === "qx-list") {
     rawEntries = parseQuantumultXList(sourceText);
-  } else if (parser === "qx-conf-reject-merge") {
-    const rejectUrls = parseQxFilterRemoteRejectUrls(sourceText);
-    if (rejectUrls.length === 0) {
-      throw new Error(`No reject filter_remote URLs found in ${source.url}`);
-    }
-
-    for (const rejectUrl of rejectUrls) {
-      const ruleText = await fetchTextWithRetry(rejectUrl);
-      const parsedRules = parseRuleTextAny(ruleText);
-      for (const item of parsedRules) {
-        rawEntries.push(item);
-      }
-    }
   } else {
     rawEntries = parsePayloadToList(sourceText);
   }
 
-  const entries = normalizeEntries(source.name, rawEntries);
+  const entries = normalizeEntries(rawEntries);
   if (entries.length === 0) {
     throw new Error(`No entries parsed from ${source.url}`);
   }
