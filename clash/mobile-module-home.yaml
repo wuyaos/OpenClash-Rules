@@ -138,9 +138,7 @@ proxy-providers:
           pattern: "^(?!.*([🇦-🇿]{2}|ℹ)).*(官.?网|官方|产品|平台|勿连|修复|恢复|更新|地址|网站|网址|域名|网域|浏览器|导航|群|裙|聊|频道|电报|飞机|扣|微信|售后|客服|工单|联系|使用|购买|续费|公告|版本|出现|没网|情况|开通|数量|注|说明|通知|去除|@|(?i:(?<![\\da-z])(tg|telegram|t\\.me|qq?|vx?|wx)(?!\\d*[a-z])))"
           target: "ℹ $0"
 proxies:
-  -
-    name: "DNS_Hijack"
-    type: "dns"
+  - {name: DNS_Hijack, type: dns}
   -
     name: "home1"
     type: "ss"

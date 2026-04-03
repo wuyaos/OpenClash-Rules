@@ -431,6 +431,13 @@ function toYaml(value, indent = 0) {
   return `${sp}${formatScalar(value)}`;
 }
 
+function inlineDnsHijackProxyEntry(yamlText) {
+  return yamlText.replace(
+    /proxies:\n\s*-\n\s*name:\s*"DNS_Hijack"\n\s*type:\s*"dns"/g,
+    "proxies:\n  - {name: DNS_Hijack, type: dns}"
+  );
+}
+
 function main() {
   const iniSource = loadIniSource();
   const baseYaml = loadBaseYaml();
@@ -489,8 +496,9 @@ function main() {
       "",
     ].join("\n");
 
+    const yamlBody = inlineDnsHijackProxyEntry(toYaml(config));
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
-    fs.writeFileSync(outPath, `${header}${baseYaml}${toYaml(config)}\n`, "utf8");
+    fs.writeFileSync(outPath, `${header}${baseYaml}${yamlBody}\n`, "utf8");
 
     console.log(
       `[mobile] ${iniSource.label} -> ${path.relative(ROOT, outPath)} ` +
