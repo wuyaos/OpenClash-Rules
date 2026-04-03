@@ -51,8 +51,9 @@ tun:
 dns:
   enable: true
   ipv6: true
-  enhanced-mode: "fake-ip"
-  fake-ip-range: "198.18.0.1/16"
+  listen: "0.0.0.0:1053"
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
   use-hosts: true
   use-system-hosts: true
   respect-rules: true

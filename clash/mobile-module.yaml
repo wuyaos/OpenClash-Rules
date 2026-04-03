@@ -56,8 +56,9 @@ tun:
 dns:
   enable: true
   ipv6: true
-  enhanced-mode: "fake-ip"
-  fake-ip-range: "198.18.0.1/16"
+  listen: "0.0.0.0:1053"
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
   use-hosts: true
   use-system-hosts: true
   respect-rules: true
@@ -528,13 +529,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/UnBan.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
-  SteamCN:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/SteamCN.list"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
   pt:
     type: "http"
     behavior: "classical"
@@ -556,20 +550,6 @@ rule-providers:
     interval: 86400
     path: "./ruleset/proxy_custom.list"
     url: "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-custom.list"
-  ProxyGFWlist:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/ProxyGFWlist.list"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
-  ProxyLite:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    interval: 86400
-    path: "./ruleset/ProxyLite.list"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"
   BilibiliHMT:
     type: "http"
     behavior: "classical"
@@ -661,6 +641,27 @@ rule-providers:
     interval: 86400
     path: "./ruleset/GoogleFCM.list"
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list"
+  SteamCN:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/SteamCN.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
+  ProxyGFWlist:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/ProxyGFWlist.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
+  ProxyLite:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    interval: 86400
+    path: "./ruleset/ProxyLite.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"
   android_block:
     type: "http"
     behavior: "classical"
@@ -791,12 +792,9 @@ rules:
   - "DST-PORT,53,DNS_Hijack"
   - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
   - "RULE-SET,UnBan,🎯 全球直连"
-  - "RULE-SET,SteamCN,🎯 全球直连"
   - "RULE-SET,pt,🎯 全球直连"
   - "RULE-SET,direct_custom,🎯 全球直连"
   - "RULE-SET,proxy_custom,🚀 节点选择"
-  - "RULE-SET,ProxyGFWlist,🚀 节点选择"
-  - "RULE-SET,ProxyLite,🚀 节点选择"
   - "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台"
   - "RULE-SET,proxy_media,🌍 国外媒体"
   - "RULE-SET,scraper_nojp,🕸 刮削"
@@ -810,6 +808,9 @@ rules:
   - "RULE-SET,OneDrive,Ⓜ️ 微软云盘"
   - "RULE-SET,Microsoft,Ⓜ️ 微软服务"
   - "RULE-SET,GoogleFCM,📢 谷歌FCM"
+  - "RULE-SET,SteamCN,🎯 全球直连"
+  - "RULE-SET,ProxyGFWlist,🚀 节点选择"
+  - "RULE-SET,ProxyLite,🚀 节点选择"
   - "RULE-SET,android_block,🛑 广告拦截"
   - "RULE-SET,adblock_reject,🛑 广告拦截"
   - "RULE-SET,BanAD,🛑 广告拦截"
