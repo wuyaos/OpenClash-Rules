@@ -459,134 +459,6 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "BilibiliHMT": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list",
-    "path": "./ruleset/BilibiliHMT.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "proxy_media": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-media.list",
-    "path": "./ruleset/proxy_media.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "scraper_nojp": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/scraper-nojp.list",
-    "path": "./ruleset/scraper_nojp.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "scraper_jp": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/scraper-jp.list",
-    "path": "./ruleset/scraper_jp.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "ai": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ai.list",
-    "path": "./ruleset/ai.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "AI": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/AI.list",
-    "path": "./ruleset/AI.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "github": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/github.list",
-    "path": "./ruleset/github.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "developer": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/developer.list",
-    "path": "./ruleset/developer.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "quest3": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/quest3.list",
-    "path": "./ruleset/quest3.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "Telegram": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
-    "path": "./ruleset/Telegram.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "OneDrive": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list",
-    "path": "./ruleset/OneDrive.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "Microsoft": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list",
-    "path": "./ruleset/Microsoft.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "GoogleFCM": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
-    "path": "./ruleset/GoogleFCM.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "SteamCN": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
-    "path": "./ruleset/SteamCN.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "ProxyGFWlist": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
-    "path": "./ruleset/ProxyGFWlist.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "ProxyLite": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list",
-    "path": "./ruleset/ProxyLite.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
   "android_block": {
     "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/android-block.list",
     "path": "./ruleset/android_block.list",
@@ -659,25 +531,153 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "ChinaIp": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list",
-    "path": "./ruleset/ChinaIp.list",
+  "ai": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ai.list",
+    "path": "./ruleset/ai.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
     "type": "http"
   },
-  "ChinaCompanyIp": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
-    "path": "./ruleset/ChinaCompanyIp.list",
+  "AI": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/AI.list",
+    "path": "./ruleset/AI.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
     "type": "http"
   },
-  "androidcn_allow": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/androidcn-allow.list",
-    "path": "./ruleset/androidcn_allow.list",
+  "github": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/github.list",
+    "path": "./ruleset/github.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "developer": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/developer.list",
+    "path": "./ruleset/developer.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "Developer": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Developer.list",
+    "path": "./ruleset/Developer.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "Docker": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Docker.list",
+    "path": "./ruleset/Docker.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "JetBrains": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/JetBrains.list",
+    "path": "./ruleset/JetBrains.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "BilibiliHMT": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list",
+    "path": "./ruleset/BilibiliHMT.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "proxy_media": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-media.list",
+    "path": "./ruleset/proxy_media.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "scraper_nojp": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/scraper-nojp.list",
+    "path": "./ruleset/scraper_nojp.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "scraper_jp": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/scraper-jp.list",
+    "path": "./ruleset/scraper_jp.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "quest3": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/quest3.list",
+    "path": "./ruleset/quest3.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "Telegram": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
+    "path": "./ruleset/Telegram.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "OneDrive": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list",
+    "path": "./ruleset/OneDrive.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "Microsoft": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list",
+    "path": "./ruleset/Microsoft.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "GoogleFCM": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
+    "path": "./ruleset/GoogleFCM.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "ProxyGFWlist": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
+    "path": "./ruleset/ProxyGFWlist.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "ProxyLite": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list",
+    "path": "./ruleset/ProxyLite.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "SteamCN": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
+    "path": "./ruleset/SteamCN.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -730,6 +730,30 @@ function main(config) {
     "interval": 86400,
     "format": "text",
     "type": "http"
+  },
+  "ChinaIp": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list",
+    "path": "./ruleset/ChinaIp.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "ChinaCompanyIp": {
+    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
+    "path": "./ruleset/ChinaCompanyIp.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
+  "androidcn_allow": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/androidcn-allow.list",
+    "path": "./ruleset/androidcn_allow.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
   }
 };
   const generatedRules = [
@@ -738,22 +762,6 @@ function main(config) {
   "RULE-SET,pt,🎯 全球直连",
   "RULE-SET,direct_custom,🎯 全球直连",
   "RULE-SET,proxy_custom,🚀 节点选择",
-  "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台",
-  "RULE-SET,proxy_media,🌍 国外媒体",
-  "RULE-SET,scraper_nojp,🕸 刮削",
-  "RULE-SET,scraper_jp,🕸 刮削🇯🇵",
-  "RULE-SET,ai,🤖 AI",
-  "RULE-SET,AI,🤖 AI",
-  "RULE-SET,github,👨‍💻 开发",
-  "RULE-SET,developer,👨‍💻 开发",
-  "RULE-SET,quest3,ᯅ QUEST",
-  "RULE-SET,Telegram,📲 电报消息",
-  "RULE-SET,OneDrive,Ⓜ️ 微软云盘",
-  "RULE-SET,Microsoft,Ⓜ️ 微软服务",
-  "RULE-SET,GoogleFCM,📢 谷歌FCM",
-  "RULE-SET,SteamCN,🎯 全球直连",
-  "RULE-SET,ProxyGFWlist,🚀 节点选择",
-  "RULE-SET,ProxyLite,🚀 节点选择",
   "RULE-SET,android_block,🛑 广告拦截",
   "RULE-SET,adblock_reject,🛑 广告拦截",
   "RULE-SET,BanAD,🛑 广告拦截",
@@ -763,15 +771,34 @@ function main(config) {
   "RULE-SET,BanEasyPrivacy,🛑 广告拦截",
   "RULE-SET,awavenue_ads,🛑 广告拦截",
   "RULE-SET,ddgksf_ads,🛑 广告拦截",
-  "RULE-SET,ChinaIp,🎯 全球直连",
-  "RULE-SET,ChinaCompanyIp,🎯 全球直连",
-  "RULE-SET,androidcn_allow,🎯 全球直连",
+  "RULE-SET,ai,🤖 AI",
+  "RULE-SET,AI,🤖 AI",
+  "RULE-SET,github,👨‍💻 开发",
+  "RULE-SET,developer,👨‍💻 开发",
+  "RULE-SET,Developer,👨‍💻 开发",
+  "RULE-SET,Docker,👨‍💻 开发",
+  "RULE-SET,JetBrains,👨‍💻 开发",
+  "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台",
+  "RULE-SET,proxy_media,🌍 国外媒体",
+  "RULE-SET,scraper_nojp,🕸 刮削",
+  "RULE-SET,scraper_jp,🕸 刮削🇯🇵",
+  "RULE-SET,quest3,ᯅ QUEST",
+  "RULE-SET,Telegram,📲 电报消息",
+  "RULE-SET,OneDrive,Ⓜ️ 微软云盘",
+  "RULE-SET,Microsoft,Ⓜ️ 微软服务",
+  "RULE-SET,GoogleFCM,📢 谷歌FCM",
+  "RULE-SET,ProxyGFWlist,🚀 节点选择",
+  "RULE-SET,ProxyLite,🚀 节点选择",
+  "RULE-SET,SteamCN,🎯 全球直连",
   "RULE-SET,app_mutated,🎯 全球直连",
   "RULE-SET,game_mutated,🎯 全球直连",
   "RULE-SET,applications,🎯 全球直连",
   "RULE-SET,GoogleCN,🎯 全球直连",
   "RULE-SET,ChinaDomain,🎯 全球直连",
   "RULE-SET,Download,🎯 全球直连",
+  "RULE-SET,ChinaIp,🎯 全球直连",
+  "RULE-SET,ChinaCompanyIp,🎯 全球直连",
+  "RULE-SET,androidcn_allow,🎯 全球直连",
   "GEOIP,CN,🎯 全球直连",
   "MATCH,🐟 Final兜底"
 ];
