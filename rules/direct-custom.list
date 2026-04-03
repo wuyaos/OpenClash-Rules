@@ -12,3 +12,12 @@ PROCESS-NAME,GameViewer.exe
 PROCESS-NAME,feishunet
 PROCESS-NAME,飞鼠组网.exe
 PROCESS-NAME,com.seeyon.cmp
+
+# Xiaomi / Mi push allowlist
+DOMAIN,push.xiaomi.com
+DOMAIN,api.ad.xiaomi.com
+DOMAIN,gvod.aiseejapp.atianqi.com
+DOMAIN-SUFFIX,xiaomi.com
+DOMAIN-SUFFIX,mi.com
+IP-CIDR6,2404:f4c0::/32,no-resolve
+DOMAIN,cdn.cnbj1.fds.api.mi-img.com

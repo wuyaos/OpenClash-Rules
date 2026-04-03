@@ -156,3 +156,27 @@ node -c scripts/override_Router_mod_mini.js
 1. 打开 FlClash 的脚本配置（YAML 脚本模式）。
 2. 将对应 `scripts/override_<ini文件名>.js` 内容粘贴进去。
 3. 应用配置并重载核心，检查 `proxy-groups` 和 `rules` 是否按预期出现。
+
+### 5. `sync-ruleset.js` 本地自定义补丁
+
+`scripts/sync-ruleset.js` 支持在同步上游规则后，叠加本地补丁文件，避免手工改动在下次同步时丢失。
+
+- 补丁目录：`rules/_custom/`
+- 文件命名：
+  - `rules/_custom/<source-name>.append.list`
+  - `rules/_custom/<source-name>.remove.list`
+- 当前 `source-name`：
+  - `app-mutated`
+  - `game-mutated`
+  - `awavenue-ads`
+
+处理顺序：
+
+1. 先按 `remove.list` 删除完全匹配的行  
+2. 再按 `append.list` 追加行  
+3. 最后自动去重并写回 `rules/*.list`
+
+说明：
+
+- 每行一个规则；
+- 空行和以 `#` / `;` 开头的行会被忽略。

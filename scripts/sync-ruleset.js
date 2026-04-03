@@ -7,6 +7,7 @@ const http = require("http");
 
 const ROOT = path.resolve(__dirname, "..");
 const RULES_DIR = path.join(ROOT, "rules");
+const CUSTOM_RULES_DIR = path.join(RULES_DIR, "_custom");
 
 const SOURCES = [
   {
@@ -162,6 +163,38 @@ function normalizeEntries(entries) {
   return out;
 }
 
+function readLocalPatchEntries(filePath) {
+  if (!fs.existsSync(filePath)) return [];
+  const text = fs.readFileSync(filePath, "utf8").replace(/\r/g, "");
+  const out = [];
+  for (const raw of text.split("\n")) {
+    const line = raw.trim();
+    if (!line || line.startsWith("#") || line.startsWith(";")) continue;
+    out.push(line);
+  }
+  return out;
+}
+
+function applyLocalPatch(source, entries) {
+  const appendFile = path.join(CUSTOM_RULES_DIR, `${source.name}.append.list`);
+  const removeFile = path.join(CUSTOM_RULES_DIR, `${source.name}.remove.list`);
+
+  const removeEntries = normalizeEntries(readLocalPatchEntries(removeFile));
+  const appendEntries = normalizeEntries(readLocalPatchEntries(appendFile));
+  if (removeEntries.length === 0 && appendEntries.length === 0) {
+    return entries;
+  }
+
+  const removeSet = new Set(removeEntries);
+  const base = entries.filter((item) => !removeSet.has(item));
+  const merged = normalizeEntries([...base, ...appendEntries]);
+
+  console.log(
+    `[ruleset-sync] patch ${source.name}: -${removeEntries.length} +${appendEntries.length} => ${merged.length}`
+  );
+  return merged;
+}
+
 function parseQuantumultXList(listText) {
   const lines = listText.replace(/\r/g, "").split("\n");
   const out = [];
@@ -218,7 +251,7 @@ async function parseOne(source) {
     rawEntries = parsePayloadToList(sourceText);
   }
 
-  const entries = normalizeEntries(rawEntries);
+  const entries = applyLocalPatch(source, normalizeEntries(rawEntries));
   if (entries.length === 0) {
     throw new Error(`No entries parsed from ${source.url}`);
   }
