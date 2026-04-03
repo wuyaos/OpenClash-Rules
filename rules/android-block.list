@@ -7,7 +7,10 @@ DOMAIN,aiclk.com
 DOMAIN,ubixioe.com
 DOMAIN,qttunion.com
 DOMAIN,adintl.cn
+DOMAIN,adash.m.taobao.com
 DOMAIN,adashx.m.taobao.com
+DOMAIN,accscdn.m.taobao.com
+DOMAIN,amdc.m.taobao.com
 DOMAIN,mos.m.taobao.com
 DOMAIN,pages-fast.m.taobao.com
 DOMAIN,pages.goofish.com
@@ -19,6 +22,9 @@ DOMAIN,adim.pinduoduo.com
 DOMAIN,meta.pinduoduo.com
 DOMAIN,apm-a.pinduoduo.com
 DOMAIN,at.pinduoduo.com
+DOMAIN,log.jd.com
+DOMAIN,ads-union.jd.com
+DOMAIN,cc.m.jd.com
 
 # 视频 / 音频 / 阅读
 DOMAIN,fdxadiv.com
@@ -33,6 +39,9 @@ DOMAIN,ggic01.miguvideo.com
 DOMAIN,ggtagcache.cmvideo.cn
 DOMAIN,nstool.netease.com
 DOMAIN,nstool.laiqukankan.com
+DOMAIN,cj.qidian.com
+DOMAIN,qdp.qidian.com
+DOMAIN,path.qidian.com
 
 # 腾讯系
 DOMAIN,compliance.tdos.qq.com
@@ -43,8 +52,12 @@ DOMAIN,tam.cdn-go.cn
 DOMAIN,apponline.research.qq.com
 DOMAIN,tmfmazuhttp-wangka.m.qq.com
 DOMAIN,stun.qqlive.qq.com
+DOMAIN,mdevstat.qqlive.qq.com
 DOMAIN,punch.p2p.qq.com
 DOMAIN,static.qblv.qq.com
+DOMAIN,bkcommdata.v.qq.com
+DOMAIN,bksoup.v.qq.com
+DOMAIN,soup.v.qq.com
 DOMAIN,qbuc.html5.qq.com
 DOMAIN,ug.qbimg.qq.com
 DOMAIN,mcdn.kandian.qq.com
@@ -97,6 +110,7 @@ DOMAIN,life-service-open.zijieapi.com
 DOMAIN,tsearch.snssdk.com
 DOMAIN,abtestvm.bytedance.com
 DOMAIN,zlink.toutiao.com
+DOMAIN,frontier100-toutiao-lf.fqnovel.com
 DOMAIN-REGEX,^abtest.*-misc-.*\\.zijieapi\\.com$
 DOMAIN-REGEX,^ads.*-normal-hl\\.zijieapi\\.com$
 DOMAIN-REGEX,^tnc.*-bjlgy\\.zijieapi\\.com$
@@ -126,6 +140,10 @@ DOMAIN,logd.api.moji.com
 DOMAIN,adlaunch.moji.com
 DOMAIN-REGEX,^qchannel.*\\.cn$
 DOMAIN,oss4bpc.moji.com
+DOMAIN,apsrgeo.amap.com
+DOMAIN,cgicol.amap.com
+DOMAIN,dualstack-cgicol.amap.com
+DOMAIN,amaprop.net
 DOMAIN,kplayer.keepcdn.com
 DOMAIN,v1.keepcdn.com
 DOMAIN,kad.gotokeep.com
@@ -164,6 +182,7 @@ DOMAIN,ssp.vivo.com.cn
 # 其它广告/统计/跟踪平台
 DOMAIN,anythinktech.com
 DOMAIN,birdgesdk.com
+DOMAIN,api.umengcn.org
 DOMAIN,mobrtb.com
 DOMAIN,domob.cn
 DOMAIN,domobcdn.com
@@ -215,3 +234,13 @@ DOMAIN,oceanengine.com
 DOMAIN,networkbench.com
 DOMAIN,tingyun.com
 DOMAIN,metrics.apple.com
+
+# 可选高风险（涉及支付/系统 DNS，默认不启用）
+# DOMAIN,loggw.alipay.com
+# DOMAIN,loggw-ex.alipay.com
+# DOMAIN,loggw-exsdk.alipay.com
+# DOMAIN,openmonitor.alipay.com
+# DOMAIN,collect.alipay.com
+# DOMAIN,as.weixin.qq.com
+# DOMAIN,dns.weixin.qq.com
+# DOMAIN,paydns.wechatpay.cn
