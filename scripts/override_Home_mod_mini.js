@@ -467,14 +467,6 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "adblock_reject": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/adblock-reject.list",
-    "path": "./ruleset/adblock_reject.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
   "BanAD": {
     "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
     "path": "./ruleset/BanAD.list",
@@ -486,14 +478,6 @@ function main(config) {
   "BanProgramAD": {
     "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
     "path": "./ruleset/BanProgramAD.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "BanEasyList": {
-    "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list",
-    "path": "./ruleset/BanEasyList.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -518,14 +502,6 @@ function main(config) {
   "awavenue_ads": {
     "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/awavenue-ads.list",
     "path": "./ruleset/awavenue_ads.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
-  "ddgksf_ads": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ddgksf-ads.list",
-    "path": "./ruleset/ddgksf_ads.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -763,14 +739,11 @@ function main(config) {
   "RULE-SET,direct_custom,🎯 全球直连",
   "RULE-SET,proxy_custom,🚀 节点选择",
   "RULE-SET,android_block,🛑 广告拦截",
-  "RULE-SET,adblock_reject,🛑 广告拦截",
   "RULE-SET,BanAD,🛑 广告拦截",
   "RULE-SET,BanProgramAD,🛑 广告拦截",
-  "RULE-SET,BanEasyList,🛑 广告拦截",
   "RULE-SET,BanEasyListChina,🛑 广告拦截",
   "RULE-SET,BanEasyPrivacy,🛑 广告拦截",
   "RULE-SET,awavenue_ads,🛑 广告拦截",
-  "RULE-SET,ddgksf_ads,🛑 广告拦截",
   "RULE-SET,ai,🤖 AI",
   "RULE-SET,AI,🤖 AI",
   "RULE-SET,github,👨‍💻 开发",
