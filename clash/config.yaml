@@ -8,6 +8,7 @@ tcp-concurrent: true # 启用 TCP 并发连接。这允许 Clash 同时建立多
 
 dns:
   enable: true # 开启 DNS 配置
+  listen: 0.0.0.0:1053 # DNS 监听端口，便于客户端稳定识别 DNS 模式
   enhanced-mode: fake-ip # 使用 fake-ip 提升规则匹配效率
   fake-ip-range: 198.18.0.1/16 # fake-ip 网段
   use-hosts: true # 读取 hosts
@@ -20,11 +21,12 @@ dns:
     - tls://223.6.6.6
     - tls://119.29.29.29
     - tls://1.12.12.12
+    - tls://1.1.1.1
   nameserver: # 未命中分流规则最终走 MATCH 时使用，采用国外 DNS 防污染/泄漏
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
     - https://dns.quad9.net/dns-query
-    - https://dns.opendns.com/dns-query
+    - https://doh.opendns.com/dns-query
   proxy-server-nameserver: # 解析代理节点域名时使用，优先国内 DNS 保证起步可达
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
