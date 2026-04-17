@@ -47,3 +47,5 @@ dns:
     - 'stun.*.*'
     - 'stun.*.*.*'
     - 'WORKGROUP'
+    # Argo Tunnel 核心必排除
+    - +.argotunnel.com
