@@ -12,6 +12,7 @@ PROCESS-NAME,GameViewer.exe
 PROCESS-NAME,feishunet
 PROCESS-NAME,飞鼠组网.exe
 PROCESS-NAME,com.seeyon.cmp
+PROCESS-NAME,cloudflared
 
 # Xiaomi / Mi push allowlist
 DOMAIN,push.xiaomi.com
