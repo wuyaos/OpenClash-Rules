@@ -1,0 +1,85 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "mangabz.com",
+        "myqnapcloud.cn",
+        "manhuagui.com",
+        "mxwljsq.top",
+        "sonarr.tv",
+        "v1.mk",
+        "msq.pub",
+        "typeset.io",
+        "ipm.com.cn",
+        "npmjs.com",
+        "mb3admin.com",
+        "tsss123.cc",
+        "sub.dy.ax",
+        "sub.d1.mk",
+        "mineru.net",
+        "idcflare.com",
+        "iptorrents.com",
+        "mikanani.me",
+        "dmhy.org",
+        "filelist.io",
+        "byr.pt",
+        "avistaz.to",
+        "ani.rip",
+        "u2.dmhy.org",
+        "acgrip.art",
+        "monikadesign.uk",
+        "cinemaz.to",
+        "resources.ani.rip",
+        "aniopen.an-i.workers.dev",
+        "acg.rip",
+        "xn--ngstr-lra8j.com",
+        "services.googleapis.cn",
+        "challenges.cloudflare.com",
+        "cdn.cloudflare.net",
+        "cloudflareinsights.com",
+        "facebook.com",
+        "fb.com",
+        "fb.me",
+        "fbcdn.com",
+        "fbcdn.net",
+        "zodgame.xyz",
+        "ecchi100.com",
+        "www.acgkkk.com",
+        "www.gtloli.eu.org"
+      ]
+    },
+    {
+      "process_name": [
+        "UniGetUI.exe"
+      ]
+    },
+    {
+      "domain": [
+        "linux.do",
+        "mypikpak.com",
+        "mypikpak.netcologne",
+        "user.mypikpak.com",
+        "access.mypikpak.com"
+      ]
+    },
+    {
+      "ip_cidr": [
+        "31.13.24.0/21",
+        "31.13.64.0/18",
+        "45.64.40.0/22",
+        "66.220.144.0/20",
+        "69.63.176.0/20",
+        "69.171.224.0/19",
+        "74.119.76.0/22",
+        "103.4.96.0/22",
+        "129.134.0.0/17",
+        "157.240.0.0/17",
+        "173.252.64.0/18",
+        "179.60.192.0/22",
+        "185.60.216.0/22",
+        "204.15.20.0/22"
+      ]
+    }
+  ]
+}

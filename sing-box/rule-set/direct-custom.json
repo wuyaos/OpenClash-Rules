@@ -1,0 +1,41 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "process_name": [
+        "mosdns",
+        "lucky",
+        "tailscaled",
+        "easytier-core",
+        "easytier",
+        "frpc",
+        "LinkEase.exe",
+        "syncthing.exe",
+        "syncthing",
+        "GameViewer.exe",
+        "feishunet",
+        "飞鼠组网.exe",
+        "com.seeyon.cmp"
+      ]
+    },
+    {
+      "domain": [
+        "push.xiaomi.com",
+        "api.ad.xiaomi.com",
+        "gvod.aiseejapp.atianqi.com",
+        "cdn.cnbj1.fds.api.mi-img.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "xiaomi.com",
+        "mi.com"
+      ]
+    },
+    {
+      "ip_cidr": [
+        "2404:f4c0::/32"
+      ]
+    }
+  ]
+}

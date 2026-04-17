@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_keyword": [
+        "amazon",
+        "dmm",
+        "prestige-av"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "fc2.com",
+        "hbox.jp",
+        "caribbeancom.com",
+        "akabeesoft2.com",
+        "akabeesoft3.com",
+        "akatsukiworks.com",
+        "alicesoft.com",
+        "api-p.videomarket.jp",
+        "cosmiccute.com",
+        "ddo.jp",
+        "dmm-extension.com",
+        "dmm.co.jp",
+        "dmm.com",
+        "dmm.hk",
+        "dmmapis.com",
+        "dmmrex.com",
+        "hibiki-site.com",
+        "minori.ph",
+        "navismithapis-cdn.com",
+        "tenco.cc",
+        "wheel-soft.com"
+      ]
+    },
+    {
+      "ip_cidr": [
+        "125.6.189.7/32",
+        "203.104.209.7/32"
+      ]
+    }
+  ]
+}

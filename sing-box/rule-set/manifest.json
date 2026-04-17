@@ -1,0 +1,116 @@
+[
+  {
+    "tag": "oc-pt",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/pt.list",
+    "file": "sing-box/rule-set/pt.json",
+    "rules": 4,
+    "unsupported": {
+      "URL-REGEX": 4
+    }
+  },
+  {
+    "tag": "oc-direct-custom",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/direct-custom.list",
+    "file": "sing-box/rule-set/direct-custom.json",
+    "rules": 4,
+    "unsupported": {}
+  },
+  {
+    "tag": "oc-proxy-custom",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-custom.list",
+    "file": "sing-box/rule-set/proxy-custom.json",
+    "rules": 4,
+    "unsupported": {}
+  },
+  {
+    "tag": "oc-android-block",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/android-block.list",
+    "file": "sing-box/rule-set/android-block.json",
+    "rules": 2,
+    "unsupported": {}
+  },
+  {
+    "tag": "oc-awavenue-ads",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/awavenue-ads.list",
+    "file": "sing-box/rule-set/awavenue-ads.json",
+    "rules": 4,
+    "unsupported": {}
+  },
+  {
+    "tag": "oc-ai",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/ai.list",
+    "file": "sing-box/rule-set/ai.json",
+    "rules": 3,
+    "unsupported": {}
+  },
+  {
+    "tag": "oc-github",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/github.list",
+    "file": "sing-box/rule-set/github.json",
+    "rules": 2,
+    "unsupported": {}
+  },
+  {
+    "tag": "oc-developer",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/developer.list",
+    "file": "sing-box/rule-set/developer.json",
+    "rules": 2,
+    "unsupported": {}
+  },
+  {
+    "tag": "oc-proxy-media",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-media.list",
+    "file": "sing-box/rule-set/proxy-media.json",
+    "rules": 5,
+    "unsupported": {
+      "USER-AGENT": 42,
+      "URL-REGEX": 1
+    }
+  },
+  {
+    "tag": "oc-scraper-nojp",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/scraper-nojp.list",
+    "file": "sing-box/rule-set/scraper-nojp.json",
+    "rules": 3,
+    "unsupported": {}
+  },
+  {
+    "tag": "oc-scraper-jp",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/scraper-jp.list",
+    "file": "sing-box/rule-set/scraper-jp.json",
+    "rules": 3,
+    "unsupported": {}
+  },
+  {
+    "tag": "oc-quest3",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/quest3.list",
+    "file": "sing-box/rule-set/quest3.json",
+    "rules": 1,
+    "unsupported": {}
+  },
+  {
+    "tag": "oc-app-mutated",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/app-mutated.list",
+    "file": "sing-box/rule-set/app-mutated.json",
+    "rules": 4,
+    "unsupported": {
+      "PROCESS-NAME-REGEX": 6
+    }
+  },
+  {
+    "tag": "oc-game-mutated",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/game-mutated.list",
+    "file": "sing-box/rule-set/game-mutated.json",
+    "rules": 5,
+    "unsupported": {
+      "PROCESS-NAME-REGEX": 6
+    }
+  },
+  {
+    "tag": "oc-androidcn-allow",
+    "source": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/androidcn-allow.list",
+    "file": "sing-box/rule-set/androidcn-allow.json",
+    "rules": 4,
+    "unsupported": {}
+  }
+]

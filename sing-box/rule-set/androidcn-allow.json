@@ -1,0 +1,95 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "zhuanzhuan.com",
+        "jiaoyimao.com"
+      ]
+    },
+    {
+      "domain": [
+        "c.pc.qq.com",
+        "sfp.safe.baidu.com",
+        "dlswbr.baidu.com",
+        "pull.yximgs.com",
+        "s2.kskwai.com",
+        "tpns.tencent.com",
+        "cnlogs.umeng.com",
+        "resolve.umeng.com",
+        "cnlogs.umengcloud.com",
+        "errnewlog.umeng.com",
+        "auni.telecome.cn",
+        "auni.unioncom.cc",
+        "shuzilm.cn",
+        "a0.app.xiaomi.com",
+        "grpc.biliapi.net",
+        "api.look.163.com",
+        "dun.163.com",
+        "mime.baidu.com",
+        "saveu5-normal-lq.zijieapi.com",
+        "ecombdimg.com",
+        "mrn.meituan.net",
+        "i.meituan.com",
+        "mcc.inf.miui.com",
+        "ipassport.ele.me",
+        "fin-ingress-ele.aliyuncs.com",
+        "shouji.sogou.com",
+        "dig.bdurl.net",
+        "toblog.ctobsnssdk.com",
+        "article.zlink.toutiao.com",
+        "v.110route.cn",
+        "snowflake.qq.com",
+        "game.weixin.qq.com",
+        "szlong.weixin.qq.com",
+        "fc.kejiweixun.com",
+        "cstore.koubei.com",
+        "imtt.dd.qq.com",
+        "down-update.qq.com",
+        "log.snssdk.com",
+        "tnc3-alisc1.snssdk.com",
+        "content-open.douyin.com",
+        "prod-chat-kimi.tos-cn-beijing.volces.com",
+        "download.uc.cn",
+        "broccoli.uc.cn",
+        "id-card.yun.cn",
+        "clouddrive-activity.uc.cn",
+        "ucus.ucweb.com",
+        "ynuf.alipay.com",
+        "order.sm.cn",
+        "user-auth-server.uc.cn",
+        "id.uc.cn",
+        "drive.uc.cn",
+        "smartcard.apps.coloros.com",
+        "weather-api-cn.allawntech.com",
+        "uland.taobao.com",
+        "www.iconfont.cn",
+        "retcode.taobao.com",
+        "report.dingtalk.com",
+        "ac.opapp.cn",
+        "acs-m.koubei.com",
+        "c.umsns.com",
+        "i.fotao9.com",
+        "ccc-x.jd.com",
+        "knicks.jd.com",
+        "second-floor-pro.pf.jd.com",
+        "tdid.m.qq.com",
+        "capi.jingjianx.vip",
+        "i.snssdk.com",
+        "img.ssl.msdk.qq.com"
+      ]
+    },
+    {
+      "domain_keyword": [
+        "quark"
+      ]
+    },
+    {
+      "domain_regex": [
+        "^[^.]+-api\\\\.uc\\\\.cn$",
+        "^[^.]+-album\\\\.uc\\\\.cn$",
+        "^s\\\\.click\\\\..*\\\\.com$"
+      ]
+    }
+  ]
+}

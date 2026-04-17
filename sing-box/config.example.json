@@ -1,0 +1,309 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "type": "tls",
+        "server": "8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "type": "https",
+        "server": "223.5.5.5"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "tun0",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed"
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "proxy",
+      "outbounds": [
+        "auto",
+        "node-01",
+        "node-02"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "node-01",
+        "node-02"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "type": "socks",
+      "tag": "node-01",
+      "server": "127.0.0.1",
+      "server_port": 10801
+    },
+    {
+      "type": "socks",
+      "tag": "node-02",
+      "server": "127.0.0.1",
+      "server_port": 10802
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "action": "route",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": [
+          "oc-pt"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "oc-direct-custom"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "oc-proxy-custom"
+        ],
+        "action": "route",
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": [
+          "oc-android-block"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "oc-awavenue-ads"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "oc-ai"
+        ],
+        "action": "route",
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": [
+          "oc-github"
+        ],
+        "action": "route",
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": [
+          "oc-developer"
+        ],
+        "action": "route",
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": [
+          "oc-proxy-media"
+        ],
+        "action": "route",
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": [
+          "oc-scraper-nojp"
+        ],
+        "action": "route",
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": [
+          "oc-scraper-jp"
+        ],
+        "action": "route",
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": [
+          "oc-quest3"
+        ],
+        "action": "route",
+        "outbound": "proxy"
+      },
+      {
+        "rule_set": [
+          "oc-app-mutated"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "oc-game-mutated"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "oc-androidcn-allow"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "oc-pt",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/pt.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-direct-custom",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/direct-custom.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-proxy-custom",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/proxy-custom.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-android-block",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/android-block.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-awavenue-ads",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/awavenue-ads.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-ai",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/ai.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-github",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/github.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-developer",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/developer.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-proxy-media",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/proxy-media.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-scraper-nojp",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/scraper-nojp.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-scraper-jp",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/scraper-jp.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-quest3",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/quest3.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-app-mutated",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/app-mutated.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-game-mutated",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/game-mutated.json",
+        "download_detour": "proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "oc-androidcn-allow",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/androidcn-allow.json",
+        "download_detour": "proxy"
+      }
+    ],
+    "final": "proxy",
+    "auto_detect_interface": true,
+    "find_process": true,
+    "default_domain_resolver": "local"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_rdrc": true
+    },
+    "clash_api": {
+      "default_mode": "Enhanced"
+    }
+  }
+}

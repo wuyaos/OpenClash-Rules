@@ -152,3 +152,44 @@ node -c scripts/flclash.home.js
 1. 打开 FlClash 的脚本配置（YAML 脚本模式）。
 2. 将 `scripts/flclash.acl.js` 或 `scripts/flclash.home.js` 内容粘贴进去。
 3. 应用配置并重载核心，检查 `proxy-groups` 和 `rules` 是否按预期出现。
+
+***
+
+### 5. sing-box 配置示例（新增）
+
+仓库提供了 sing-box 配置与转换脚本：
+
+- `sing-box/config.example.json`
+- `scripts/gen-singbox-rule-sets.js`
+- `scripts/convert-clash-yaml-to-singbox.js`
+
+当前流程是“先把本项目 `.list` 规则转为 sing-box source 规则，再按 `clash/mobile-module.yaml` 的规则顺序生成 sing-box JSON”。
+
+生成后的 `config.example.json` 特点：
+
+- `tun` 入站（全局接管）
+- `selector + urltest` 出站（手动/自动切换）
+- `route.rule_set` 全部为远程路径（`raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/sing-box/rule-set/*.json`）
+- `route.rules` 仅使用本项目规则，顺序对齐 `clash/mobile-module.yaml` 中对应的项目规则顺序
+
+使用方式：
+
+1. 生成本项目的 sing-box 规则集 JSON：
+
+```bash
+node scripts/gen-singbox-rule-sets.js
+```
+
+2. 从 Clash YAML 生成 sing-box JSON（默认输入 `clash/mobile-module.yaml`，默认输出 `sing-box/config.example.json`）：
+
+```bash
+node scripts/convert-clash-yaml-to-singbox.js
+```
+
+3. 把 `node-01` / `node-02` 改成你的真实节点（或改成你订阅导入后的节点 tag）。
+
+关于“去广告有没有优势”：
+
+- 有优势：可减少广告/追踪域名请求，页面更干净、部分场景更省流量。
+- 也有代价：可能误拦截个别网站的登录、验证码、评论或视频资源域名。
+- 建议做法：先启用当前示例里的 `oc-android-block` 与 `oc-awavenue-ads`，若遇到误拦截，再在 `route.rules` 前面增加白名单直连规则。
