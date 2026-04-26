@@ -129,10 +129,8 @@ PROCESS-NAME,com.appchina.yugao.2020080310
 PROCESS-NAME,com.appchina.yugao.2020080705
 PROCESS-NAME,com.appchina.yugao.2020082001
 PROCESS-NAME,com.appchina.yugao.2020082908
-PROCESS-NAME,com.appchina.yugao.2020090305
 PROCESS-NAME,com.appchina.yugao.2020112301
 PROCESS-NAME,com.appchina.yugao.2020122302
-PROCESS-NAME,com.appchina.yugao.2021012605
 PROCESS-NAME,com.appchina.yugao.2021022205
 PROCESS-NAME,com.appchina.yugao.2021022505
 PROCESS-NAME,com.appchina.yugao.2021030213
@@ -142,6 +140,7 @@ PROCESS-NAME,com.appchina.yugao.2021032606
 PROCESS-NAME,com.appchina.yugao.2021051401
 PROCESS-NAME,com.appchina.yugao.2021051802
 PROCESS-NAME,com.appchina.yugao.2021051806
+PROCESS-NAME,com.appchina.yugao.2021052007
 PROCESS-NAME,com.appchina.yugao.2021060103
 PROCESS-NAME,com.appchina.yugao.2021062204
 PROCESS-NAME,com.appchina.yugao.2021070511
@@ -151,6 +150,7 @@ PROCESS-NAME,com.appchina.yugao.2021071501
 PROCESS-NAME,com.appchina.yugao.2021072606
 PROCESS-NAME,com.appchina.yugao.2021073003
 PROCESS-NAME,com.appchina.yugao.2021081905
+PROCESS-NAME,com.appchina.yugao.2021092601
 PROCESS-NAME,com.appchina.yugao.2021101902
 PROCESS-NAME,com.appchina.yugao.2021111117
 PROCESS-NAME,com.appchina.yugao.2021112210
@@ -722,6 +722,7 @@ PROCESS-NAME,com.ovilex.realdriving3d
 PROCESS-NAME,com.ovilex.schooldriving3d
 PROCESS-NAME,com.ovilex.trucksimulator3d
 PROCESS-NAME,com.ovilex.trucksimulatorusa
+PROCESS-NAME,com.papegames.infinitynikki
 PROCESS-NAME,com.papegames.lysk.cn
 PROCESS-NAME,com.paradoxplaza.imagicka
 PROCESS-NAME,com.patigames.ilovepasta4gsp
@@ -1633,7 +1634,6 @@ PROCESS-NAME,com.tencent.tmgp.ydxh.cnchess
 PROCESS-NAME,com.tencent.tmgp.ydxh.ludo
 PROCESS-NAME,com.tencent.tmgp.ydxh.superblock
 PROCESS-NAME,com.tencent.tmgp.yhhoa
-PROCESS-NAME,com.tencent.tmgp.yhzx
 PROCESS-NAME,com.tencent.tmgp.yhzxtwzw
 PROCESS-NAME,com.tencent.tmgp.yhzz.huiyue
 PROCESS-NAME,com.tencent.tmgp.yjqy
