@@ -119,6 +119,7 @@ PROCESS-NAME,com.appchina.yugao.2020030906
 PROCESS-NAME,com.appchina.yugao.2020031602
 PROCESS-NAME,com.appchina.yugao.2020032002
 PROCESS-NAME,com.appchina.yugao.2020042406
+PROCESS-NAME,com.appchina.yugao.2020042802
 PROCESS-NAME,com.appchina.yugao.2020060406
 PROCESS-NAME,com.appchina.yugao.2020062204
 PROCESS-NAME,com.appchina.yugao.2020062805
@@ -128,7 +129,6 @@ PROCESS-NAME,com.appchina.yugao.2020080310
 PROCESS-NAME,com.appchina.yugao.2020080705
 PROCESS-NAME,com.appchina.yugao.2020082001
 PROCESS-NAME,com.appchina.yugao.2020082908
-PROCESS-NAME,com.appchina.yugao.2020090305
 PROCESS-NAME,com.appchina.yugao.2020112301
 PROCESS-NAME,com.appchina.yugao.2020122302
 PROCESS-NAME,com.appchina.yugao.2021012605
@@ -589,7 +589,6 @@ PROCESS-NAME,com.longtech.lastwars.gp
 PROCESS-NAME,com.longtu.oao
 PROCESS-NAME,com.lootworks.swords
 PROCESS-NAME,com.lovata.drawemfree
-PROCESS-NAME,com.lovejiajiao.my2048
 PROCESS-NAME,com.lovejiajiao.twentyfour
 PROCESS-NAME,com.lutongnet.brainadventure.plugin
 PROCESS-NAME,com.MA.LosAngelesCrimes
@@ -607,6 +606,7 @@ PROCESS-NAME,com.magene.onelapMatch
 PROCESS-NAME,com.magicflute.renjuworld
 PROCESS-NAME,com.magmamobile.game.EmpireConquest
 PROCESS-NAME,com.martian.RoomEscape24.tx
+PROCESS-NAME,com.martian.taochuhaidaochuan.tx
 PROCESS-NAME,com.marvel.avengersalliance_goo
 PROCESS-NAME,com.MatchalaGames.RyahsRhythm
 PROCESS-NAME,com.maxgames.stickwarlegacy
@@ -1516,7 +1516,6 @@ PROCESS-NAME,com.tencent.tmgp.tfjl
 PROCESS-NAME,com.tencent.tmgp.tfxyj
 PROCESS-NAME,com.tencent.tmgp.tgfml2
 PROCESS-NAME,com.tencent.tmgp.tgsgsy
-PROCESS-NAME,com.tencent.tmgp.tiancity.blackbeacon
 PROCESS-NAME,com.tencent.tmgp.tiancity.dom
 PROCESS-NAME,com.tencent.tmgp.tianmashikong.qj
 PROCESS-NAME,com.tencent.tmgp.tinghood.TpsForMobile.yyb3
