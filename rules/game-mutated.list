@@ -91,7 +91,6 @@ PROCESS-NAME,com.appchina.yugao.2019020105
 PROCESS-NAME,com.appchina.yugao.2019041202
 PROCESS-NAME,com.appchina.yugao.2019052902
 PROCESS-NAME,com.appchina.yugao.2019061006
-PROCESS-NAME,com.appchina.yugao.2019061203
 PROCESS-NAME,com.appchina.yugao.2019061401
 PROCESS-NAME,com.appchina.yugao.2019071702
 PROCESS-NAME,com.appchina.yugao.2019090617
@@ -1968,6 +1967,7 @@ PROCESS-NAME,mytown.street
 PROCESS-NAME,mytown.wedding
 PROCESS-NAME,net.capsuleplus.JapaneseDoll
 PROCESS-NAME,net.defensezone
+PROCESS-NAME,net.devfloor.pomodor
 PROCESS-NAME,net.fishlabs.gof2hdallandroid2012
 PROCESS-NAME,net.handicrafter.games.fom
 PROCESS-NAME,net.hexage.defense
