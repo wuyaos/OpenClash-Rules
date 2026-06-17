@@ -52,6 +52,7 @@ PROCESS-NAME,cn.com.spdb.mobilebank.per
 PROCESS-NAME,cn.com.tx.chat.android
 PROCESS-NAME,cn.com.wiisoft.glass
 PROCESS-NAME,cn.com.wiisoft.skin
+PROCESS-NAME,cn.com.zjol
 PROCESS-NAME,cn.dahebao
 PROCESS-NAME,cn.daje.remoter
 PROCESS-NAME,cn.damai
@@ -123,16 +124,15 @@ PROCESS-NAME,cn.weli.sweet
 PROCESS-NAME,cn.wiz.note
 PROCESS-NAME,cn.wondershare.filmorago
 PROCESS-NAME,cn.wps.moffice_eng
-PROCESS-NAME,cn.xianglianai
 PROCESS-NAME,cn.xiaochuankeji.tieba
 PROCESS-NAME,cn.xiaofengkj.fitpro
 PROCESS-NAME,cn.xmcall.haige
 PROCESS-NAME,cn.xuexi.android
+PROCESS-NAME,cn.yonghui.hyd
 PROCESS-NAME,cn.youth.news
 PROCESS-NAME,cn.zepeto.main
 PROCESS-NAME,cn.zymk.comic
 PROCESS-NAME,co.runner.app
-PROCESS-NAME,co.welab.wolaidai
 PROCESS-NAME,com.A17zuoye.mobile.homework
 PROCESS-NAME,com.able.wisdomtree
 PROCESS-NAME,com.acadsoc.learn
@@ -155,6 +155,7 @@ PROCESS-NAME,com.alibaba.intl.android.apps.poseidon
 PROCESS-NAME,com.alibaba.wireless
 PROCESS-NAME,com.alimama.moon
 PROCESS-NAME,com.aliyun.tongyi
+PROCESS-NAME,com.ancda.parents
 PROCESS-NAME,com.ancient.calendar
 PROCESS-NAME,com.android.abustory
 PROCESS-NAME,com.android.app.quanmama
@@ -266,7 +267,6 @@ PROCESS-NAME,com.c2vl.kgamebox
 PROCESS-NAME,com.caijing
 PROCESS-NAME,com.caing.news
 PROCESS-NAME,com.cainiao.wireless
-PROCESS-NAME,com.cainiu.lawyer365
 PROCESS-NAME,com.caishi.cronus
 PROCESS-NAME,com.call.myyb
 PROCESS-NAME,com.campmobile.snowcamera
@@ -316,7 +316,6 @@ PROCESS-NAME,com.cio.project
 PROCESS-NAME,com.citiccard.mobilebank
 PROCESS-NAME,com.cleanmaster.mguard_cn
 PROCESS-NAME,com.clipzz.media
-PROCESS-NAME,com.cloudpower.netsale.activity
 PROCESS-NAME,com.clov4r.android.nil
 PROCESS-NAME,com.clover.daysmatter
 PROCESS-NAME,com.cmbc.cc.mbank
@@ -337,7 +336,6 @@ PROCESS-NAME,com.cooby.news
 PROCESS-NAME,com.coolapk.market
 PROCESS-NAME,com.cootek.crazyreader
 PROCESS-NAME,com.cpic.maker
-PROCESS-NAME,com.cpic.sxbxxe
 PROCESS-NAME,com.creditwealth.client
 PROCESS-NAME,com.crv.wanjia
 PROCESS-NAME,com.cs_credit_bank
@@ -355,7 +353,6 @@ PROCESS-NAME,com.cyjh.ddyun
 PROCESS-NAME,com.cyp.fm
 PROCESS-NAME,com.dachen.medicalcircle
 PROCESS-NAME,com.dada.kdb123
-PROCESS-NAME,com.dailyyoga.cn
 PROCESS-NAME,com.dalongtech.cloud
 PROCESS-NAME,com.dangdang.buy2
 PROCESS-NAME,com.dangdang.reader
@@ -381,14 +378,12 @@ PROCESS-NAME,com.didapinche.booking
 PROCESS-NAME,com.diershoubing.erbing
 PROCESS-NAME,com.digitalgd.dgyss
 PROCESS-NAME,com.diguayouxi
-PROCESS-NAME,com.dingchebao
 PROCESS-NAME,com.dingtai.wxhn.activity
 PROCESS-NAME,com.dingYZ.dingyzwater
 PROCESS-NAME,com.dinoenglish.yyb
 PROCESS-NAME,com.dipiapp.pcall
 PROCESS-NAME,com.djbox.product
 PROCESS-NAME,com.docin.zlibrary.ui.android
-PROCESS-NAME,com.dongfanghn.com
 PROCESS-NAME,com.dongqiudi.news
 PROCESS-NAME,com.dotamax.app
 PROCESS-NAME,com.douban.book.reader
@@ -458,7 +453,9 @@ PROCESS-NAME,com.fanghe.makepaper
 PROCESS-NAME,com.fanghuoyun.im
 PROCESS-NAME,com.fanhuan
 PROCESS-NAME,com.fanli.android.apps
+PROCESS-NAME,com.fanlijiew
 PROCESS-NAME,com.fanlitaolianmengw
+PROCESS-NAME,com.fanlwgaoylmengw
 PROCESS-NAME,com.fbx.handwriteime
 PROCESS-NAME,com.fc.management
 PROCESS-NAME,com.fcbox.hivebox
@@ -528,7 +525,6 @@ PROCESS-NAME,com.gioct.weather
 PROCESS-NAME,com.glodon.drawingexplorer
 PROCESS-NAME,com.glorytimes.app.android.jfyaudioeditor
 PROCESS-NAME,com.gome.eshopnew
-PROCESS-NAME,com.gomejr.icash
 PROCESS-NAME,com.gongyinruixin
 PROCESS-NAME,com.gonlan.iplaymtg
 PROCESS-NAME,com.goodtech.tq
@@ -591,7 +587,6 @@ PROCESS-NAME,com.hkx.youandme
 PROCESS-NAME,com.hlg.daydaytobusiness
 PROCESS-NAME,com.hmkx.zgjkj
 PROCESS-NAME,com.hnzx.hnrb
-PROCESS-NAME,com.hnzycfc.zyxj
 PROCESS-NAME,com.hoge.android.chinablue
 PROCESS-NAME,com.hoge.android.wuhan
 PROCESS-NAME,com.hoge.android.wuxiwireless
@@ -618,6 +613,7 @@ PROCESS-NAME,com.huati
 PROCESS-NAME,com.huawei.fastapp
 PROCESS-NAME,com.huawei.hwid
 PROCESS-NAME,com.huawei.intelligent
+PROCESS-NAME,com.huawei.search
 PROCESS-NAME,com.huawei.smarthome
 PROCESS-NAME,com.huicao.stbg
 PROCESS-NAME,com.huimai365
@@ -660,7 +656,6 @@ PROCESS-NAME,com.idotools.rings
 PROCESS-NAME,com.ifanr.activitys
 PROCESS-NAME,com.ifeimo.audiorecord
 PROCESS-NAME,com.ifeimo.videoeditor
-PROCESS-NAME,com.ifeng.android
 PROCESS-NAME,com.ifeng.fhdt
 PROCESS-NAME,com.ifeng.news2
 PROCESS-NAME,com.ifeng.newvideo
@@ -681,7 +676,6 @@ PROCESS-NAME,com.immomo.momo
 PROCESS-NAME,com.imusic.iting
 PROCESS-NAME,com.inditex.zara
 PROCESS-NAME,com.infinitus.bupm
-PROCESS-NAME,com.infothinker.gzmetro
 PROCESS-NAME,com.insurance.agency
 PROCESS-NAME,com.intsig.BizCardReader
 PROCESS-NAME,com.intsig.camscanner
@@ -697,6 +691,7 @@ PROCESS-NAME,com.ishowedu.child.peiyin
 PROCESS-NAME,com.ishowedu.peiyin
 PROCESS-NAME,com.ishugui
 PROCESS-NAME,com.istone.activity
+PROCESS-NAME,com.itcode.reader
 PROCESS-NAME,com.iyuba.AE
 PROCESS-NAME,com.iyuba.cet4
 PROCESS-NAME,com.iyuba.CSvoa
@@ -802,6 +797,7 @@ PROCESS-NAME,com.leixun.taofen8
 PROCESS-NAME,com.lemon.faceu
 PROCESS-NAME,com.lemon.lv
 PROCESS-NAME,com.leqi.idpicture
+PROCESS-NAME,com.leqi.ProfessionalIDPhoto
 PROCESS-NAME,com.letv.android.client
 PROCESS-NAME,com.letv.android.client.pad
 PROCESS-NAME,com.letv.letvshop
@@ -815,8 +811,6 @@ PROCESS-NAME,com.liba.android
 PROCESS-NAME,com.lietou.mishu
 PROCESS-NAME,com.linecorp.foodcamcn.android
 PROCESS-NAME,com.lingan.seeyou
-PROCESS-NAME,com.lingan.yunqi
-PROCESS-NAME,com.lingcreate.speechtotext
 PROCESS-NAME,com.lingyue.zebraloan
 PROCESS-NAME,com.linkiing.show
 PROCESS-NAME,com.lion.market
@@ -827,7 +821,6 @@ PROCESS-NAME,com.lltskb.lltskb
 PROCESS-NAME,com.lofter.android
 PROCESS-NAME,com.lolaage.tbulu.tools
 PROCESS-NAME,com.lovebizhi.wallpaper
-PROCESS-NAME,com.lphtsccft
 PROCESS-NAME,com.lqh.love.comic
 PROCESS-NAME,com.ls.sjdtbz
 PROCESS-NAME,com.lt.lighting
@@ -856,9 +849,7 @@ PROCESS-NAME,com.mandian.android.dongdong
 PROCESS-NAME,com.market2345
 PROCESS-NAME,com.marqio.widget.keeplighting
 PROCESS-NAME,com.marryu
-PROCESS-NAME,com.maxxipoint.android
 PROCESS-NAME,com.mcdonalds.gma.cn
-PROCESS-NAME,com.mediabox.voicechanger
 PROCESS-NAME,com.meelive.ingkee
 PROCESS-NAME,com.meet.pianolearn
 PROCESS-NAME,com.meetstudio.app.Zither
@@ -981,6 +972,7 @@ PROCESS-NAME,com.paic.zhifu.wallet.activity
 PROCESS-NAME,com.palmmob.voicer
 PROCESS-NAME,com.pangning.eq.equalizer.music
 PROCESS-NAME,com.pcncn.jj
+PROCESS-NAME,com.pdmi.guangzhou.media
 PROCESS-NAME,com.pen.recorder
 PROCESS-NAME,com.people.health.doctor
 PROCESS-NAME,com.peopledailychina.activity
@@ -1002,7 +994,6 @@ PROCESS-NAME,com.pplive.androidphone
 PROCESS-NAME,com.pplive.androidphone.sport
 PROCESS-NAME,com.prinics.kodak.photoprinter
 PROCESS-NAME,com.prompt.lines
-PROCESS-NAME,com.qb.qtranslator
 PROCESS-NAME,com.qclianai.com
 PROCESS-NAME,com.qdnews.qd
 PROCESS-NAME,com.qdruotu.app
@@ -1035,6 +1026,7 @@ PROCESS-NAME,com.qiouou.app
 PROCESS-NAME,com.qisi.freepaper
 PROCESS-NAME,com.qisi.wallpaper
 PROCESS-NAME,com.qiyi.video
+PROCESS-NAME,com.qiyi.video.child
 PROCESS-NAME,com.qiyi.video.lite
 PROCESS-NAME,com.qiyi.video.pad
 PROCESS-NAME,com.qiyi.video.reader
@@ -1044,6 +1036,7 @@ PROCESS-NAME,com.qq.ac.android
 PROCESS-NAME,com.qq.qcloud
 PROCESS-NAME,com.qq.reader
 PROCESS-NAME,com.qsmy.walkmonkey
+PROCESS-NAME,com.qtx.qtxty
 PROCESS-NAME,com.quanleimu.activity
 PROCESS-NAME,com.quark.browser
 PROCESS-NAME,com.Qunar
@@ -1090,14 +1083,10 @@ PROCESS-NAME,com.seewo.easicare.pro
 PROCESS-NAME,com.sender.yiwei
 PROCESS-NAME,com.sevenmmobile
 PROCESS-NAME,com.sevenpig.wallpaper
-PROCESS-NAME,com.sevenplus.chinascience
 PROCESS-NAME,com.sf.activity
-PROCESS-NAME,com.sgcc.wsgw.cn
-PROCESS-NAME,com.shabro.android.activity
 PROCESS-NAME,com.shanbay.sentence
 PROCESS-NAME,com.shangbiao.activity
 PROCESS-NAME,com.shangbiao.searchsb86
-PROCESS-NAME,com.shangfang.gylm
 PROCESS-NAME,com.shangshaban.zhaopin.activity
 PROCESS-NAME,com.shanhu.wallpaper
 PROCESS-NAME,com.shark.jizhang
@@ -1157,7 +1146,6 @@ PROCESS-NAME,com.sinyee.babybus.show
 PROCESS-NAME,com.sinyee.babybus.talk2kiki
 PROCESS-NAME,com.sinyee.babybus.toilet
 PROCESS-NAME,com.sinyee.babybus.travelsafety
-PROCESS-NAME,com.site.maigoo
 PROCESS-NAME,com.sitech.rhtx
 PROCESS-NAME,com.sjsj.clockapp.clockmaster
 PROCESS-NAME,com.sjz.cl.smspopup
@@ -1213,6 +1201,7 @@ PROCESS-NAME,com.suning.mobile.epa
 PROCESS-NAME,com.sunying.booster
 PROCESS-NAME,com.sup.android.superb
 PROCESS-NAME,com.superlib
+PROCESS-NAME,com.suteng.zzss480
 PROCESS-NAME,com.swlvrm.anwsi
 PROCESS-NAME,com.sxm.farpoolcar
 PROCESS-NAME,com.sxm.yiwei
@@ -1227,7 +1216,6 @@ PROCESS-NAME,com.szzc.ucar.pilot
 PROCESS-NAME,com.tal.kaoyan
 PROCESS-NAME,com.talent.food
 PROCESS-NAME,com.talicai.timiclient
-PROCESS-NAME,com.tanyu.me
 PROCESS-NAME,com.taobao.etao
 PROCESS-NAME,com.taobao.idlefish
 PROCESS-NAME,com.taobao.litetao
@@ -1253,7 +1241,6 @@ PROCESS-NAME,com.tencent.gamehelper.dnf
 PROCESS-NAME,com.tencent.gamehelper.nz
 PROCESS-NAME,com.tencent.gamehelper.pg
 PROCESS-NAME,com.tencent.gamehelper.smoba
-PROCESS-NAME,com.tencent.gamereva
 PROCESS-NAME,com.tencent.hunyuan.app.chat
 PROCESS-NAME,com.tencent.igame
 PROCESS-NAME,com.tencent.karaoke
@@ -1275,7 +1262,6 @@ PROCESS-NAME,com.tencent.qqsports
 PROCESS-NAME,com.tencent.qt.qtl
 PROCESS-NAME,com.tencent.qt.sns
 PROCESS-NAME,com.tencent.tgclub
-PROCESS-NAME,com.tencent.tim
 PROCESS-NAME,com.tencent.token
 PROCESS-NAME,com.tencent.transfer
 PROCESS-NAME,com.tencent.ttpic
@@ -1315,7 +1301,6 @@ PROCESS-NAME,com.topgether.sixfoot
 PROCESS-NAME,com.toutiao.yangtse
 PROCESS-NAME,com.towords
 PROCESS-NAME,com.tpv.familylink
-PROCESS-NAME,com.translate.english
 PROCESS-NAME,com.trantor.genesis
 PROCESS-NAME,com.tripadvisor.tripadvisor.daodao
 PROCESS-NAME,com.truckhome.bbs
@@ -1327,6 +1312,7 @@ PROCESS-NAME,com.tudou.android
 PROCESS-NAME,com.tujia.hotel
 PROCESS-NAME,com.tuniu.app.ui
 PROCESS-NAME,com.tuoniu.pingmuezuo
+PROCESS-NAME,com.tvs.metoo
 PROCESS-NAME,com.twentyfirstcbh.epaper
 PROCESS-NAME,com.ubestkid.beilehu.android
 PROCESS-NAME,com.ucar.app
@@ -1379,6 +1365,7 @@ PROCESS-NAME,com.welove520.welove
 PROCESS-NAME,com.wemall.onlineshopping
 PROCESS-NAME,com.wenhua.bamboo
 PROCESS-NAME,com.wenhui.ebook
+PROCESS-NAME,com.wepie.weplay
 PROCESS-NAME,com.when.coco
 PROCESS-NAME,com.whizen.iptv.activity
 PROCESS-NAME,com.whty.wicity.china
@@ -1388,7 +1375,6 @@ PROCESS-NAME,com.wifi.reader.free
 PROCESS-NAME,com.winbaoxian.wybx
 PROCESS-NAME,com.winderinfo.yashanghui
 PROCESS-NAME,com.wisentsoft.chinapost.android
-PROCESS-NAME,com.wkjyqh.wukuangqihuo
 PROCESS-NAME,com.wkscuiphone
 PROCESS-NAME,com.wlqq
 PROCESS-NAME,com.wlqq4consignor
@@ -1402,7 +1388,6 @@ PROCESS-NAME,com.wondertek.miguaikan
 PROCESS-NAME,com.wondertek.paper
 PROCESS-NAME,com.woqu.attendance
 PROCESS-NAME,com.words.english
-PROCESS-NAME,com.work.clock
 PROCESS-NAME,com.wsecar.wsjc
 PROCESS-NAME,com.wshifu.app.jiedanyi
 PROCESS-NAME,com.wuba
@@ -1461,6 +1446,7 @@ PROCESS-NAME,com.xt.retouch
 PROCESS-NAME,com.xtc.watch
 PROCESS-NAME,com.xtuone.android.syllabus
 PROCESS-NAME,com.xuanyou2022.bizhi
+PROCESS-NAME,com.xueersi.parentsmeeting
 PROCESS-NAME,com.xueqiu.android
 PROCESS-NAME,com.xuexiang.myring
 PROCESS-NAME,com.xunlei.downloadprovider
@@ -1488,13 +1474,13 @@ PROCESS-NAME,com.yibo.xiaoguan.toc
 PROCESS-NAME,com.yicai.news
 PROCESS-NAME,com.yiche.autoeasy
 PROCESS-NAME,com.yiche.price
-PROCESS-NAME,com.yidian.xiaomi
 PROCESS-NAME,com.yigequanquanqq.app
 PROCESS-NAME,com.yigusjgh.daoshuri
 PROCESS-NAME,com.yilesoft.app.beautifulimageshow
 PROCESS-NAME,com.yingyonghui.market
 PROCESS-NAME,com.yipiao
 PROCESS-NAME,com.yiruike.sodacn.android
+PROCESS-NAME,com.yitantech.gaigai
 PROCESS-NAME,com.yitong.mbank
 PROCESS-NAME,com.yitong.mbank.psbc
 PROCESS-NAME,com.yiwang
@@ -1560,6 +1546,7 @@ PROCESS-NAME,com.zhibo.mm
 PROCESS-NAME,com.zhichan.msmds
 PROCESS-NAME,com.zhihu.android
 PROCESS-NAME,com.zhihu.daily.android
+PROCESS-NAME,com.zhinengremote.mohan
 PROCESS-NAME,com.zhiyaolai.playschool
 PROCESS-NAME,com.zhubajie.client
 PROCESS-NAME,com.zhutisp.sdbzcm
@@ -1579,7 +1566,6 @@ PROCESS-NAME,com.zyhd.voice
 PROCESS-NAME,com.zz.voip
 PROCESS-NAME,com.zzu.sxm.chemical
 PROCESS-NAME,com.zzw.october
-PROCESS-NAME,consumer.ttpc.com.consumer
 PROCESS-NAME,cszy.wdtk.dntkbz
 PROCESS-NAME,ctrip.android.view
 PROCESS-NAME,dongzheng.szkingdom.android.phone
@@ -1611,7 +1597,6 @@ PROCESS-NAME,jiakaokesan.app.good
 PROCESS-NAME,jiakaokesi.app.good
 PROCESS-NAME,jiakaokeyi.app.good
 PROCESS-NAME,jiakaotong.app.good
-PROCESS-NAME,jiakaozhushou.app.good
 PROCESS-NAME,jiaxiao.app.good
 PROCESS-NAME,jiaxiaobaodian.app.good
 PROCESS-NAME,jp.ne.neko.freewing.JapaneseKeyboard
@@ -1683,7 +1668,6 @@ PROCESS-NAME,vStudio.Android.Camera360
 PROCESS-NAME,vz.com
 PROCESS-NAME,weicom.yi.wallpaper
 PROCESS-NAME,wind.deposit
-PROCESS-NAME,wshifu.app.android
 PROCESS-NAME,xhing.pqoen.uthjg
 PROCESS-NAME,xun.image.magic
 PROCESS-NAME,yiqi.bazi
