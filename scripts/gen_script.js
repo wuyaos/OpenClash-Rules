@@ -272,6 +272,23 @@ function generateOne(target) {
   };
 }
 
+function cleanupOrphanOverrides(targets) {
+  const expected = new Set(targets.map((item) => path.basename(item.outPath)));
+  const names = fs
+    .readdirSync(OUTPUT_DIR)
+    .filter((name) => /^override_.*\.js$/i.test(name))
+    .sort((a, b) => a.localeCompare(b));
+
+  const removed = [];
+  for (const name of names) {
+    if (expected.has(name)) continue;
+    const fullPath = path.join(OUTPUT_DIR, name);
+    fs.unlinkSync(fullPath);
+    removed.push(path.relative(ROOT, fullPath));
+  }
+  return removed;
+}
+
 function main() {
   const targets = collectTargets();
   if (targets.length === 0) {
@@ -284,6 +301,11 @@ function main() {
     console.log(
       `[override:${item.label}] ${item.ini} -> ${item.out} (groups=${item.groups}, providers=${item.providers}, rules=${item.rules})`
     );
+  }
+
+  const removed = cleanupOrphanOverrides(targets);
+  for (const file of removed) {
+    console.log(`[override:cleanup] removed orphan ${file}`);
   }
 }
 

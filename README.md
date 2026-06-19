@@ -120,7 +120,6 @@
 - 生成结果命名规则：`scripts/override_<ini文件名>.js`
 - 当前示例输出：
   - `scripts/override_ACL4SSR_mod_mini.js`
-  - `scripts/override_Home_mod_mini.js`
   - `scripts/override_Router_mod_mini.js`
 
 #### 4.2 重新生成
@@ -136,7 +135,6 @@ node scripts/gen_script.js
 ```bash
 node -c scripts/gen_script.js
 node -c scripts/override_ACL4SSR_mod_mini.js
-node -c scripts/override_Home_mod_mini.js
 node -c scripts/override_Router_mod_mini.js
 ```
 
@@ -149,7 +147,7 @@ node -c scripts/override_Router_mod_mini.js
   - `clash-classic:<url>`（yaml provider）
   - `[]GEOIP,...` / `[]FINAL`（内建规则，`FINAL` 转为 `MATCH,...`）
 - 自动去重（provider 与 rules）并保持首次出现顺序
-- 保留各 `ini` 文件之间的规则差异（例如 `🏠 回家` 规则链）
+- 自动清理孤儿 `override_*.js`（当对应 ini 删除后，旧产物会被移除）
 
 #### 4.4 在 FlClash 中使用
 
