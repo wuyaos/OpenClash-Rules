@@ -8,23 +8,8 @@ const ROOT = path.resolve(__dirname, "..");
 const INI_GIT_REF = "main:config/ACL4SSR_mod_mini.ini";
 const BASE_YAML_PATH = path.join(ROOT, "clash", "base.yaml");
 const OUT_PATH_NO_HOME = path.join(ROOT, "clash", "mobile-module.yaml");
-const OUT_PATH_WITH_HOME = path.join(ROOT, "clash", "mobile-module-home.yaml");
 const DEFAULT_TEST_URL = "https://www.gstatic.com/generate_204";
 const ICON_BASE = "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/";
-const HOME_GROUP_NAME = "🏠 回家";
-const HOME_RULESET_PROVIDER = "home_lan";
-const HOME_RULESET_SOURCE =
-  "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/home-lan.list";
-const HOME_PROXY_NAME = "home1";
-const HOME_PROXY_TEMPLATE = {
-  name: HOME_PROXY_NAME,
-  type: "ss",
-  server: "127.0.0.1",
-  port: 8388,
-  cipher: "aes-128-gcm",
-  password: "please-change-me",
-  udp: true,
-};
 
 const ICON_RULES = [
   ["节点选择", "Proxy.png"],
@@ -59,7 +44,6 @@ const ICON_RULES = [
   ["手动选择", "Available.png"],
 ];
 
-// Keep mobile rename rules compact: only regions used by current proxy groups.
 const CORE_REGION_EMOJIS = new Set(["ℹ", "🇭🇰", "🇹🇼", "🇨🇳", "🇲🇴", "🇸🇬", "🇯🇵", "🇺🇲", "🇺🇸"]);
 
 function uniqueOrdered(values) {
@@ -253,8 +237,6 @@ function buildProxyGroup(groupSpec, excludeRemarksPattern) {
     group.interval = interval;
     group.tolerance = tolerance;
   } else if (filterExpr) {
-    // For select groups with explicit static proxies, keep exact INI order.
-    // Only use include-all/filter when no static proxies are defined.
     if (uniqueStatic.length === 0) {
       group["include-all"] = true;
       group["include-all-providers"] = true;
@@ -310,8 +292,6 @@ function buildRulesAndProviders(rulesets) {
       const baseKey = baseName.toLowerCase();
       let count = providerNameCount.get(baseKey) || 0;
 
-      // Ensure case-insensitive uniqueness for ./ruleset file names,
-      // important on case-insensitive file systems.
       do {
         count += 1;
         providerName = count === 1 ? baseName : `${baseName}_${count}`;
@@ -343,18 +323,7 @@ function withDnsHijackRule(rules) {
   return out;
 }
 
-function withHomeRulePriority(rules) {
-  const homeRule = rules.find(
-    (rule) => rule.startsWith("RULE-SET,") && rule.includes(`,${HOME_GROUP_NAME}`)
-  );
-  if (!homeRule) return rules;
-
-  const out = rules.filter((rule) => rule !== homeRule);
-  out.splice(1, 0, homeRule);
-  return out;
-}
-
-function buildDynamicConfig(proxyGroups, providers, rules, proxyNameOverrides, extraProxies = []) {
+function buildDynamicConfig(proxyGroups, providers, rules, proxyNameOverrides) {
   const subscription = {
     type: "http",
     path: "./proxy_provider/subscription.yaml",
@@ -384,10 +353,7 @@ function buildDynamicConfig(proxyGroups, providers, rules, proxyNameOverrides, e
     "proxy-providers": {
       subscription,
     },
-    proxies: [
-      { name: "DNS_Hijack", type: "dns" },
-      ...extraProxies,
-    ],
+    proxies: [{ name: "DNS_Hijack", type: "dns" }],
     "proxy-groups": proxyGroups,
     "rule-providers": providers,
     rules,
@@ -454,70 +420,36 @@ function main() {
   const iniText = iniSource.text;
   const parsed = parseIni(iniText);
   const proxyNameOverrides = buildProxyNameOverrides(parsed.addEmoji, parsed.removeOldEmoji, parsed.emojiRules);
-  const injectedHomeGroup = {
-    name: HOME_GROUP_NAME,
-    type: "select",
-    tokens: [`[]${HOME_PROXY_NAME}`, "[]DIRECT"],
-  };
 
-  const buildVariant = (withHome) => {
-    const rulesets = parsed.rulesets
-      .filter((item) => withHome || item.target !== HOME_GROUP_NAME)
-      .map((item) => ({ ...item }));
-    const groups = parsed.groups
-      .filter((item) => withHome || item.name !== HOME_GROUP_NAME)
-      .map((item) => buildProxyGroup(item, parsed.excludeRemarksPattern));
+  const rulesets = parsed.rulesets
+    .filter((item) => item.target !== "🏠 回家")
+    .map((item) => ({ ...item }));
+  const groups = parsed.groups
+    .filter((item) => item.name !== "🏠 回家")
+    .map((item) => buildProxyGroup(item, parsed.excludeRemarksPattern));
 
-    if (withHome) {
-      if (!rulesets.some((item) => item.target === HOME_GROUP_NAME)) {
-        rulesets.push({ target: HOME_GROUP_NAME, source: HOME_RULESET_SOURCE });
-      }
-      if (!groups.some((item) => item.name === HOME_GROUP_NAME)) {
-        groups.push(buildProxyGroup(injectedHomeGroup, parsed.excludeRemarksPattern));
-      }
-      for (const group of groups) {
-        if (group.name === HOME_GROUP_NAME) {
-          group.proxies = [HOME_PROXY_NAME, "DIRECT"];
-        }
-      }
-    }
+  const { providers, rules } = buildRulesAndProviders(rulesets);
+  const finalRules = withDnsHijackRule(rules);
 
-    const { providers, rules } = buildRulesAndProviders(rulesets);
-    let finalRules = withDnsHijackRule(rules);
-    if (withHome) {
-      finalRules = withHomeRulePriority(finalRules);
-    }
+  const config = buildDynamicConfig(groups, providers, finalRules, proxyNameOverrides);
 
-    const config = buildDynamicConfig(
-      groups,
-      providers,
-      finalRules,
-      proxyNameOverrides,
-      withHome ? [HOME_PROXY_TEMPLATE] : []
-    );
+  const header = [
+    "# Auto-generated mobile module config",
+    `# Source INI: ${iniSource.label}`,
+    "# Generated by: scripts/gen-mobile-module.js",
+    "# Variant: no-home",
+    "# 订阅地址请填写 proxy-providers.subscription.url",
+    "",
+  ].join("\n");
 
-    const outPath = withHome ? OUT_PATH_WITH_HOME : OUT_PATH_NO_HOME;
-    const header = [
-      "# Auto-generated mobile module config",
-      `# Source INI: ${iniSource.label}`,
-      "# Generated by: scripts/gen-mobile-module.js",
-      `# Variant: ${withHome ? "with-home" : "no-home"}`,
-      "# 订阅地址请填写 proxy-providers.subscription.url",
-      "",
-    ].join("\n");
+  const yamlBody = inlineDnsHijackProxyEntry(toYaml(config));
+  fs.mkdirSync(path.dirname(OUT_PATH_NO_HOME), { recursive: true });
+  fs.writeFileSync(OUT_PATH_NO_HOME, `${header}${baseYaml}${yamlBody}\n`, "utf8");
 
-    const yamlBody = inlineDnsHijackProxyEntry(toYaml(config));
-    fs.mkdirSync(path.dirname(outPath), { recursive: true });
-    fs.writeFileSync(outPath, `${header}${baseYaml}${yamlBody}\n`, "utf8");
-
-    console.log(
-      `[mobile] ${iniSource.label} -> ${path.relative(ROOT, outPath)} ` +
-        `(groups=${groups.length}, providers=${Object.keys(providers).length}, rules=${rules.length})`
-    );
-  };
-
-  buildVariant(false);
-  buildVariant(true);
+  console.log(
+    `[mobile] ${iniSource.label} -> ${path.relative(ROOT, OUT_PATH_NO_HOME)} ` +
+      `(groups=${groups.length}, providers=${Object.keys(providers).length}, rules=${rules.length})`
+  );
 }
 
 function loadBaseYaml() {
