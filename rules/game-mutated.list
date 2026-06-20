@@ -83,7 +83,6 @@ PROCESS-NAME,com.appchina.yugao.2017122101
 PROCESS-NAME,com.appchina.yugao.2018020204
 PROCESS-NAME,com.appchina.yugao.2018022401
 PROCESS-NAME,com.appchina.yugao.2018022804
-PROCESS-NAME,com.appchina.yugao.2018041001
 PROCESS-NAME,com.appchina.yugao.2018071703
 PROCESS-NAME,com.appchina.yugao.2019013001
 PROCESS-NAME,com.appchina.yugao.2019020105
@@ -108,6 +107,7 @@ PROCESS-NAME,com.appchina.yugao.2019121413
 PROCESS-NAME,com.appchina.yugao.2019122601
 PROCESS-NAME,com.appchina.yugao.2020011604
 PROCESS-NAME,com.appchina.yugao.2020011702
+PROCESS-NAME,com.appchina.yugao.2020012101
 PROCESS-NAME,com.appchina.yugao.2020020407
 PROCESS-NAME,com.appchina.yugao.2020021103
 PROCESS-NAME,com.appchina.yugao.2020030906
@@ -1535,6 +1535,7 @@ PROCESS-NAME,com.tencent.tmgp.tmst
 PROCESS-NAME,com.tencent.tmgp.tom
 PROCESS-NAME,com.tencent.tmgp.totnew
 PROCESS-NAME,com.tencent.tmgp.tqbaohuang
+PROCESS-NAME,com.tencent.tmgp.tqfuzhoumajiang
 PROCESS-NAME,com.tencent.tmgp.tqguandan
 PROCESS-NAME,com.tencent.tmgp.tqshuangkou
 PROCESS-NAME,com.tencent.tmgp.tqwzfx
