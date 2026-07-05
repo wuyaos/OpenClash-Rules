@@ -25,7 +25,6 @@ PROCESS-NAME,br.com.tapps.myvirtualpetshop
 PROCESS-NAME,ca.roofdog.roadtrip
 PROCESS-NAME,cc.thedream.qinsmoon.yyh
 PROCESS-NAME,cento.n1.lib
-PROCESS-NAME,cn.apppk.apps.chessroad
 PROCESS-NAME,cn.badminton.tw
 PROCESS-NAME,cn.flytalk.shudu
 PROCESS-NAME,cn.izis.mygo.mplat
@@ -165,6 +164,7 @@ PROCESS-NAME,com.artifexmundi.grimlegends.gp.free
 PROCESS-NAME,com.asgardventure.mecha
 PROCESS-NAME,com.astragon.cs2016_hh
 PROCESS-NAME,com.astragon.trucksim
+PROCESS-NAME,com.aswind.libdesktoppet
 PROCESS-NAME,com.atos.ver
 PROCESS-NAME,com.atv.blackops
 PROCESS-NAME,com.atypicalgames.radiationisland
@@ -493,7 +493,6 @@ PROCESS-NAME,com.hotheadgames.google.free.valor
 PROCESS-NAME,com.hottagames.yh.laohu
 PROCESS-NAME,com.htwoplayers.srjjc
 PROCESS-NAME,com.huabang.golf
-PROCESS-NAME,com.huanlingrongyao.mukekeji
 PROCESS-NAME,com.hyperbeard.adorablehome
 PROCESS-NAME,com.hyperbeard.pocketlove
 PROCESS-NAME,com.hypergryph.arknights
@@ -527,7 +526,6 @@ PROCESS-NAME,com.jibicat.jibiland.princesscastle
 PROCESS-NAME,com.jichuang.iq.client
 PROCESS-NAME,com.jiumijoy.simuniversity
 PROCESS-NAME,com.john.plasmasky
-PROCESS-NAME,com.joym.armorbear.yyb
 PROCESS-NAME,com.joym.bearfarm.yingyongbao
 PROCESS-NAME,com.joym.legendhero.yyb
 PROCESS-NAME,com.joym.xiongdakuaipao.yyb
@@ -538,7 +536,6 @@ PROCESS-NAME,com.julian.motorboat
 PROCESS-NAME,com.jumpgames.pacificrim
 PROCESS-NAME,com.jumpgames.RealSteel
 PROCESS-NAME,com.jumpgames.rswrb
-PROCESS-NAME,com.jy.mj.hzmj
 PROCESS-NAME,com.kabam.ff6android
 PROCESS-NAME,com.kabam.marvelbattle
 PROCESS-NAME,com.kauf.talking.baum.TalkingCatandBackgroundDog
@@ -832,6 +829,7 @@ PROCESS-NAME,com.sinyee.babybus.coffee
 PROCESS-NAME,com.sinyee.babybus.cultivation
 PROCESS-NAME,com.sinyee.babybus.delicacy
 PROCESS-NAME,com.sinyee.babybus.diner
+PROCESS-NAME,com.sinyee.babybus.dinosaurIII
 PROCESS-NAME,com.sinyee.babybus.factory
 PROCESS-NAME,com.sinyee.babybus.findCha
 PROCESS-NAME,com.sinyee.babybus.foodstreetII
@@ -844,6 +842,7 @@ PROCESS-NAME,com.sinyee.babybus.princess
 PROCESS-NAME,com.sinyee.babybus.restaurant
 PROCESS-NAME,com.sinyee.babybus.snacks
 PROCESS-NAME,com.sinyee.babybus.soda
+PROCESS-NAME,com.sinyee.babybus.spell
 PROCESS-NAME,com.siqi.tank
 PROCESS-NAME,com.sixwaves.strikefleetomega
 PROCESS-NAME,com.skgames.trafficracer
@@ -1467,6 +1466,7 @@ PROCESS-NAME,com.tencent.tmgp.SeerInfiniteUniverse
 PROCESS-NAME,com.tencent.tmgp.sf3
 PROCESS-NAME,com.tencent.tmgp.sg3
 PROCESS-NAME,com.tencent.tmgp.sgame
+PROCESS-NAME,com.tencent.tmgp.sgdmx
 PROCESS-NAME,com.tencent.tmgp.sgfx
 PROCESS-NAME,com.tencent.tmgp.sglbcs
 PROCESS-NAME,com.tencent.tmgp.sgqyz
@@ -1543,7 +1543,6 @@ PROCESS-NAME,com.tencent.tmgp.tom
 PROCESS-NAME,com.tencent.tmgp.totnew
 PROCESS-NAME,com.tencent.tmgp.tqbaohuang
 PROCESS-NAME,com.tencent.tmgp.tqfuzhoumajiang
-PROCESS-NAME,com.tencent.tmgp.tqgouji
 PROCESS-NAME,com.tencent.tmgp.tqwzfx
 PROCESS-NAME,com.tencent.tmgp.trunknaruto
 PROCESS-NAME,com.tencent.tmgp.tsjyyz
@@ -1559,6 +1558,7 @@ PROCESS-NAME,com.tencent.tmgp.tttq
 PROCESS-NAME,com.tencent.tmgp.ttwq
 PROCESS-NAME,com.tencent.tmgp.turnipboy
 PROCESS-NAME,com.tencent.tmgp.twrxhjly
+PROCESS-NAME,com.tencent.tmgp.twsklrjx
 PROCESS-NAME,com.tencent.tmgp.twyscq
 PROCESS-NAME,com.tencent.tmgp.twzzjhly
 PROCESS-NAME,com.tencent.tmgp.tx
@@ -1693,7 +1693,6 @@ PROCESS-NAME,com.tencent.tmgp.yyzy2
 PROCESS-NAME,com.tencent.tmgp.yzg36
 PROCESS-NAME,com.tencent.tmgp.yzhslln
 PROCESS-NAME,com.tencent.tmgp.yzmj.cn
-PROCESS-NAME,com.tencent.tmgp.yzsc
 PROCESS-NAME,com.tencent.tmgp.yzsnxyj
 PROCESS-NAME,com.tencent.tmgp.YZSY
 PROCESS-NAME,com.tencent.tmgp.YZTWO
@@ -1843,6 +1842,7 @@ PROCESS-NAME,com.wedobest.HD1010
 PROCESS-NAME,com.wedobest.llk
 PROCESS-NAME,com.wedobest.piano
 PROCESS-NAME,com.wedobest.shudu
+PROCESS-NAME,com.wedobest.szhrd
 PROCESS-NAME,com.wedobest.xiangqi
 PROCESS-NAME,com.wepie.snake.tencent
 PROCESS-NAME,com.wepie.werewolfkill
