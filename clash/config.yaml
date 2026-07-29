@@ -13,28 +13,29 @@ dns:
   fake-ip-range: 198.18.0.1/16 # fake-ip 网段
   use-hosts: true # 读取 hosts
   use-system-hosts: true # 读取系统 hosts
-  ipv6: true # IPv6 解析开关
+  ipv6: false # IPv6 解析开关；避免网络不支持 IPv6 时拖慢首连
   cache-algorithm: arc
-  respect-rules: true      #让连接DNS服务器时能够遵循规则，也就是通过代理节点连接到上面设置的国外DNS，因为直连可能连接不上
   default-nameserver: # 基础 DNS，必须为 IP 形式
-    - tls://223.5.5.5
-    - tls://223.6.6.6
-    - tls://119.29.29.29
-    - tls://1.12.12.12
-    - tls://1.1.1.1
-  nameserver: # 未命中分流规则最终走 MATCH 时使用，采用国外 DNS 防污染/泄漏
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
-    - https://dns.quad9.net/dns-query
-    - https://doh.opendns.com/dns-query
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver: # 主用国内 DNS，保证当前网络下能稳定完成解析
+    - https://223.5.5.5/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   proxy-server-nameserver: # 解析代理节点域名时使用，优先国内 DNS 保证起步可达
-    - https://dns.alidns.com/dns-query
+    - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query
-    - https://doh.360.cn/dns-query
-  direct-nameserver: # 命中直连规则时使用国内 DNS
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - https://doh.360.cn/dns-query
+  fallback: # 主用 DNS 不可用时再使用海外 DNS
+    - https://doh.dns.sb/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.twnic.tw/dns-query
+    - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
   fake-ip-filter-mode: blacklist # 显式启用 fake-ip-filter 模式（黑名单语义）
   fake-ip-filter:
     - '*.lan'
