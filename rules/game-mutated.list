@@ -996,6 +996,7 @@ PROCESS-NAME,com.tencent.tmgp.bh3
 PROCESS-NAME,com.tencent.tmgp.bilibili.bangdream
 PROCESS-NAME,com.tencent.tmgp.bilibili.blhx
 PROCESS-NAME,com.tencent.tmgp.bilibili.deadcells.mobile
+PROCESS-NAME,com.tencent.tmgp.bilibili.mfgy
 PROCESS-NAME,com.tencent.tmgp.bilibili.nslg
 PROCESS-NAME,com.tencent.tmgp.bilibili.priconne
 PROCESS-NAME,com.tencent.tmgp.bilibili.snake
@@ -1146,6 +1147,7 @@ PROCESS-NAME,com.tencent.tmgp.fxyx.mzc
 PROCESS-NAME,com.tencent.tmgp.fyyx.huiyue
 PROCESS-NAME,com.tencent.tmgp.fzdl
 PROCESS-NAME,com.tencent.tmgp.fzgd.ssfh
+PROCESS-NAME,com.tencent.tmgp.fzyzh.yzx
 PROCESS-NAME,com.tencent.tmgp.g12000128
 PROCESS-NAME,com.tencent.tmgp.g13001230
 PROCESS-NAME,com.tencent.tmgp.g13002010
@@ -1344,6 +1346,7 @@ PROCESS-NAME,com.tencent.tmgp.mjwy
 PROCESS-NAME,com.tencent.tmgp.mkcncn.hwyad
 PROCESS-NAME,com.tencent.tmgp.MMHD
 PROCESS-NAME,com.tencent.tmgp.mmsrmlhd
+PROCESS-NAME,com.tencent.tmgp.mocheng.jdxy
 PROCESS-NAME,com.tencent.tmgp.modernship2
 PROCESS-NAME,com.tencent.tmgp.molenew
 PROCESS-NAME,com.tencent.tmgp.momoca.isekai2cn
@@ -1406,6 +1409,7 @@ PROCESS-NAME,com.tencent.tmgp.projectsnow
 PROCESS-NAME,com.tencent.tmgp.projectt
 PROCESS-NAME,com.tencent.tmgp.pubgmhd
 PROCESS-NAME,com.tencent.tmgp.pvz2hdtxyyb
+PROCESS-NAME,com.tencent.tmgp.pygame.zipai
 PROCESS-NAME,com.tencent.tmgp.qblykilltext
 PROCESS-NAME,com.tencent.tmgp.qilong.warship
 PROCESS-NAME,com.tencent.tmgp.qinsmoon
@@ -1613,7 +1617,6 @@ PROCESS-NAME,com.tencent.tmgp.wryy
 PROCESS-NAME,com.tencent.tmgp.wujin
 PROCESS-NAME,com.tencent.tmgp.wuxia
 PROCESS-NAME,com.tencent.tmgp.wwguandanall
-PROCESS-NAME,com.tencent.tmgp.wwmx
 PROCESS-NAME,com.tencent.tmgp.wxbz.lyjx
 PROCESS-NAME,com.tencent.tmgp.wxbz.sjjx
 PROCESS-NAME,com.tencent.tmgp.wxmj
