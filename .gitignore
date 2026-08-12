@@ -3,3 +3,4 @@
 .ace-tool/
 .omx/
 __pycache__
+.mindfs/
