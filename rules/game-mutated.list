@@ -162,7 +162,6 @@ PROCESS-NAME,com.BatoviGamesStudio.PixelCupSoccer19
 PROCESS-NAME,com.batteryacid.highwayrider
 PROCESS-NAME,com.batteryacid.jamcity
 PROCESS-NAME,com.bbqstudio.bbqq.yyb
-PROCESS-NAME,com.bdapps.slimesimulator
 PROCESS-NAME,com.bdc.nh
 PROCESS-NAME,com.bestcoolfungamesfreegamecreation.gogogoat
 PROCESS-NAME,com.bf.hbxz_mg
@@ -860,6 +859,7 @@ PROCESS-NAME,com.studio7775.BeatMP3v2
 PROCESS-NAME,com.StudioOnMars.CSPortable
 PROCESS-NAME,com.studiowildcard.wardrumstudios.ark
 PROCESS-NAME,com.subterraneansoftware.tanktrouble.android
+PROCESS-NAME,com.Sunborn.SnqxExilium
 PROCESS-NAME,com.sundaytoz.mobile.anipang.google.service
 PROCESS-NAME,com.supersolid.adventuretown
 PROCESS-NAME,com.supersurvivalac.activity
@@ -1018,6 +1018,7 @@ PROCESS-NAME,com.tencent.tmgp.cjqyz.kkk5
 PROCESS-NAME,com.tencent.tmgp.clgame.cs2
 PROCESS-NAME,com.tencent.tmgp.cly.fkzz
 PROCESS-NAME,com.tencent.tmgp.cly.rxys
+PROCESS-NAME,com.tencent.tmgp.cly.txyx
 PROCESS-NAME,com.tencent.tmgp.cmcm.zmjjkillshotbravo
 PROCESS-NAME,com.tencent.tmgp.cmge.dldllove
 PROCESS-NAME,com.tencent.tmgp.cmge.gathering
@@ -1037,6 +1038,7 @@ PROCESS-NAME,com.tencent.tmgp.com.chorusworldwide.theroomone
 PROCESS-NAME,com.tencent.tmgp.com.feelingtouch.bn.cn
 PROCESS-NAME,com.tencent.tmgp.com.feelingtouch.jsfb.cn
 PROCESS-NAME,com.tencent.tmgp.com.feelingtouch.zfsniper.cn
+PROCESS-NAME,com.tencent.tmgp.com.hanjiasongshu.jianghux2
 PROCESS-NAME,com.tencent.tmgp.com.outfit7.talkingtomgoldrun
 PROCESS-NAME,com.tencent.tmgp.com.sdgs.yyb
 PROCESS-NAME,com.tencent.tmgp.com.tencent.tmgp.bog2
@@ -1051,6 +1053,7 @@ PROCESS-NAME,com.tencent.tmgp.croak
 PROCESS-NAME,com.tencent.tmgp.crossgate.ks
 PROCESS-NAME,com.tencent.tmgp.crownddz
 PROCESS-NAME,com.tencent.tmgp.crownworld.dianfengddz
+PROCESS-NAME,com.tencent.tmgp.cshjphz
 PROCESS-NAME,com.tencent.tmgp.ctycj
 PROCESS-NAME,com.tencent.tmgp.cxswz
 PROCESS-NAME,com.tencent.tmgp.cyddztwo
@@ -1122,6 +1125,7 @@ PROCESS-NAME,com.tencent.tmgp.fknyg
 PROCESS-NAME,com.tencent.tmgp.fksss.hardtime
 PROCESS-NAME,com.tencent.tmgp.freeking
 PROCESS-NAME,com.tencent.tmgp.frxxzrjp
+PROCESS-NAME,com.tencent.tmgp.fssd123
 PROCESS-NAME,com.tencent.tmgp.fszn2.huiyue
 PROCESS-NAME,com.tencent.tmgp.ftf
 PROCESS-NAME,com.tencent.tmgp.funntcp
@@ -1183,10 +1187,8 @@ PROCESS-NAME,com.tencent.tmgp.hmrj
 PROCESS-NAME,com.tencent.tmgp.hmzqfy
 PROCESS-NAME,com.tencent.tmgp.hntx.gransaga
 PROCESS-NAME,com.tencent.tmgp.hnty.tfjy
-PROCESS-NAME,com.tencent.tmgp.hnyl
 PROCESS-NAME,com.tencent.tmgp.holidayandroid
 PROCESS-NAME,com.tencent.tmgp.hometownbuilder
-PROCESS-NAME,com.tencent.tmgp.hongguaiwan
 PROCESS-NAME,com.tencent.tmgp.hotta
 PROCESS-NAME,com.tencent.tmgp.hqxy
 PROCESS-NAME,com.tencent.tmgp.hsahc
@@ -1206,11 +1208,11 @@ PROCESS-NAME,com.tencent.tmgp.hy.hbmnq
 PROCESS-NAME,com.tencent.tmgp.hy.hcrdj
 PROCESS-NAME,com.tencent.tmgp.hy.hcrshzc
 PROCESS-NAME,com.tencent.tmgp.hy.hcrssyx
+PROCESS-NAME,com.tencent.tmgp.hy.hcrssyxz2
 PROCESS-NAME,com.tencent.tmgp.hy.hmxqmnq
 PROCESS-NAME,com.tencent.tmgp.hy.hszz
 PROCESS-NAME,com.tencent.tmgp.hy.jsk2
 PROCESS-NAME,com.tencent.tmgp.hy.jzxl
-PROCESS-NAME,com.tencent.tmgp.hy.jzymq
 PROCESS-NAME,com.tencent.tmgp.hy.kbnn
 PROCESS-NAME,com.tencent.tmgp.hy.kbnn2
 PROCESS-NAME,com.tencent.tmgp.hy.kbnn7
@@ -1219,10 +1221,8 @@ PROCESS-NAME,com.tencent.tmgp.hy.mfqs
 PROCESS-NAME,com.tencent.tmgp.hy.nshcr2
 PROCESS-NAME,com.tencent.tmgp.hy.ozkcjsmnq3
 PROCESS-NAME,com.tencent.tmgp.hy.pmjs
-PROCESS-NAME,com.tencent.tmgp.hy.qcchmnq
 PROCESS-NAME,com.tencent.tmgp.hy.qmzzmnq
 PROCESS-NAME,com.tencent.tmgp.hy.sdzsczsj
-PROCESS-NAME,com.tencent.tmgp.hy.slbhr
 PROCESS-NAME,com.tencent.tmgp.hy.snxns
 PROCESS-NAME,com.tencent.tmgp.hy.sryx
 PROCESS-NAME,com.tencent.tmgp.hy.tzbdxz
@@ -1262,7 +1262,6 @@ PROCESS-NAME,com.tencent.tmgp.kaayou.qichun
 PROCESS-NAME,com.tencent.tmgp.kaopu.jzpaj
 PROCESS-NAME,com.tencent.tmgp.kaopu.zdjs
 PROCESS-NAME,com.tencent.tmgp.kddouluo
-PROCESS-NAME,com.tencent.tmgp.kdjj
 PROCESS-NAME,com.tencent.tmgp.kgame.catssoup
 PROCESS-NAME,com.tencent.tmgp.kjfzd
 PROCESS-NAME,com.tencent.tmgp.klbqm
@@ -1274,9 +1273,10 @@ PROCESS-NAME,com.tencent.tmgp.kuangbaochuanqi
 PROCESS-NAME,com.tencent.tmgp.kurogame.haru
 PROCESS-NAME,com.tencent.tmgp.kuroko
 PROCESS-NAME,com.tencent.tmgp.kxtf
-PROCESS-NAME,com.tencent.tmgp.kyruanjian.gwlmlg
 PROCESS-NAME,com.tencent.tmgp.l10
 PROCESS-NAME,com.tencent.tmgp.lanjing.yanyu
+PROCESS-NAME,com.tencent.tmgp.lcglnqp
+PROCESS-NAME,com.tencent.tmgp.lcgynmj
 PROCESS-NAME,com.tencent.tmgp.ledou.mhhy
 PROCESS-NAME,com.tencent.tmgp.ledou.mhjy
 PROCESS-NAME,com.tencent.tmgp.leiting.chaojinhua
@@ -1309,16 +1309,13 @@ PROCESS-NAME,com.tencent.tmgp.lywlfrcs
 PROCESS-NAME,com.tencent.tmgp.lzjxmb
 PROCESS-NAME,com.tencent.tmgp.m3gsy
 PROCESS-NAME,com.tencent.tmgp.madhero
-PROCESS-NAME,com.tencent.tmgp.majiangall
 PROCESS-NAME,com.tencent.tmgp.manggo.xwdsh
-PROCESS-NAME,com.tencent.tmgp.maobu.gdzz2unity
 PROCESS-NAME,com.tencent.tmgp.maplem
 PROCESS-NAME,com.tencent.tmgp.matrix
 PROCESS-NAME,com.tencent.tmgp.mds
 PROCESS-NAME,com.tencent.tmgp.mduel
 PROCESS-NAME,com.tencent.tmgp.mecharashi
 PROCESS-NAME,com.tencent.tmgp.mgddz
-PROCESS-NAME,com.tencent.tmgp.mhlz
 PROCESS-NAME,com.tencent.tmgp.mhmfw
 PROCESS-NAME,com.tencent.tmgp.mhmnz
 PROCESS-NAME,com.tencent.tmgp.mhxy.sqsy
@@ -1420,9 +1417,12 @@ PROCESS-NAME,com.tencent.tmgp.rollingsky
 PROCESS-NAME,com.tencent.tmgp.rome
 PROCESS-NAME,com.tencent.tmgp.room1
 PROCESS-NAME,com.tencent.tmgp.Room13
+PROCESS-NAME,com.tencent.tmgp.room2
+PROCESS-NAME,com.tencent.tmgp.room6
 PROCESS-NAME,com.tencent.tmgp.room7
 PROCESS-NAME,com.tencent.tmgp.rshytycq
 PROCESS-NAME,com.tencent.tmgp.rshyzncq
+PROCESS-NAME,com.tencent.tmgp.rsjy
 PROCESS-NAME,com.tencent.tmgp.rxcq
 PROCESS-NAME,com.tencent.tmgp.rxjhbj
 PROCESS-NAME,com.tencent.tmgp.rxsc.chenyou
@@ -1605,9 +1605,9 @@ PROCESS-NAME,com.tencent.tmgp.xbxxz
 PROCESS-NAME,com.tencent.tmgp.xcdphz
 PROCESS-NAME,com.tencent.tmgp.xdsw.Aoe
 PROCESS-NAME,com.tencent.tmgp.xianjianshijie.cmge
+PROCESS-NAME,com.tencent.tmgp.xiaoyss
 PROCESS-NAME,com.tencent.tmgp.xinhuluwa
 PROCESS-NAME,com.tencent.tmgp.xishanju.mysy
-PROCESS-NAME,com.tencent.tmgp.xjcspx
 PROCESS-NAME,com.tencent.tmgp.xjqxz
 PROCESS-NAME,com.tencent.tmgp.xlwyln
 PROCESS-NAME,com.tencent.tmgp.xmdzz
@@ -1633,7 +1633,8 @@ PROCESS-NAME,com.tencent.tmgp.ycf.herosland
 PROCESS-NAME,com.tencent.tmgp.ydcsly
 PROCESS-NAME,com.tencent.tmgp.ydgame.twzwtwo
 PROCESS-NAME,com.tencent.tmgp.ydl.cxd
-PROCESS-NAME,com.tencent.tmgp.ydyaocuotu
+PROCESS-NAME,com.tencent.tmgp.ydxh.cnchess
+PROCESS-NAME,com.tencent.tmgp.ydxh.superblock
 PROCESS-NAME,com.tencent.tmgp.yhzxtwzw
 PROCESS-NAME,com.tencent.tmgp.yjqy
 PROCESS-NAME,com.tencent.tmgp.ykdqddz
@@ -1856,6 +1857,7 @@ PROCESS-NAME,com.yxjj.sjtc.tc
 PROCESS-NAME,com.yymoon.lmrjvol
 PROCESS-NAME,com.zeptolab.cats.google
 PROCESS-NAME,com.zk.car.wipay
+PROCESS-NAME,com.ztgame.bob
 PROCESS-NAME,com.ztgame.jl2
 PROCESS-NAME,com.ztgame.yyzy.yyh
 PROCESS-NAME,com.zuuks.bus.simulator.ultimate
@@ -1972,6 +1974,7 @@ PROCESS-NAME,ru.drimmi.fishing2
 PROCESS-NAME,ru.nsu.ccfit.zuev.osuplus
 PROCESS-NAME,se.modesty.spookening
 PROCESS-NAME,sggs.android.witchhouse
+PROCESS-NAME,sh.lilith.dgame.lemon
 PROCESS-NAME,sts.pl
 PROCESS-NAME,syj.youngfhsher
 PROCESS-NAME,zhtc.noscores.pmtianlongzhl
