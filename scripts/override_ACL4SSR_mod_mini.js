@@ -738,48 +738,87 @@ function main(config) {
   }
 };
   const generatedRules = [
-  "RULE-SET,LocalAreaNetwork,🎯 全球直连",
-  "RULE-SET,UnBan,🎯 全球直连",
-  "RULE-SET,pt,🎯 全球直连",
-  "RULE-SET,direct_custom,🎯 全球直连",
-  "RULE-SET,proxy_custom,🚀 节点选择",
-  "RULE-SET,android_block,🛑 广告拦截",
-  "RULE-SET,BanAD,🛑 广告拦截",
-  "RULE-SET,BanProgramAD,🛑 广告拦截",
-  "RULE-SET,BanEasyListChina,🛑 广告拦截",
-  "RULE-SET,BanEasyPrivacy,🛑 广告拦截",
-  "RULE-SET,awavenue_ads,🛑 广告拦截",
-  "RULE-SET,ai,🤖 AI",
-  "RULE-SET,AI,🤖 AI",
-  "RULE-SET,github,👨‍💻 开发",
-  "RULE-SET,developer,👨‍💻 开发",
-  "RULE-SET,Developer,👨‍💻 开发",
-  "RULE-SET,Docker,👨‍💻 开发",
-  "RULE-SET,JetBrains,👨‍💻 开发",
-  "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台",
-  "RULE-SET,proxy_media,🌍 国外媒体",
-  "RULE-SET,scraper_nojp,🕸 刮削",
-  "RULE-SET,scraper_jp,🕸 刮削🇯🇵",
-  "RULE-SET,quest3,ᯅ QUEST",
-  "RULE-SET,Telegram,📲 电报消息",
-  "RULE-SET,OneDrive,Ⓜ️ 微软云盘",
-  "RULE-SET,Microsoft,Ⓜ️ 微软服务",
-  "RULE-SET,GoogleFCM,📢 谷歌FCM",
-  "RULE-SET,ProxyGFWlist,🚀 节点选择",
-  "RULE-SET,ProxyLite,🚀 节点选择",
-  "RULE-SET,SteamCN,🎯 全球直连",
-  "RULE-SET,app_mutated,🎯 全球直连",
-  "RULE-SET,game_mutated,🎯 全球直连",
-  "RULE-SET,applications,🎯 全球直连",
-  "RULE-SET,GoogleCN,🎯 全球直连",
-  "RULE-SET,ChinaDomain,🎯 全球直连",
-  "RULE-SET,Download,🎯 全球直连",
-  "RULE-SET,ChinaIp,🎯 全球直连",
-  "RULE-SET,ChinaCompanyIp,🎯 全球直连",
-  "RULE-SET,androidcn_allow,🎯 全球直连",
-  "GEOIP,CN,🎯 全球直连",
+  "RULE-SET,LocalAreaNetwork,🎯 全球直连,no-resolve",
+  "RULE-SET,UnBan,🎯 全球直连,no-resolve",
+  "RULE-SET,pt,🎯 全球直连,no-resolve",
+  "RULE-SET,direct_custom,🎯 全球直连,no-resolve",
+  "RULE-SET,proxy_custom,🚀 节点选择,no-resolve",
+  "RULE-SET,android_block,🛑 广告拦截,no-resolve",
+  "RULE-SET,BanAD,🛑 广告拦截,no-resolve",
+  "RULE-SET,BanProgramAD,🛑 广告拦截,no-resolve",
+  "RULE-SET,BanEasyListChina,🛑 广告拦截,no-resolve",
+  "RULE-SET,BanEasyPrivacy,🛑 广告拦截,no-resolve",
+  "RULE-SET,awavenue_ads,🛑 广告拦截,no-resolve",
+  "RULE-SET,ai,🤖 AI,no-resolve",
+  "RULE-SET,AI,🤖 AI,no-resolve",
+  "RULE-SET,github,👨‍💻 开发,no-resolve",
+  "RULE-SET,developer,👨‍💻 开发,no-resolve",
+  "RULE-SET,Developer,👨‍💻 开发,no-resolve",
+  "RULE-SET,Docker,👨‍💻 开发,no-resolve",
+  "RULE-SET,JetBrains,👨‍💻 开发,no-resolve",
+  "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台,no-resolve",
+  "RULE-SET,proxy_media,🌍 国外媒体,no-resolve",
+  "RULE-SET,scraper_nojp,🕸 刮削,no-resolve",
+  "RULE-SET,scraper_jp,🕸 刮削🇯🇵,no-resolve",
+  "RULE-SET,quest3,ᯅ QUEST,no-resolve",
+  "RULE-SET,Telegram,📲 电报消息,no-resolve",
+  "RULE-SET,OneDrive,Ⓜ️ 微软云盘,no-resolve",
+  "RULE-SET,Microsoft,Ⓜ️ 微软服务,no-resolve",
+  "RULE-SET,GoogleFCM,📢 谷歌FCM,no-resolve",
+  "RULE-SET,ProxyGFWlist,🚀 节点选择,no-resolve",
+  "RULE-SET,ProxyLite,🚀 节点选择,no-resolve",
+  "RULE-SET,SteamCN,🎯 全球直连,no-resolve",
+  "RULE-SET,app_mutated,🎯 全球直连,no-resolve",
+  "RULE-SET,game_mutated,🎯 全球直连,no-resolve",
+  "RULE-SET,applications,🎯 全球直连,no-resolve",
+  "RULE-SET,GoogleCN,🎯 全球直连,no-resolve",
+  "RULE-SET,ChinaDomain,🎯 全球直连,no-resolve",
+  "RULE-SET,Download,🎯 全球直连,no-resolve",
+  "RULE-SET,ChinaIp,🎯 全球直连,no-resolve",
+  "RULE-SET,ChinaCompanyIp,🎯 全球直连,no-resolve",
+  "RULE-SET,androidcn_allow,🎯 全球直连,no-resolve",
+  "GEOIP,CN,🎯 全球直连,no-resolve",
   "MATCH,🐟 Final兜底"
 ];
+
+  // 空分组剔除(可选优化, 默认关闭): 分组内实际节点数 < MIN_GROUP_NODES 时隐藏该组,
+  // 并同步清理其他分组对该组的引用, 避免 mihomo 报 proxy not found。
+  // 注意: 需在节点已加国旗后统计(地区组 filter 依赖国旗), unified 模式已保证。
+  const MIN_GROUP_NODES = 0;
+  if (MIN_GROUP_NODES > 0 && Array.isArray(config.proxies)) {
+    const weak = new Set();
+    const weakFilters = [];
+    for (const g of generatedProxyGroups) {
+      if (!g.filter || g["include-all"] !== true || !/自动$/.test(g.name)) continue;
+      try {
+        const jsFilter = g.filter.split("[🇦-🇿]").join("[\u{1F1E6}-\u{1F1FF}]");
+        const re = new RegExp(jsFilter, "u");
+        const n = config.proxies.filter((p) => re.test(p.name || "")).length;
+        if (n < MIN_GROUP_NODES) {
+          weak.add(g.name);
+          weakFilters.push(g.filter);
+        }
+      } catch (_e) {
+        // filter 含 JS 无法编译的 mihomo 方言时跳过该组统计
+      }
+    }
+    if (weak.size > 0) {
+      const other = generatedProxyGroups.find((g) => /其他$/.test(g.name));
+      if (other && weakFilters.length > 0) {
+        other["include-all"] = true;
+        other.filter = [other.filter, ...weakFilters]
+          .filter(Boolean)
+          .map((filter) => "(?:" + filter + ")")
+          .join("|");
+      }
+      for (const g of generatedProxyGroups) {
+        if (Array.isArray(g.proxies)) g.proxies = g.proxies.filter((name) => !weak.has(name));
+      }
+      for (let i = generatedProxyGroups.length - 1; i >= 0; i--) {
+        if (weak.has(generatedProxyGroups[i].name)) generatedProxyGroups.splice(i, 1);
+      }
+    }
+  }
 
   config["proxy-groups"] = generatedProxyGroups;
   config["rule-providers"] = generatedRuleProviders;
