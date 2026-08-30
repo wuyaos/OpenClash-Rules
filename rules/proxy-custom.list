@@ -26,7 +26,6 @@ DOMAIN,user.mypikpak.com
 DOMAIN,access.mypikpak.com
 
 # PT/BT
-DOMAIN-SUFFIX,iptorrents.com
 DOMAIN-SUFFIX,mikanani.me
 DOMAIN-SUFFIX,dmhy.org
 DOMAIN-SUFFIX,filelist.io
@@ -40,6 +39,9 @@ DOMAIN-SUFFIX,cinemaz.to
 DOMAIN-SUFFIX,resources.ani.rip
 DOMAIN-SUFFIX,aniopen.an-i.workers.dev
 DOMAIN-SUFFIX,acg.rip
+DOMAIN-SUFFIX,rutracker.net
+DOMAIN-SUFFIX,xloli.cc
+
 
 # 解决谷歌商店无法下载应用的问题
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
@@ -76,3 +78,13 @@ DOMAIN-SUFFIX,zodgame.xyz
 DOMAIN-SUFFIX,ecchi100.com
 DOMAIN-SUFFIX,www.acgkkk.com
 DOMAIN-SUFFIX,www.gtloli.eu.org
+
+DOMAIN-SUFFIX,mineru.net
+DOMAIN-SUFFIX,idcflare.com
+DOMAIN-SUFFIX,1995.win
+DOMAIN-SUFFIX,bigmelook.com
+DOMAIN-SUFFIX,vumstar.com
+DOMAIN-SUFFIX,my.interserver.net
+DOMAIN-SUFFIX,vcb-s.com
+DOMAIN-SUFFIX,m.dian115.com
+DOMAIN-SUFFIX,picix.us
