@@ -14,6 +14,11 @@ PROCESS-NAME,飞鼠组网.exe
 PROCESS-NAME,com.seeyon.cmp
 PROCESS-NAME,cloudflared
 
+PROCESS-NAME,Weixin.exe
+PROCESS-NAME,nblink.exe
+PROCESS-NAME,NodeBabyLinkService.exe
+DOMAIN-KEYWORD,frp
+
 # Xiaomi / Mi push allowlist
 DOMAIN,push.xiaomi.com
 DOMAIN,api.ad.xiaomi.com
