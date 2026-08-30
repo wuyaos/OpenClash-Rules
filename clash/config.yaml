@@ -6,6 +6,12 @@ external-controller: :9090
 unified-delay: true  # 更换延迟计算方式，去除握手等额外延迟
 tcp-concurrent: true # 启用 TCP 并发连接。这允许 Clash 同时建立多个 TCP
 
+hosts:
+  # 节点伪装域名在部分公共 DNS(如 223.5.5.5 DoH)上解析为 NODATA/不可达 IP，
+  # 固化为可达入口 IP 后客户端可稳定连通（2026-08-30 实测：香港01 464ms、新加坡02 497ms）。
+  # 若订阅方更换入口，需同步更新此 IP。
+  vehicle-filess.prd.cnn1.vn.cloud.gunzivip.space: 193.30.122.227
+
 dns:
   enable: true # 开启 DNS 配置
   listen: 0.0.0.0:1053 # DNS 监听端口，便于客户端稳定识别 DNS 模式
@@ -15,21 +21,27 @@ dns:
   use-system-hosts: true # 读取系统 hosts
   ipv6: false # IPv6 解析开关；避免网络不支持 IPv6 时拖慢首连
   cache-algorithm: arc
+  respect-rules: true # DNS 服务器连接遵守规则；节点域名由 proxy-server-nameserver 负责引导
+  fallback-lazy-query: true # 仅在默认结果命中 fallback-filter 时查询海外 DNS
   default-nameserver: # 基础 DNS，必须为 IP 形式
     - 223.5.5.5
     - 119.29.29.29
-  nameserver: # 主用国内 DNS，保证当前网络下能稳定完成解析
+  nameserver: # 默认国内 DNS；使用 IP DoH 避免解析 DNS 服务域名
     - https://223.5.5.5/dns-query
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  proxy-server-nameserver: # 解析代理节点域名时使用，优先国内 DNS 保证起步可达
+    - https://1.12.12.12/dns-query
+  proxy-server-nameserver: # 节点域名必须在代理建立前通过国内 DNS 解析，避免启动循环
     - https://223.5.5.5/dns-query
-    - https://doh.pub/dns-query
-  fallback: # 主用 DNS 不可用时再使用海外 DNS
+    - https://1.12.12.12/dns-query
+  nameserver-policy: # 国内低延迟解析；国外经规则代理查询可信 DNS，防止污染
+    "geosite:cn":
+      - https://223.5.5.5/dns-query
+      - https://1.12.12.12/dns-query
+    "geosite:geolocation-!cn":
+      - https://1.1.1.1/dns-query
+      - https://doh.dns.sb/dns-query
+  fallback: # 未分类域名的国内结果命中 fallback-filter 后使用
+    - https://1.1.1.1/dns-query
     - https://doh.dns.sb/dns-query
-    - https://dns.cloudflare.com/dns-query
-    - https://dns.twnic.tw/dns-query
-    - tls://8.8.4.4:853
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -48,3 +60,8 @@ dns:
     - 'stun.*.*'
     - 'stun.*.*.*'
     - 'WORKGROUP'
+    # Windows NCSI 网络状态检测必须返回真实 IP，避免系统误判无网络
+    - 'msftconnecttest.com'
+    - '*.msftconnecttest.com'
+    - 'msftncsi.com'
+    - '*.msftncsi.com'

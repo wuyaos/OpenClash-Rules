@@ -8,7 +8,7 @@
  * 用法: Sub-Store 订阅/组合订阅 -> 操作 -> 脚本操作, 填本文件链接或粘贴内容。
  * 兼容性: 规则含 lookbehind, 需 Node>=9 或 Safari>=16.4; PCRE (?i:) 已改写为 i 标志。
  */
-const EXCLUDE_REMARKS = new RegExp("(GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev)))", "i");
+const EXCLUDE_REMARKS = new RegExp("(GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网|Data Left|Remain:|Traffic:|Expir[ey]|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?![\\dA-Za-z])|流量|剩[余餘]|[到过過效]期|重置|Reset|リセット|域名|机场|官网|本站|计划|面板|到期|套餐|更多|关注|购买|QQ|测试|客户端|续费|说明|网址|网站|(?:https?:\\/\\/[^\\s]+|www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}|[a-zA-Z0-9-]+\\.(com|net|org|io|cn|xyz|me|top|site|online|tech|dev)))", "i");
 const EMOJI_RULES = [
   [
     "^(?!.*[\\u{1F1E6}-\\u{1F1FF}]{2}).*(Data Left|Remain:|Traffic:|Expir[ey]|Reset|剩[余餘]流量|流量：|[到过過效]期|[时時][间間]|分割线|残り使用容量|有効期限|リセット|故障转移|距离下次重置|IPV6|重置|流量|用户|本站|漏洞|永久虚通路|车|邀|免翻|邀请|eevpn|域名|机场|刷新|禁止|备用登录|计划|面板|忘记|到期|套餐|官网|更多|关注|25倍率|http|增加|持续|渠道|购买|QQ|Ins|二手|^\\s*[\\u2300-\\u2BFF🀀-🧦]?\\s*[A-Za-z\\x80-\\u2000\\u2C00-\\u2FFF\\u3040-\\uFDFF\\uFE70-\\uFEFFＡ-Ｚａ-ｚ\\uFF65-\\uFFDC]*(: |：))",

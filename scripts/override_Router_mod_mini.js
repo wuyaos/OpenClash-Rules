@@ -5,8 +5,9 @@
  * 用法 A (Clash Verge/FlClash 等客户端): 粘贴到订阅的「编辑脚本/覆写」。
  * 用法 B (Sub-Store 文件管理): 新建 Mihomo 配置, 来源选订阅, 脚本操作填本文件,
  *   流量信息请在文件编辑页「订阅信息」(subInfoUrl) 填上游订阅链接。
+ * 参数: groupemoji=true 保留原始 emoji 组名; 默认去掉组名 emoji, icon 字段保留。
  */
-const BASE_YAML_TEXT = "mixed-port: 7890\r\nallow-lan: true\r\nbind-address: '*'\r\nmode: rule\r\nexternal-controller: :9090\r\nunified-delay: true  # 更换延迟计算方式，去除握手等额外延迟\r\ntcp-concurrent: true # 启用 TCP 并发连接。这允许 Clash 同时建立多个 TCP\r\n\r\ndns:\r\n  enable: true # 开启 DNS 配置\r\n  listen: 0.0.0.0:1053 # DNS 监听端口，便于客户端稳定识别 DNS 模式\r\n  enhanced-mode: fake-ip # 使用 fake-ip 提升规则匹配效率\r\n  fake-ip-range: 198.18.0.1/16 # fake-ip 网段\r\n  use-hosts: true # 读取 hosts\r\n  use-system-hosts: true # 读取系统 hosts\r\n  ipv6: false # IPv6 解析开关；避免网络不支持 IPv6 时拖慢首连\r\n  cache-algorithm: arc\r\n  default-nameserver: # 基础 DNS，必须为 IP 形式\r\n    - 223.5.5.5\r\n    - 119.29.29.29\r\n  nameserver: # 主用国内 DNS，保证当前网络下能稳定完成解析\r\n    - https://223.5.5.5/dns-query\r\n    - https://doh.pub/dns-query\r\n    - https://dns.alidns.com/dns-query\r\n  proxy-server-nameserver: # 解析代理节点域名时使用，优先国内 DNS 保证起步可达\r\n    - https://223.5.5.5/dns-query\r\n    - https://doh.pub/dns-query\r\n  fallback: # 主用 DNS 不可用时再使用海外 DNS\r\n    - https://doh.dns.sb/dns-query\r\n    - https://dns.cloudflare.com/dns-query\r\n    - https://dns.twnic.tw/dns-query\r\n    - tls://8.8.4.4:853\r\n  fallback-filter:\r\n    geoip: true\r\n    geoip-code: CN\r\n    ipcidr:\r\n      - 240.0.0.0/4\r\n      - 0.0.0.0/32\r\n  fake-ip-filter-mode: blacklist # 显式启用 fake-ip-filter 模式（黑名单语义）\r\n  fake-ip-filter:\r\n    - '*.lan'\r\n    - '*.localhost'\r\n    - '*.test'\r\n    - '*.local'\r\n    - '*.home.arpa'\r\n    - geosite:private\r\n    - geosite:category-ntp\r\n    - 'stun.*.*'\r\n    - 'stun.*.*.*'\r\n    - 'WORKGROUP'";
+const BASE_YAML_TEXT = "mixed-port: 7890\r\nallow-lan: true\r\nbind-address: '*'\r\nmode: rule\r\nexternal-controller: :9090\r\nunified-delay: true  # 更换延迟计算方式，去除握手等额外延迟\r\ntcp-concurrent: true # 启用 TCP 并发连接。这允许 Clash 同时建立多个 TCP\r\n\r\nhosts:\r\n  # 节点伪装域名在部分公共 DNS(如 223.5.5.5 DoH)上解析为 NODATA/不可达 IP，\r\n  # 固化为可达入口 IP 后客户端可稳定连通（2026-08-30 实测：香港01 464ms、新加坡02 497ms）。\r\n  # 若订阅方更换入口，需同步更新此 IP。\r\n  vehicle-filess.prd.cnn1.vn.cloud.gunzivip.space: 193.30.122.227\r\n\r\ndns:\r\n  enable: true # 开启 DNS 配置\r\n  listen: 0.0.0.0:1053 # DNS 监听端口，便于客户端稳定识别 DNS 模式\r\n  enhanced-mode: fake-ip # 使用 fake-ip 提升规则匹配效率\r\n  fake-ip-range: 198.18.0.1/16 # fake-ip 网段\r\n  use-hosts: true # 读取 hosts\r\n  use-system-hosts: true # 读取系统 hosts\r\n  ipv6: false # IPv6 解析开关；避免网络不支持 IPv6 时拖慢首连\r\n  cache-algorithm: arc\r\n  respect-rules: true # DNS 服务器连接遵守规则；节点域名由 proxy-server-nameserver 负责引导\r\n  fallback-lazy-query: true # 仅在默认结果命中 fallback-filter 时查询海外 DNS\r\n  default-nameserver: # 基础 DNS，必须为 IP 形式\r\n    - 223.5.5.5\r\n    - 119.29.29.29\r\n  nameserver: # 默认国内 DNS；使用 IP DoH 避免解析 DNS 服务域名\r\n    - https://223.5.5.5/dns-query\r\n    - https://1.12.12.12/dns-query\r\n  proxy-server-nameserver: # 节点域名必须在代理建立前通过国内 DNS 解析，避免启动循环\r\n    - https://223.5.5.5/dns-query\r\n    - https://1.12.12.12/dns-query\r\n  nameserver-policy: # 国内低延迟解析；国外经规则代理查询可信 DNS，防止污染\r\n    \"geosite:cn\":\r\n      - https://223.5.5.5/dns-query\r\n      - https://1.12.12.12/dns-query\r\n    \"geosite:geolocation-!cn\":\r\n      - https://1.1.1.1/dns-query\r\n      - https://doh.dns.sb/dns-query\r\n  fallback: # 未分类域名的国内结果命中 fallback-filter 后使用\r\n    - https://1.1.1.1/dns-query\r\n    - https://doh.dns.sb/dns-query\r\n  fallback-filter:\r\n    geoip: true\r\n    geoip-code: CN\r\n    ipcidr:\r\n      - 240.0.0.0/4\r\n      - 0.0.0.0/32\r\n  fake-ip-filter-mode: blacklist # 显式启用 fake-ip-filter 模式（黑名单语义）\r\n  fake-ip-filter:\r\n    - '*.lan'\r\n    - '*.localhost'\r\n    - '*.test'\r\n    - '*.local'\r\n    - '*.home.arpa'\r\n    - geosite:private\r\n    - geosite:category-ntp\r\n    - 'stun.*.*'\r\n    - 'stun.*.*.*'\r\n    - 'WORKGROUP'\r\n    # Windows NCSI 网络状态检测必须返回真实 IP，避免系统误判无网络\r\n    - 'msftconnecttest.com'\r\n    - '*.msftconnecttest.com'\r\n    - 'msftncsi.com'\r\n    - '*.msftncsi.com'";
 const baseConfig = (() => {
   try {
     const yaml = (typeof ProxyUtils !== "undefined" && ProxyUtils.yaml)
@@ -17,6 +18,76 @@ const baseConfig = (() => {
     return {};
   }
 })();
+
+function getScriptArguments() {
+  try {
+    return typeof $arguments !== "undefined" ? $arguments || {} : {};
+  } catch (_e) {
+    return {};
+  }
+}
+
+function parseBoolean(value, defaultValue) {
+  if (value == null || value === "") return defaultValue;
+  return value === true || value === 1 || String(value).toLowerCase() === "true" || value === "1";
+}
+
+function normalizeGroupName(name) {
+  const flagNames = {
+    "🇭🇰": "香港",
+    "🇹🇼": "台湾",
+    "🇨🇳": "中国",
+    "🇲🇴": "澳门",
+    "🇸🇬": "狮城",
+    "🇯🇵": "日本",
+    "🇺🇸": "美国",
+    "🇺🇲": "美国",
+  };
+  let text = String(name).replace(
+    /^(?:[\p{Extended_Pictographic}\p{Regional_Indicator}\uFE0F\u200D]|\s|ᯅ)+/gu,
+    ""
+  );
+  for (const [flag, label] of Object.entries(flagNames)) text = text.split(flag).join(label);
+  text = text.replace(/no\s*日本/gi, "非日本");
+  return text
+    .replace(/[\p{Extended_Pictographic}\p{Regional_Indicator}\uFE0F\u200D]/gu, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function applyGroupNameMode(groups, rules, keepEmoji) {
+  if (keepEmoji) return;
+  const nameMap = new Map();
+  const used = new Set();
+
+  for (const group of groups) {
+    const base = normalizeGroupName(group.name) || group.name;
+    let next = base;
+    let suffix = 2;
+    while (used.has(next)) next = base + "-" + suffix++;
+    used.add(next);
+    nameMap.set(group.name, next);
+  }
+
+  for (const group of groups) {
+    group.name = nameMap.get(group.name) || group.name;
+    if (Array.isArray(group.proxies)) {
+      group.proxies = group.proxies.map((name) => nameMap.get(name) || name);
+    }
+    if (nameMap.has(group["default-selected"])) {
+      group["default-selected"] = nameMap.get(group["default-selected"]);
+    }
+  }
+
+  for (let i = 0; i < rules.length; i++) {
+    const parts = String(rules[i]).split(",");
+    let targetIndex = parts.length - 1;
+    if (parts[targetIndex] === "no-resolve") targetIndex--;
+    if (nameMap.has(parts[targetIndex])) parts[targetIndex] = nameMap.get(parts[targetIndex]);
+    rules[i] = parts.join(",");
+  }
+}
+
 function main(config) {
   const generatedProxyGroups = [
   {
@@ -309,9 +380,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*$",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   },
   {
     "name": "🔯 故障转移",
@@ -319,9 +394,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*$",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   },
   {
     "name": "🔮 负载均衡",
@@ -329,9 +408,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*$",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   },
   {
     "name": "🔮 负载均衡 no🇯🇵",
@@ -339,9 +422,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
     "include-all": true,
     "filter": "^(?!.*(日本|JP|Japan|🇯🇵))(?!.*ℹ(?:️)?).*$",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   },
   {
     "name": "🇭🇰 香港自动",
@@ -349,9 +436,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*🇭🇰(?!.*(?!🇨🇳)[🇦-🇿]{2})",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   },
   {
     "name": "🇹🇼 台湾自动",
@@ -359,9 +450,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*🇹🇼(?!.*(?!🇨🇳)[🇦-🇿]{2})",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   },
   {
     "name": "🇨🇳 ‍中国自动",
@@ -369,9 +464,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*(🇭🇰|🇹🇼|🇨🇳|🇲🇴)(?!.*[🇦-🇿]{2})",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   },
   {
     "name": "🇸🇬 狮城自动",
@@ -379,9 +478,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*🇸🇬(?!.*[🇦-🇿]{2})",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   },
   {
     "name": "🇯🇵 日本自动",
@@ -389,9 +492,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*🇯🇵(?!.*[🇦-🇿]{2})",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   },
   {
     "name": "🇺🇲 ‍美国自动",
@@ -399,9 +506,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*(🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2})",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   },
   {
     "name": "🎏 ‍其他",
@@ -409,9 +520,13 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?)(?!.*(🇨🇳|🇭🇰|🇲🇴|🇹🇼|🇸🇬|🇯🇵|🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2}))",
-    "url": "https://www.gstatic.com/generate_204",
-    "interval": 600,
-    "tolerance": 50
+    "url": "https://cp.cloudflare.com/generate_204",
+    "interval": 300,
+    "tolerance": 50,
+    "lazy": true,
+    "timeout": 5000,
+    "max-failed-times": 2,
+    "expected-status": 204
   }
 ];
   const generatedRuleProviders = {
@@ -681,6 +796,8 @@ function main(config) {
   }
 };
   const generatedRules = [
+  "IP-CIDR,1.1.1.1/32,🚀 节点选择,no-resolve",
+  "DOMAIN,doh.dns.sb,🚀 节点选择",
   "RULE-SET,LocalAreaNetwork,🎯 全球直连,no-resolve",
   "RULE-SET,UnBan,🎯 全球直连,no-resolve",
   "RULE-SET,pt,🎯 全球直连,no-resolve",
@@ -717,6 +834,9 @@ function main(config) {
   "GEOIP,CN,🎯 全球直连,no-resolve",
   "MATCH,🐟 Final兜底"
 ];
+  const ARGS = getScriptArguments();
+  const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, false);
+  applyGroupNameMode(generatedProxyGroups, generatedRules, KEEP_GROUP_EMOJI);
 
   // 空分组剔除(可选优化, 默认关闭): 分组内实际节点数 < MIN_GROUP_NODES 时隐藏该组,
   // 并同步清理其他分组对该组的引用, 避免 mihomo 报 proxy not found。

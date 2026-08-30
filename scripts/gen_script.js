@@ -7,7 +7,7 @@ const ROOT = path.resolve(__dirname, "..");
 const CONFIG_DIR = path.join(ROOT, "config");
 const CLASH_BASE_YAML = path.join(ROOT, "clash", "config.yaml");
 const OUTPUT_DIR = path.join(ROOT, "scripts");
-const DEFAULT_TEST_URL = "http://www.gstatic.com/generate_204";
+const DEFAULT_TEST_URL = "https://cp.cloudflare.com/generate_204";
 const ICON_BASE = "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/";
 
 const ICON_RULES = [
@@ -200,6 +200,10 @@ function buildProxyGroup(groupSpec) {
     group.url = testUrl || DEFAULT_TEST_URL;
     group.interval = interval;
     group.tolerance = tolerance;
+    group.lazy = true;
+    group.timeout = 5000;
+    group["max-failed-times"] = 2;
+    group["expected-status"] = 204;
   } else if (filterExpr) {
     group["include-all"] = true;
     group.filter = filterExpr;
@@ -208,7 +212,7 @@ function buildProxyGroup(groupSpec) {
   return group;
 }
 
-function buildRulesAndProviders(rulesets) {
+function buildRulesAndProviders(rulesets, proxyGroups) {
   const providers = {};
   const providerBySource = new Map();
   const providerNameCount = new Map();
@@ -220,6 +224,14 @@ function buildRulesAndProviders(rulesets) {
     seenRules.add(rule);
     rules.push(rule);
   };
+
+  // respect-rules 下，海外 DoH 必须显式走代理；规则放在 provider 规则之前，
+  // 使首次启动和规则集尚未加载时也不会回落到 Final兜底(DIRECT)。
+  const dnsProxyTarget = proxyGroups.find((group) => /节点选择/.test(group.name))?.name;
+  if (dnsProxyTarget) {
+    addRule(`IP-CIDR,1.1.1.1/32,${dnsProxyTarget},no-resolve`);
+    addRule(`DOMAIN,doh.dns.sb,${dnsProxyTarget}`);
+  }
 
   for (const { target, source } of rulesets) {
     if (source.startsWith("[]")) {
@@ -293,6 +305,77 @@ function parseYamlTopLevel(yamlText) {
 // 去行内注释并化简 YAML 标量为 JS 值(字符串/数字/布尔), 块字段交给 main 里 YAML.parse。
 // 为避免引入 yaml 解析依赖, 生成脚本运行时优先用环境自带的 yaml 工具(ProxyUtils.yaml),
 // 不可用时退化为纯文本透传(拼回 YAML 文本再让内核解析)。
+const GROUP_NAME_TOOLS = `
+function getScriptArguments() {
+  try {
+    return typeof $arguments !== "undefined" ? $arguments || {} : {};
+  } catch (_e) {
+    return {};
+  }
+}
+
+function parseBoolean(value, defaultValue) {
+  if (value == null || value === "") return defaultValue;
+  return value === true || value === 1 || String(value).toLowerCase() === "true" || value === "1";
+}
+
+function normalizeGroupName(name) {
+  const flagNames = {
+    "🇭🇰": "香港",
+    "🇹🇼": "台湾",
+    "🇨🇳": "中国",
+    "🇲🇴": "澳门",
+    "🇸🇬": "狮城",
+    "🇯🇵": "日本",
+    "🇺🇸": "美国",
+    "🇺🇲": "美国",
+  };
+  let text = String(name).replace(
+    /^(?:[\\p{Extended_Pictographic}\\p{Regional_Indicator}\\uFE0F\\u200D]|\\s|ᯅ)+/gu,
+    ""
+  );
+  for (const [flag, label] of Object.entries(flagNames)) text = text.split(flag).join(label);
+  text = text.replace(/no\\s*日本/gi, "非日本");
+  return text
+    .replace(/[\\p{Extended_Pictographic}\\p{Regional_Indicator}\\uFE0F\\u200D]/gu, "")
+    .replace(/\\s+/g, " ")
+    .trim();
+}
+
+function applyGroupNameMode(groups, rules, keepEmoji) {
+  if (keepEmoji) return;
+  const nameMap = new Map();
+  const used = new Set();
+
+  for (const group of groups) {
+    const base = normalizeGroupName(group.name) || group.name;
+    let next = base;
+    let suffix = 2;
+    while (used.has(next)) next = base + "-" + suffix++;
+    used.add(next);
+    nameMap.set(group.name, next);
+  }
+
+  for (const group of groups) {
+    group.name = nameMap.get(group.name) || group.name;
+    if (Array.isArray(group.proxies)) {
+      group.proxies = group.proxies.map((name) => nameMap.get(name) || name);
+    }
+    if (nameMap.has(group["default-selected"])) {
+      group["default-selected"] = nameMap.get(group["default-selected"]);
+    }
+  }
+
+  for (let i = 0; i < rules.length; i++) {
+    const parts = String(rules[i]).split(",");
+    let targetIndex = parts.length - 1;
+    if (parts[targetIndex] === "no-resolve") targetIndex--;
+    if (nameMap.has(parts[targetIndex])) parts[targetIndex] = nameMap.get(parts[targetIndex]);
+    rules[i] = parts.join(",");
+  }
+}
+`;
+
 function buildScriptContent(iniPath, proxyGroups, providers, rules, baseYaml, includeNodeOps) {
   const banner = [
     "/*",
@@ -302,6 +385,7 @@ function buildScriptContent(iniPath, proxyGroups, providers, rules, baseYaml, in
     " * 用法 A (Clash Verge/FlClash 等客户端): 粘贴到订阅的「编辑脚本/覆写」。",
     " * 用法 B (Sub-Store 文件管理): 新建 Mihomo 配置, 来源选订阅, 脚本操作填本文件,",
     " *   流量信息请在文件编辑页「订阅信息」(subInfoUrl) 填上游订阅链接。",
+    " * 参数: groupemoji=true 保留原始 emoji 组名; 默认去掉组名 emoji, icon 字段保留。",
     " */",
   ].join("\n");
 
@@ -318,7 +402,7 @@ function buildScriptContent(iniPath, proxyGroups, providers, rules, baseYaml, in
   // 键序重排: base 基础键在前(保持 config 已有值优先的合并语义), 其余 config 键, 最后依次 节点/分组/规则, 符合 clash 配置阅读惯例。
   const orderBlock = `\n  const ordered = {};\n  for (const [key, value] of Object.entries(baseConfig)) {\n    if (["proxies", "proxy-groups", "rule-providers", "rules"].includes(key)) continue;\n    ordered[key] = config[key] != null ? config[key] : value;\n  }\n  for (const [key, value] of Object.entries(config)) {\n    if (["proxies", "proxy-groups", "rule-providers", "rules"].includes(key)) continue;\n    if (key in ordered) continue;\n    ordered[key] = value;\n  }\n  ordered["proxies"] = config.proxies;\n  ordered["proxy-groups"] = generatedProxyGroups;\n  ordered["rule-providers"] = generatedRuleProviders;\n  ordered["rules"] = generatedRules;\n  return ordered;\n`;
 
-  return `${banner}\n${baseDecl}function main(config) {\n  const generatedProxyGroups = ${JSON.stringify(
+  return `${banner}\n${baseDecl}${GROUP_NAME_TOOLS}\nfunction main(config) {\n  const generatedProxyGroups = ${JSON.stringify(
     proxyGroups,
     null,
     2
@@ -326,7 +410,7 @@ function buildScriptContent(iniPath, proxyGroups, providers, rules, baseYaml, in
     rules,
     null,
     2
-  )};\n${nodeBlock}
+  )};\n  const ARGS = getScriptArguments();\n  const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, false);\n  applyGroupNameMode(generatedProxyGroups, generatedRules, KEEP_GROUP_EMOJI);\n${nodeBlock}
   // 空分组剔除(可选优化, 默认关闭): 分组内实际节点数 < MIN_GROUP_NODES 时隐藏该组,
   // 并同步清理其他分组对该组的引用, 避免 mihomo 报 proxy not found。
   // 注意: 需在节点已加国旗后统计(地区组 filter 依赖国旗), unified 模式已保证。
@@ -427,7 +511,7 @@ function buildSubstoreScriptContent(iniPath, nodeOps) {
 // 单文件全功能版: operator(节点级) + main(配置级) + base 配置, 供“只想维护一个脚本”的场景。
 function buildUnifiedScriptContent(iniPath, nodeOps, proxyGroups, providers, rules, baseYaml) {
   const overridePart = buildScriptContent(iniPath, proxyGroups, providers, rules, baseYaml, true)
-    .replace(/^[\s\S]*?\n(?=const BASE_YAML_TEXT|function main)/, "") // 去 banner
+    .replace(/^[\s\S]*?\n(?=const BASE_YAML_TEXT|function getScriptArguments|function main)/, "") // 去 banner
     .replace(/\* 用法 A[\s\S]*?\*\/\n/, "") // 去旧用法注释块
     .replace(/\n$/, "");
   const nodePart = buildSubstoreScriptContent(iniPath, nodeOps)
@@ -468,7 +552,8 @@ function buildUnifiedAllScriptContent(nodeOps, profileList, baseYaml) {
     " *   profile: acl4ssr(默认) | router —— 选择 ini 方案",
     " *   ipv6:     true | false(默认) —— 启用 IPv6(顶层 ipv6 + dns.ipv6)",
     " *   full:     true(默认) | false —— true 输出完整配置(合并 base), false 仅输出节点/分组/规则",
-    " *   threshold: 非负整数(默认 0) —— filter 分组命中节点数低于该值时隐藏分组并清理引用",
+    " *   threshold:  非负整数(默认 0) —— filter 分组命中节点数低于该值时隐藏分组并清理引用",
+    " *   groupemoji: true | false(默认) —— true 保留原始 emoji 组名; false 组名去 emoji、保留 icon",
     " */",
   ].join("\n");
 
@@ -541,19 +626,10 @@ function operator(proxies = [], targetPlatform, context) {
 }
 
 ${baseDecl}
+${GROUP_NAME_TOOLS}
 function main(config) {
   // ===== 参数解析 =====
-  const ARGS = (() => {
-    try {
-      return $arguments || {};
-    } catch (_e) {
-      return {};
-    }
-  })();
-  const argBool = (v, def) => {
-    if (v == null || v === "") return def;
-    return String(v).toLowerCase() === "true" || v === "1" || v === true;
-  };
+  const ARGS = getScriptArguments();
   const argInt = (v, def) => {
     if (v == null || v === "") return def;
     const n = Number.parseInt(String(v), 10);
@@ -566,9 +642,10 @@ function main(config) {
     if (PROFILE_ALIASES[want]) return PROFILE_ALIASES[want];
     return ${JSON.stringify(firstKey)};
   })();
-  const FULL = argBool(ARGS.full, true);
-  const IPV6 = argBool(ARGS.ipv6, false);
+  const FULL = parseBoolean(ARGS.full, true);
+  const IPV6 = parseBoolean(ARGS.ipv6, false);
   const MIN_GROUP_NODES = argInt(ARGS.threshold, 0);
+  const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, false);
 
   // main 可能在同一脚本实例中多次调用; 深拷贝避免 threshold/ipv6 修改常量数据。
   const selectedProfile = JSON.parse(JSON.stringify(PROFILES[profileKey]));
@@ -576,6 +653,7 @@ function main(config) {
   const generatedProxyGroups = selectedProfile["proxy-groups"];
   const generatedRuleProviders = selectedProfile["rule-providers"];
   const generatedRules = selectedProfile.rules;
+  applyGroupNameMode(generatedProxyGroups, generatedRules, KEEP_GROUP_EMOJI);
 
   // 节点级处理(幂等): 过滤信息伪节点 + 补国旗, 与 operator 同源
   if (Array.isArray(config.proxies)) {
@@ -661,7 +739,7 @@ function generateOne(target) {
   const iniText = fs.readFileSync(target.iniPath, "utf8");
   const parsed = parseIni(iniText);
   const proxyGroups = parsed.groups.map(buildProxyGroup);
-  const { providers, rules } = buildRulesAndProviders(parsed.rulesets);
+  const { providers, rules } = buildRulesAndProviders(parsed.rulesets, proxyGroups);
 
   // 与 ini 的 clash_rule_base 对应: 将 clash/config.yaml 作为 base 并入 override 脚本。
   // ini 中指向本仓库 raw 链接的 clash_rule_base 均为同一路径, 直接读本地文件。
