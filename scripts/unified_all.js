@@ -1880,6 +1880,7 @@ const PROFILES = {
       {
         "name": "ᯅ QUEST",
         "type": "select",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png",
         "proxies": [
           "🇺🇲 ‍美国自动",
           "🚀 节点选择",
@@ -1934,6 +1935,7 @@ const PROFILES = {
       {
         "name": "🎬 EMBY",
         "type": "select",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png",
         "proxies": [
           "🚀 节点选择",
           "DIRECT",
@@ -1954,6 +1956,7 @@ const PROFILES = {
       {
         "name": "🕸 刮削",
         "type": "select",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Media.png",
         "proxies": [
           "🔮 负载均衡 no🇯🇵",
           "🚀 节点选择",
@@ -1968,6 +1971,7 @@ const PROFILES = {
       {
         "name": "🕸 刮削🇯🇵",
         "type": "select",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png",
         "proxies": [
           "🇯🇵 日本自动"
         ],
@@ -2019,6 +2023,7 @@ const PROFILES = {
       {
         "name": "🤖 AI",
         "type": "select",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png",
         "proxies": [
           "🇺🇲 ‍美国自动",
           "🚀 节点选择",
@@ -2078,7 +2083,7 @@ const PROFILES = {
       {
         "name": "📺 哔哩哔哩港澳台",
         "type": "select",
-        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/BiliBili.png",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili.png",
         "proxies": [
           "🇨🇳 ‍中国自动",
           "🇭🇰 香港自动",
@@ -2690,6 +2695,7 @@ const PROFILES = {
       {
         "name": "ᯅ QUEST",
         "type": "select",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png",
         "proxies": [
           "🇺🇲 ‍美国自动",
           "🚀 节点选择",
@@ -2744,6 +2750,7 @@ const PROFILES = {
       {
         "name": "🎬 EMBY",
         "type": "select",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png",
         "proxies": [
           "🚀 节点选择",
           "DIRECT",
@@ -2764,6 +2771,7 @@ const PROFILES = {
       {
         "name": "🕸 刮削",
         "type": "select",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Media.png",
         "proxies": [
           "🔮 负载均衡 no🇯🇵",
           "🚀 节点选择",
@@ -2778,6 +2786,7 @@ const PROFILES = {
       {
         "name": "🕸 刮削🇯🇵",
         "type": "select",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png",
         "proxies": [
           "🇯🇵 日本自动"
         ],
@@ -2829,6 +2838,7 @@ const PROFILES = {
       {
         "name": "🤖 AI",
         "type": "select",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png",
         "proxies": [
           "🇺🇲 ‍美国自动",
           "🚀 节点选择",
@@ -2888,7 +2898,7 @@ const PROFILES = {
       {
         "name": "📺 哔哩哔哩港澳台",
         "type": "select",
-        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/BiliBili.png",
+        "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili.png",
         "proxies": [
           "🇨🇳 ‍中国自动",
           "🇭🇰 香港自动",
@@ -3419,11 +3429,27 @@ function operator(proxies = [], targetPlatform, context) {
 const BASE_YAML_TEXT = "mixed-port: 7890\r\nallow-lan: true\r\nbind-address: '*'\r\nmode: rule\r\nexternal-controller: :9090\r\nunified-delay: true  # 更换延迟计算方式，去除握手等额外延迟\r\ntcp-concurrent: true # 启用 TCP 并发连接。这允许 Clash 同时建立多个 TCP\r\n\r\nhosts:\r\n  # 节点伪装域名在部分公共 DNS(如 223.5.5.5 DoH)上解析为 NODATA/不可达 IP，\r\n  # 固化为可达入口 IP 后客户端可稳定连通（2026-08-30 实测：香港01 464ms、新加坡02 497ms）。\r\n  # 若订阅方更换入口，需同步更新此 IP。\r\n  vehicle-filess.prd.cnn1.vn.cloud.gunzivip.space: 193.30.122.227\r\n\r\ndns:\r\n  enable: true # 开启 DNS 配置\r\n  listen: 0.0.0.0:1053 # DNS 监听端口，便于客户端稳定识别 DNS 模式\r\n  enhanced-mode: fake-ip # 使用 fake-ip 提升规则匹配效率\r\n  fake-ip-range: 198.18.0.1/16 # fake-ip 网段\r\n  use-hosts: true # 读取 hosts\r\n  use-system-hosts: true # 读取系统 hosts\r\n  ipv6: false # IPv6 解析开关；避免网络不支持 IPv6 时拖慢首连\r\n  cache-algorithm: arc\r\n  respect-rules: true # DNS 服务器连接遵守规则；节点域名由 proxy-server-nameserver 负责引导\r\n  fallback-lazy-query: true # 仅在默认结果命中 fallback-filter 时查询海外 DNS\r\n  default-nameserver: # 基础 DNS，必须为 IP 形式\r\n    - 223.5.5.5\r\n    - 119.29.29.29\r\n  nameserver: # 默认国内 DNS；使用 IP DoH 避免解析 DNS 服务域名\r\n    - https://223.5.5.5/dns-query\r\n    - https://1.12.12.12/dns-query\r\n  proxy-server-nameserver: # 节点域名必须在代理建立前通过国内 DNS 解析，避免启动循环\r\n    - https://223.5.5.5/dns-query\r\n    - https://1.12.12.12/dns-query\r\n  nameserver-policy: # 国内低延迟解析；国外经规则代理查询可信 DNS，防止污染\r\n    \"geosite:cn\":\r\n      - https://223.5.5.5/dns-query\r\n      - https://1.12.12.12/dns-query\r\n    \"geosite:geolocation-!cn\":\r\n      - https://1.1.1.1/dns-query\r\n      - https://doh.dns.sb/dns-query\r\n  fallback: # 未分类域名的国内结果命中 fallback-filter 后使用\r\n    - https://1.1.1.1/dns-query\r\n    - https://doh.dns.sb/dns-query\r\n  fallback-filter:\r\n    geoip: true\r\n    geoip-code: CN\r\n    ipcidr:\r\n      - 240.0.0.0/4\r\n      - 0.0.0.0/32\r\n  fake-ip-filter-mode: blacklist # 显式启用 fake-ip-filter 模式（黑名单语义）\r\n  fake-ip-filter:\r\n    - '*.lan'\r\n    - '*.localhost'\r\n    - '*.test'\r\n    - '*.local'\r\n    - '*.home.arpa'\r\n    - geosite:private\r\n    - geosite:category-ntp\r\n    - 'stun.*.*'\r\n    - 'stun.*.*.*'\r\n    - 'WORKGROUP'\r\n    # Windows NCSI 网络状态检测必须返回真实 IP，避免系统误判无网络\r\n    - 'msftconnecttest.com'\r\n    - '*.msftconnecttest.com'\r\n    - 'msftncsi.com'\r\n    - '*.msftncsi.com'";
 const baseConfig = (() => {
   try {
-    const yaml = (typeof ProxyUtils !== "undefined" && ProxyUtils.yaml)
-      ? ProxyUtils.yaml.safeLoad(BASE_YAML_TEXT)
-      : (typeof yaml !== "undefined" && yaml) ? yaml.safeLoad(BASE_YAML_TEXT) : null;
-    return yaml || {};
-  } catch (_e) {
+    const parser = (typeof ProxyUtils !== "undefined" && ProxyUtils.yaml)
+      ? ProxyUtils.yaml
+      : (typeof YAML !== "undefined" && YAML)
+        ? YAML
+        : (typeof globalThis !== "undefined" && globalThis.yaml)
+          ? globalThis.yaml
+          : null;
+    if (!parser) throw new Error("YAML parser unavailable");
+    const parsed = typeof parser.parse === "function"
+      ? parser.parse(BASE_YAML_TEXT)
+      : typeof parser.safeLoad === "function"
+        ? parser.safeLoad(BASE_YAML_TEXT)
+        : typeof parser.load === "function"
+          ? parser.load(BASE_YAML_TEXT)
+          : null;
+    if (!parsed || typeof parsed !== "object") throw new Error("invalid base YAML result");
+    return parsed;
+  } catch (error) {
+    if (typeof console !== "undefined" && console.error) {
+      console.error("[OpenClash-Rules] base YAML parse failed:", error);
+    }
     return {};
   }
 })();
@@ -3515,6 +3541,7 @@ function main(config) {
   })();
   const FULL = parseBoolean(ARGS.full, true);
   const IPV6 = parseBoolean(ARGS.ipv6, false);
+  const HAS_IPV6_ARG = Object.prototype.hasOwnProperty.call(ARGS, "ipv6");
   const MIN_GROUP_NODES = argInt(ARGS.threshold, 0);
   const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, false);
 
@@ -3577,12 +3604,18 @@ function main(config) {
     }
   }
 
-  // 键序重排: base 基础键在前(FULL 时), 其余 config 键, 最后 节点/分组/规则
+  // FULL=true 以项目 base 为准，避免上游完整订阅的旧 DNS/端口覆盖已审核配置。
+  // hosts 保留上游自定义项，但同名键由项目固定映射覆盖。
   const ordered = {};
   if (FULL) {
     for (const [key, value] of Object.entries(runtimeBase)) {
       if (["proxies", "proxy-groups", "rule-providers", "rules"].includes(key)) continue;
-      ordered[key] = config[key] != null ? config[key] : value;
+      if (key === "hosts" && value && typeof value === "object") {
+        const sourceHosts = config.hosts && typeof config.hosts === "object" ? config.hosts : {};
+        ordered.hosts = { ...sourceHosts, ...value };
+      } else {
+        ordered[key] = value;
+      }
     }
   }
   for (const [key, value] of Object.entries(config)) {
@@ -3595,9 +3628,9 @@ function main(config) {
   ordered["rule-providers"] = generatedRuleProviders;
   ordered["rules"] = generatedRules;
 
-  if (IPV6) {
-    ordered["ipv6"] = true;
-    if (ordered.dns && typeof ordered.dns === "object") ordered.dns.ipv6 = true;
+  if (FULL || HAS_IPV6_ARG) {
+    ordered["ipv6"] = IPV6;
+    if (ordered.dns && typeof ordered.dns === "object") ordered.dns.ipv6 = IPV6;
   }
 
   return ordered;
