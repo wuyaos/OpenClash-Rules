@@ -18,13 +18,18 @@ const ICON_RULES = [
   ["回家", "Home.png"],
   ["电报", "Telegram.png"],
   ["谷歌", "Google_Search.png"],
-  ["GPT", "Bot.png"],
+  ["GPT", "ChatGPT.png"],
+  ["AI", "AI.png"],
+  ["QUEST", "Game.png"],
+  ["EMBY", "Emby.png"],
+  ["刮削🇯🇵", "Japan.png"],
+  ["刮削", "Media.png"],
   ["GitHub", "GitHub.png"],
   ["开发", "GitHub.png"],
   ["微软云盘", "OneDrive.png"],
   ["微软服务", "Microsoft.png"],
   ["国外媒体", "ForeignMedia.png"],
-  ["哔哩哔哩", "BiliBili.png"],
+  ["哔哩哔哩", "bilibili.png"],
   ["广告拦截", "AdBlack.png"],
   ["全球直连", "Direct.png"],
   ["Final", "Final.png"],
@@ -36,6 +41,8 @@ const ICON_RULES = [
   ["日本", "Japan.png"],
   ["美国", "United_States.png"],
   ["其他", "Global.png"],
+  ["Global", "Global.png"],
+  ["GLOBAL", "Global.png"],
   ["手动选择", "Available.png"],
 ];
 
@@ -86,7 +93,7 @@ function pickIcon(groupName) {
       return `${ICON_BASE}${iconName}`;
     }
   }
-  return null;
+  return `${ICON_BASE}Global.png`;
 }
 
 function parseIni(iniText) {
@@ -376,6 +383,38 @@ function applyGroupNameMode(groups, rules, keepEmoji) {
 }
 `;
 
+function buildBaseConfigDeclaration(baseYaml) {
+  if (!baseYaml) return "";
+  return `const BASE_YAML_TEXT = ${JSON.stringify(baseYaml)};
+const baseConfig = (() => {
+  try {
+    const parser = (typeof ProxyUtils !== "undefined" && ProxyUtils.yaml)
+      ? ProxyUtils.yaml
+      : (typeof YAML !== "undefined" && YAML)
+        ? YAML
+        : (typeof globalThis !== "undefined" && globalThis.yaml)
+          ? globalThis.yaml
+          : null;
+    if (!parser) throw new Error("YAML parser unavailable");
+    const parsed = typeof parser.parse === "function"
+      ? parser.parse(BASE_YAML_TEXT)
+      : typeof parser.safeLoad === "function"
+        ? parser.safeLoad(BASE_YAML_TEXT)
+        : typeof parser.load === "function"
+          ? parser.load(BASE_YAML_TEXT)
+          : null;
+    if (!parsed || typeof parsed !== "object") throw new Error("invalid base YAML result");
+    return parsed;
+  } catch (error) {
+    if (typeof console !== "undefined" && console.error) {
+      console.error("[OpenClash-Rules] base YAML parse failed:", error);
+    }
+    return {};
+  }
+})();
+`;
+}
+
 function buildScriptContent(iniPath, proxyGroups, providers, rules, baseYaml, includeNodeOps) {
   const banner = [
     "/*",
@@ -389,9 +428,7 @@ function buildScriptContent(iniPath, proxyGroups, providers, rules, baseYaml, in
     " */",
   ].join("\n");
 
-  const baseDecl = baseYaml
-    ? `const BASE_YAML_TEXT = ${JSON.stringify(baseYaml)};\nconst baseConfig = (() => {\n  try {\n    const yaml = (typeof ProxyUtils !== "undefined" && ProxyUtils.yaml)\n      ? ProxyUtils.yaml.safeLoad(BASE_YAML_TEXT)\n      : (typeof yaml !== "undefined" && yaml) ? yaml.safeLoad(BASE_YAML_TEXT) : null;\n    return yaml || {};\n  } catch (_e) {\n    return {};\n  }\n})();\n`
-    : "";
+  const baseDecl = buildBaseConfigDeclaration(baseYaml);
 
   // unified 模式: main 内也做节点级处理(过滤信息伪节点 + 补国旗)。
   // 与订阅侧 operator 同源逻辑, 幂等: 已带国旗的节点不会被重复加(emoji 规则自带防重)。
@@ -557,20 +594,7 @@ function buildUnifiedAllScriptContent(nodeOps, profileList, baseYaml) {
     " */",
   ].join("\n");
 
-  const baseDecl = baseYaml
-    ? `const BASE_YAML_TEXT = ${JSON.stringify(baseYaml)};
-const baseConfig = (() => {
-  try {
-    const yaml = (typeof ProxyUtils !== "undefined" && ProxyUtils.yaml)
-      ? ProxyUtils.yaml.safeLoad(BASE_YAML_TEXT)
-      : (typeof yaml !== "undefined" && yaml) ? yaml.safeLoad(BASE_YAML_TEXT) : null;
-    return yaml || {};
-  } catch (_e) {
-    return {};
-  }
-})();
-`
-    : "";
+  const baseDecl = buildBaseConfigDeclaration(baseYaml);
 
   // profiles 数据: key(短名) -> {proxy-groups, rule-providers, rules}
   const profileMap = {};
@@ -644,6 +668,7 @@ function main(config) {
   })();
   const FULL = parseBoolean(ARGS.full, true);
   const IPV6 = parseBoolean(ARGS.ipv6, false);
+  const HAS_IPV6_ARG = Object.prototype.hasOwnProperty.call(ARGS, "ipv6");
   const MIN_GROUP_NODES = argInt(ARGS.threshold, 0);
   const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, false);
 
@@ -706,12 +731,18 @@ function main(config) {
     }
   }
 
-  // 键序重排: base 基础键在前(FULL 时), 其余 config 键, 最后 节点/分组/规则
+  // FULL=true 以项目 base 为准，避免上游完整订阅的旧 DNS/端口覆盖已审核配置。
+  // hosts 保留上游自定义项，但同名键由项目固定映射覆盖。
   const ordered = {};
   if (FULL) {
     for (const [key, value] of Object.entries(runtimeBase)) {
       if (["proxies", "proxy-groups", "rule-providers", "rules"].includes(key)) continue;
-      ordered[key] = config[key] != null ? config[key] : value;
+      if (key === "hosts" && value && typeof value === "object") {
+        const sourceHosts = config.hosts && typeof config.hosts === "object" ? config.hosts : {};
+        ordered.hosts = { ...sourceHosts, ...value };
+      } else {
+        ordered[key] = value;
+      }
     }
   }
   for (const [key, value] of Object.entries(config)) {
@@ -724,9 +755,9 @@ function main(config) {
   ordered["rule-providers"] = generatedRuleProviders;
   ordered["rules"] = generatedRules;
 
-  if (IPV6) {
-    ordered["ipv6"] = true;
-    if (ordered.dns && typeof ordered.dns === "object") ordered.dns.ipv6 = true;
+  if (FULL || HAS_IPV6_ARG) {
+    ordered["ipv6"] = IPV6;
+    if (ordered.dns && typeof ordered.dns === "object") ordered.dns.ipv6 = IPV6;
   }
 
   return ordered;
