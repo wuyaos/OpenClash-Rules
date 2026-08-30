@@ -4,3 +4,4 @@
 .omx/
 __pycache__
 .mindfs/
+.pi-loop.json.lock
