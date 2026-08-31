@@ -2247,11 +2247,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*$",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   },
@@ -2261,11 +2261,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*$",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   },
@@ -2275,11 +2275,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*$",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   },
@@ -2289,11 +2289,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
     "include-all": true,
     "filter": "^(?!.*(日本|JP|Japan|🇯🇵))(?!.*ℹ(?:️)?).*$",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   },
@@ -2303,11 +2303,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*🇭🇰(?!.*(?!🇨🇳)[🇦-🇿]{2})",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   },
@@ -2317,11 +2317,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*🇹🇼(?!.*(?!🇨🇳)[🇦-🇿]{2})",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   },
@@ -2331,11 +2331,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*(🇭🇰|🇹🇼|🇨🇳|🇲🇴)(?!.*[🇦-🇿]{2})",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   },
@@ -2345,11 +2345,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*🇸🇬(?!.*[🇦-🇿]{2})",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   },
@@ -2359,11 +2359,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*🇯🇵(?!.*[🇦-🇿]{2})",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   },
@@ -2373,11 +2373,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?).*(🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2})",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   },
@@ -2387,11 +2387,11 @@ function main(config) {
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png",
     "include-all": true,
     "filter": "^(?!.*ℹ(?:️)?)(?!.*(🇨🇳|🇭🇰|🇲🇴|🇹🇼|🇸🇬|🇯🇵|🇺🇸|🇺🇲)(?!.*[🇦-🇿]{2}))",
-    "url": "https://cp.cloudflare.com/generate_204",
+    "url": "https://connectivitycheck.platform.hicloud.com/generate_204",
     "interval": 300,
     "tolerance": 50,
     "lazy": true,
-    "timeout": 5000,
+    "timeout": 10000,
     "max-failed-times": 2,
     "expected-status": 204
   }
@@ -2702,7 +2702,7 @@ function main(config) {
   "MATCH,🐟 Final兜底"
 ];
   const ARGS = getScriptArguments();
-  const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, false);
+  const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, true);
   applyGroupNameMode(generatedProxyGroups, generatedRules, KEEP_GROUP_EMOJI);
 
   // 节点级处理(幂等): 过滤信息伪节点 + 补国旗, 与订阅侧 operator 同源

@@ -7,7 +7,7 @@ const ROOT = path.resolve(__dirname, "..");
 const CONFIG_DIR = path.join(ROOT, "config");
 const CLASH_BASE_YAML = path.join(ROOT, "clash", "config.yaml");
 const OUTPUT_DIR = path.join(ROOT, "scripts");
-const DEFAULT_TEST_URL = "https://cp.cloudflare.com/generate_204";
+const DEFAULT_TEST_URL = "https://connectivitycheck.platform.hicloud.com/generate_204";
 const ICON_BASE = "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/";
 
 const ICON_RULES = [
@@ -208,7 +208,7 @@ function buildProxyGroup(groupSpec) {
     group.interval = interval;
     group.tolerance = tolerance;
     group.lazy = true;
-    group.timeout = 5000;
+    group.timeout = 10000;
     group["max-failed-times"] = 2;
     group["expected-status"] = 204;
   } else if (filterExpr) {
@@ -424,7 +424,7 @@ function buildScriptContent(iniPath, proxyGroups, providers, rules, baseYaml, in
     " * 用法 A (Clash Verge/FlClash 等客户端): 粘贴到订阅的「编辑脚本/覆写」。",
     " * 用法 B (Sub-Store 文件管理): 新建 Mihomo 配置, 来源选订阅, 脚本操作填本文件,",
     " *   流量信息请在文件编辑页「订阅信息」(subInfoUrl) 填上游订阅链接。",
-    " * 参数: groupemoji=true 保留原始 emoji 组名; 默认去掉组名 emoji, icon 字段保留。",
+    " * 参数: 默认保留原始 emoji 组名; groupemoji=false 去掉组名 emoji, icon 字段保留。",
     " */",
   ].join("\n");
 
@@ -447,7 +447,7 @@ function buildScriptContent(iniPath, proxyGroups, providers, rules, baseYaml, in
     rules,
     null,
     2
-  )};\n  const ARGS = getScriptArguments();\n  const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, false);\n  applyGroupNameMode(generatedProxyGroups, generatedRules, KEEP_GROUP_EMOJI);\n${nodeBlock}
+  )};\n  const ARGS = getScriptArguments();\n  const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, true);\n  applyGroupNameMode(generatedProxyGroups, generatedRules, KEEP_GROUP_EMOJI);\n${nodeBlock}
   // 空分组剔除(可选优化, 默认关闭): 分组内实际节点数 < MIN_GROUP_NODES 时隐藏该组,
   // 并同步清理其他分组对该组的引用, 避免 mihomo 报 proxy not found。
   // 注意: 需在节点已加国旗后统计(地区组 filter 依赖国旗), unified 模式已保证。
@@ -590,7 +590,7 @@ function buildUnifiedAllScriptContent(nodeOps, profileList, baseYaml) {
     " *   ipv6:     true | false(默认) —— 启用 IPv6(顶层 ipv6 + dns.ipv6)",
     " *   full:     true(默认) | false —— true 输出完整配置(合并 base), false 仅输出节点/分组/规则",
     " *   threshold:  非负整数(默认 0) —— filter 分组命中节点数低于该值时隐藏分组并清理引用",
-    " *   groupemoji: true | false(默认) —— true 保留原始 emoji 组名; false 组名去 emoji、保留 icon",
+    " *   groupemoji: true(默认) | false —— true 保留原始 emoji 组名; false 组名去 emoji、保留 icon",
     " */",
   ].join("\n");
 
@@ -670,7 +670,7 @@ function main(config) {
   const IPV6 = parseBoolean(ARGS.ipv6, false);
   const HAS_IPV6_ARG = Object.prototype.hasOwnProperty.call(ARGS, "ipv6");
   const MIN_GROUP_NODES = argInt(ARGS.threshold, 0);
-  const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, false);
+  const KEEP_GROUP_EMOJI = parseBoolean(ARGS.groupemoji, true);
 
   // main 可能在同一脚本实例中多次调用; 深拷贝避免 threshold/ipv6 修改常量数据。
   const selectedProfile = JSON.parse(JSON.stringify(PROFILES[profileKey]));
