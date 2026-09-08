@@ -102,7 +102,6 @@ PROCESS-NAME,com.appchina.yugao.2019092307
 PROCESS-NAME,com.appchina.yugao.2019092309
 PROCESS-NAME,com.appchina.yugao.2019100901
 PROCESS-NAME,com.appchina.yugao.2019101601
-PROCESS-NAME,com.appchina.yugao.2019120402
 PROCESS-NAME,com.appchina.yugao.2019121413
 PROCESS-NAME,com.appchina.yugao.2019122601
 PROCESS-NAME,com.appchina.yugao.2020011604
@@ -116,7 +115,6 @@ PROCESS-NAME,com.appchina.yugao.2020032002
 PROCESS-NAME,com.appchina.yugao.2020042406
 PROCESS-NAME,com.appchina.yugao.2020042802
 PROCESS-NAME,com.appchina.yugao.2020060406
-PROCESS-NAME,com.appchina.yugao.2020062204
 PROCESS-NAME,com.appchina.yugao.2020070312
 PROCESS-NAME,com.appchina.yugao.2020073006
 PROCESS-NAME,com.appchina.yugao.2020080310
@@ -136,6 +134,7 @@ PROCESS-NAME,com.appchina.yugao.2021070511
 PROCESS-NAME,com.appchina.yugao.2021070709
 PROCESS-NAME,com.appchina.yugao.2021071501
 PROCESS-NAME,com.appchina.yugao.2021081905
+PROCESS-NAME,com.appchina.yugao.2021092601
 PROCESS-NAME,com.appchina.yugao.2021111117
 PROCESS-NAME,com.appchina.yugao.2021112210
 PROCESS-NAME,com.appchina.yugao.2022020701
@@ -549,6 +548,7 @@ PROCESS-NAME,com.liaoyanxuan.sudoku
 PROCESS-NAME,com.lila.beatracer
 PROCESS-NAME,com.lilith.palmon.android.cn
 PROCESS-NAME,com.lilithgame.igame.android.cn
+PROCESS-NAME,com.lilithgame.pgame.android.cn
 PROCESS-NAME,com.lilithgame.wgame.android.cn
 PROCESS-NAME,com.lilithgames.rok.offical.cn
 PROCESS-NAME,com.lilithgames.samo.android.cn
@@ -1007,7 +1007,6 @@ PROCESS-NAME,com.tencent.tmgp.cf
 PROCESS-NAME,com.tencent.tmgp.cfswz
 PROCESS-NAME,com.tencent.tmgp.cfxf
 PROCESS-NAME,com.tencent.tmgp.chaowu10003
-PROCESS-NAME,com.tencent.tmgp.chcyyb
 PROCESS-NAME,com.tencent.tmgp.chengzhu.zcydtz
 PROCESS-NAME,com.tencent.tmgp.chudustar.gdmj2
 PROCESS-NAME,com.tencent.tmgp.chudustar.herbmj
@@ -1225,7 +1224,6 @@ PROCESS-NAME,com.tencent.tmgp.hy.qmzzmnq
 PROCESS-NAME,com.tencent.tmgp.hy.sdzsczsj
 PROCESS-NAME,com.tencent.tmgp.hy.snxns
 PROCESS-NAME,com.tencent.tmgp.hy.sryx
-PROCESS-NAME,com.tencent.tmgp.hy.wdgqsj
 PROCESS-NAME,com.tencent.tmgp.hy.xhzxymnq
 PROCESS-NAME,com.tencent.tmgp.hy.zdmnq
 PROCESS-NAME,com.tencent.tmgp.hy.zjsc
@@ -1793,6 +1791,7 @@ PROCESS-NAME,com.unciv.app
 PROCESS-NAME,com.unitedfun.prod.apollo
 PROCESS-NAME,com.unrealgame.projectplaytime
 PROCESS-NAME,com.uplayonline.youtubers
+PROCESS-NAME,com.uqee.lying.maingame
 PROCESS-NAME,com.usgames.fast.jeep.racing
 PROCESS-NAME,com.ustwo.monumentvalleyzz
 PROCESS-NAME,com.vg.MonsterDashHillRacer
