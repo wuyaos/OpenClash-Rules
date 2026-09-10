@@ -116,9 +116,11 @@ PROCESS-NAME,com.appchina.yugao.2020032002
 PROCESS-NAME,com.appchina.yugao.2020042406
 PROCESS-NAME,com.appchina.yugao.2020042802
 PROCESS-NAME,com.appchina.yugao.2020060406
+PROCESS-NAME,com.appchina.yugao.2020062204
 PROCESS-NAME,com.appchina.yugao.2020070312
 PROCESS-NAME,com.appchina.yugao.2020073006
 PROCESS-NAME,com.appchina.yugao.2020080310
+PROCESS-NAME,com.appchina.yugao.2020080705
 PROCESS-NAME,com.appchina.yugao.2020082908
 PROCESS-NAME,com.appchina.yugao.2020090305
 PROCESS-NAME,com.appchina.yugao.2020112301
@@ -132,10 +134,8 @@ PROCESS-NAME,com.appchina.yugao.2021052007
 PROCESS-NAME,com.appchina.yugao.2021060103
 PROCESS-NAME,com.appchina.yugao.2021070511
 PROCESS-NAME,com.appchina.yugao.2021070709
-PROCESS-NAME,com.appchina.yugao.2021071401
 PROCESS-NAME,com.appchina.yugao.2021071501
 PROCESS-NAME,com.appchina.yugao.2021081905
-PROCESS-NAME,com.appchina.yugao.2021092601
 PROCESS-NAME,com.appchina.yugao.2021111117
 PROCESS-NAME,com.appchina.yugao.2021112210
 PROCESS-NAME,com.appchina.yugao.2022020701
@@ -893,6 +893,7 @@ PROCESS-NAME,com.telltalegames.walkingdead100
 PROCESS-NAME,com.tencent.af
 PROCESS-NAME,com.tencent.cookie
 PROCESS-NAME,com.tencent.cqsj
+PROCESS-NAME,com.tencent.czn
 PROCESS-NAME,com.tencent.dhm1
 PROCESS-NAME,com.tencent.dm
 PROCESS-NAME,com.tencent.dragoncn
@@ -942,7 +943,6 @@ PROCESS-NAME,com.tencent.qqgame.qqhlupwvga
 PROCESS-NAME,com.tencent.qqgame.xq
 PROCESS-NAME,com.tencent.rmcn
 PROCESS-NAME,com.tencent.ro
-PROCESS-NAME,com.tencent.ryxsg
 PROCESS-NAME,com.tencent.sgzywl
 PROCESS-NAME,com.tencent.shootgame
 PROCESS-NAME,com.tencent.sqsd
@@ -1198,6 +1198,7 @@ PROCESS-NAME,com.tencent.tmgp.hse
 PROCESS-NAME,com.tencent.tmgp.hsw
 PROCESS-NAME,com.tencent.tmgp.htgl
 PROCESS-NAME,com.tencent.tmgp.htsk
+PROCESS-NAME,com.tencent.tmgp.huopinsk
 PROCESS-NAME,com.tencent.tmgp.huoyu.spidersolitaireclassic
 PROCESS-NAME,com.tencent.tmgp.hxjysy
 PROCESS-NAME,com.tencent.tmgp.hxmjl
@@ -1607,7 +1608,6 @@ PROCESS-NAME,com.tencent.tmgp.xiaoyss
 PROCESS-NAME,com.tencent.tmgp.xinhuluwa
 PROCESS-NAME,com.tencent.tmgp.xishanju.mysy
 PROCESS-NAME,com.tencent.tmgp.xjqxz
-PROCESS-NAME,com.tencent.tmgp.xlwyln
 PROCESS-NAME,com.tencent.tmgp.xmdzz
 PROCESS-NAME,com.tencent.tmgp.xmsl
 PROCESS-NAME,com.tencent.tmgp.xnbz
