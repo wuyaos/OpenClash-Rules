@@ -95,7 +95,6 @@ PROCESS-NAME,cn.kuwo.player
 PROCESS-NAME,cn.ledongli.ldl
 PROCESS-NAME,cn.longmaster.pengpeng
 PROCESS-NAME,cn.lrapps.changliaocall
-PROCESS-NAME,cn.lrapps.yitongcall
 PROCESS-NAME,cn.mama.activity
 PROCESS-NAME,cn.microants.merchants
 PROCESS-NAME,cn.mimilive.xianyu
@@ -530,6 +529,7 @@ PROCESS-NAME,com.gaoping.makewallpaper
 PROCESS-NAME,com.gaotu100.superclass
 PROCESS-NAME,com.gator.mm
 PROCESS-NAME,com.gau.go.launcherex.theme.droidglass
+PROCESS-NAME,com.gbcom.gwifi.school
 PROCESS-NAME,com.gdwx.cnwest
 PROCESS-NAME,com.geihui
 PROCESS-NAME,com.gelonghui.glhapp
@@ -1370,6 +1370,7 @@ PROCESS-NAME,com.tongzhuo.tongzhuogame
 PROCESS-NAME,com.topgether.sixfoot
 PROCESS-NAME,com.toutiao.yangtse
 PROCESS-NAME,com.towords
+PROCESS-NAME,com.tpv.familylink
 PROCESS-NAME,com.trantor.genesis
 PROCESS-NAME,com.tripadvisor.tripadvisor.daodao
 PROCESS-NAME,com.truckhome.bbs
