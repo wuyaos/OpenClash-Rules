@@ -118,6 +118,7 @@ PROCESS-NAME,com.appchina.yugao.2020060406
 PROCESS-NAME,com.appchina.yugao.2020070312
 PROCESS-NAME,com.appchina.yugao.2020073006
 PROCESS-NAME,com.appchina.yugao.2020080310
+PROCESS-NAME,com.appchina.yugao.2020080705
 PROCESS-NAME,com.appchina.yugao.2020082908
 PROCESS-NAME,com.appchina.yugao.2020090305
 PROCESS-NAME,com.appchina.yugao.2020112301
@@ -131,7 +132,6 @@ PROCESS-NAME,com.appchina.yugao.2021052007
 PROCESS-NAME,com.appchina.yugao.2021060103
 PROCESS-NAME,com.appchina.yugao.2021070511
 PROCESS-NAME,com.appchina.yugao.2021070709
-PROCESS-NAME,com.appchina.yugao.2021071401
 PROCESS-NAME,com.appchina.yugao.2021071501
 PROCESS-NAME,com.appchina.yugao.2021081905
 PROCESS-NAME,com.appchina.yugao.2021092601
@@ -1224,6 +1224,7 @@ PROCESS-NAME,com.tencent.tmgp.hyrjgd
 PROCESS-NAME,com.tencent.tmgp.hztf
 PROCESS-NAME,com.tencent.tmgp.idol2
 PROCESS-NAME,com.tencent.tmgp.ifsanguo
+PROCESS-NAME,com.tencent.tmgp.jbycbmnq
 PROCESS-NAME,com.tencent.tmgp.jbyhlzd
 PROCESS-NAME,com.tencent.tmgp.jdjh1
 PROCESS-NAME,com.tencent.tmgp.jieyou.jifengdamx
@@ -1236,7 +1237,6 @@ PROCESS-NAME,com.tencent.tmgp.jpzmg
 PROCESS-NAME,com.tencent.tmgp.jsxwsy
 PROCESS-NAME,com.tencent.tmgp.jszc
 PROCESS-NAME,com.tencent.tmgp.jumpw
-PROCESS-NAME,com.tencent.tmgp.junhai.shjhxl
 PROCESS-NAME,com.tencent.tmgp.jwdzg
 PROCESS-NAME,com.tencent.tmgp.jx3m
 PROCESS-NAME,com.tencent.tmgp.jxpd.feimo
