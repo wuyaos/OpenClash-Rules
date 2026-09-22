@@ -150,6 +150,7 @@ PROCESS-NAME,com.aheading.news.lanzhourb
 PROCESS-NAME,com.ahnews.newsclient
 PROCESS-NAME,com.ai.marki
 PROCESS-NAME,com.aikan
+PROCESS-NAME,com.aiwu.market
 PROCESS-NAME,com.alarmclock
 PROCESS-NAME,com.alibaba.ailabs.tg
 PROCESS-NAME,com.alibaba.android.rimet
@@ -1298,7 +1299,6 @@ PROCESS-NAME,com.teamnet.hula
 PROCESS-NAME,com.telecom.video
 PROCESS-NAME,com.tencent.android.qqdownloader
 PROCESS-NAME,com.tencent.androidqqmail
-PROCESS-NAME,com.tencent.cmocmna
 PROCESS-NAME,com.tencent.djcity
 PROCESS-NAME,com.tencent.gallerymanager
 PROCESS-NAME,com.tencent.gamehelper
