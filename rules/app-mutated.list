@@ -25,7 +25,6 @@ PROCESS-NAME,cn.banshenggua.aichang
 PROCESS-NAME,cn.bdqn.pictureview
 PROCESS-NAME,cn.bluecrane.album
 PROCESS-NAME,cn.bluecrane.calendar
-PROCESS-NAME,cn.bluecrane.private_album
 PROCESS-NAME,cn.buding.martin
 PROCESS-NAME,cn.caocaokeji.user
 PROCESS-NAME,cn.cbct.seefm
@@ -1378,7 +1377,6 @@ PROCESS-NAME,com.tst.tinsecret
 PROCESS-NAME,com.tttci.tik
 PROCESS-NAME,com.ttxg.fruitday
 PROCESS-NAME,com.tudou.android
-PROCESS-NAME,com.tuhao.lulu
 PROCESS-NAME,com.tujia.hotel
 PROCESS-NAME,com.tuniu.app.ui
 PROCESS-NAME,com.tuoniu.pingmuezuo
@@ -1639,6 +1637,7 @@ PROCESS-NAME,com.zzw.october
 PROCESS-NAME,consumer.ttpc.com.consumer
 PROCESS-NAME,cszy.wdtk.dntkbz
 PROCESS-NAME,ctrip.android.view
+PROCESS-NAME,dji.go.v5
 PROCESS-NAME,dongzheng.szkingdom.android.phone
 PROCESS-NAME,enfc.metro
 PROCESS-NAME,epson.print
