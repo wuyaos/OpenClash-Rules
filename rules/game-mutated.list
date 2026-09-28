@@ -115,10 +115,10 @@ PROCESS-NAME,com.appchina.yugao.2020032002
 PROCESS-NAME,com.appchina.yugao.2020042406
 PROCESS-NAME,com.appchina.yugao.2020042802
 PROCESS-NAME,com.appchina.yugao.2020060406
+PROCESS-NAME,com.appchina.yugao.2020062204
 PROCESS-NAME,com.appchina.yugao.2020070312
 PROCESS-NAME,com.appchina.yugao.2020073006
 PROCESS-NAME,com.appchina.yugao.2020080310
-PROCESS-NAME,com.appchina.yugao.2020080705
 PROCESS-NAME,com.appchina.yugao.2020082908
 PROCESS-NAME,com.appchina.yugao.2020090305
 PROCESS-NAME,com.appchina.yugao.2020112301
@@ -132,9 +132,9 @@ PROCESS-NAME,com.appchina.yugao.2021052007
 PROCESS-NAME,com.appchina.yugao.2021060103
 PROCESS-NAME,com.appchina.yugao.2021070511
 PROCESS-NAME,com.appchina.yugao.2021070709
+PROCESS-NAME,com.appchina.yugao.2021071401
 PROCESS-NAME,com.appchina.yugao.2021071501
 PROCESS-NAME,com.appchina.yugao.2021081905
-PROCESS-NAME,com.appchina.yugao.2021092601
 PROCESS-NAME,com.appchina.yugao.2021111117
 PROCESS-NAME,com.appchina.yugao.2021112210
 PROCESS-NAME,com.appchina.yugao.2022020701
@@ -277,7 +277,6 @@ PROCESS-NAME,com.dts.freefireth
 PROCESS-NAME,com.ducroquet.bamba
 PROCESS-NAME,com.dwwang.pdkpoker.yyb
 PROCESS-NAME,com.DynamicGames.HeavyTruckSimulator
-PROCESS-NAME,com.e4qnr.ndnyoh
 PROCESS-NAME,com.ea.deadspace_mod
 PROCESS-NAME,com.ea.game.easportsufc_row
 PROCESS-NAME,com.ea.game.fifa14_na
@@ -414,7 +413,6 @@ PROCESS-NAME,com.giantssoftware.fs18.google
 PROCESS-NAME,com.giantssoftware.fs20.google
 PROCESS-NAME,com.gipnetix.doorsrevenge
 PROCESS-NAME,com.girl.chesstwo
-PROCESS-NAME,com.global.xddq.xddq_gdtzz21
 PROCESS-NAME,com.gloczus.hakuokismp.chinesehan
 PROCESS-NAME,com.glu.carszombies
 PROCESS-NAME,com.glu.contractkiller2
@@ -634,7 +632,6 @@ PROCESS-NAME,com.naturalmotion.csrclassics
 PROCESS-NAME,com.naturalmotion.csrracing
 PROCESS-NAME,com.naturalmotion.customstreetracer2
 PROCESS-NAME,com.naturalmotion.myhorse
-PROCESS-NAME,com.nd.myht
 PROCESS-NAME,com.nekki.shadowfight
 PROCESS-NAME,com.nekki.shadowfight3
 PROCESS-NAME,com.nekki.vector
@@ -1008,7 +1005,6 @@ PROCESS-NAME,com.tencent.tmgp.carrot3dj
 PROCESS-NAME,com.tencent.tmgp.catstudio.nekostory
 PROCESS-NAME,com.tencent.tmgp.cdfml
 PROCESS-NAME,com.tencent.tmgp.cf
-PROCESS-NAME,com.tencent.tmgp.cfswz
 PROCESS-NAME,com.tencent.tmgp.cfxf
 PROCESS-NAME,com.tencent.tmgp.chaowu10003
 PROCESS-NAME,com.tencent.tmgp.chengzhu.zcydtz
@@ -1111,7 +1107,6 @@ PROCESS-NAME,com.tencent.tmgp.dzxyzq
 PROCESS-NAME,com.tencent.tmgp.eden
 PROCESS-NAME,com.tencent.tmgp.ef3
 PROCESS-NAME,com.tencent.tmgp.ef5
-PROCESS-NAME,com.tencent.tmgp.eight.ball.live
 PROCESS-NAME,com.tencent.tmgp.elex.ctw
 PROCESS-NAME,com.tencent.tmgp.enjoymisgzj
 PROCESS-NAME,com.tencent.tmgp.es2boy
@@ -1199,12 +1194,10 @@ PROCESS-NAME,com.tencent.tmgp.holidayandroid
 PROCESS-NAME,com.tencent.tmgp.hometownbuilder
 PROCESS-NAME,com.tencent.tmgp.hongguaiwan
 PROCESS-NAME,com.tencent.tmgp.hotta
-PROCESS-NAME,com.tencent.tmgp.hqfytank
 PROCESS-NAME,com.tencent.tmgp.hqxy
 PROCESS-NAME,com.tencent.tmgp.hsahc
 PROCESS-NAME,com.tencent.tmgp.hse
 PROCESS-NAME,com.tencent.tmgp.hsw
-PROCESS-NAME,com.tencent.tmgp.htgl
 PROCESS-NAME,com.tencent.tmgp.htsk
 PROCESS-NAME,com.tencent.tmgp.hungrydragon
 PROCESS-NAME,com.tencent.tmgp.huopinsk
@@ -1212,14 +1205,21 @@ PROCESS-NAME,com.tencent.tmgp.huoyu.spidersolitaireclassic
 PROCESS-NAME,com.tencent.tmgp.hxjysy
 PROCESS-NAME,com.tencent.tmgp.hxmjl
 PROCESS-NAME,com.tencent.tmgp.hy.ayzg2
+PROCESS-NAME,com.tencent.tmgp.hy.csmnq
+PROCESS-NAME,com.tencent.tmgp.hy.fkjytj
 PROCESS-NAME,com.tencent.tmgp.hy.hcrdj
 PROCESS-NAME,com.tencent.tmgp.hy.hcrshzc
 PROCESS-NAME,com.tencent.tmgp.hy.hcrssyx
+PROCESS-NAME,com.tencent.tmgp.hy.hmxqmnq
+PROCESS-NAME,com.tencent.tmgp.hy.jsk2
 PROCESS-NAME,com.tencent.tmgp.hy.jzxl
 PROCESS-NAME,com.tencent.tmgp.hy.kbnn
+PROCESS-NAME,com.tencent.tmgp.hy.ljfzsmn
+PROCESS-NAME,com.tencent.tmgp.hy.mfqs
 PROCESS-NAME,com.tencent.tmgp.hy.nshcr2
 PROCESS-NAME,com.tencent.tmgp.hy.ozkcjsmnq3
 PROCESS-NAME,com.tencent.tmgp.hy.pmjs
+PROCESS-NAME,com.tencent.tmgp.hy.qmzzmnq
 PROCESS-NAME,com.tencent.tmgp.hy.sryx
 PROCESS-NAME,com.tencent.tmgp.hy.zdmnq
 PROCESS-NAME,com.tencent.tmgp.hy.zjsc
@@ -1229,6 +1229,8 @@ PROCESS-NAME,com.tencent.tmgp.hyrjgd
 PROCESS-NAME,com.tencent.tmgp.hztf
 PROCESS-NAME,com.tencent.tmgp.idol2
 PROCESS-NAME,com.tencent.tmgp.ifsanguo
+PROCESS-NAME,com.tencent.tmgp.jbyhcrdz
+PROCESS-NAME,com.tencent.tmgp.jbyhlzd
 PROCESS-NAME,com.tencent.tmgp.jjxm
 PROCESS-NAME,com.tencent.tmgp.jjzd
 PROCESS-NAME,com.tencent.tmgp.jltx
@@ -1291,6 +1293,7 @@ PROCESS-NAME,com.tencent.tmgp.LWSY
 PROCESS-NAME,com.tencent.tmgp.lwyqqsqz
 PROCESS-NAME,com.tencent.tmgp.lxdqy
 PROCESS-NAME,com.tencent.tmgp.lxwz
+PROCESS-NAME,com.tencent.tmgp.lydh.chenjue
 PROCESS-NAME,com.tencent.tmgp.lyjleniu
 PROCESS-NAME,com.tencent.tmgp.lyjzchqsy
 PROCESS-NAME,com.tencent.tmgp.lysh
@@ -1311,7 +1314,6 @@ PROCESS-NAME,com.tencent.tmgp.mhmnz
 PROCESS-NAME,com.tencent.tmgp.mhtgame.wxr
 PROCESS-NAME,com.tencent.tmgp.mhxy.sqsy
 PROCESS-NAME,com.tencent.tmgp.mhzxsy
-PROCESS-NAME,com.tencent.tmgp.migu.mgxlzl
 PROCESS-NAME,com.tencent.tmgp.minitech.miniworld
 PROCESS-NAME,com.tencent.tmgp.miniworldroyale
 PROCESS-NAME,com.tencent.tmgp.mjwy
@@ -1414,7 +1416,6 @@ PROCESS-NAME,com.tencent.tmgp.room6
 PROCESS-NAME,com.tencent.tmgp.room7
 PROCESS-NAME,com.tencent.tmgp.rshytycq
 PROCESS-NAME,com.tencent.tmgp.rshyzncq
-PROCESS-NAME,com.tencent.tmgp.rsjy
 PROCESS-NAME,com.tencent.tmgp.rxcq
 PROCESS-NAME,com.tencent.tmgp.rxjhbj
 PROCESS-NAME,com.tencent.tmgp.rxsc.chenyou
@@ -1514,17 +1515,18 @@ PROCESS-NAME,com.tencent.tmgp.TCrossSGJQ
 PROCESS-NAME,com.tencent.tmgp.tdj
 PROCESS-NAME,com.tencent.tmgp.tew
 PROCESS-NAME,com.tencent.tmgp.tfjl
-PROCESS-NAME,com.tencent.tmgp.tgsgsy
 PROCESS-NAME,com.tencent.tmgp.tiancity.dom
 PROCESS-NAME,com.tencent.tmgp.tianmashikong.qj
 PROCESS-NAME,com.tencent.tmgp.tinghood.TpsForMobile.yyb3
 PROCESS-NAME,com.tencent.tmgp.tk2.x
+PROCESS-NAME,com.tencent.tmgp.tkxs
 PROCESS-NAME,com.tencent.tmgp.tmsk.qj2
 PROCESS-NAME,com.tencent.tmgp.tmsk.qj3
 PROCESS-NAME,com.tencent.tmgp.tmsk.zhzr
 PROCESS-NAME,com.tencent.tmgp.tmst
 PROCESS-NAME,com.tencent.tmgp.tom
 PROCESS-NAME,com.tencent.tmgp.tqbaohuang
+PROCESS-NAME,com.tencent.tmgp.tqguandan
 PROCESS-NAME,com.tencent.tmgp.tqshuangkou
 PROCESS-NAME,com.tencent.tmgp.tqwzfx
 PROCESS-NAME,com.tencent.tmgp.trunknaruto
@@ -1589,7 +1591,6 @@ PROCESS-NAME,com.tencent.tmgp.wpzz
 PROCESS-NAME,com.tencent.tmgp.wryy
 PROCESS-NAME,com.tencent.tmgp.wuxia
 PROCESS-NAME,com.tencent.tmgp.wwguandanall
-PROCESS-NAME,com.tencent.tmgp.wwmx
 PROCESS-NAME,com.tencent.tmgp.wxbz.lyjx
 PROCESS-NAME,com.tencent.tmgp.wxbz.sjjx
 PROCESS-NAME,com.tencent.tmgp.wxmj
@@ -1660,6 +1661,7 @@ PROCESS-NAME,com.tencent.tmgp.yunbu.nonogram
 PROCESS-NAME,com.tencent.tmgp.yunbu.puppyblast
 PROCESS-NAME,com.tencent.tmgp.yuyoupoker101
 PROCESS-NAME,com.tencent.tmgp.ywgn.myc
+PROCESS-NAME,com.tencent.tmgp.ywhy.ltly
 PROCESS-NAME,com.tencent.tmgp.yx.sjcs
 PROCESS-NAME,com.tencent.tmgp.yx.ymjx
 PROCESS-NAME,com.tencent.tmgp.yxwdzzjy
@@ -1777,7 +1779,6 @@ PROCESS-NAME,com.tuoniu.lizhi2020
 PROCESS-NAME,com.turner.asmajormayhem
 PROCESS-NAME,com.turner.ppg
 PROCESS-NAME,com.turner.prankwar
-PROCESS-NAME,com.twqj.sbqj9
 PROCESS-NAME,com.ubestkid.jigsawpuzzle.a
 PROCESS-NAME,com.ubisoft.adventure.valiant_hearts
 PROCESS-NAME,com.ubisoft.assassin.pirates
@@ -1823,7 +1824,6 @@ PROCESS-NAME,com.wepie.snake.tencent
 PROCESS-NAME,com.wepie.werewolfkill
 PROCESS-NAME,com.wepie.wespy
 PROCESS-NAME,com.WildSoda.MineSurvival
-PROCESS-NAME,com.wlwzb.gdt
 PROCESS-NAME,com.wodidashi.paint
 PROCESS-NAME,com.wooga.diamonddash
 PROCESS-NAME,com.wordtiger.cargame
@@ -1838,6 +1838,7 @@ PROCESS-NAME,com.xhtt.app.fzjh.yyh
 PROCESS-NAME,com.xiaoao.car3d4
 PROCESS-NAME,com.xiaokui.koi
 PROCESS-NAME,com.xjskp.gztv1.hnsc
+PROCESS-NAME,com.xueba.play
 PROCESS-NAME,com.xzbig.idiom
 PROCESS-NAME,com.xzidiom.stay
 PROCESS-NAME,com.yikeweiqi.ifk
@@ -1865,7 +1866,6 @@ PROCESS-NAME,com.zy.wqmt.cn
 PROCESS-NAME,com.zynga.empires2
 PROCESS-NAME,com.zynga.FarmVille2CountryEscape
 PROCESS-NAME,com.zzoo.aos.healingpocket
-PROCESS-NAME,com.zzzszgycq.h5.sp2
 PROCESS-NAME,de.mobilebits.soulcraftdefault
 PROCESS-NAME,es.socialpoint.DragonCity
 PROCESS-NAME,eu.aagames.dragopet
