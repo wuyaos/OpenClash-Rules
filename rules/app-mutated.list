@@ -734,7 +734,6 @@ PROCESS-NAME,com.jf.lkrj
 PROCESS-NAME,com.jhdapp.xhbycm
 PROCESS-NAME,com.jhss.youguu
 PROCESS-NAME,com.jiadi.quannengsaomiaowang
-PROCESS-NAME,com.jianhuangshihengyuesddm.cn
 PROCESS-NAME,com.jianyou.swatch
 PROCESS-NAME,com.jianzhiku.zhongrenbang
 PROCESS-NAME,com.jiaoyinbrother.monkeyking
@@ -1298,6 +1297,7 @@ PROCESS-NAME,com.teamnet.hula
 PROCESS-NAME,com.telecom.video
 PROCESS-NAME,com.tencent.android.qqdownloader
 PROCESS-NAME,com.tencent.androidqqmail
+PROCESS-NAME,com.tencent.cmocmna
 PROCESS-NAME,com.tencent.djcity
 PROCESS-NAME,com.tencent.gallerymanager
 PROCESS-NAME,com.tencent.gamehelper
@@ -1565,7 +1565,6 @@ PROCESS-NAME,com.ymatou.seller
 PROCESS-NAME,com.ymatou.shop
 PROCESS-NAME,com.ymt360.app.mass
 PROCESS-NAME,com.yoloho.dayima
-PROCESS-NAME,com.yoosee
 PROCESS-NAME,com.youba.barcode
 PROCESS-NAME,com.youcheyihou.iyoursuv
 PROCESS-NAME,com.youdao.dict
@@ -1695,7 +1694,6 @@ PROCESS-NAME,net.whty.app.eyu
 PROCESS-NAME,net.xinhuamm.mainclient
 PROCESS-NAME,net.zdsoft.zerobook_android
 PROCESS-NAME,news.cnr.cn
-PROCESS-NAME,ning.zuo.diyzhuti
 PROCESS-NAME,oms.mmc.app.almanac_inland
 PROCESS-NAME,oms.mmc.fortunetelling
 PROCESS-NAME,one.hh.oneclient
