@@ -284,7 +284,6 @@ PROCESS-NAME,com.cctv.caijing
 PROCESS-NAME,com.cctv.cctv5ultimate
 PROCESS-NAME,com.cctv.yangshipin.app.androidp
 PROCESS-NAME,com.cdb.app
-PROCESS-NAME,com.cdcd.milv
 PROCESS-NAME,com.cdsb.newsreader
 PROCESS-NAME,com.cdtv.app
 PROCESS-NAME,com.cdv.video360
@@ -565,7 +564,6 @@ PROCESS-NAME,com.gwchina.lssw.parent
 PROCESS-NAME,com.gwdang.app
 PROCESS-NAME,com.gwsoft.imusic.controller
 PROCESS-NAME,com.gzfns.ecar
-PROCESS-NAME,com.gzrcb.mobilebank
 PROCESS-NAME,com.haidilao
 PROCESS-NAME,com.haier.uhome.uplus
 PROCESS-NAME,com.haiqiu.jihai
@@ -1016,6 +1014,7 @@ PROCESS-NAME,com.parallel.odyssey
 PROCESS-NAME,com.pcncn.jj
 PROCESS-NAME,com.pdmi.guangzhou.media
 PROCESS-NAME,com.pdmi.studio.newmedia.people.video
+PROCESS-NAME,com.pengda.mobile.hhjz
 PROCESS-NAME,com.people.health.doctor
 PROCESS-NAME,com.peopledailychina.activity
 PROCESS-NAME,com.perracolabs.tcc
