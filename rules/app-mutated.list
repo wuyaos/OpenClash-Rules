@@ -795,7 +795,6 @@ PROCESS-NAME,com.kugou.fanxing
 PROCESS-NAME,com.kugou.playerHD
 PROCESS-NAME,com.kunpeng.babyting
 PROCESS-NAME,com.kunpeng.bluefont
-PROCESS-NAME,com.kunpeng.zitice
 PROCESS-NAME,com.kwai.hisense
 PROCESS-NAME,com.kwai.livepartner
 PROCESS-NAME,com.kwai.m2u
@@ -924,7 +923,6 @@ PROCESS-NAME,com.moonshot.kimichat
 PROCESS-NAME,com.mosheng
 PROCESS-NAME,com.motoband
 PROCESS-NAME,com.moutian.moutianshuiyinwang
-PROCESS-NAME,com.mp.qcoperate
 PROCESS-NAME,com.mrkj.sm
 PROCESS-NAME,com.msg.schedule
 PROCESS-NAME,com.msxf.ayh
@@ -1675,7 +1673,6 @@ PROCESS-NAME,me.niuke.app.gupiaozhitou
 PROCESS-NAME,me.piebridge.brevent
 PROCESS-NAME,me.suncloud.marrymemo
 PROCESS-NAME,me.yidui
-PROCESS-NAME,music.f2bcutter.mp3editor
 PROCESS-NAME,my.beautyCamera
 PROCESS-NAME,my.maya.android
 PROCESS-NAME,net.aituyue.app
