@@ -22,6 +22,8 @@ jobs:
 
       - name: Sync app/game mutated rules + awavenue-ads
         run: node scripts/sync-ruleset.js
+        env:
+          RULESET_REMOVE_PATTERNS: ${{ secrets.RULESET_REMOVE_PATTERNS }}
 
       - name: Commit changes
         run: |

@@ -175,18 +175,54 @@ function readLocalPatchEntries(filePath) {
   return out;
 }
 
+function readEnvRemovePatterns(sourceName) {
+  const raw = process.env.RULESET_REMOVE_PATTERNS;
+  if (!raw) return [];
+  const out = [];
+  for (const part of raw.split(";")) {
+    const entry = part.trim();
+    if (!entry) continue;
+    if (entry.includes(":") && !entry.startsWith("re:")) {
+      const idx = entry.indexOf(":");
+      const scoped = entry.slice(0, idx).trim();
+      if (scoped === sourceName) out.push(entry.slice(idx + 1).trim());
+      continue;
+    }
+    out.push(entry);
+  }
+  return out;
+}
+
 function applyLocalPatch(source, entries) {
   const appendFile = path.join(CUSTOM_RULES_DIR, `${source.name}.append.list`);
   const removeFile = path.join(CUSTOM_RULES_DIR, `${source.name}.remove.list`);
 
-  const removeEntries = normalizeEntries(readLocalPatchEntries(removeFile));
+  const envRemoveEntries = readEnvRemovePatterns(source.name);
+  const removeEntries = normalizeEntries([
+    ...readLocalPatchEntries(removeFile),
+    ...envRemoveEntries,
+  ]);
   const appendEntries = normalizeEntries(readLocalPatchEntries(appendFile));
   if (removeEntries.length === 0 && appendEntries.length === 0) {
     return entries;
   }
 
-  const removeSet = new Set(removeEntries);
-  const base = entries.filter((item) => !removeSet.has(item));
+  const exactRemove = new Set();
+  const removePatterns = [];
+  for (const entry of removeEntries) {
+    if (entry.startsWith("re:")) {
+      try {
+        removePatterns.push(new RegExp(entry.slice(3)));
+      } catch (err) {
+        console.warn(`[ruleset-sync] patch ${source.name}: invalid regex "${entry}", skipped`);
+      }
+    } else {
+      exactRemove.add(entry);
+    }
+  }
+  const base = entries.filter(
+    (item) => !exactRemove.has(item) && !removePatterns.some((re) => re.test(item))
+  );
   const merged = normalizeEntries([...base, ...appendEntries]);
 
   console.log(
@@ -275,7 +311,11 @@ async function main() {
   }
 }
 
-main().catch((err) => {
-  console.error(`[ruleset-sync] failed: ${err.message}`);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(`[ruleset-sync] failed: ${err.message}`);
+    process.exit(1);
+  });
+}
+
+module.exports = { applyLocalPatch, readEnvRemovePatterns };
