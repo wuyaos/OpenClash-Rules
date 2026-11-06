@@ -59,7 +59,6 @@ PROCESS-NAME,cn.koogame.Fish
 PROCESS-NAME,cn.lbwdhysj.gf
 PROCESS-NAME,cn.maoguo.mobile
 PROCESS-NAME,cn.noctella.galgod
-PROCESS-NAME,cn.scarc.glitch
 PROCESS-NAME,cn.scarc.trick
 PROCESS-NAME,cn.skybox.breezegirl.bilibili
 PROCESS-NAME,cn.ss911.android.bilibili
@@ -67,7 +66,6 @@ PROCESS-NAME,cn.vstudio.eel.ipay
 PROCESS-NAME,com.a10game.dmlt.bilibili
 PROCESS-NAME,com.A3donkeys.loveBits.bilibili
 PROCESS-NAME,com.abocado.blueberry
-PROCESS-NAME,com.ACEEntertainment.CD2_TrapMaster_TapTap
 PROCESS-NAME,com.aceviral.ag2
 PROCESS-NAME,com.aceviral.agr
 PROCESS-NAME,com.aceviral.angrygranrun
@@ -145,6 +143,7 @@ PROCESS-NAME,com.anzheng.game.myylg
 PROCESS-NAME,com.anzheng.game.nlwjslmdxfg
 PROCESS-NAME,com.anzheng.game.nnwjslyydyg
 PROCESS-NAME,com.anzheng.game.qysgrl
+PROCESS-NAME,com.anzheng.game.sdllyzdyz
 PROCESS-NAME,com.anzheng.game.wydydbq
 PROCESS-NAME,com.anzheng.game.xxmml
 PROCESS-NAME,com.anzheng.game.ygrdwh
@@ -175,7 +174,6 @@ PROCESS-NAME,com.appchina.yugao.2019061006
 PROCESS-NAME,com.appchina.yugao.2019061203
 PROCESS-NAME,com.appchina.yugao.2019061401
 PROCESS-NAME,com.appchina.yugao.2019071702
-PROCESS-NAME,com.appchina.yugao.2019090617
 PROCESS-NAME,com.appchina.yugao.2019091703
 PROCESS-NAME,com.appchina.yugao.2019091802
 PROCESS-NAME,com.appchina.yugao.2019091803
@@ -202,6 +200,7 @@ PROCESS-NAME,com.appchina.yugao.2020060406
 PROCESS-NAME,com.appchina.yugao.2020070312
 PROCESS-NAME,com.appchina.yugao.2020073006
 PROCESS-NAME,com.appchina.yugao.2020080310
+PROCESS-NAME,com.appchina.yugao.2020080705
 PROCESS-NAME,com.appchina.yugao.2020082908
 PROCESS-NAME,com.appchina.yugao.2020090305
 PROCESS-NAME,com.appchina.yugao.2020112301
@@ -260,19 +259,18 @@ PROCESS-NAME,com.baitian.fx.bt.bilibili
 PROCESS-NAME,com.baitian.szx.lxywq.bilibili
 PROCESS-NAME,com.baiyu.nzzz
 PROCESS-NAME,com.baiyunworks.azureone
-PROCESS-NAME,com.balanvege.baier
 PROCESS-NAME,com.bamboogame.moto
 PROCESS-NAME,com.bamboowind.ztx1.bilibili
 PROCESS-NAME,com.banana.football.fake
 PROCESS-NAME,com.BananaDogGames.archer
 PROCESS-NAME,com.BananaDogGames.hex
-PROCESS-NAME,com.BananaDogGames.Outpost2Remake
 PROCESS-NAME,com.BananaDogGames.outpost4
 PROCESS-NAME,com.bantu.sglbcs.bilibili
 PROCESS-NAME,com.bantu.sgzlbz.bilibili
 PROCESS-NAME,com.bantu.trssgshz.bilibili
 PROCESS-NAME,com.bantu.trssgshz2.bilibili
 PROCESS-NAME,com.bantus.styjz.bilibili
+PROCESS-NAME,com.baofutiyan.app
 PROCESS-NAME,com.baplay.st.bilibili
 PROCESS-NAME,com.basalt.google.wizarddefense
 PROCESS-NAME,com.BatoviGamesStudio.PixelCupSoccer19
@@ -346,9 +344,11 @@ PROCESS-NAME,com.bruce.bestidiom
 PROCESS-NAME,com.bruce.idiomxxl
 PROCESS-NAME,com.bruce.riddle
 PROCESS-NAME,com.bttcxq.txtryy
+PROCESS-NAME,com.budapp.biyoudideshijie.bilibili
 PROCESS-NAME,com.budgestudios.googleplay.BarbieDreamhouse
 PROCESS-NAME,com.building.destruction.simlator.battle
 PROCESS-NAME,com.bulkypix.deadeffect
+PROCESS-NAME,com.bulletfactory.app
 PROCESS-NAME,com.buzzbrozllc.pixelartgeneratorformcpe
 PROCESS-NAME,com.bxplus.bilibili
 PROCESS-NAME,com.BXZZ.MixProject11
@@ -356,7 +356,6 @@ PROCESS-NAME,com.by.dj.cyou
 PROCESS-NAME,com.BYBY.CTGZ.bilibili
 PROCESS-NAME,com.c2vl.kgamebox
 PROCESS-NAME,com.c4cat.dynamix
-PROCESS-NAME,com.candlelight.corridor
 PROCESS-NAME,com.candlemangames.wuxingyou.taptap
 PROCESS-NAME,com.candyrufusgames.survivalcraft
 PROCESS-NAME,com.candyrufusgames.survivalcraft2
@@ -472,6 +471,7 @@ PROCESS-NAME,com.com2us.sliceit
 PROCESS-NAME,com.com2us.smon.normal.freefull.google.kr.android.common
 PROCESS-NAME,com.Company.BreathofDragons
 PROCESS-NAME,com.company.wind
+PROCESS-NAME,com.cookie.fall
 PROCESS-NAME,com.coolfun.sgcs.bilibili
 PROCESS-NAME,com.corrodinggames.rts
 PROCESS-NAME,com.cottongame.FrontierSpace
@@ -501,6 +501,7 @@ PROCESS-NAME,com.cupid.intern
 PROCESS-NAME,com.cxdx.cz
 PROCESS-NAME,com.cxuu.ktmnq
 PROCESS-NAME,com.cxyx.godspace
+PROCESS-NAME,com.cxyx.hzwg
 PROCESS-NAME,com.cxyx.ndzts
 PROCESS-NAME,com.cxyx.outpost
 PROCESS-NAME,com.cxyx.tbmnq
@@ -530,12 +531,13 @@ PROCESS-NAME,com.dax.deepsteel
 PROCESS-NAME,com.dcslad4.ad1b
 PROCESS-NAME,com.dddwan.summer.eater.bilibili
 PROCESS-NAME,com.ddm.xiaotuizi
+PROCESS-NAME,com.ddwy.xksq.android.bilibili
 PROCESS-NAME,com.deadmage.shadowblade.paid
 PROCESS-NAME,com.deadstrike.ds
 PROCESS-NAME,com.dedalord.runningfred
+PROCESS-NAME,com.DefaultCompany.CrusadeDemonKing2RE
 PROCESS-NAME,com.DefaultCompany.heimalouxiangsutest
 PROCESS-NAME,com.DefaultCompany.LampOfTheWest
-PROCESS-NAME,com.DefaultCompany.Project
 PROCESS-NAME,com.DefaultCompany.SportsCarCar
 PROCESS-NAME,com.Defender3
 PROCESS-NAME,com.dehan.ljzcly.bilibili
@@ -674,6 +676,7 @@ PROCESS-NAME,com.easytech.ew4
 PROCESS-NAME,com.easytech.ew4_gold
 PROCESS-NAME,com.easytech.wc4
 PROCESS-NAME,com.ecapycsw.onetouchdrawing
+PROCESS-NAME,com.echo.studio
 PROCESS-NAME,com.eivaagames.LabyrinthGame
 PROCESS-NAME,com.eivaagames.MiniGolfGame3D
 PROCESS-NAME,com.eivaagames.RealPool3D
@@ -687,7 +690,6 @@ PROCESS-NAME,com.emay.msdkg.topon
 PROCESS-NAME,com.emay.nhwc.qudao
 PROCESS-NAME,com.emay.zstcmnq.topon
 PROCESS-NAME,com.ember.protocol
-PROCESS-NAME,com.emberfall.game
 PROCESS-NAME,com.embersiege.towerdefense
 PROCESS-NAME,com.empromgame.bioweavercn
 PROCESS-NAME,com.emztzero.game
@@ -706,11 +708,9 @@ PROCESS-NAME,com.ex.hlxckxjr.mi
 PROCESS-NAME,com.ex.msrj.mi
 PROCESS-NAME,com.example.chinesechess.mi
 PROCESS-NAME,com.example.echoes
-PROCESS-NAME,com.example.gamejam_light
 PROCESS-NAME,com.example.HumanBugCleaning
 PROCESS-NAME,com.example.linkgarden.demo
 PROCESS-NAME,com.example.tiantai30
-PROCESS-NAME,com.example.youarenothere
 PROCESS-NAME,com.exiles.rvivalArchives
 PROCESS-NAME,com.explorationbase.Exploration
 PROCESS-NAME,com.ezjoynetwork.cavemanstory
@@ -909,6 +909,7 @@ PROCESS-NAME,com.gameimax.kidskitchen
 PROCESS-NAME,com.gameinsight.battletowersandroid
 PROCESS-NAME,com.gameinsight.transportempiregp
 PROCESS-NAME,com.GameJam.app
+PROCESS-NAME,com.GameLily
 PROCESS-NAME,com.gamelion.mstll
 PROCESS-NAME,com.gameloft.android.AMAZ.GloftKRAS
 PROCESS-NAME,com.gameloft.android.ANMP.GloftA3HM
@@ -947,6 +948,7 @@ PROCESS-NAME,com.gameshell.busparking3d
 PROCESS-NAME,com.gamesourcestudio.carbonwarfarefree
 PROCESS-NAME,com.gamevil.cartoonwars.gunner.global
 PROCESS-NAME,com.gamster.azrael
+PROCESS-NAME,com.ganfanyu.app
 PROCESS-NAME,com.gaoyu.cultivationfromzerotomaster
 PROCESS-NAME,com.gbits.atm.leiting
 PROCESS-NAME,com.gbits.atm.mi
@@ -971,7 +973,6 @@ PROCESS-NAME,com.gf.l1h5cncn.hwyad.hwy
 PROCESS-NAME,com.gf.p2ph5cncn.hwyad.hwy
 PROCESS-NAME,com.gf.p6cncn.hwyad.bilibili
 PROCESS-NAME,com.gf.wxcncn.hwyad.bilibili
-PROCESS-NAME,com.gf.wxcncn.hwyad.hwy
 PROCESS-NAME,com.gfyouxi.ygqx.bilibili
 PROCESS-NAME,com.gg.lostword.bilibili
 PROCESS-NAME,com.ggagts.hachimi
@@ -982,7 +983,6 @@ PROCESS-NAME,com.giantssoftware.fs16
 PROCESS-NAME,com.giantssoftware.fs18.google
 PROCESS-NAME,com.giantssoftware.fs20.google
 PROCESS-NAME,com.ginicat.sweet.bilibili
-PROCESS-NAME,com.ginkgobookstore.game
 PROCESS-NAME,com.gipnetix.doorsrevenge
 PROCESS-NAME,com.girl.chesstwo
 PROCESS-NAME,com.glee.yibochaoren
@@ -1009,11 +1009,8 @@ PROCESS-NAME,com.gnapk.totnew
 PROCESS-NAME,com.gnsbt.Shgame.bilibili
 PROCESS-NAME,com.goatgames.dlls.cn.bilibili
 PROCESS-NAME,com.godlu.tocatownworld.mi
-PROCESS-NAME,com.godneedsstudy
 PROCESS-NAME,com.gof.china
 PROCESS-NAME,com.golaxy.mobile
-PROCESS-NAME,com.gongsi.lunhui
-PROCESS-NAME,com.GoodGame.BattlefieldOne
 PROCESS-NAME,com.GoodGame.BattlefieldToy
 PROCESS-NAME,com.goodgames.dilao
 PROCESS-NAME,com.goorusoft.MetalWars3
@@ -1286,6 +1283,7 @@ PROCESS-NAME,com.jaekkl.forest
 PROCESS-NAME,com.JAGames.TalesoftheClan
 PROCESS-NAME,com.jam.dualport
 PROCESS-NAME,com.JamGamesGmbH.SniperDuty.free
+PROCESS-NAME,com.jcgame.jianchao
 PROCESS-NAME,com.jcgame.zongmenwudi
 PROCESS-NAME,com.jd.dlphs.bilibili
 PROCESS-NAME,com.jd.game.onetpet.mi
@@ -1305,7 +1303,6 @@ PROCESS-NAME,com.jhtx.qpxq.bilibili
 PROCESS-NAME,com.jiahui.lymj
 PROCESS-NAME,com.jianghu.bupingjing
 PROCESS-NAME,com.jianxiliemotuan.bilibili
-PROCESS-NAME,com.jiaodoushizhiwang.game
 PROCESS-NAME,com.jiaodouzhihun.game
 PROCESS-NAME,com.jibei.pg2.bilibili
 PROCESS-NAME,com.jibicat.jibiland.princesscastle
@@ -1324,6 +1321,7 @@ PROCESS-NAME,com.jingzhonghua.daluxueyuan
 PROCESS-NAME,com.jinke.ltxfd.bilibili
 PROCESS-NAME,com.jinke.rlwxsc.tapcps
 PROCESS-NAME,com.jinmenzuozhuan.todaynothing
+PROCESS-NAME,com.jinox.harborvillage
 PROCESS-NAME,com.jinsaina.auditionsgo.bilibili
 PROCESS-NAME,com.jinyou.hldj.bilibili
 PROCESS-NAME,com.jiuhu.myty.bilibili
@@ -1490,7 +1488,6 @@ PROCESS-NAME,com.leiyan.mdjl.bilibili
 PROCESS-NAME,com.lemon.play.linecolor
 PROCESS-NAME,com.lemonjamstudio.drawacarlemonjam
 PROCESS-NAME,com.leniu.dpcqln.bilibili
-PROCESS-NAME,com.leniu.jlsy.bilibili
 PROCESS-NAME,com.leniu.jlsy.mi
 PROCESS-NAME,com.leniu.lfcs.bilibili
 PROCESS-NAME,com.leniu.lfcstap
@@ -1548,7 +1545,6 @@ PROCESS-NAME,com.lingxigames.uwm.tap
 PROCESS-NAME,com.lingxigames.zszs.bilibili
 PROCESS-NAME,com.lingxigames.zszs.cn.tap
 PROCESS-NAME,com.lingyue.xxyz.bilibili
-PROCESS-NAME,com.linjiaxu.miwuxingji
 PROCESS-NAME,com.link.xingyuqingdaofu
 PROCESS-NAME,com.linkdeskstudio.popcat
 PROCESS-NAME,com.linlight.match13
@@ -1579,7 +1575,6 @@ PROCESS-NAME,com.lovelybird.chmhtxd
 PROCESS-NAME,com.lovin2.bilibili
 PROCESS-NAME,com.loyalsoft.ylsj
 PROCESS-NAME,com.lsb.findchar
-PROCESS-NAME,com.lta.hsahc.bilibili
 PROCESS-NAME,com.ltdz.zsf
 PROCESS-NAME,com.ltgame.atmcard.mi
 PROCESS-NAME,com.ludoy.balls.road
@@ -1698,7 +1693,6 @@ PROCESS-NAME,com.miniclip.railrush
 PROCESS-NAME,com.minimo.miniracingadventures
 PROCESS-NAME,com.minitech.miniworld
 PROCESS-NAME,com.minitech.miniworld.TMobile.mi
-PROCESS-NAME,Com.MiniWhale.GunWizard
 PROCESS-NAME,com.miniworldroyale.sparkgame.bilibili
 PROCESS-NAME,com.mizhongtech.qief
 PROCESS-NAME,com.MJCC.MasterMa
@@ -1706,6 +1700,7 @@ PROCESS-NAME,com.mjct.wxbz
 PROCESS-NAME,com.mjhwd.tt.sdk01
 PROCESS-NAME,com.mk.kdyxz.bilibili
 PROCESS-NAME,com.mk.qhhw.bilibili
+PROCESS-NAME,com.mnyq.fssd
 PROCESS-NAME,com.mobage.g12000128.bilibili
 PROCESS-NAME,com.mobage.g13001230.bilibili
 PROCESS-NAME,com.mobage.ww.a1575.Motor_World_Car_Factory_Android
@@ -1724,7 +1719,7 @@ PROCESS-NAME,com.molehole.zaiwanyiguan.yyb
 PROCESS-NAME,com.monkey.swing
 PROCESS-NAME,com.moonlitjiangnan.game
 PROCESS-NAME,com.moonton.silverblood.cn.bilibili
-PROCESS-NAME,com.morieating.forestexplorer
+PROCESS-NAME,com.mossfrontier.monstersurvivors
 PROCESS-NAME,com.motionvolt.flipdiving
 PROCESS-NAME,com.moumoubin.pengpengpeng
 PROCESS-NAME,com.mountains.feathertop
@@ -1763,7 +1758,6 @@ PROCESS-NAME,com.Mysm.ZZZjfccar
 PROCESS-NAME,com.mysteryemerge.game
 PROCESS-NAME,com.mysteryphone.app
 PROCESS-NAME,com.MYYZCompany.ZQQDZZ
-PROCESS-NAME,com.mzyxkapi.game.tt
 PROCESS-NAME,com.n1studio.empress
 PROCESS-NAME,com.namcobandaigames.ridgeracerss
 PROCESS-NAME,com.naquatic.guncraft
@@ -1877,7 +1871,6 @@ PROCESS-NAME,com.ningwen.BrutalRush
 PROCESS-NAME,com.ninjakiwi.bloonstd6
 PROCESS-NAME,com.ninjakiwi.sas3zombieassault
 PROCESS-NAME,com.ninjamuffin99.funkin
-PROCESS-NAME,com.ninogame.beverageTown.bilibili
 PROCESS-NAME,com.nintendo.zaba
 PROCESS-NAME,com.nintendo.zaca
 PROCESS-NAME,com.nival.pwdefenders
@@ -1909,6 +1902,7 @@ PROCESS-NAME,com.onektower.mgame
 PROCESS-NAME,com.Onut.Snow.bilibili
 PROCESS-NAME,com.opalastudios.pads
 PROCESS-NAME,com.orange.sndwz.bilibili
+PROCESS-NAME,com.orangecat.travel.preview
 PROCESS-NAME,com.orangepixel.dungeon
 PROCESS-NAME,com.orangesounds.soup2
 PROCESS-NAME,com.orangestudio.kenken
@@ -1959,6 +1953,7 @@ PROCESS-NAME,com.paperika.mewraider
 PROCESS-NAME,com.paradoxplaza.imagicka
 PROCESS-NAME,com.pathea.portia.TapTap
 PROCESS-NAME,com.patigames.ilovepasta4gsp
+PROCESS-NAME,com.paulpip.icewalk
 PROCESS-NAME,com.pazugames.avatarworld
 PROCESS-NAME,com.pdragon.doushouqi.mi
 PROCESS-NAME,com.pdragon.fivechess
@@ -1982,7 +1977,6 @@ PROCESS-NAME,com.phxh.taptap.nld
 PROCESS-NAME,com.pi.czrxdfirst
 PROCESS-NAME,com.picktao.zsjjc.bilibili
 PROCESS-NAME,com.pie.piegame.bilibili
-PROCESS-NAME,com.PigCanFly.PigCanFly
 PROCESS-NAME,com.PigeonGames.Phigros
 PROCESS-NAME,com.pikpok.fr.play
 PROCESS-NAME,com.pikpok.rua2
@@ -2026,7 +2020,6 @@ PROCESS-NAME,com.poppingames.android.alice
 PROCESS-NAME,com.poptiger.catarmy
 PROCESS-NAME,com.postram.winulatorbeta
 PROCESS-NAME,com.potatoflower.mycatisamaid
-PROCESS-NAME,com.PPL.AlienStarWars
 PROCESS-NAME,com.PrairieFireStudio.WhenThePastUnfolds
 PROCESS-NAME,com.primefactor.hundredfold.mobile
 PROCESS-NAME,com.project.Mooncn
@@ -2041,7 +2034,6 @@ PROCESS-NAME,com.pushangame.dada
 PROCESS-NAME,com.pwrd.mzlite.bilibili
 PROCESS-NAME,com.pwrd.mzlite.laohu
 PROCESS-NAME,com.pwrd.p5x.bilibili
-PROCESS-NAME,com.pwrd.secret.bilibili
 PROCESS-NAME,com.pwrd.tzyxmznew.bilibili
 PROCESS-NAME,com.pwrd.zx2.bilibili
 PROCESS-NAME,com.pwrd.zx2.laohu
@@ -2067,7 +2059,6 @@ PROCESS-NAME,com.qiqi.game.dmmtwo.mi
 PROCESS-NAME,com.qiqi.game.kbdmm.mi
 PROCESS-NAME,com.qiqi.game.kbdmm3.mi
 PROCESS-NAME,com.qiqi.ttfirstruncar
-PROCESS-NAME,com.QiZhuGame.Spotlight
 PROCESS-NAME,com.qjsjqy.bilibili
 PROCESS-NAME,com.qkyx.lhzs.bilibili
 PROCESS-NAME,com.qmaygame.mhxy.bilibili
@@ -2097,7 +2088,6 @@ PROCESS-NAME,com.r2games.myhero.mi
 PROCESS-NAME,com.racoondigi.jqys.bilibili
 PROCESS-NAME,com.ran.candy
 PROCESS-NAME,com.ran.program
-PROCESS-NAME,com.ranzi4.kaihuang
 PROCESS-NAME,com.rappidstudios.simulatorbattlephysics
 PROCESS-NAME,com.rastar.mxd.bilibili
 PROCESS-NAME,com.rastar.sqcdjz.bilibili
@@ -2131,6 +2121,7 @@ PROCESS-NAME,com.rocketpunchgames.hmm
 PROCESS-NAME,com.rockstar.maxpayne
 PROCESS-NAME,com.rockstargames.bully
 PROCESS-NAME,com.rockstargames.gtactw
+PROCESS-NAME,com.roguecarrom.mobile
 PROCESS-NAME,com.Rohana.OdCycle
 PROCESS-NAME,com.rouge.adventure
 PROCESS-NAME,com.rovio.angrybirds
@@ -2151,9 +2142,9 @@ PROCESS-NAME,com.rsg.bhlt.bilibili
 PROCESS-NAME,com.rsg.wdyz
 PROCESS-NAME,com.rshy.lzjxtycq.two.ywwl
 PROCESS-NAME,com.rtcm.wsqjs
+PROCESS-NAME,com.ruanfengasyjzcyhuaixuheji.cysz
 PROCESS-NAME,com.ruiwoo.ff.aligames
 PROCESS-NAME,com.rule12.game
-PROCESS-NAME,com.runmingc.spotlight.film
 PROCESS-NAME,com.runmingc.spotlight.shop
 PROCESS-NAME,com.rv9yd1.e0s6yn62
 PROCESS-NAME,com.rywl.tkzx2.mi
@@ -2161,6 +2152,8 @@ PROCESS-NAME,com.sanguo.qunxiong
 PROCESS-NAME,com.sanguo110.star.base.game122
 PROCESS-NAME,com.sanguo110.star.base.game127
 PROCESS-NAME,com.sanguo110.star.base.game130
+PROCESS-NAME,com.sanguo110.star.base.game134
+PROCESS-NAME,com.sanguo110.star.base.game202
 PROCESS-NAME,com.sanguo110.star.game46.t
 PROCESS-NAME,com.sanguosha.mjz.bilibili
 PROCESS-NAME,com.sanguosha.nysgs2.bilibili
@@ -2209,6 +2202,7 @@ PROCESS-NAME,com.shanhai.zy1
 PROCESS-NAME,com.shbq.gyzw.bilibili
 PROCESS-NAME,com.shbq.gyzw.ppyx
 PROCESS-NAME,com.shengji.yyb
+PROCESS-NAME,com.shengleigame.xfjdzd
 PROCESS-NAME,com.shengmiao.cqzy.ywwl
 PROCESS-NAME,com.shengqugames.wod.bilibili
 PROCESS-NAME,com.shenlan.m.reverse1999.bilibili
@@ -2223,6 +2217,7 @@ PROCESS-NAME,com.shiyi.hjwj.taptap
 PROCESS-NAME,com.shiyongshi.xydzp.bilibili
 PROCESS-NAME,com.shiyue.sszg.bilibili
 PROCESS-NAME,com.shiyue.sszg.mi
+PROCESS-NAME,com.shizhen.wendaoxiuxian
 PROCESS-NAME,com.shlk.dljh.bilibili
 PROCESS-NAME,com.shlwwan.qmyx
 PROCESS-NAME,com.shockland.autoball
@@ -2275,6 +2270,7 @@ PROCESS-NAME,com.siqi.tank
 PROCESS-NAME,com.siso.mobiwusizhilian.bilibili
 PROCESS-NAME,com.sixwaves.strikefleetomega
 PROCESS-NAME,com.sjffcf.bilibili
+PROCESS-NAME,com.sjfy.shunchen.cn
 PROCESS-NAME,com.sjjx.wxbz
 PROCESS-NAME,com.sjyy.wdxxsj2.mi
 PROCESS-NAME,com.skgames.trafficracer
@@ -2290,7 +2286,6 @@ PROCESS-NAME,com.slggames.hgsg.bilibili
 PROCESS-NAME,com.slitherine.davincisartofwar
 PROCESS-NAME,com.slmcb.game.xuanxin
 PROCESS-NAME,com.slothwerks.meteorfall
-PROCESS-NAME,com.slqj.qmms.bilibili
 PROCESS-NAME,com.slqj.tbnxy.bilibili
 PROCESS-NAME,com.slqj.wjws.bilibili
 PROCESS-NAME,com.slqj.yzmy.bilibili
@@ -2450,7 +2445,6 @@ PROCESS-NAME,com.tanwan.xajhqxzly.bilibili
 PROCESS-NAME,com.tanwan.yscq.mi
 PROCESS-NAME,com.tanwan.yslzxsjly.bilibili
 PROCESS-NAME,com.tanyan.qyymdy.ttt
-PROCESS-NAME,com.tanyu.cjhwy.bilibili
 PROCESS-NAME,com.taojin.dungeon2.bilibili
 PROCESS-NAME,com.taolu.freakplanet.bilibili
 PROCESS-NAME,com.taomee.hua
@@ -3491,6 +3485,7 @@ PROCESS-NAME,com.wangwang.maidenmedal2
 PROCESS-NAME,com.wanmei.zhuxian.mi
 PROCESS-NAME,com.wanshi.game
 PROCESS-NAME,com.wanshijianzhong.app
+PROCESS-NAME,com.wanxiang.qitu
 PROCESS-NAME,com.wanxiu.cn.yaocuotu.andriod
 PROCESS-NAME,com.wanyu.clqx.bilibili
 PROCESS-NAME,com.watersort.puzzle
@@ -3526,6 +3521,7 @@ PROCESS-NAME,com.weflycn.bilibili
 PROCESS-NAME,com.wegame.gg.bilibili
 PROCESS-NAME,com.weile.jymxpd.bilibili
 PROCESS-NAME,com.weile.sichuanmj.bilibili
+PROCESS-NAME,com.wenqi.game
 PROCESS-NAME,com.wenxian.tqsy.bilibili
 PROCESS-NAME,com.wepie.snake.new.mi
 PROCESS-NAME,com.wepie.snake.tencent
@@ -3664,6 +3660,7 @@ PROCESS-NAME,com.xiuxian.app
 PROCESS-NAME,com.xiuxian.idle
 PROCESS-NAME,com.xiyou.pozhang
 PROCESS-NAME,com.xiyou.shuaoyao
+PROCESS-NAME,com.xiyoujue.zijue
 PROCESS-NAME,com.xiyouzhi.wuji.qk
 PROCESS-NAME,com.xj.wgdgw.bilibili
 PROCESS-NAME,com.xjhcw.tapcwxjh
@@ -3711,7 +3708,6 @@ PROCESS-NAME,com.xuangames.fire233.yunmeng
 PROCESS-NAME,com.xuanjian.yujian
 PROCESS-NAME,com.xuanyizhineng.haloufeiche
 PROCESS-NAME,com.xuanyizhineng.lingshanweizhi
-PROCESS-NAME,com.xuxin.wordsleftunsaid
 PROCESS-NAME,com.xwzc.shinher.gb
 PROCESS-NAME,com.xwzylr.white
 PROCESS-NAME,com.xxjzmnq2.tt
@@ -3811,6 +3807,7 @@ PROCESS-NAME,com.yoozoo.sgyml.bilibili
 PROCESS-NAME,com.youka.werewolfbattle.bilibili
 PROCESS-NAME,com.youmin.jszc.bilibili
 PROCESS-NAME,com.youmt.jszx.bilibili
+PROCESS-NAME,com.yourname.huarong15
 PROCESS-NAME,com.youximi.pmwcn.bilibili
 PROCESS-NAME,com.youximi.pmwcn02
 PROCESS-NAME,com.YouXin.SunnyPuppies
@@ -3858,6 +3855,7 @@ PROCESS-NAME,com.yunqu.mxybtbz.w5aw.bilibili
 PROCESS-NAME,com.yunshi.darklord
 PROCESS-NAME,com.yunshi.darklord.bilibili
 PROCESS-NAME,com.yunshi.leitingwinter
+PROCESS-NAME,com.yuntu.fouryears
 PROCESS-NAME,com.yunying.qgfzmnq
 PROCESS-NAME,com.yuting.zhiqian
 PROCESS-NAME,com.yuwan.cqytj.bilibili
@@ -3872,7 +3870,6 @@ PROCESS-NAME,com.yy.mzlqjmzd.bilibili
 PROCESS-NAME,com.yy.nbalqsj.bilibili
 PROCESS-NAME,com.yy.shzj.bilibili
 PROCESS-NAME,com.yyg.sanguo.bilibili
-PROCESS-NAME,com.yygame.dontfeedshadows
 PROCESS-NAME,com.yygame.yinyangjie.bilibili
 PROCESS-NAME,com.yyhygame.yzx.bilibili
 PROCESS-NAME,com.yymoon.angellegion.bilibili
@@ -3888,7 +3885,6 @@ PROCESS-NAME,com.yzy.hcrjd.mi
 PROCESS-NAME,com.yzy.jymnq.mi
 PROCESS-NAME,com.yzyz.bilibili
 PROCESS-NAME,com.zc.aimmaster
-PROCESS-NAME,com.zc.warfare
 PROCESS-NAME,com.zchd.dwd.bilibili
 PROCESS-NAME,com.zd.ultraman.bilibili
 PROCESS-NAME,com.zengame.cyddz.bilibili
@@ -3919,6 +3915,7 @@ PROCESS-NAME,com.zhaolu.games.ftg.bilibili
 PROCESS-NAME,com.zhcj.xzjh
 PROCESS-NAME,com.zhixun.bhxz
 PROCESS-NAME,com.zhixun.zjg
+PROCESS-NAME,com.zhongchi.shijianxingqiu
 PROCESS-NAME,com.zhoulipeng.jiansaobahuang
 PROCESS-NAME,com.zhuohua.qzzm.bilibili
 PROCESS-NAME,com.zhuoxun.whmsca
@@ -4007,7 +4004,6 @@ PROCESS-NAME,game.taptap.com.lc.ssxm
 PROCESS-NAME,game.taptap.com.lc.xzx
 PROCESS-NAME,game.taptap.com.oldboy.dbxj.android.worldwave
 PROCESS-NAME,game.taptap.delta.rpg_lost_zone
-PROCESS-NAME,game.taptap.devil.war.free.android.cn
 PROCESS-NAME,game.taptap.land
 PROCESS-NAME,game.taptap.morizero.milthm
 PROCESS-NAME,game.taptap.pfx
@@ -4148,7 +4144,6 @@ PROCESS-NAME,sleepfly.nowood
 PROCESS-NAME,sts.pl
 PROCESS-NAME,studio.bitecho.sevendays
 PROCESS-NAME,syj.youngfhsher
-PROCESS-NAME,tachiyidenayike.H53B345C4
 PROCESS-NAME,www.mota.com
 PROCESS-NAME,www.www.www
 PROCESS-NAME,xd.sce.echo
