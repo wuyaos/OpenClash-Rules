@@ -29,6 +29,9 @@ DOMAIN-KEYWORD,tmdb
 DOMAIN-KEYWORD,themoviedb
 DOMAIN-SUFFIX,danmaku.movie.kg
 DOMAIN-SUFFIX,opensubtitles.org
+# Plex
+DOMAIN-SUFFIX,plex.tv
+DOMAIN-SUFFIX,plex.direct
 
 # AV
 DOMAIN,dmm.co.jp
