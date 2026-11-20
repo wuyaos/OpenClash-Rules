@@ -1,29 +1,37 @@
-# 添加自定义的代理
+# 自定义直连规则（本地组网/内网工具进程，绕过代理）
+
+# DNS / 网络工具
 PROCESS-NAME,mosdns
 PROCESS-NAME,lucky
+PROCESS-NAME,cloudflared
+PROCESS-NAME,frpc
+DOMAIN-KEYWORD,frp
+
+# 组网 / VPN
 PROCESS-NAME,tailscaled
 PROCESS-NAME,easytier-core
 PROCESS-NAME,easytier
-PROCESS-NAME,frpc
+PROCESS-NAME,feishunet
+PROCESS-NAME,飞鼠组网.exe
+PROCESS-NAME,GameViewer.exe
+
+# 内网穿透 / 文件同步 / 远程访问
 PROCESS-NAME,LinkEase.exe
 PROCESS-NAME,syncthing.exe
 PROCESS-NAME,syncthing
-PROCESS-NAME,GameViewer.exe
-PROCESS-NAME,feishunet
-PROCESS-NAME,飞鼠组网.exe
 PROCESS-NAME,com.seeyon.cmp
-PROCESS-NAME,cloudflared
 
+# 微信及登录组件
 PROCESS-NAME,Weixin.exe
 PROCESS-NAME,nblink.exe
 PROCESS-NAME,NodeBabyLinkService.exe
-DOMAIN-KEYWORD,frp
 
-# Xiaomi / Mi push allowlist
+# 小米系统服务直连（推送/系统组件，防误代理）
 DOMAIN,push.xiaomi.com
 DOMAIN,api.ad.xiaomi.com
+DOMAIN,cdn.cnbj1.fds.api.mi-img.com
 DOMAIN,gvod.aiseejapp.atianqi.com
 DOMAIN-SUFFIX,xiaomi.com
 DOMAIN-SUFFIX,mi.com
 IP-CIDR6,2404:f4c0::/32,no-resolve
-DOMAIN,cdn.cnbj1.fds.api.mi-img.com
+
