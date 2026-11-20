@@ -68,6 +68,8 @@ DOMAIN-SUFFIX,repo.jellyfin.org
 DOMAIN-SUFFIX,sgp1.mirror.jellyfin.org
 DOMAIN-SUFFIX,deb.debian.org
 
+DOMAIN-SUFFIX,mineru.net
+DOMAIN-SUFFIX,archive.org
 # From proxy-custom.list (dev related)
 DOMAIN-SUFFIX,typeset.io
 DOMAIN-SUFFIX,idcflare.com
