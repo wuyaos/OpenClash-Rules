@@ -20,6 +20,7 @@ const ICON_RULES = [
   ["谷歌", "Google_Search.png"],
   ["GPT", "ChatGPT.png"],
   ["AI", "AI.png"],
+  ["PT", "Download.png"],
   ["刮削🇯🇵", "Japan.png"],
   ["刮削", "Media.png"],
   ["GitHub", "GitHub.png"],

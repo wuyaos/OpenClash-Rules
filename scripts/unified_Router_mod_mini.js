@@ -2029,18 +2029,19 @@ function main(config) {
     ]
   },
   {
-    "name": "🕸 刮削",
+    "name": "🧲 PT",
     "type": "select",
-    "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Media.png",
+    "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png",
     "proxies": [
-      "🔮 负载均衡 no🇯🇵",
       "🚀 节点选择",
+      "DIRECT",
+      "🥇 手动选择1",
+      "🥈 手动选择2",
       "🇭🇰 香港自动",
-      "🇹🇼 台湾自动",
-      "🇨🇳 ‍中国自动",
-      "🇸🇬 狮城自动",
+      "🇯🇵 日本自动",
       "🇺🇲 ‍美国自动",
-      "🎏 ‍其他"
+      "🇸🇬 狮城自动",
+      "🇹🇼 台湾自动"
     ]
   },
   {
@@ -2403,6 +2404,14 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
+  "pt_proxy": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/pt-proxy.list",
+    "path": "./ruleset/pt_proxy.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
   "proxy_custom": {
     "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-custom.list",
     "path": "./ruleset/proxy_custom.list",
@@ -2628,6 +2637,7 @@ function main(config) {
   "RULE-SET,pt,🎯 全球直连,no-resolve",
   "RULE-SET,direct_custom,🎯 全球直连,no-resolve",
   "RULE-SET,Facebook,🚀 节点选择,no-resolve",
+  "RULE-SET,pt_proxy,🧲 PT,no-resolve",
   "RULE-SET,proxy_custom,🚀 节点选择,no-resolve",
   "RULE-SET,ai,🤖 AI,no-resolve",
   "RULE-SET,AI,🤖 AI,no-resolve",

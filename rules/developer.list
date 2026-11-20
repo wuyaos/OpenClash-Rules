@@ -68,6 +68,12 @@ DOMAIN-SUFFIX,repo.jellyfin.org
 DOMAIN-SUFFIX,sgp1.mirror.jellyfin.org
 DOMAIN-SUFFIX,deb.debian.org
 
+# From proxy-custom.list (dev related)
+DOMAIN-SUFFIX,typeset.io
+DOMAIN-SUFFIX,idcflare.com
+DOMAIN,linux.do
+PROCESS-NAME,UniGetUI.exe
+
 # From github.list (merged)
 DOMAIN-SUFFIX,atom.io
 DOMAIN-SUFFIX,dependabot.com

@@ -6,17 +6,12 @@ DOMAIN-SUFFIX,mxwljsq.top
 DOMAIN-SUFFIX,sonarr.tv
 DOMAIN-SUFFIX,v1.mk
 DOMAIN-SUFFIX,msq.pub
-DOMAIN-SUFFIX,typeset.io
 DOMAIN-SUFFIX,ipm.com.cn
-DOMAIN-SUFFIX,npmjs.com
-PROCESS-NAME,UniGetUI.exe
-DOMAIN,linux.do
 DOMAIN-SUFFIX,mb3admin.com
 DOMAIN-SUFFIX,tsss123.cc
 DOMAIN-SUFFIX,sub.dy.ax
 DOMAIN-SUFFIX,sub.d1.mk
 DOMAIN-SUFFIX,mineru.net
-DOMAIN-SUFFIX,idcflare.com
 
 
 # pikpak
@@ -25,22 +20,6 @@ DOMAIN,mypikpak.netcologne
 DOMAIN,user.mypikpak.com
 DOMAIN,access.mypikpak.com
 
-# PT/BT
-DOMAIN-SUFFIX,mikanani.me
-DOMAIN-SUFFIX,dmhy.org
-DOMAIN-SUFFIX,filelist.io
-DOMAIN-SUFFIX,byr.pt
-DOMAIN-SUFFIX,avistaz.to
-DOMAIN-SUFFIX,ani.rip
-DOMAIN-SUFFIX,u2.dmhy.org
-DOMAIN-SUFFIX,acgrip.art
-DOMAIN-SUFFIX,monikadesign.uk
-DOMAIN-SUFFIX,cinemaz.to
-DOMAIN-SUFFIX,resources.ani.rip
-DOMAIN-SUFFIX,aniopen.an-i.workers.dev
-DOMAIN-SUFFIX,acg.rip
-DOMAIN-SUFFIX,rutracker.net
-DOMAIN-SUFFIX,xloli.cc
 
 
 # 解决谷歌商店无法下载应用的问题
@@ -52,16 +31,13 @@ DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,cdn.cloudflare.net
 DOMAIN-SUFFIX,cloudflareinsights.com
 
-IP-CIDR,204.15.20.0/22,no-resolve
 
 # 🚫Porn-FISH
 DOMAIN-SUFFIX,zodgame.xyz
 DOMAIN-SUFFIX,ecchi100.com
-DOMAIN-SUFFIX,www.acgkkk.com
-DOMAIN-SUFFIX,www.gtloli.eu.org
+DOMAIN-SUFFIX,acgkkk.com
+DOMAIN-SUFFIX,gtloli.eu.org
 
-DOMAIN-SUFFIX,mineru.net
-DOMAIN-SUFFIX,idcflare.com
 DOMAIN-SUFFIX,1995.win
 DOMAIN-SUFFIX,bigmelook.com
 DOMAIN-SUFFIX,vumstar.com
@@ -70,11 +46,6 @@ DOMAIN-SUFFIX,vcb-s.com
 DOMAIN-SUFFIX,dian115.com
 DOMAIN-SUFFIX,picix.us
 DOMAIN-SUFFIX,hdhaven.com
-DOMAIN-SUFFIX,pF-Cloudpan
-DOMAIN-SUFFIX,huangguoai.com
-DOMAIN-SUFFIX,ltxlib.dpdns.org
-DOMAIN-SUFFIX,huangguo.video
 DOMAIN-SUFFIX,meta.com
 DOMAIN-SUFFIX,oculus.com
 DOMAIN-SUFFIX,archive.org
-DOMAIN-SUFFIX,bgm.tv

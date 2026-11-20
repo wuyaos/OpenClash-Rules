@@ -30,6 +30,10 @@ DOMAIN-KEYWORD,themoviedb
 DOMAIN-SUFFIX,danmaku.movie.kg
 DOMAIN-SUFFIX,opensubtitles.org
 # Plex
+DOMAIN-SUFFIX,huangguoai.com
+DOMAIN-SUFFIX,ltxlib.dpdns.org
+DOMAIN-SUFFIX,huangguo.video
+DOMAIN-SUFFIX,bgm.tv
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,plex.direct
 
