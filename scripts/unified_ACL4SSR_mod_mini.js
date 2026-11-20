@@ -2404,6 +2404,14 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
+  "Facebook": {
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.list",
+    "path": "./ruleset/Facebook.list",
+    "behavior": "classical",
+    "interval": 86400,
+    "format": "text",
+    "type": "http"
+  },
   "proxy_custom": {
     "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-custom.list",
     "path": "./ruleset/proxy_custom.list",
@@ -2676,6 +2684,7 @@ function main(config) {
   "RULE-SET,UnBan,🎯 全球直连,no-resolve",
   "RULE-SET,pt,🎯 全球直连,no-resolve",
   "RULE-SET,direct_custom,🎯 全球直连,no-resolve",
+  "RULE-SET,Facebook,🚀 节点选择,no-resolve",
   "RULE-SET,proxy_custom,🚀 节点选择,no-resolve",
   "RULE-SET,android_block,🛑 广告拦截,no-resolve",
   "RULE-SET,BanAD,🛑 广告拦截,no-resolve",
