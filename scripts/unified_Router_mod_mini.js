@@ -2388,9 +2388,9 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "direct_custom": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/direct-custom.list",
-    "path": "./ruleset/direct_custom.list",
+  "custom_direct": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/custom-direct.list",
+    "path": "./ruleset/custom_direct.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -2635,7 +2635,7 @@ function main(config) {
   "RULE-SET,LocalAreaNetwork,🎯 全球直连,no-resolve",
   "RULE-SET,UnBan,🎯 全球直连,no-resolve",
   "RULE-SET,pt,🎯 全球直连,no-resolve",
-  "RULE-SET,direct_custom,🎯 全球直连,no-resolve",
+  "RULE-SET,custom_direct,🎯 全球直连,no-resolve",
   "RULE-SET,Facebook,🚀 节点选择,no-resolve",
   "RULE-SET,pt_proxy,🧲 PT,no-resolve",
   "RULE-SET,proxy_custom,🚀 节点选择,no-resolve",
