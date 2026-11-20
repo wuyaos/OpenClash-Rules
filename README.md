@@ -110,64 +110,68 @@
 
 ***
 
-### 4. 参数化脚本（基于本仓库规则自动生成）
+### 4. 参数化脚本
 
-`scripts/unified.js` 是唯一生成的使用脚本：Sub-Store 的订阅操作调用 `operator` 处理节点，文件配置操作及支持脚本覆写的客户端调用 `main` 生成配置。`scripts/gen_script.js` 是生成器，不是客户端使用脚本。
+使用脚本是 `scripts/unified.js`；`scripts/gen_script.js` 只用于生成脚本，不能作为客户端覆写脚本使用。
 
 #### 4.1 选择配置
 
-在支持通过脚本链接传递参数的 Sub-Store 操作中，使用：
+| 参数 | 适用场景 | 配置文件 |
+| --- | --- | --- |
+| `profile=general` | 通用配置，包含广告拦截规则（默认） | [general.ini](config/general.ini) |
+| `profile=router` | 路由器配置，不含广告拦截规则 | [router.ini](config/router.ini) |
+| `profile=app-proxy` | Docker 容器、下载软件等应用代理；在路由器配置基础上不包含 Android APP/GAME 直连规则 | [app-proxy.ini](config/app-proxy.ini) |
+
+不填写 `profile` 或填写未知名称时使用 `general`。旧参数 `acl4ssr`、`acl4ssr_mod_mini` 仍映射到 `general`，`router_mod_mini` 映射到 `router`；原来的 INI 文件和 `unified_all.js` 已移除，需要更新链接。
+
+#### 4.2 Sub-Store 调用
+
+**生成完整 Mihomo 配置**：在 Sub-Store 的文件（Mihomo 配置）脚本操作中添加远程脚本，选择需要的链接。此处运行 `main`，生成策略组、规则和 rule-provider。
+
+通用配置：
 
 ```text
-https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/scripts/unified.js#profile=router
+https://cdn.jsdelivr.net/gh/wuyaos/OpenClash-Rules@main/scripts/unified.js#profile=general&full=true&ipv6=true&threshold=2
 ```
 
-将 `router` 替换为需要的配置：
+路由器配置：
 
-| profile | 配置 |
-| --- | --- |
-| `general` | 通用配置（默认） |
-| `router` | 路由器配置 |
-| `app-proxy` | Docker 容器、下载软件等应用代理配置 |
+```text
+https://cdn.jsdelivr.net/gh/wuyaos/OpenClash-Rules@main/scripts/unified.js#profile=router&full=true&ipv6=true&threshold=2
+```
 
-其他参数可用 `&` 连接：`ipv6=true` 开启 IPv6；`full=false` 不合并基础配置；`threshold=数字` 按地区组节点数隐藏空组；`groupemoji=false` 去除组名 emoji。默认分别为 `false`、`true`、`0`、`true`。节点处理使用同一套规则，不受 `profile` 切换影响。
+应用代理配置：
 
-旧参数 `acl4ssr` / `acl4ssr_mod_mini` 兼容映射到 `general`，`router_mod_mini` 映射到 `router`。旧 INI 直链删除后将失效，需改用上述配置。
+```text
+https://cdn.jsdelivr.net/gh/wuyaos/OpenClash-Rules@main/scripts/unified.js#profile=app-proxy&full=true&ipv6=true&threshold=2
+```
 
-FlClash 等客户端可粘贴 `unified.js` 作为覆写脚本，但切换配置需要运行环境提供 `$arguments`；若不支持传参，将使用默认的 `general`。
+如果使用 GitHub 原始地址，将链接的 `https://cdn.jsdelivr.net/gh/wuyaos/OpenClash-Rules@main/` 替换为 `https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/`。`#` 后的参数需要由 Sub-Store 等运行环境解析并传给脚本；仅下载脚本文件不会执行或传入这些参数。
 
-#### 4.2 重新生成
+**仅处理订阅节点**：在订阅的脚本操作中使用同一个脚本地址，此处运行 `operator`，只过滤信息节点并补充国旗，不生成策略组或规则。`profile` 等配置参数作用于 `main`，不会改变节点处理规则。
 
-在项目根目录执行：
+#### 4.3 参数说明
+
+| 参数 | 默认值 | 作用 |
+| --- | --- | --- |
+| `profile` | `general` | 选择配置；也可用 `name` 传入配置名。 |
+| `full` | `true` | 是否合并仓库的基础配置；`false` 不合并基础配置，保留输入配置的其他字段，并生成策略组及规则。 |
+| `ipv6` | `false` | 设置顶层和 DNS 的 IPv6 开关；`full=false` 且未指定时保留输入配置的设置。 |
+| `threshold` | `0` | 当节点数组可用时，地区自动组匹配节点数低于该值则移除该组及其引用；`0` 不移除。 |
+| `groupemoji` | `true` | 设为 `false` 去除策略组名称中的 emoji。 |
+
+多个参数用 `&` 连接。`full=true` 的基础配置依赖运行环境提供 YAML 解析器（例如 Sub-Store 的 `ProxyUtils.yaml`）；解析失败时不会合并基础配置，请查看运行日志。
+
+支持 JavaScript 覆写的客户端也可使用 `unified.js` 的 `main` 入口；切换配置或传递其他参数需要客户端向脚本提供 `$arguments`。不支持参数的环境使用默认的 `general`，不能只把带 `#` 的链接当成通用 JavaScript 参数机制。
+
+#### 4.4 重新生成
+
+修改 INI、基础配置或生成器后，在项目根目录执行：
 
 ```bash
 node scripts/gen_script.js
-node -c scripts/gen_script.js
-node -c scripts/unified.js
+node --check scripts/gen_script.js
+node --check scripts/unified.js
 ```
 
-生成器读取 `config/*.ini` 和 `clash/config.yaml`，将分组及 ruleset 转换为代理组、rule-provider 和规则，按首次出现顺序去重。GitHub Actions 会在这些输入或生成器变更时更新 `scripts/unified.js`。
-
-### 5. `sync-ruleset.js` 本地自定义补丁
-
-`scripts/sync-ruleset.js` 支持在同步上游规则后，叠加本地补丁文件，避免手工改动在下次同步时丢失。
-
-- 补丁目录：`rules/_custom/`
-- 文件命名：
-  - `rules/_custom/<source-name>.append.list`
-  - `rules/_custom/<source-name>.remove.list`
-- 当前 `source-name`：
-  - `app-mutated`
-  - `game-mutated`
-  - `awavenue-ads`
-
-处理顺序：
-
-1. 先按 `remove.list` 删除完全匹配的行  
-2. 再按 `append.list` 追加行  
-3. 最后自动去重并写回 `rules/*.list`
-
-说明：
-
-- 每行一个规则；
-- 空行和以 `#` / `;` 开头的行会被忽略。
+生成器读取 `config/*.ini` 和 `clash/config.yaml`，输出 `scripts/unified.js`。GitHub Actions 会在这些输入或生成器变更时更新生成脚本。
