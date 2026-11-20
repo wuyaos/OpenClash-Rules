@@ -20,9 +20,6 @@ DOMAIN,mypikpak.netcologne
 DOMAIN,user.mypikpak.com
 DOMAIN,access.mypikpak.com
 
-# 解决谷歌商店无法下载应用的问题
-DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-DOMAIN-SUFFIX,services.googleapis.cn
 
 # cloudflare
 DOMAIN-SUFFIX,challenges.cloudflare.com
