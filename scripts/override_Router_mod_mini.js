@@ -566,9 +566,9 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "proxy_custom": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-custom.list",
-    "path": "./ruleset/proxy_custom.list",
+  "custom_proxy": {
+    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/custom-proxy.list",
+    "path": "./ruleset/custom_proxy.list",
     "behavior": "classical",
     "interval": 86400,
     "format": "text",
@@ -800,7 +800,7 @@ function main(config) {
   "RULE-SET,custom_direct,🎯 全球直连,no-resolve",
   "RULE-SET,Facebook,🚀 节点选择,no-resolve",
   "RULE-SET,pt_proxy,🧲 PT,no-resolve",
-  "RULE-SET,proxy_custom,🚀 节点选择,no-resolve",
+  "RULE-SET,custom_proxy,🚀 节点选择,no-resolve",
   "RULE-SET,ai,🤖 AI,no-resolve",
   "RULE-SET,AI,🤖 AI,no-resolve",
   "RULE-SET,developer,👨‍💻 开发,no-resolve",
