@@ -2472,6 +2472,14 @@ const PROFILES = {
         "format": "text",
         "type": "http"
       },
+      "Google": {
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
+        "path": "./ruleset/Google.list",
+        "behavior": "classical",
+        "interval": 86400,
+        "format": "text",
+        "type": "http"
+      },
       "GoogleFCM": {
         "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
         "path": "./ruleset/GoogleFCM.list",
@@ -2606,6 +2614,7 @@ const PROFILES = {
       "RULE-SET,Telegram,📲 电报消息,no-resolve",
       "RULE-SET,OneDrive,Ⓜ️ 微软云盘,no-resolve",
       "RULE-SET,Microsoft,Ⓜ️ 微软服务,no-resolve",
+      "RULE-SET,Google,🚀 节点选择,no-resolve",
       "RULE-SET,GoogleFCM,📢 谷歌FCM,no-resolve",
       "RULE-SET,ProxyGFWlist,🚀 节点选择,no-resolve",
       "RULE-SET,ProxyLite,🚀 节点选择,no-resolve",
@@ -3197,6 +3206,14 @@ const PROFILES = {
         "format": "text",
         "type": "http"
       },
+      "Google": {
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
+        "path": "./ruleset/Google.list",
+        "behavior": "classical",
+        "interval": 86400,
+        "format": "text",
+        "type": "http"
+      },
       "GoogleFCM": {
         "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
         "path": "./ruleset/GoogleFCM.list",
@@ -3325,6 +3342,7 @@ const PROFILES = {
       "RULE-SET,Telegram,📲 电报消息,no-resolve",
       "RULE-SET,OneDrive,Ⓜ️ 微软云盘,no-resolve",
       "RULE-SET,Microsoft,Ⓜ️ 微软服务,no-resolve",
+      "RULE-SET,Google,🚀 节点选择,no-resolve",
       "RULE-SET,GoogleFCM,📢 谷歌FCM,no-resolve",
       "RULE-SET,ProxyGFWlist,🚀 节点选择,no-resolve",
       "RULE-SET,ProxyLite,🚀 节点选择,no-resolve",
