@@ -141,19 +141,6 @@ function main(config) {
     "filter": ".*"
   },
   {
-    "name": "ᯅ QUEST",
-    "type": "select",
-    "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png",
-    "proxies": [
-      "🇺🇲 ‍美国自动",
-      "🚀 节点选择",
-      "🥇 手动选择1",
-      "🥈 手动选择2"
-    ],
-    "include-all": true,
-    "filter": "^(?!.*ℹ(?:️)?).*$"
-  },
-  {
     "name": "Ⓜ️ 微软云盘",
     "type": "select",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png",
@@ -728,14 +715,6 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "quest3": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/quest3.list",
-    "path": "./ruleset/quest3.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
   "Telegram": {
     "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
     "path": "./ruleset/Telegram.list",
@@ -889,7 +868,6 @@ function main(config) {
   "RULE-SET,proxy_media,🌍 国外媒体,no-resolve",
   "RULE-SET,scraper_nojp,🕸 刮削,no-resolve",
   "RULE-SET,scraper_jp,🕸 刮削🇯🇵,no-resolve",
-  "RULE-SET,quest3,ᯅ QUEST,no-resolve",
   "RULE-SET,Telegram,📲 电报消息,no-resolve",
   "RULE-SET,OneDrive,Ⓜ️ 微软云盘,no-resolve",
   "RULE-SET,Microsoft,Ⓜ️ 微软服务,no-resolve",
