@@ -2428,9 +2428,9 @@ const PROFILES = {
         "format": "text",
         "type": "http"
       },
-      "proxy_media": {
-        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-media.list",
-        "path": "./ruleset/proxy_media.list",
+      "ProxyMedia": {
+        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
+        "path": "./ruleset/ProxyMedia.list",
         "behavior": "classical",
         "interval": 86400,
         "format": "text",
@@ -2602,7 +2602,7 @@ const PROFILES = {
       "RULE-SET,Docker,👨‍💻 开发,no-resolve",
       "RULE-SET,JetBrains,👨‍💻 开发,no-resolve",
       "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台,no-resolve",
-      "RULE-SET,proxy_media,🌍 国外媒体,no-resolve",
+      "RULE-SET,ProxyMedia,🌍 国外媒体,no-resolve",
       "RULE-SET,scraper_nojp,🕸 刮削,no-resolve",
       "RULE-SET,scraper_jp,🕸 刮削🇯🇵,no-resolve",
       "RULE-SET,Telegram,📲 电报消息,no-resolve",
@@ -3155,9 +3155,9 @@ const PROFILES = {
         "format": "text",
         "type": "http"
       },
-      "proxy_media": {
-        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/proxy-media.list",
-        "path": "./ruleset/proxy_media.list",
+      "ProxyMedia": {
+        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
+        "path": "./ruleset/ProxyMedia.list",
         "behavior": "classical",
         "interval": 86400,
         "format": "text",
@@ -3323,7 +3323,7 @@ const PROFILES = {
       "RULE-SET,Docker,👨‍💻 开发,no-resolve",
       "RULE-SET,JetBrains,👨‍💻 开发,no-resolve",
       "RULE-SET,BilibiliHMT,📺 哔哩哔哩港澳台,no-resolve",
-      "RULE-SET,proxy_media,🌍 国外媒体,no-resolve",
+      "RULE-SET,ProxyMedia,🌍 国外媒体,no-resolve",
       "RULE-SET,scraper_nojp,🕸 刮削,no-resolve",
       "RULE-SET,scraper_jp,🕸 刮削🇯🇵,no-resolve",
       "RULE-SET,Telegram,📲 电报消息,no-resolve",
