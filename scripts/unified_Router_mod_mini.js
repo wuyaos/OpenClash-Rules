@@ -2453,14 +2453,6 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "github": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/github.list",
-    "path": "./ruleset/github.list",
-    "behavior": "classical",
-    "interval": 86400,
-    "format": "text",
-    "type": "http"
-  },
   "developer": {
     "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/developer.list",
     "path": "./ruleset/developer.list",
@@ -2672,7 +2664,6 @@ function main(config) {
   "RULE-SET,proxy_custom,🚀 节点选择,no-resolve",
   "RULE-SET,ai,🤖 AI,no-resolve",
   "RULE-SET,AI,🤖 AI,no-resolve",
-  "RULE-SET,github,👨‍💻 开发,no-resolve",
   "RULE-SET,developer,👨‍💻 开发,no-resolve",
   "RULE-SET,Developer,👨‍💻 开发,no-resolve",
   "RULE-SET,Docker,👨‍💻 开发,no-resolve",
