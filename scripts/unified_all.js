@@ -2377,12 +2377,12 @@ const PROFILES = {
         "format": "text",
         "type": "http"
       },
-      "awavenue_ads": {
-        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/awavenue-ads.list",
-        "path": "./ruleset/awavenue_ads.list",
+      "AWAvenue_Ads_Rule_Clash": {
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml",
+        "path": "./ruleset/AWAvenue_Ads_Rule_Clash.yaml",
         "behavior": "classical",
         "interval": 86400,
-        "format": "text",
+        "format": "yaml",
         "type": "http"
       },
       "ai": {
@@ -2537,20 +2537,20 @@ const PROFILES = {
         "format": "text",
         "type": "http"
       },
-      "app_mutated": {
-        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/app-mutated.list",
-        "path": "./ruleset/app_mutated.list",
+      "APP_mutated": {
+        "url": "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/APP.mutated.yaml",
+        "path": "./ruleset/APP_mutated.yaml",
         "behavior": "classical",
         "interval": 86400,
-        "format": "text",
+        "format": "yaml",
         "type": "http"
       },
-      "game_mutated": {
-        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/game-mutated.list",
-        "path": "./ruleset/game_mutated.list",
+      "GAME_mutated": {
+        "url": "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/GAME.mutated.yaml",
+        "path": "./ruleset/GAME_mutated.yaml",
         "behavior": "classical",
         "interval": 86400,
-        "format": "text",
+        "format": "yaml",
         "type": "http"
       },
       "applications": {
@@ -2623,7 +2623,7 @@ const PROFILES = {
       "RULE-SET,BanProgramAD,🛑 广告拦截,no-resolve",
       "RULE-SET,BanEasyListChina,🛑 广告拦截,no-resolve",
       "RULE-SET,BanEasyPrivacy,🛑 广告拦截,no-resolve",
-      "RULE-SET,awavenue_ads,🛑 广告拦截,no-resolve",
+      "RULE-SET,AWAvenue_Ads_Rule_Clash,🛑 广告拦截,no-resolve",
       "RULE-SET,ai,🤖 AI,no-resolve",
       "RULE-SET,AI,🤖 AI,no-resolve",
       "RULE-SET,github,👨‍💻 开发,no-resolve",
@@ -2643,8 +2643,8 @@ const PROFILES = {
       "RULE-SET,ProxyGFWlist,🚀 节点选择,no-resolve",
       "RULE-SET,ProxyLite,🚀 节点选择,no-resolve",
       "RULE-SET,SteamCN,🎯 全球直连,no-resolve",
-      "RULE-SET,app_mutated,🎯 全球直连,no-resolve",
-      "RULE-SET,game_mutated,🎯 全球直连,no-resolve",
+      "RULE-SET,APP_mutated,🎯 全球直连,no-resolve",
+      "RULE-SET,GAME_mutated,🎯 全球直连,no-resolve",
       "RULE-SET,applications,🎯 全球直连,no-resolve",
       "RULE-SET,GoogleCN,🎯 全球直连,no-resolve",
       "RULE-SET,ChinaDomain,🎯 全球直连,no-resolve",
@@ -3295,20 +3295,20 @@ const PROFILES = {
         "format": "text",
         "type": "http"
       },
-      "app_mutated": {
-        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/app-mutated.list",
-        "path": "./ruleset/app_mutated.list",
+      "APP_mutated": {
+        "url": "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/APP.mutated.yaml",
+        "path": "./ruleset/APP_mutated.yaml",
         "behavior": "classical",
         "interval": 86400,
-        "format": "text",
+        "format": "yaml",
         "type": "http"
       },
-      "game_mutated": {
-        "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/game-mutated.list",
-        "path": "./ruleset/game_mutated.list",
+      "GAME_mutated": {
+        "url": "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/GAME.mutated.yaml",
+        "path": "./ruleset/GAME_mutated.yaml",
         "behavior": "classical",
         "interval": 86400,
-        "format": "text",
+        "format": "yaml",
         "type": "http"
       },
       "applications": {
@@ -3395,8 +3395,8 @@ const PROFILES = {
       "RULE-SET,ProxyGFWlist,🚀 节点选择,no-resolve",
       "RULE-SET,ProxyLite,🚀 节点选择,no-resolve",
       "RULE-SET,SteamCN,🎯 全球直连,no-resolve",
-      "RULE-SET,app_mutated,🎯 全球直连,no-resolve",
-      "RULE-SET,game_mutated,🎯 全球直连,no-resolve",
+      "RULE-SET,APP_mutated,🎯 全球直连,no-resolve",
+      "RULE-SET,GAME_mutated,🎯 全球直连,no-resolve",
       "RULE-SET,applications,🎯 全球直连,no-resolve",
       "RULE-SET,GoogleCN,🎯 全球直连,no-resolve",
       "RULE-SET,ChinaDomain,🎯 全球直连,no-resolve",

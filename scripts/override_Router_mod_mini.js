@@ -743,20 +743,20 @@ function main(config) {
     "format": "text",
     "type": "http"
   },
-  "app_mutated": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/app-mutated.list",
-    "path": "./ruleset/app_mutated.list",
+  "APP_mutated": {
+    "url": "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/APP.mutated.yaml",
+    "path": "./ruleset/APP_mutated.yaml",
     "behavior": "classical",
     "interval": 86400,
-    "format": "text",
+    "format": "yaml",
     "type": "http"
   },
-  "game_mutated": {
-    "url": "https://raw.githubusercontent.com/wuyaos/OpenClash-Rules/main/rules/game-mutated.list",
-    "path": "./ruleset/game_mutated.list",
+  "GAME_mutated": {
+    "url": "https://raw.githubusercontent.com/mnixry/direct-android-ruleset/rules/@Merged/GAME.mutated.yaml",
+    "path": "./ruleset/GAME_mutated.yaml",
     "behavior": "classical",
     "interval": 86400,
-    "format": "text",
+    "format": "yaml",
     "type": "http"
   },
   "applications": {
@@ -843,8 +843,8 @@ function main(config) {
   "RULE-SET,ProxyGFWlist,🚀 节点选择,no-resolve",
   "RULE-SET,ProxyLite,🚀 节点选择,no-resolve",
   "RULE-SET,SteamCN,🎯 全球直连,no-resolve",
-  "RULE-SET,app_mutated,🎯 全球直连,no-resolve",
-  "RULE-SET,game_mutated,🎯 全球直连,no-resolve",
+  "RULE-SET,APP_mutated,🎯 全球直连,no-resolve",
+  "RULE-SET,GAME_mutated,🎯 全球直连,no-resolve",
   "RULE-SET,applications,🎯 全球直连,no-resolve",
   "RULE-SET,GoogleCN,🎯 全球直连,no-resolve",
   "RULE-SET,ChinaDomain,🎯 全球直连,no-resolve",
