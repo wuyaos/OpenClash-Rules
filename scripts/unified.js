@@ -2086,11 +2086,7 @@ const PROFILES = {
         "type": "select",
         "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png",
         "proxies": [
-          "DIRECT",
-          "🚀 节点选择",
-          "♻️ 自动选择",
-          "🔯 故障转移",
-          "🔮 负载均衡"
+          "DIRECT"
         ]
       },
       {
@@ -2820,11 +2816,7 @@ const PROFILES = {
         "type": "select",
         "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png",
         "proxies": [
-          "DIRECT",
-          "🚀 节点选择",
-          "♻️ 自动选择",
-          "🔯 故障转移",
-          "🔮 负载均衡"
+          "DIRECT"
         ]
       },
       {
@@ -3617,11 +3609,7 @@ const PROFILES = {
         "type": "select",
         "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png",
         "proxies": [
-          "DIRECT",
-          "🚀 节点选择",
-          "♻️ 自动选择",
-          "🔯 故障转移",
-          "🔮 负载均衡"
+          "DIRECT"
         ]
       },
       {
