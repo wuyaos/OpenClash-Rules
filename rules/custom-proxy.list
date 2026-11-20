@@ -1,29 +1,48 @@
-# 添加自定义的代理
+# 自定义代理规则（个人域名杂项，无对应策略组）
+
+# 漫画
 DOMAIN-SUFFIX,mangabz.com
-DOMAIN-SUFFIX,myqnapcloud.cn
 DOMAIN-SUFFIX,manhuagui.com
+
+# NAS 远程访问
+DOMAIN-SUFFIX,myqnapcloud.cn
+DOMAIN-SUFFIX,my.interserver.net
+
+# 网盘/订阅/中转
 DOMAIN-SUFFIX,mxwljsq.top
 DOMAIN-SUFFIX,v1.mk
 DOMAIN-SUFFIX,msq.pub
-DOMAIN-SUFFIX,ipm.com.cn
-DOMAIN-SUFFIX,mb3admin.com
-DOMAIN-SUFFIX,tsss123.cc
 DOMAIN-SUFFIX,sub.dy.ax
 DOMAIN-SUFFIX,sub.d1.mk
+DOMAIN-SUFFIX,tsss123.cc
 
+# 媒体服务
+DOMAIN-SUFFIX,mb3admin.com
+DOMAIN-SUFFIX,vumstar.com
+DOMAIN-SUFFIX,vcb-s.com
+DOMAIN-SUFFIX,dian115.com
+DOMAIN-SUFFIX,picix.us
+DOMAIN-SUFFIX,hdhaven.com
+DOMAIN-SUFFIX,bigmelook.com
+DOMAIN-SUFFIX,1995.win
 
-# pikpak
+# PikPak
 DOMAIN,mypikpak.com
-DOMAIN,mypikpak.netcologne
 DOMAIN,user.mypikpak.com
 DOMAIN,access.mypikpak.com
+DOMAIN,mypikpak.netcologne
 
-
-# cloudflare
+# Cloudflare 人机验证/CDN 强制代理
 DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,cdn.cloudflare.net
 DOMAIN-SUFFIX,cloudflareinsights.com
 
+# Meta（Quest 头显）
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,oculus.com
+
+# 其他（无法归类）
+DOMAIN-SUFFIX,ipm.com.cn
 
 # 🚫Porn-FISH
 DOMAIN-SUFFIX,zodgame.xyz
@@ -31,13 +50,3 @@ DOMAIN-SUFFIX,ecchi100.com
 DOMAIN-SUFFIX,acgkkk.com
 DOMAIN-SUFFIX,gtloli.eu.org
 
-DOMAIN-SUFFIX,1995.win
-DOMAIN-SUFFIX,bigmelook.com
-DOMAIN-SUFFIX,vumstar.com
-DOMAIN-SUFFIX,my.interserver.net
-DOMAIN-SUFFIX,vcb-s.com
-DOMAIN-SUFFIX,dian115.com
-DOMAIN-SUFFIX,picix.us
-DOMAIN-SUFFIX,hdhaven.com
-DOMAIN-SUFFIX,meta.com
-DOMAIN-SUFFIX,oculus.com
