@@ -2029,27 +2029,6 @@ function main(config) {
     ]
   },
   {
-    "name": "🎬 EMBY",
-    "type": "select",
-    "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png",
-    "proxies": [
-      "🚀 节点选择",
-      "DIRECT",
-      "🥇 手动选择1",
-      "🥈 手动选择2",
-      "♻️ 自动选择",
-      "🔯 故障转移",
-      "🔮 负载均衡",
-      "🇭🇰 香港自动",
-      "🇹🇼 台湾自动",
-      "🇨🇳 ‍中国自动",
-      "🇸🇬 狮城自动",
-      "🇯🇵 日本自动",
-      "🇺🇲 ‍美国自动",
-      "🎏 ‍其他"
-    ]
-  },
-  {
     "name": "🕸 刮削",
     "type": "select",
     "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Media.png",
