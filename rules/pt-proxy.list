@@ -1,4 +1,4 @@
-# PT 站点（需代理访问，tracker 子域走 pt.list 直连）
+# PT 站点（需代理访问；命中本站域名的 tracker 子域也走代理）
 DOMAIN-SUFFIX,mikanani.me
 DOMAIN-SUFFIX,dmhy.org
 DOMAIN-SUFFIX,filelist.io

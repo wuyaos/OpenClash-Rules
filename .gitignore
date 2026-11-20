@@ -1,7 +1,11 @@
-.history
-.omc/
+# 本地工具状态
+.agents/
 .ace-tool/
-.omx/
-__pycache__
 .mindfs/
+.omc/
+.omx/
 .pi-loop.json.lock
+
+# 本地历史及 Python 缓存目录
+.history/
+__pycache__/

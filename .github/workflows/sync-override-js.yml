@@ -1,9 +1,10 @@
-name: Sync Override JS
+name: Sync Unified JS
 
 on:
   push:
     paths:
       - "config/**/*.ini"
+      - "clash/config.yaml"
       - "scripts/gen_script.js"
   workflow_dispatch:
 
@@ -11,7 +12,7 @@ permissions:
   contents: write
 
 jobs:
-  sync-override-js:
+  sync-unified-js:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,17 +25,17 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Regenerate override scripts from ini
+      - name: Regenerate unified script from ini
         run: node scripts/gen_script.js
 
-      - name: Commit and push override updates
+      - name: Commit and push unified script updates
         run: |
-          if git diff --quiet -- scripts/override_*.js; then
-            echo "No override JS changes."
+          if git diff --quiet -- scripts/unified.js; then
+            echo "No unified JS changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- scripts/override_*.js
-          git commit -m "chore(override): regenerate scripts from ini [skip ci]"
+          git add -- scripts/unified.js
+          git commit -m "chore(scripts): regenerate unified script [skip ci]"
           git push

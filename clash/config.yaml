@@ -6,12 +6,6 @@ external-controller: :9090
 unified-delay: true  # 更换延迟计算方式，去除握手等额外延迟
 tcp-concurrent: true # 启用 TCP 并发连接。这允许 Clash 同时建立多个 TCP
 
-hosts:
-  # 节点伪装域名在部分公共 DNS(如 223.5.5.5 DoH)上解析为 NODATA/不可达 IP，
-  # 固化为可达入口 IP 后客户端可稳定连通（2026-08-30 实测：香港01 464ms、新加坡02 497ms）。
-  # 若订阅方更换入口，需同步更新此 IP。
-  vehicle-filess.prd.cnn1.vn.cloud.gunzivip.space: 193.30.122.227
-
 dns:
   enable: true # 开启 DNS 配置
   listen: 0.0.0.0:1053 # DNS 监听端口，便于客户端稳定识别 DNS 模式
